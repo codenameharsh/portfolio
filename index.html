@@ -28,6 +28,7 @@
                     </ul>
                 </div>
             </div>
+    
         
             <!-- hero section -->
             <div id="hero">
@@ -35,8 +36,8 @@
                        <!-- <h1><p id="blue-text">Hey there! I am</p>a Graphic Designer</h1> -->
                 </div>
                 <div class="hero-btn">
-                    <button id="read-more">Read More</button>
-                    <button id="resume">Download Resume</button>
+                    <button id="read-more" onclick="window.open('about_me/about.html')">Read More</button>
+                    <button id="resume" onclick="window.open('Resume_HR_2025.pdf', '_blank')">Download Resume</button>
                 </div>
             </div>
             
@@ -153,41 +154,35 @@
               </div>
 
               <!-- contact form -->
+            
+              <div class="contact-container">
+                <div class="contact-head">
+                    <h1>Reach out to me</h1>
+                    <p>
+                        If you'd like to get in touch, please feel free to reach out to me through any of the channels below:
+                    </p>
+        
+                    <ul>
+                        <li class="contact-method">
+                            <img src="./images/mail.svg" alt="mail"/>
+                            <a href="mailto:harshitha167@gmail.com" class="contact-info" tabindex="0">harshitha167@gmail.com</a>
+                        </li>
+                        <li class="contact-method" >
+                            <img src="./images/phone-call.svg" alt="phone" />
+                            <span class="contact-info">+1 657-410-9970</span>
+                        </li>
+                        <li class="contact-method">
+                            <img src="./images/linkedin.svg" alt="LinkedIn"/>
+                            <a href="www.linkedin.com/in/harshitha167" class="contact-info">Harshitha Rajendran</a>
+                        </li>
+                        <li class="contact-method">
+                            <img src="./images/github.svg" alt="github"/>
+                            <a href="https://github.com/codenameharsh" class="contact-info">codenameharsh</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
 
-              <div class="banner" id="contact-me">
-                <div class="page banner_container-1">
-                    <div class="banner_container-2">
-                        <div class="banner_section" id="contact-bg">
-                            <h2 class="banner_heading">
-                           Let's get in touch</h2>
-                            <p class="banner_subheading">
-                                Tell me more about your project.
-                            </p>
-
-                            <div class="form-container">
-                                <form action="submit_form.php" method="post" class="form">
-                                    <input type="text" id="fname" name="firstname" placeholder="Enter your First Name" required>
-                        
-                                    <input type="text" id="lname" name="lastname" placeholder="Enter your Last Name" required>
-                        
-                                    <input type="text" id="email" name="email" placeholder="Enter your E-mail" required>
-                        
-                                    <textarea id="message" name="message" placeholder="Write your message.." style="height:100px" required></textarea>
-    
-                                    <div class="banner_section" id="contact-submit">
-                                        <p class="banner_button">
-                                        <a href="#main"
-                                        class="banner_button_link" >
-                                            Submit</a></p>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-
-
-                    </div>
-                </div>         
-              </div>
         </div>
     
         <!--Contact section-->

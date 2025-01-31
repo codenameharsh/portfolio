@@ -402,54 +402,88 @@ body{
   
   }
 
-  .form-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    right: 4em;
-    height: 50vh;
-    max-width: 75%;
-  }
+  .contact-container {
+    height: 500px;
+    width: 300px;
+    padding: 1rem;
+    max-width: 300px;
+    margin: 40px auto;
+    background-color: var(--accent-brown);
+    border-radius: 2rem;
+    border-top: .4rem dashed var(--bg-color);
+    border-bottom: 1rem solid;
+    box-shadow: 0 0 10px rgba(43, 42, 42, 0.666);
+    color: var(--accent-grey);
+    cursor: pointer;
+}
 
-  #contact-submit {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.contact-head {
+    margin-bottom: 20px;
+    padding-top: 2rem;
+    width: 300px;
+    font-size: 1rem;
+    padding-left: 1rem;
+}
+
+.contact-head h1 {
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.contact-head p {
+    color: #fff;
+    font-size: .9rem;
+    width: 240px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);   
+    text-decoration: none;
     
+}
+
+.contact-method{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem; 
+    flex-direction: column;
+    font-size: .7rem;
+    padding-left: 0;
+}
+
+.contact-method img {
+    width: 2rem;
+    height: 2rem;
+    padding: .1rem;
+    margin: 1rem;
+}
+
+.contact-info {
+  color: var(--accent-grey);
+  text-align: center;
+  text-decoration: none;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.contact-method:hover {
+  cursor: pointer;
+  }
+  .contact-method:hover .contact-info {
+  color: #fff;
+  text-decoration: underline;
+  }
+  .contact-method:hover > img {
+  transform: scale(1.5);
   }
 
-  input[type='text'], [type='email'], select, textarea {
-    background: none;
-  border: none;
-    border-bottom: solid 2px #847468;
-    color: #847468;
-    font-size: .6em;
-  font-weight: 400;
-  letter-spacing: 1px;
-    margin: 0.875em;
-    padding: 0.875em;
-  text-transform: uppercase;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -ms-box-sizing: border-box;
-    -o-box-sizing: border-box;
-    box-sizing: border-box;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    -ms-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
-}
 
-input[type='text']:focus, [type='email']:focus, textarea:focus {
-    outline: none;
-    padding: 0 0 0.875em 0;
-}
   
  
   .footer {
@@ -518,13 +552,31 @@ input[type='text']:focus, [type='email']:focus, textarea:focus {
     left: 70px;
   }
 
-  .container{
+  .contact-container{
     height: 500px;
+    width: 300px;
+    padding: 1rem;
   }
 
   .contact-head{
-    padding-top: 5em;
+    padding-top: 2rem;
+    width: 300px;
+    font-size: 1rem;
+    padding-left: 1rem;
   }
+
+  .contact-head p{
+    font-size: .9rem;
+    width: 240px;
+  }
+
+  .contact-method{
+    display: flex;
+    flex-direction: column;
+    font-size: .7rem;
+    padding-left: 0;
+  }
+
   }
 
   @media only screen and (min-width: 768px) {
@@ -572,16 +624,29 @@ input[type='text']:focus, [type='email']:focus, textarea:focus {
       left: 70px;
     }
   
-    .container{
+    .contact-container{
       height: 500px;
+      width: 300px;
+      padding: 1rem;
     }
   
     .contact-head{
-      padding-top: 5em;
+      padding-top: 2rem;
+      width: 300px;
+      font-size: 1rem;
+      padding-left: 1rem;
     }
-
-    #submit{
-      font-size: .9em;
+  
+    .contact-head p{
+      font-size: .9rem;
+      width: 240px;
+    }
+  
+    .contact-method{
+      display: flex;
+      flex-direction: column;
+      font-size: .7rem;
+      padding-left: 0;
     }
 
   }
@@ -642,16 +707,29 @@ input[type='text']:focus, [type='email']:focus, textarea:focus {
       left: 70px;
     }
   
-    .container{
+    .contact-container{
       height: 500px;
+      width: 300px;
+      padding: 1rem;
     }
   
     .contact-head{
-      padding-top: 5em;
+      padding-top: 2rem;
+      width: 300px;
+      font-size: 1rem;
+      padding-left: 1rem;
     }
-
-    #submit{
-      font-size: .9em;
+  
+    .contact-head p{
+      font-size: .9rem;
+      width: 240px;
+    }
+  
+    .contact-method{
+      display: flex;
+      flex-direction: column;
+      font-size: .7rem;
+      padding-left: 0;
     }
   }
   
