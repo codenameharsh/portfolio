@@ -14,6 +14,10 @@
     --text-color: white;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .wrapper{
     width: 100vw;
     overflow-x: hidden;
@@ -26,7 +30,6 @@ body{
     background-color: var(--bg-color);
     width: 100vw;
     overflow-x: hidden;
-    z-index: 1;
 }
 
 .im-fell-double-pica-regular {
@@ -64,6 +67,7 @@ body{
       position: fixed;
       top: 0;
       width: 100%;
+      z-index: 10;
     }
 
     #nav-bar{
@@ -106,6 +110,17 @@ body{
     #nav-menu li{
       padding: .5em;
 
+    }
+
+    #nav-menu li > a{
+      text-decoration: none;
+      color: var(--accent-grey);
+      font-weight: bold;
+    }
+
+    #nav-menu a:active, #nav-menu a:focus {
+      outline: none;
+      box-shadow: none;
     }
     /* hero section */
 
@@ -295,113 +310,78 @@ body{
   }
 
 /* projects */
-#web-des {
-  background: url('images/web2.jpeg') no-repeat center center / cover fixed;
-}
-#fas-illus {
-  background: url('images/fashion3.jpeg') no-repeat center center / cover fixed;
-}
-#brochure {
-  background: url('images/brochure2.jpeg') no-repeat center center / cover fixed;
-}
-#contact-me {
-  background: url('images/bg-contact.jpeg') no-repeat center center / cover fixed;
 
-}
-
-.page {
-    max-width: 100vw;
-    margin: 0 auto;
-  }
-
-  .banner-container{
-    position: relative;
-    z-index: -1;
-  }
-    
-  .banner_container-1 {
+  .projects-banner {
     display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
     width: 100vw;
-    padding: 16px;
-    position: relative;
- 
   }
   
-  .banner_container-2 {
-    border-radius: 8px;
-    padding: 16px 0;
-    background: #041e32e1;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
-  }
-  
-  .banner_section {
-    padding: 8px;
-  }
-
-  #contact-bg {
-    height: 75vh;
-  }
-  
-  .banner_heading {
-    padding: 8px;
-    font: bold 22px / 1.5 sans-serif;
-    text-align: center;
-    color: #847468;
-    text-shadow: 0 4px 8px rgb(0, 0, 0);
-    opacity: 1;
-  }
-  
-  .banner_subheading {
-    padding: 8px;
-    font: italic 12px / 1.5 sans-serif;
-    text-align: center;
-    color: #b3b3b3;
-    text-shadow: 0 4px 8px rgba(0, 0, 0, 1);
-  }
-  
-  .banner_button {
-    margin: 0 auto;
-    padding: 4px;
-    width: 120px;
-  }
-  
-  .banner_button_link {
+  .web-design-section {
+    width: 100vw; 
     display: flex;
-    justify-content: center;
-    
-    border-radius: 15px;
-    padding: 8px;
-    font: 12px / 1.5 sans-serif;
-    text-decoration: none;
-    text-align: center;
-    color: var(--text-color);
-    background: #321804;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
-    font-family: "Julius Sans One", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    text-decoration: none;
-    cursor: pointer;
+    flex-direction: column;
+    align-items: center;
+    padding: 250px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.659), rgba(0, 0, 0, 0.582)), url('images/web2.jpeg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
   
-  .banner_button_link:hover{
-    animation: bounce 0.3s  alternate; 
-    color: #fff;
-    background-color: #847468;
-    cursor: pointer;
-  }
-  
-  @media (min-width: 480px) {
-  
-    .banner_heading {font-size: 48px;}
-  
-    .banner_button {width: 50%;}
-  
+  .graphic-design-section {
+    width: 100vw; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 250px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.622), rgba(0, 0, 0, 0.589)), url('images/brochure2.jpeg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
 
+  
+  .section-title {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: white;
+    z-index: 1; /* Add this to ensure the title appears on top of the background */
+  }
+  
+  .section-description {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: white;
+    z-index: 1; /* Add this to ensure the description appears on top of the background */
+  }
+  
+  .pdf-button {
+    background-color: var(--bg-color);
+    color: var(--light-brown);
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding: 1.5rem 4rem;
+    border: none;
+    border-radius: 3rem;
+    cursor: pointer;
+    z-index: 1; /* Add this to ensure the button appears on top of the background */
+  }
+  
+  .pdf-button:hover {
+    background-color: var(--accent-brown);
+  }
+
+  
+
+
+
+  /* contact section */
   .contact-container {
     height: 500px;
     width: 300px;
@@ -506,6 +486,85 @@ ul {
 
     
 /* } */
+/* For desktop screens */
+@media only screen and (min-width: 1200px) {
+  .projects-banner {
+    padding: 2rem;
+  }
+  .web-design-section, .graphic-design-section {
+    padding: 200px 50px;
+  }
+  .section-title {
+    font-size: 3rem;
+  }
+  .section-description {
+    font-size: 1.8rem;
+  }
+  .pdf-button {
+    font-size: 1.5rem;
+    padding: 1.5rem 3rem;
+  }
+}
+
+/* For laptop screens */
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+  .projects-banner {
+    padding: 1.5rem;
+  }
+  .web-design-section, .graphic-design-section {
+    padding: 150px 30px;
+  }
+  .section-title {
+    font-size: 2.5rem;
+  }
+  .section-description {
+    font-size: 1.5rem;
+  }
+  .pdf-button {
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+  }
+}
+
+/* For tablet screens */
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+  .projects-banner {
+    padding: 1rem;
+  }
+  .web-design-section, .graphic-design-section {
+    padding: 100px 20px;
+  }
+  .section-title {
+    font-size: 2rem;
+  }
+  .section-description {
+    font-size: 1.2rem;
+  }
+  .pdf-button {
+    font-size: 1rem;
+    padding: 0.5rem 1.5rem;
+  }
+}
+
+/* For mobile screens */
+@media only screen and (max-width: 599px) {
+  .projects-banner {
+    padding: 0.5rem;
+  }
+  .web-design-section, .graphic-design-section {
+    padding: 50px 10px;
+  }
+  .section-title {
+    font-size: 1.5rem;
+  }
+  .section-description {
+    font-size: 1rem;
+  }
+  .pdf-button {
+    font-size: 0.8rem;
+    padding: 0.2rem 1rem;
+  }
+}
 
 @media only screen and (min-width: 480px) and (max-width: 767px) {
 /* Landscape mobile styles here */

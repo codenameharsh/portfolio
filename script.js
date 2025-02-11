@@ -1,45 +1,46 @@
 $(document).ready(() => {
-    //nav bar
-    $('#header').on('click', function(event){
-        event.preventDefault();
-        $('#nav-menu').toggle()
-      });
-      $('#nav-menu').hide();
+  //nav bar
+  $('#header').on('click', function(event){
+    event.preventDefault();
+    $('#nav-menu').toggle()
+  });
+  
+  $('#nav-menu').hide();
 
-      var navbar = $("#header");
-      var stickyOffset = navbar.offset().top;
-    
-      $(window).scroll(function() {
-        if ($(window).scrollTop() >= stickyOffset) {
-          navbar.addClass("sticky");
-        } else {
-          navbar.removeClass("sticky");
-        }
-      });
+  $('#nav-menu a').on('click', function(event){
+    event.stopPropagation();
+  });
 
-   
+  var navbar = $("#header");
+  var stickyOffset = navbar.offset().top;
 
-
+  $(window).scroll(function() {
+    if ($(window).scrollTop() >= stickyOffset) {
+      navbar.addClass("sticky");
+    } else {
+      navbar.removeClass("sticky");
+    }
+  });
 })
 
 
 
-//sticky navbar
-// Get the navbar
-var navbar = document.getElementById("header");
+// //sticky navbar
+// // Get the navbar
+// var navbar = document.getElementById("header");
 
-// Get the offset position of the navbar
-var sticky = navbar.offsetTop;
+// // Get the offset position of the navbar
+// var sticky = navbar.offsetTop;
 
-// Add the sticky class to the navbar when you reach its scroll position
-// Remove the "sticky" class when you leave the scroll position
-window.onscroll = function() {
-  if (window.scrollY >= sticky) {
-    navbar.classList.add("sticky");
-  } else {
-    navbar.classList.remove("sticky");
-  }
-};
+// // Add the sticky class to the navbar when you reach its scroll position
+// // Remove the "sticky" class when you leave the scroll position
+// window.onscroll = function() {
+//   if (window.scrollY >= sticky) {
+//     navbar.classList.add("sticky");
+//   } else {
+//     navbar.classList.remove("sticky");
+//   }
+// };
 
 
 //hero section
@@ -72,4 +73,16 @@ function updateText() {
     setTimeout(updateText, 300)
 }
 
+// Get the PDF buttons
+const webDesignPdfButton = document.getElementById('web-design-pdf');
+const graphicDesignPdfButton = document.getElementById('graphic-design-pdf');
+
+// Add event listeners to the PDF buttons
+webDesignPdfButton.addEventListener('click', () => {
+  window.open('portfolio_web.pdf', '_blank');
+});
+
+graphicDesignPdfButton.addEventListener('click', () => {
+  window.open('portfolio_web.pdf', '_blank');
+});
 
