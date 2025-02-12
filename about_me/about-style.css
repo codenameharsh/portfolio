@@ -42,9 +42,7 @@ body{
     'skills des'
     'h4 h4'
     ;
-    gap:0;
-    grid-row-gap: 0;
-    grid-column-gap: 0;
+    gap: 1.5rem;
     justify-content: center;
     align-items: center;
     width: 900px;
@@ -52,8 +50,8 @@ body{
   }
   
   .photo-container img{
-    height: 20rem;
-    width: 20rem;
+    height: 18rem;
+    width: 18rem;
     clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
     grid-area: photo;
   }
@@ -92,14 +90,11 @@ body{
   .skills {
     grid-area: skills;
     background-color:#847468b3;
-    padding: 1rem;
     border-top-left-radius: 3rem;
     border-bottom-right-radius: 3rem;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    width: 300px;
-    height: 450px;
   }
   
   .skills ul {
@@ -108,7 +103,10 @@ body{
     margin: 1rem;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+  
   }
   
   .skills li {
@@ -117,8 +115,12 @@ body{
     padding: 0.5rem 1rem;
     border-radius: 1rem;
     margin: 0.5rem;
+    width: 100rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
   .skills li:hover {
@@ -174,3 +176,96 @@ body{
     width: 40px;
     height: 40px;
   }
+
+
+  /* Large screens (Desktops/Laptops) */
+@media only screen and (min-width: 1200px) {
+  .about-container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .photo-container {
+    height: 250px;
+  }
+  .about-des p {
+    font-size: 18px;
+  }
+  .skills ul {
+    flex-wrap: nowrap;
+  }
+  .skills li {
+    margin: 1rem;
+    padding: 1rem;
+    width: calc(80% - 1rem);
+  }
+}
+
+/* Medium screens (Tablets) */
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+  .about-container {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .photo-container {
+    height: 200px;
+  }
+  .about-des p {
+    font-size: 16px;
+  }
+  .skills ul {
+    flex-wrap: wrap;
+  }
+  .skills li {
+    margin: 0.5rem;
+    padding: 0.5rem;
+    width: calc(60% - 1rem);
+  }
+}
+
+/* Small screens (Smartphones) */
+@media only screen and (max-width: 767px) {
+  .about-container {
+    width: 100%;
+    padding: 1rem;
+  }
+  .photo-container {
+    height: 150px;
+  }
+  .about-des p {
+    font-size: 14px;
+  }
+  .skills ul {
+    flex-direction: column;
+  }
+  .skills li {
+    margin: 0.2rem;
+    padding: 0.2rem;
+    width: calc(50% - 1rem);
+  }
+  .home-icon {
+    bottom: 5px;
+    right: 5px;
+  }
+}
+
+/* Extra small screens (Older Smartphones) */
+@media only screen and (max-width: 479px) {
+  .about-container {
+    padding: 0.5rem;
+  }
+  .photo-container {
+    height: 100px;
+  }
+  .about-des p {
+    font-size: 12px;
+  }
+  .skills li {
+    margin: 0.1rem;
+    padding: 0.1rem;
+    width: 100%;
+  }
+  .home-icon {
+    bottom: 2px;
+    right: 2px;
+  }
+}
