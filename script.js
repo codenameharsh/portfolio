@@ -83,6 +83,6 @@ webDesignPdfButton.addEventListener('click', () => {
 });
 
 graphicDesignPdfButton.addEventListener('click', () => {
-  window.open('portfolio_web.pdf', '_blank');
+  window.open('portfolio_graphic.pdf', '_blank');
 });
 
