@@ -163,10 +163,10 @@ body{
 
     .hero-btn button{
         background-color: #32180495;
-        color: var(--accent-grey) op;
-        border: 1px solid #321804;
+        color: var(--accent-grey);
         border-top-left-radius: 3rem;
         border-bottom-right-radius:3rem ;
+        border: none;
         font-family: "Julius Sans One", sans-serif;
         font-weight: 800;
         font-style: normal;
