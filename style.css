@@ -63,6 +63,8 @@ body{
         width: 100vw;
     }
 
+
+
     .sticky {
       position: fixed;
       top: 0;
@@ -84,6 +86,11 @@ body{
     #logo{
         height: 130px;
         width: 130px;
+    }
+
+    #logo:hover{
+      height: 100px;
+      width: 100px;
     }
 
     .nav-menu-bar{
@@ -147,16 +154,23 @@ body{
         color: var(--bg-color);
     }
 
+    .hero-btn{
+      display: flex;
+      flex-direction:row ;
+      justify-content: center;
+      align-items: center;
+    }
+
     .hero-btn button{
-        padding: 10px;
-        background-color: var(--accent-brown);
-        color: var(--accent-grey);
-        border: none;
-        border-radius: 10px;
+        background-color: #32180495;
+        color: var(--accent-grey) op;
+        border: 1px solid #321804;
+        border-top-left-radius: 3rem;
+        border-bottom-right-radius:3rem ;
         font-family: "Julius Sans One", sans-serif;
         font-weight: 800;
         font-style: normal;
-        font-size: 10px;
+        font-size: .8rem;
     }
 
     .hero-btn button:hover{
@@ -315,21 +329,30 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0;
+    padding: 3rem;
     width: 100vw;
   }
   
   .web-design-section {
-    width: 100vw; 
+    width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 250px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.429), rgba(0, 0, 0, 0.325)), url('images/web2.jpeg');
+    color: #041e32;  
+   background-color: #847468;
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+    
+  }
+
+  .web-design-section:hover{
+    background-image: url(images/web_bg2.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: background-image 30s ease-in-out;  
   }
   
   .graphic-design-section {
@@ -338,26 +361,55 @@ body{
     flex-direction: column;
     align-items: center;
     padding: 250px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.429), rgba(0, 0, 0, 0.325)), url('images/brochure2.jpeg');
+    background-color: #041e32;
+    color: #847468;
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
 
+  .graphic-design-section:hover{
+    background-image: url(images/graphic_bg.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: background-image 30s ease-in-out;  
+    color: var(--bg-color);
+  }
   
+  .art-section {
+    width: 100vw; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 250px;
+    background-color: #847468;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+
+  .art-section:hover{
+    background-image: url(images/web_bg.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: background-image 30s ease-in-out;  
+    color: var(--bg-color);
+  }
+
   .section-title {
     font-size: 4rem;
     font-weight: bold;
     margin-bottom: 10px;
-    color: white;
     z-index: 1; /* Add this to ensure the title appears on top of the background */
   }
   
   .section-description {
     font-size: 2rem;
     margin-bottom: 20px;
-    color: white;
+    width: 40vw;
     z-index: 1; /* Add this to ensure the description appears on top of the background */
   }
   
@@ -368,13 +420,22 @@ body{
     font-size: 1.5rem;
     padding: 1.5rem 4rem;
     border: none;
-    border-radius: 3rem;
+    border-top-left-radius: 3rem;
+    border-bottom-right-radius:3rem ;
     cursor: pointer;
     z-index: 1; /* Add this to ensure the button appears on top of the background */
   }
   
   .pdf-button:hover {
     background-color: var(--accent-brown);
+  }
+
+  .graphic-design-section button{
+    background-color: #321804;
+  }
+  .graphic-design-section button:hover{
+    background-color: #847468;
+    color: #041e32;
   }
 
   
@@ -437,7 +498,7 @@ ul {
     padding-left: 0;
 }
 
-.contact-method img {
+.contact-method  img {
     width: 2rem;
     height: 2rem;
     padding: .1rem;
@@ -455,12 +516,10 @@ ul {
 .contact-method:hover {
   cursor: pointer;
   }
+
   .contact-method:hover .contact-info {
   color: #fff;
   text-decoration: underline;
-  }
-  .contact-method:hover > img {
-  transform: scale(1.5);
   }
 
 
@@ -491,7 +550,7 @@ ul {
   .projects-banner {
     padding: 2rem;
   }
-  .web-design-section, .graphic-design-section {
+  .web-design-section, .graphic-design-section, .art-section {
     padding: 200px 50px;
   }
   .section-title {
@@ -512,7 +571,7 @@ ul {
   .projects-banner {
     padding: 1.5rem;
   }
-  .web-design-section, .graphic-design-section {
+  .web-design-section, .graphic-design-section, .art-section {
     padding: 150px 30px;
   }
   .section-title {
@@ -532,7 +591,7 @@ ul {
   .projects-banner {
     padding: 1rem;
   }
-  .web-design-section, .graphic-design-section {
+  .web-design-section, .graphic-design-section, .art-section {
     padding: 100px 20px;
   }
   .section-title {
@@ -553,7 +612,7 @@ ul {
   .projects-banner {
     padding: 0.5rem;
   }
-  .web-design-section, .graphic-design-section {
+  .web-design-section, .graphic-design-section, .art-section {
     padding: 50px 10px;
   }
   .section-title {

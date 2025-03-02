@@ -76,6 +76,7 @@ function updateText() {
 // Get the PDF buttons
 const webDesignPdfButton = document.getElementById('web-design-pdf');
 const graphicDesignPdfButton = document.getElementById('graphic-design-pdf');
+const artPdfButton = document.getElementById('art-pdf');
 
 // Add event listeners to the PDF buttons
 webDesignPdfButton.addEventListener('click', () => {
@@ -84,5 +85,9 @@ webDesignPdfButton.addEventListener('click', () => {
 
 graphicDesignPdfButton.addEventListener('click', () => {
   window.open('portfolio_graphic.pdf', '_blank');
+});
+
+artPdfButton.addEventListener('click', () => {
+  window.open('portfolio_art.pdf', '_blank');
 });
 
