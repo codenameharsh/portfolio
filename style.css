@@ -162,15 +162,17 @@ body{
     }
 
     .hero-btn button{
-        background-color: #32180495;
-        color: var(--accent-grey);
+        background-color: #321804b5;
+        color: #fff;
         border-top-left-radius: 3rem;
         border-bottom-right-radius:3rem ;
-        border: none;
         font-family: "Julius Sans One", sans-serif;
         font-weight: 800;
         font-style: normal;
         font-size: .8rem;
+        width: 8rem;
+        height: 3rem;
+        border: 2px dashed #847468;
     }
 
     .hero-btn button:hover{
