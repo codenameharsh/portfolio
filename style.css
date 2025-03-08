@@ -247,7 +247,7 @@ body{
   /* Responsive Styles */
   @media only screen and (max-width: 1200px) {
       #hero {
-          width: 80%; /* Make hero section slightly smaller on medium screens */
+          width: 80%;/* Make hero section slightly smaller on medium screens */
       }
   }
   
