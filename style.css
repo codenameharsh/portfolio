@@ -21,6 +21,8 @@ html {
 .wrapper{
     width: 100vw;
     overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 body{
@@ -131,157 +133,162 @@ body{
       outline: none;
       box-shadow: none;
     }
-    /* hero section */
-    #hero {
-      width: 100%;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      color: var(--text-color);
-      position: relative;
-      overflow: hidden;
-      padding: 1rem;
-      margin: 0;
-      border-radius: 3rem; /* Ensure the main element has rounded corners */
-  }
-  
 
-  #hero::before,
+   /* hero section */
+/* Hero section */
+#hero {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-color);
+  position: relative;
+  overflow: hidden;
+  padding: 1rem;
+  margin: 0 auto; /* Center horizontally */
+  border: .5rem solid var(--light-brown); 
+  border-radius: 3rem; /* Ensure the main element has rounded corners */
+  max-width: 1200px; /* Optional: Max width for larger screens */
+}
+
+/* Optional borders */
+#hero::before,
 #hero::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-radius: 3rem; /* Match the rounded corners */
-    z-index: -1; /* Ensure the borders are behind the content */
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 3rem; /* Match the rounded corners */
+  z-index: -1; /* Ensure the borders are behind the content */
 }
 
 #hero::before {
-    border: 3px solid #847468; /* Outer beige border */
+  border: 3px solid #847468; /* Outer beige border */
 }
 
 #hero::after {
-    border: 3px solid #847468; /* Inner beige border */
-    top: 3px; /* Slightly smaller offset for the inner border */
-    left: 3px;
-    right: 3px;
-    bottom: 3px;
+  border: 3px solid #847468; /* Inner beige border */
+  top: 3px; /* Slightly smaller offset for the inner border */
+  left: 3px;
+  right: 3px;
+  bottom: 3px;
 }
-  
-  /* Subtle animated texture for depth */
-  #hero::before {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background: url('images/subtle-texture.jpg'); /* Optional texture image */
-      opacity: 0.1;
-      animation: moveTexture 5s linear infinite;
-      z-index: -2; /* Move the texture beneath the borders */
-      background-position: center center; /* Center the texture */
-      background-size: cover; /* Make the texture cover the section */
+
+/* Subtle animated texture for depth */
+#hero::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url('images/subtle-texture.jpg'); /* Optional texture image */
+  opacity: 0.1;
+  animation: moveTexture 30s linear infinite;
+  z-index: -2; /* Move the texture beneath the borders */
+  background-position: center center; /* Center the texture */
+  background-size: cover; /* Make the texture cover the section */
+}
+
+/* Texture movement for subtle depth */
+@keyframes moveTexture {
+  0% {
+      transform: translate(0, 0); /* Start at top-left corner */
   }
-  
-  /* Texture movement for subtle depth */
-  @keyframes moveTexture {
-      0% {
-          transform: translateX(0);
-      }
-      100% {
-          transform: translateX(100px);
-      }
+  100% {
+      transform: translate(550px, 550px); /* Move to bottom-right corner */
   }
-  
+}
+
+/* Centered Text */
+.text-container {
+  margin: 20px;
+  padding: 15px;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #f5e1d2;
+  text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
+}
+
+#blue-text {
+  color: var(--light-brown);
+}
+
+/* Animated career text */
+#career-text {
+  color: white;
+  font-weight: bold;
+}
+
+/* Hero Buttons */
+.hero-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.hero-btn button {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border-radius: 2rem;
+  font-family: "Julius Sans One", sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  width: 10rem;
+  height: 3.5rem;
+  border: 2px solid var(--accent-grey);
+  transition: all 0.3s ease-in-out;
+}
+
+.hero-btn button:hover {
+  background-color: var(--light-brown);
+  color: #2a1505;
+  transform: scale(1.05);
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 1200px) {
+  #hero {
+      width: 80%; /* Make hero section slightly smaller on medium screens */
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #hero {
+      width: 90%; /* On tablets, make the hero take up more width */
+      height: 80vh; /* Reduce height on smaller screens */
+  }
+
   .text-container {
-    margin: 20px;
-    padding: 15px;
-    text-align: center;
-    font-size: 2rem;
-    font-weight: bold;
-    color: #f5e1d2;
-    text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
-}
-  
-  #blue-text {
-      color: var(--light-brown);
+      font-size: 1.5rem; /* Smaller font size on tablets */
   }
-  
-  /* Animated career text */
-  #career-text {
-      color: white;
-      font-weight: bold;
-  }
-  
-  /* Hero Buttons */
-  .hero-btn {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      gap: 1rem;
-  }
-  
+
   .hero-btn button {
-      background: rgba(255, 255, 255, 0.1);
-      color: #fff;
-      border-radius: 2rem;
-      font-family: "Julius Sans One", sans-serif;
-      font-weight: 600;
-      font-size: 1rem;
-      width: 10rem;
-      height: 3.5rem;
-      border: 2px solid var(--accent-grey);
-      transition: all 0.3s ease-in-out;
+      width: 8rem; /* Reduce button size on tablets */
+      height: 3rem; /* Adjust button size */
   }
-  
-  .hero-btn button:hover {
-      background-color: var(--light-brown);
-      color: #2a1505;
-      transform: scale(1.05);
+}
+
+@media only screen and (max-width: 480px) {
+  #hero {
+      width: 100%; /* Full width on mobile */
+      height: 70vh; /* Adjust height for mobile screens */
   }
-  
-  /* Responsive Styles */
-  @media only screen and (max-width: 1200px) {
-      #hero {
-          width: 80%;/* Make hero section slightly smaller on medium screens */
-      }
+
+  .text-container {
+      font-size: 1.2rem; /* Smaller text size for mobile */
   }
-  
-  @media only screen and (max-width: 768px) {
-      #hero {
-          width: 90%; /* On tablets, make the hero take up more width */
-          height: 80vh; /* Reduce height on smaller screens */
-      }
-      
-      .text-container {
-          font-size: 1.5rem; /* Smaller font size on tablets */
-      }
-  
-      .hero-btn button {
-          width: 8rem; /* Reduce button size on tablets */
-          height: 3rem; /* Adjust button size */
-      }
+
+  .hero-btn button {
+      width: 7rem; /* Smaller button on mobile */
+      height: 2.8rem; /* Adjust button height */
   }
-  
-  @media only screen and (max-width: 480px) {
-      #hero {
-          width: 100%; /* Full width on mobile */
-          height: 70vh; /* Adjust height for mobile screens */
-      }
-      
-      .text-container {
-          font-size: 1.2rem; /* Smaller text size for mobile */
-      }
-  
-      .hero-btn button {
-          width: 7rem; /* Smaller button on mobile */
-          height: 2.8rem; /* Adjust button height */
-      }
-  }
+}
 
 
 /* skills banner */
