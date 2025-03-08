@@ -1,11 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=IM+Fell+Double+Pica:ital@0;1&family=Julius+Sans+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Arapey:ital@0;1&display=swap');
 
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+:root {
     --bg-color: #041e32;
     --light-brown: #847468;
     --accent-grey: #b3b3b3;
@@ -13,259 +9,196 @@
     --text-color: white;
 }
 
-.wrapper{
-    width: 100vw;
-    overflow-x: hidden;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body{
+body {
     font-family: "Arapey", serif;
-    font-weight: 400;
-    font-style: normal;
-    background-color: var(--bg-color);
-    width: 100vw;
-    height: 900px;
-}
-
-.about-container{
-    background-image: url(bg-hero.jpeg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    border: 1rem solid var(--accent-grey);
-    padding: 2rem;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 3fr 1fr;
-    grid-template-areas: 
-    'photo header'
-    'skills des'
-    'h4 h4'
-    ;
-    gap: 1.5rem;
-    justify-content: center;
-    align-items: center;
-    width: 900px;
-    color: var(--accent-grey);
-  }
-  
-  .photo-container img{
-    height: 18rem;
-    width: 18rem;
-    clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
-    grid-area: photo;
-  }
-  
-  .about{
-    grid-area: header;
-    font-size: 2rem;
-    padding: 1rem;
-    margin: 0;
-    gap:0;
-    color: var(--accent-brown);
-  }
-  
-  
-  
-  .about-des{
-    grid-area: des;
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-    margin: 0;
-    line-height: 2rem;
-    gap:0;
-    text-align: justify;
-  }
-  
-  .about-des p{
-    padding: 2rem;
-    background-color: #041e32da;
-    border-top-right-radius: 4rem;
-    border-bottom-left-radius: 4rem;
-    color: white;
-    font-weight: 700;
-  }
-  
-  .skills {
-    grid-area: skills;
-    background-color:#847468b3;
-    border-top-left-radius: 3rem;
-    border-bottom-right-radius: 3rem;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-  }
-  
-  .skills ul {
-    list-style: none;
-    padding: 0;
-    margin: 1rem;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: center; 
-    align-items: center; 
-  
-  }
-  
-  .skills li {
     background-color: var(--bg-color);
     color: var(--text-color);
-    padding: 0.5rem 1rem;
-    border-radius: 1rem;
-    margin: 0.5rem;
-    width: 100rem;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
+    width: 100vw;
+    min-height: 100vh;
     display: flex;
-    justify-content: center;
     align-items: center;
-  }
-  
-  .skills li:hover {
-    transform: scale(1.1);
-  }
-  
-  .skills ul > span {
-    font-size: 1.5rem;
-    text-transform: uppercase;
-    margin-bottom: 1rem;
-    display: block;
-    text-align: center;
-  }
+    justify-content: center;
+    padding: 2rem;
+}
 
-  .skills .key-skills {
+.about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 900px;
+    width: 90%;
+    background: rgba(4, 30, 50, 0.9);
+    padding: 2rem;
+    border-radius: 1.5rem;
+    border: 3px solid var(--accent-grey);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    overflow: hidden;
+}
+
+.photo-container img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid var(--accent-grey);
+    object-fit: cover;
+}
+
+.about h1 {
+    font-size: 2.5rem;
+    color: var(--light-brown);
+    margin-top: 1rem;
+}
+
+.about h4 {
     font-size: 1.5rem;
-    text-transform: uppercase;
-    margin-bottom: 1rem;
-    color:var(--accent-brown);
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     font-weight: bold;
-  }
-  
-  .about-container > h4{
-    grid-area: h4;
-    margin: 0;
-    font-size: 1.2rem;
-    text-align: center;
-    background-color: var(--accent-grey);
-    color: #321804;
-    padding: 1.5rem;
-    height: 7rem;
-    border-radius: 5rem;
-  }
+}
 
-  .home-icon {
+.about h6 {
+  color: var(--accent-grey);
+}
+
+.about-des p {
+    font-size: 1rem;
+    line-height: 1.8;
+    padding: 1.5rem;
+    background: rgba(4, 30, 50, 0.85);
+    border-radius: 1rem;
+    margin-top: 1rem;
+    text-align: justify;
+}
+
+.skills {
+    background: linear-gradient(135deg, rgba(132, 116, 104, 0.9), rgba(4, 30, 50, 0.9));
+    padding: 2rem;
+    border-radius: 1rem;
+    width: 100%;
+    margin-top: 2rem;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.skills .key-skills {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--accent-brown);
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.skills ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0;
+}
+
+.skills li {
+    background: rgba(4, 30, 50, 0.8);
+    padding: 0.8rem 1.5rem;
+    border-radius: 2rem;
+    color: var(--text-color);
+    font-weight: 600;
+    font-size: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+    border: 1px solid var(--accent-grey);
+    list-style: none;
+}
+
+.skills li:hover {
+    transform: translateY(-5px);
+    background: var(--accent-brown);
+}
+
+.home-icon {
     position: fixed;
     bottom: 20px;
     right: 20px;
-  }
-  
-  .home-icon button {
-    background-color: transparent;
+    z-index: 1000;
+}
+
+.home-icon button {
+    background: var(--accent-brown);
     border: none;
+    padding: 0.8rem 1.2rem;
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--text-color);
     cursor: pointer;
-    background-color: var(--accent-brown);
-    padding: 1.5rem;
-    border-radius: 3rem;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-  }
-  
-  .home-icon img {
-    width: 40px;
-    height: 40px;
-  }
-
-
-  /* Large screens (Desktops/Laptops) */
-@media only screen and (min-width: 1200px) {
-  .about-container {
-    width: 80%;
-    margin: 0 auto;
-  }
-  .photo-container {
-    height: 250px;
-  }
-  .about-des p {
-    font-size: 18px;
-  }
-  .skills ul {
-    flex-wrap: nowrap;
-  }
-  .skills li {
-    margin: 1rem;
-    padding: 1rem;
-    width: calc(80% - 1rem);
-  }
+    transition: all 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-/* Medium screens (Tablets) */
-@media only screen and (min-width: 768px) and (max-width: 1199px) {
-  .about-container {
-    width: 90%;
-    margin: 0 auto;
-  }
-  .photo-container {
-    height: 200px;
-  }
-  .about-des p {
-    font-size: 16px;
-  }
-  .skills ul {
-    flex-wrap: wrap;
-  }
-  .skills li {
-    margin: 0.5rem;
-    padding: 0.5rem;
-    width: calc(60% - 1rem);
-  }
+.home-icon button:hover {
+    transform: translateY(-3px);
+    background: var(--light-brown);
 }
 
-/* Small screens (Smartphones) */
-@media only screen and (max-width: 767px) {
-  .about-container {
-    width: 100%;
-    padding: 1rem;
-  }
-  .photo-container {
-    height: 150px;
-  }
-  .about-des p {
-    font-size: 14px;
-  }
-  .skills ul {
-    flex-direction: column;
-  }
-  .skills li {
-    margin: 0.2rem;
-    padding: 0.2rem;
-    width: calc(50% - 1rem);
-  }
-  .home-icon {
-    bottom: 5px;
-    right: 5px;
-  }
+.home-icon img {
+    width: 24px;
+    height: 24px;
 }
 
-/* Extra small screens (Older Smartphones) */
-@media only screen and (max-width: 479px) {
-  .about-container {
-    padding: 0.5rem;
-  }
-  .photo-container {
-    height: 100px;
-  }
-  .about-des p {
-    font-size: 12px;
-  }
-  .skills li {
-    margin: 0.1rem;
-    padding: 0.1rem;
-    width: 100%;
-  }
-  .home-icon {
-    bottom: 2px;
-    right: 2px;
-  }
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-container {
+        padding: 1.5rem;
+    }
+    .about h1 {
+        font-size: 2rem;
+    }
+    .about h4 {
+        font-size: 1.2rem;
+    }
+    .about-des p {
+        font-size: 0.9rem;
+        padding: 1rem;
+    }
+    .skills li {
+        font-size: 0.9rem;
+        padding: 0.6rem 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-container {
+        width: 100%;
+        padding: 1rem;
+    }
+    .about h1 {
+        font-size: 1.8rem;
+    }
+    .about h4 {
+        font-size: 1rem;
+    }
+    .about-des p {
+        font-size: 0.85rem;
+    }
+    .skills li {
+        font-size: 0.85rem;
+        padding: 0.5rem 1rem;
+    }
+    .home-icon {
+        bottom: 10px;
+        right: 10px;
+    }
+    .home-icon button {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+    }
 }
