@@ -44,34 +44,30 @@ $(document).ready(() => {
 
 
 //hero section
-const containerEl = document.querySelector(".text-container")
+const careerTextEl = document.querySelector("#career-text"); 
 
-const careers = ["Graphic Designer", "UI/UX Designer", "Freelancer", "Front-end Web Developer", "Fashion Illustrator"]
-
-let careerIndex = 0
-
-let characterIndex = 0
-
-
-updateText()
+const careers = ["Graphic Designer", "UI/UX Designer", "Freelancer", "Front-end Web Developer", "Fashion Illustrator"];
+let careerIndex = 0;
+let characterIndex = 0;
 
 function updateText() {
-    characterIndex++
-    
-    containerEl.innerHTML = `<h1> <p id="blue-text">Hey there! I am</p> ${careers[careerIndex].slice(0,1) === "U" ? "an" : "a"}  ${careers[careerIndex].slice(0,characterIndex)} </h1>`
+    let currentText = careers[careerIndex].slice(0, characterIndex);
 
-    
-    if(characterIndex === careers[careerIndex].length){
-        careerIndex++
-        characterIndex = 0
+    careerTextEl.textContent = currentText;  // Update only the career text
+
+    if (characterIndex < careers[careerIndex].length) {
+        characterIndex++;
+        setTimeout(updateText, 100); // Faster typing effect
+    } else {
+        setTimeout(() => {
+            characterIndex = 0;
+            careerIndex = (careerIndex + 1) % careers.length;
+            updateText();
+        }, 1500); // Pause before switching to next career
     }
-
-    if(careerIndex === careers.length){
-        careerIndex = 0
-    }
-
-    setTimeout(updateText, 300)
 }
+
+updateText();
 
 // Get the PDF buttons
 const webDesignPdfButton = document.getElementById('web-design-pdf');
