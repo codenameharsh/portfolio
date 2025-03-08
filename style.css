@@ -633,6 +633,10 @@ ul {
 
 @media only screen and (min-width: 480px) and (max-width: 767px) {
 /* Landscape mobile styles here */
+#nav-bar{
+  height: 100px;
+}
+
   #nav-menu {
     font-size: .7em;
     position: relative;
@@ -641,6 +645,7 @@ ul {
     align-items: center;
     justify-content: space-evenly;
   }
+
 
   #hero {
     width: 100vw;
@@ -705,6 +710,10 @@ ul {
 
   @media only screen and (min-width: 768px) {
     /* Tablet styles here */
+    #nav-bar{
+      height: 100px;
+    }
+
     #nav-menu {
       font-size: .7em;
       position: relative;
@@ -778,6 +787,10 @@ ul {
   
   @media only screen and (min-width: 1024px) {
     /* Large tablet and small desktop styles here */
+    #nav-bar{
+      height: 100px;
+    }
+
     #nav-menu {
       font-size: .7em;
       position: relative;
@@ -859,8 +872,17 @@ ul {
   
   @media only screen and (min-width: 1200px) {
     /* Desktop styles here */
+    #nav-bar{
+      height: 100px;
+    }
+
+
     #header{
       height: 220px;
+    }
+
+    #nav-bar{
+      height: 100px;
     }
 
     #logo{
