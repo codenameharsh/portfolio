@@ -512,7 +512,9 @@ body{
 .projects-banner {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  text-align: center; /* Ensure text aligns center */
   padding: 3rem 1rem;
   width: 100%;
   background-color: #041e32; /* Blue background */
@@ -555,46 +557,105 @@ body{
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
 }
 
-.web-design-section,
-.graphic-design-section,
-.art-section {
+/* Web Design Section */
+.web-design-section {
+  width: 100%;
+  max-width: 1200px;
+  height: 80vh; /* Reduced height */
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
-  padding: 3rem 1rem; /* Reduced padding */
-  text-align: center;
-  border-radius: 1rem;
-  transition: background-image 1s ease-in-out;
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
+  justify-content: center;
   color: #fff;
-  margin-bottom: 2rem; /* Added margin between sections */
+  position: relative;
+  overflow: hidden;
+  padding: 2rem;
+  margin: 0 auto 2rem;
+  border: .25rem solid var(--accent-grey);
+  border-radius: 2rem;
+  background: linear-gradient(to bottom right, #847468, #321804);
+  text-align: center;
+  transition: background 0.3s ease-in-out;
 }
 
-.web-design-section {
-  background: linear-gradient(to bottom right, #847468, #321804); /* Gradient from light-brown to brown */
-}
-
-.web-design-section:hover {
-  background: linear-gradient(to bottom right, #3e505c, #2c393e); /* A sleek deeper gradient */
-}
-
+/* Graphic Design Section */
 .graphic-design-section {
-  background: linear-gradient(to bottom right, #041e32, #2c3e50); /* Gradient from blue to a darker blue-gray */
+  width: 100%;
+  max-width: 1200px;
+  height: 80vh; /* Reduced height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  padding: 2rem;
+  margin: 0 auto 2rem;
+  border: .25rem solid var(--accent-grey);
+  border-radius: 2rem;
+  background: linear-gradient(to bottom left, #041e32, #2c3e50);
+  text-align: center;
+  transition: background 0.3s ease-in-out;
 }
 
-.graphic-design-section:hover {
-  background: linear-gradient(to bottom right, #1d2f3b, #253b46); /* Darker gradient for hover */
-}
-
+/* Art Section */
 .art-section {
-  background: linear-gradient(to bottom right, #847468, #5f4b3e); /* Gradient from light-brown to a darker brown */
+  width: 100%;
+  max-width: 1200px;
+  height: 80vh; /* Reduced height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  padding: 2rem;
+  margin: 0 auto 2rem;
+  border: .25rem solid var(--accent-grey);
+  border-radius: 2rem;
+  background: linear-gradient(to top right, #847468, #5f4b3e);
+  text-align: center;
+  transition: background 0.3s ease-in-out;
 }
 
+/* Optional hover effects */
+.web-design-section:hover,
+.graphic-design-section:hover,
 .art-section:hover {
-  background: linear-gradient(to bottom right, #6d5d4c, #4a3c2c); /* A darker, more earthy gradient for hover */
+  background: linear-gradient(to top left, #3e505c, #2c393e);
+}
+
+/* Borders for all sections */
+.web-design-section::before,
+.graphic-design-section::before,
+.art-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 2rem;
+  z-index: -1;
+}
+
+.web-design-section::before,
+.graphic-design-section::before,
+.art-section::before {
+  border: 2px solid #b3b3b3;
+}
+
+/* Subtle static texture background */
+.web-design-section::before,
+.graphic-design-section::before,
+.art-section::before {
+  background: url('images/static-texture.jpg');
+  opacity: 0.05;
+  z-index: -2;
+  background-position: center center;
+  background-size: cover;
 }
 
 .section-title {
@@ -639,15 +700,18 @@ body{
 /* Contact Section */
 .contact-container {
   max-width: 800px;
+  width: 100%;
   padding: 2rem;
   margin: 40px auto;
-  background: linear-gradient(135deg, #041e32, #847468); /* Gradient background */
+  background: linear-gradient(135deg, #041e32, #847468);
   border-radius: 1.5rem;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
   color: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center; /* Center content vertically */
+  text-align: center; /* Ensure text aligns center */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
   overflow: hidden;
