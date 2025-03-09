@@ -1,16 +1,19 @@
 $(document).ready(() => {
-  //nav bar
-  $('#header').on('click', function(event){
+  //nav bar toggle
+  $('#logo').on('click', function(event){
     event.preventDefault();
-    $('#nav-menu').toggle()
+    $('#nav-menu').toggle();  // Toggle the visibility of the nav menu
   });
-  
+
+  // Hide the nav menu by default
   $('#nav-menu').hide();
 
+  // Prevent closing the menu when clicking on a menu item
   $('#nav-menu a').on('click', function(event){
     event.stopPropagation();
   });
 
+  // Sticky navbar functionality
   var navbar = $("#header");
   var stickyOffset = navbar.offset().top;
 
@@ -21,7 +24,7 @@ $(document).ready(() => {
       navbar.removeClass("sticky");
     }
   });
-})
+});
 
 
 

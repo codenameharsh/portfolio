@@ -55,86 +55,118 @@ body{
 
 /* for mobile devices */
 /* @media only screen and (max-width: 600px) { */
-    #header{
-        background-color: var(--bg-color);
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        justify-content: center;
-        color: var(--text-color);
-        width: 100vw;
-        height: 100px;
-    }
+#header {
+  background-color: var(--bg-color);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--text-color);
+  width: 100vw;
+  height: 100px;
+  position: relative;
+}
 
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
 
+/* Nav bar */
+#nav-bar {
+  width: 100vw;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
 
-    .sticky {
-      position: fixed;
-      top: 0;
+/* Logo styling */
+#logo {
+  height: 100px;
+  width: 100px;
+  cursor: pointer; /* Make the logo clickable */
+}
+
+#logo:hover {
+  height: 90px;
+  width: 90px;
+}
+
+/* Nav menu styles */
+.nav-menu-bar {
+  background-color: #321804;
+  height: auto;
+  z-index: 1;
+  border-radius: 3rem;
+}
+
+#nav-menu {
+  display: flex;
+  flex-direction: row; /* Horizontal on desktop */
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  font-family: "Julius Sans One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px; /* Base font size */
+  text-decoration: none;
+}
+
+#nav-menu li {
+  padding: 1em 1.5em;
+  text-decoration: none;
+}
+
+#nav-menu li > a {
+  text-decoration: none;
+  color: var(--accent-grey);
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+#nav-menu a:active,
+#nav-menu a:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Responsive styles for mobile devices */
+@media (max-width: 768px) {
+  #nav-menu {
+      display: none; /* Hide menu by default */
+      flex-direction: column; /* Vertical layout */
       width: 100%;
-      z-index: 10;
-    }
+      background-color: #321804;
+      position: absolute;
+      top: 100px; /* Position below the header */
+      left: 0;
+      right: 0;
+      z-index: 5;
+      transition: transform 0.3s ease-in-out;
+  }
 
-    #nav-bar{
-        width: 100vw;
-        height: 100px;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        justify-content: center;
-    }
+  /* Style nav items for mobile */
+  #nav-menu li {
+      padding: 1.5em;
+      text-align: center;
+      font-size: 1.25rem;
+  }
 
+  #nav-menu li > a {
+      color: white; /* White text for better contrast */
+  }
+}
  
 
-    #logo{
-        height: 100px;
-        width: 100px;
-    }
-
-    #logo:hover{
-      height: 90px;
-      width: 90px;
-    }
-
-    .nav-menu-bar{
-        background-color: #321804;
-        height: auto;
-    }
-
-    #nav-menu{
-
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        list-style: none;
-        width: 100vw;
-        padding: 10px;
-        margin: 10px;
-        cursor: pointer;
-        font-family: "Julius Sans One", sans-serif;
-        font-weight: 400;
-        font-style: normal;
-        font-size: 10px;  
-    }
-
-    #nav-menu li{
-      padding: .5em;
-      text-decoration: none;
-    }
-
-    #nav-menu li > a{
-      text-decoration: none;
-      color: var(--accent-grey);
-      font-weight: bold;
-    }
-
-    #nav-menu a:active, #nav-menu a:focus {
-      outline: none;
-      box-shadow: none;
-    }
-
-   /* hero section */
 /* Hero section */
 #hero {
   width: 100%;
@@ -571,7 +603,7 @@ body{
   overflow: hidden;
   padding: 2rem;
   margin: 0 auto 2rem;
-  border: .25rem solid var(--accent-grey);
+  border: .25rem solid #b3b3b3;
   border-radius: 2rem;
   background: linear-gradient(to bottom right, #847468, #321804);
   text-align: center;
@@ -592,7 +624,7 @@ body{
   overflow: hidden;
   padding: 2rem;
   margin: 0 auto 2rem;
-  border: .25rem solid var(--accent-grey);
+  border: .25rem solid #b3b3b3;
   border-radius: 2rem;
   background: linear-gradient(to bottom left, #041e32, #2c3e50);
   text-align: center;
@@ -613,7 +645,7 @@ body{
   overflow: hidden;
   padding: 2rem;
   margin: 0 auto 2rem;
-  border: .25rem solid var(--accent-grey);
+  border: .25rem solid #b3b3b3;
   border-radius: 2rem;
   background: linear-gradient(to top right, #847468, #5f4b3e);
   text-align: center;
