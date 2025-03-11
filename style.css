@@ -31,6 +31,7 @@ body{
     font-style: normal;
     background-color: var(--bg-color);
     width: 100vw;
+    transition: padding-top 0.3s ease;
     overflow-x: hidden;
 }
 
@@ -39,7 +40,7 @@ body{
     font-weight: 400;
     font-style: normal;
   }
-  
+
   .im-fell-double-pica-regular-italic {
     font-family: "IM Fell Double Pica", serif;
     font-weight: 400;
@@ -51,121 +52,166 @@ body{
     font-weight: 400;
     font-style: normal;
   }
-  
 
-/* for mobile devices */
-/* @media only screen and (max-width: 600px) { */
+
+/* Header Styling */
 #header {
   background-color: var(--bg-color);
   display: flex;
   align-items: center;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-between; /* Space between logo & nav-menu */
   color: var(--text-color);
   width: 100vw;
   height: 100px;
-  position: relative;
+  padding: 0 2rem;
+  z-index: 10;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.24);
 }
+
+/* Sticky header */
 
 .sticky {
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
-  z-index: 10;
+  background-color: var(--bg-color);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  transition: all 0.3s ease-in-out;
 }
 
-/* Nav bar */
-#nav-bar {
-  width: 100vw;
-  height: 100px;
+/* Logo Styling */
+#nav-logo {
   display: flex;
+  justify-content: flex-end; /* Align logo to the right */
   align-items: center;
-  flex-direction: column;
-  justify-content: center;
+  width: auto;
+  padding: .5rem;
 }
 
-/* Logo styling */
 #logo {
   height: 100px;
   width: 100px;
-  cursor: pointer; /* Make the logo clickable */
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
 }
 
+/* Hover effect on logo */
 #logo:hover {
-  height: 90px;
-  width: 90px;
+  transform: scale(1.1);
 }
 
-/* Nav menu styles */
+/* Nav menu container */
 .nav-menu-bar {
-  background-color: #321804;
-  height: auto;
-  z-index: 1;
-  border-radius: 3rem;
+  width: auto;
+  background-color: transparent; /* No background in desktop view */
+  display: flex;
+  justify-content: flex-end; /* Align to the right */
+  align-items: center;
 }
 
+/* Navigation menu */
 #nav-menu {
   display: flex;
-  flex-direction: row; /* Horizontal on desktop */
+  flex-direction: row; /* Horizontal layout */
   align-items: center;
   justify-content: center;
   list-style: none;
-  width: 100%;
-  padding: 0;
   margin: 0;
-  cursor: pointer;
+  padding: .5rem;
   font-family: "Julius Sans One", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 16px; /* Base font size */
-  text-decoration: none;
+  font-weight: bolder;
 }
 
+/* Navigation menu items */
 #nav-menu li {
-  padding: 1em 1.5em;
-  text-decoration: none;
+  padding: 1em; 
+  border-left: 1px dashed #b3b3b398;
+  border-radius: 3rem ;
 }
 
 #nav-menu li > a {
   text-decoration: none;
   color: var(--accent-grey);
-  font-weight: bold;
-  font-size: 1rem;
+  font-weight: bolder;
+  font-size: .8rem;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
-#nav-menu a:active,
-#nav-menu a:focus {
-  outline: none;
-  box-shadow: none;
+/* Hover effects */
+#nav-menu li > a:hover,
+#nav-menu li > a:active {
+  color: var(--accent-grey);
+  text-decoration: double;
+  transform: translateY(-2px);
 }
 
-/* Responsive styles for mobile devices */
+/* Desktop View */
+@media (min-width: 769px) {
+  .nav-menu-bar {
+    display: flex !important;
+  }
+}
+
+/* Mobile View */
 @media (max-width: 768px) {
-  #nav-menu {
-      display: none; /* Hide menu by default */
-      flex-direction: column; /* Vertical layout */
-      width: 100%;
-      background-color: #321804;
-      position: absolute;
-      top: 100px; /* Position below the header */
-      left: 0;
-      right: 0;
-      z-index: 5;
-      transition: transform 0.3s ease-in-out;
+  #header {
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+    padding: 1rem 0;
   }
 
-  /* Style nav items for mobile */
+  /* Center logo */
+  #nav-logo {
+    position: relative;
+    top: unset;
+    transform: unset;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  #logo {
+    height: 80px;
+    width: 80px;
+  }
+
+  /* Hide nav menu initially */
+  .nav-menu-bar {
+    display: none;
+    flex-direction: column;
+    background-color: #041e32;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    right: 0;
+    z-index: 5;
+    padding: 1.5em 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Show menu when toggled */
+  .nav-menu-bar.show {
+    display: flex !important;
+  }
+
+  #nav-menu {
+    flex-direction: column;
+    width: 100%;
+  }
+
   #nav-menu li {
-      padding: 1.5em;
-      text-align: center;
-      font-size: 1.25rem;
+    text-align: center;
+    font-size: 1.25rem;
+    padding: .7em;
   }
 
   #nav-menu li > a {
-      color: white; /* White text for better contrast */
+    color: white;
   }
 }
- 
 
 /* Hero section */
 #hero {
@@ -180,12 +226,12 @@ body{
   overflow: hidden;
   padding: 1rem;
   margin: 0 auto; /* Center horizontally */
-  border: .5rem solid var(--light-brown); 
+  border: .5rem solid var(--light-brown);
   border-radius: 3rem; /* Ensure the main element has rounded corners */
   max-width: 1200px; /* Optional: Max width for larger screens */
 }
 
-/* Optional borders */
+/* borders */
 #hero::before,
 #hero::after {
   content: '';
@@ -300,10 +346,6 @@ body{
       font-size: 1.5rem; /* Smaller font size on tablets */
   }
 
-  .hero-btn button {
-      width: 8rem; /* Reduce button size on tablets */
-      height: 3rem; /* Adjust button size */
-  }
 }
 
 @media only screen and (max-width: 480px) {
@@ -317,8 +359,43 @@ body{
   }
 
   .hero-btn button {
-      width: 7rem; /* Smaller button on mobile */
+      width: 6rem; /* Smaller button on mobile */
       height: 2.8rem; /* Adjust button height */
+      font-size: .8rem;
+  }
+}
+
+
+@media only screen and (max-width: 320px) {
+  #hero {
+      width: 100%; /* Full width */
+      height: 60vh; /* Adjust height for a taller, narrower screen */
+      padding: 0.5rem; /* Less padding for small screens */
+  }
+
+  .text-container {
+      font-size: 1rem; /* Smaller font size for mobile */
+      margin: 10px; /* Less margin on small screens */
+      padding: 10px; /* Less padding */
+  }
+
+  #blue-text{
+    font-size: 1.2rem;
+  }
+
+  #career-text {
+      font-size: 1.5rem; /* Adjust font size of the animated career text */
+  }
+
+  .hero-btn {
+      flex-direction: column; /* Stack buttons vertically */
+      gap: 0.5rem; /* Smaller gap between buttons */
+  }
+
+  .hero-btn button {
+      width: 6rem; /* Smaller button width */
+      height: 2.3rem; /* Adjust button height */
+      font-size: 0.6rem; /* Smaller font size for buttons */
   }
 }
 
@@ -328,8 +405,8 @@ body{
 .sns {
     --color: #b3b3b3;
     --bgColor: #041e32;
-    min-height: 100vh;        
-    position: relative;  
+    min-height: 100vh;
+    position: relative;
     display: grid;
     align-content: center;
     justify-content: center;
@@ -340,31 +417,31 @@ body{
     background: var(--bgColor);
     z-index: -1;
   }
-  
+
   .sns h1 {
     text-align: center;
   }
-  
+
   .sns ul {
     --col-gap: 2rem;
     --barH: 1rem;
     --roleH: 2rem;
     --flapH: 2rem;
-  
+
     width: min(60rem, 90%);
     margin-inline: auto;
-  
+
     display: flex;
     flex-wrap: wrap;
-  
+
     gap: var(--col-gap);
     padding-inline: calc(var(--col-gap) / 2);
-  
+
     justify-content: center;
     align-items: flex-start;
     list-style: none;
   }
-  
+
   .sns ul li {
     width: 10em;
     display: grid;
@@ -391,7 +468,7 @@ body{
       calc(var(--col-gap) / -2 - 5px) calc(100% - var(--flapH))
     );
   }
-  
+
   /* bar */
   .sns ul li::before {
     content: "";
@@ -411,7 +488,7 @@ body{
       rgba(0, 0, 0, 0.4)
     );
   }
-  
+
   /* role */
   .sns ul li::after {
     content: "";
@@ -427,7 +504,7 @@ body{
     );
     height: var(--roleH);
   }
-  
+
   .sns ul li .icon,
   .sns ul li .title,
   .sns ul li .descr {
@@ -435,7 +512,7 @@ body{
     color: white;
     text-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
   }
-  
+
   .sns ul li .icon {
     font-size: 3rem;
   }
@@ -443,11 +520,11 @@ body{
     font-size: 1.25rem;
     font-weight: 700;
   }
-  
+
   .sns ul li .descr {
     font-size: 0.9rem;
   }
-  
+
   .sns .credits {
     position: fixed;
     bottom: 1rem;
@@ -457,20 +534,22 @@ body{
     color: var(--color);
   }
 
-/* notable projects */
-
+/* Project Highlights Carousel */
 .projects {
+  position: relative; /* Ensures buttons are positioned relative to this section */
   --color: #b3b3b3;
   --bgColor: #041e32;
   min-height: 100vh;
-  display: grid;
-  align-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  gap: 3rem;
   padding: 2rem;
-  width: 100%;
+  width: 80vw;
   color: var(--accent-grey);
   background: var(--bgColor);
+  padding: 2rem;
+  margin: 7rem;
 }
 
 .projects h1 {
@@ -482,19 +561,37 @@ body{
   letter-spacing: 2px;
 }
 
-.projects ul {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  width: min(80rem, 90%);
-  margin-inline: auto;
-  list-style: none;
+/* Carousel Wrapper */
+.carousel-container {
+  position: relative;
+  width: 80%;
+  overflow: hidden;
+  max-width: 100rem;
+
 }
 
-.projects ul li {
+/* Carousel */
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+
+}
+
+/* Each slide contains 5 projects */
+.carousel-slide {
+  display: flex;
+  flex-direction: column; /* Stack projects vertically */
+  gap: 1.5rem;
+  min-width: 100%;
+
+}
+
+/* Project Cards */
+.project-card {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  justify-content:space-between;
+  gap: 2rem;
   background: var(--accent-color);
   padding: 1.5rem;
   border-radius: 8px;
@@ -502,41 +599,116 @@ body{
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.projects ul li:hover {
+.project-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
 }
 
-.projects ul li:nth-child(even) {
+.project-card:nth-child(even) {
   background: var(--accent-grey);
 }
 
-.projects ul li .icon {
-  font-size: 2.5rem;
-  color: white;
-}
 
-.projects ul li .title {
+.project-card .title {
   font-size: 1.25rem;
   font-weight: 700;
   color: white;
+  font-family: "Julius Sans One", sans-serif;
+  font-weight: bolder;
+  font-size: 1rem;
 }
 
-.projects ul li .descr {
+.project-card .descr {
   font-size: 0.9rem;
   color: white;
   line-height: 1.5;
 }
 
-.projects .credits {
-  position: fixed;
-  bottom: 1rem;
-  right: 1rem;
+/* Buttons */
+
+/* Carousel Controls */
+.carousel-controls {
+  position: absolute;
+  top: 50%; /* Center vertically */
+  left: 0;
+  right: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between; /* Push buttons to opposite sides */
+  transform: translateY(-50%);
+  z-index: 5; /* Ensure buttons are above other elements */
 }
 
-.projects .credits a {
-  color: var(--color);
+/* Prev Button (Left) */
+.carousel-controls .prev {
+  position: absolute;
+  left: 20px; /* Adjust spacing from the left */
 }
+
+/* Next Button (Right) */
+.carousel-controls .next {
+  position: absolute;
+  right: 20px; /* Adjust spacing from the right */
+}
+
+/* Button Styling */
+.carousel-controls button {
+  background-color: #2a1505ad;
+  color: white;
+  border: none;
+  padding: 16px 24px;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  border-radius: 50%;
+  pointer-events: auto; /* Ensure button clicks work */
+}
+
+/* Hover Effect */
+.carousel-controls button:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  transform: scale(1.1);
+}
+
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .carousel-controls .prev {
+    left: 10px;
+  }
+
+  .carousel-controls .next {
+    right: 10px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .carousel-slide {
+    min-width: 100%; /* Full width for mobile */
+  }
+
+  .carousel-controls {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .carousel-controls button {
+    font-size: 1.5rem;
+    padding: 12px 18px;
+  }
+
+  .projects{
+    margin: 2em;
+  }
+
+  .project-card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.2rem;
+  }
+}
+
 
 
 /* projects */
@@ -859,7 +1031,7 @@ ul {
   }
 }
 
-  
+
  /* Footer Styling */
 .footer {
   background-color: #321804; /* Dark brown background */
@@ -908,4 +1080,3 @@ ul {
 }
 
 
- 

@@ -1,28 +1,67 @@
 $(document).ready(() => {
-  //nav bar toggle
-  $('#logo').on('click', function(event){
-    event.preventDefault();
-    $('#nav-menu').toggle();  // Toggle the visibility of the nav menu
+  // Toggle nav menu for mobile
+  $('#logo').on('click', function() {
+      if ($(window).width() <= 768) {
+          $('.nav-menu-bar').toggleClass('show');
+      }
   });
 
-  // Hide the nav menu by default
-  $('#nav-menu').hide();
+  // Ensure menu is visible for larger screens
+  $(window).on('resize', function() {
+      if ($(window).width() > 768) {
+          $('.nav-menu-bar').removeClass('show').css('display', 'flex');
+      } else {
+          $('.nav-menu-bar').css('display', 'none');
+      }
+  });
 
-  // Prevent closing the menu when clicking on a menu item
-  $('#nav-menu a').on('click', function(event){
-    event.stopPropagation();
+  // Close menu when clicking outside (mobile only)
+  $(document).on('click', function(event) {
+      if ($(window).width() <= 768 && !$(event.target).closest('#header').length) {
+          $('.nav-menu-bar').removeClass('show');
+      }
   });
 
   // Sticky navbar functionality
-  var navbar = $("#header");
-  var stickyOffset = navbar.offset().top;
+  let navbar = $("#header");
+  let stickyOffset = navbar.offset().top;
 
-  $(window).scroll(function() {
-    if ($(window).scrollTop() >= stickyOffset) {
-      navbar.addClass("sticky");
-    } else {
-      navbar.removeClass("sticky");
-    }
+  $(window).on('scroll', function() {
+      if ($(window).scrollTop() > stickyOffset) {
+          navbar.addClass("sticky");
+          $("body").css("padding-top", navbar.outerHeight() + "px"); // Prevent content jump
+      } else {
+        navbar.removeClass("sticky").css("position", "relative"); // Reset position
+        $("body").css("padding-top", "0");
+      }
+  });
+
+  //project carousel functionality
+  let currentIndex = 0;
+  const slides = $(".carousel-slide");
+  const totalSlides = slides.length;
+
+  function updateCarousel() {
+      const offset = -currentIndex * 100 + "%";
+      $(".carousel").css("transform", "translateX(" + offset + ")");
+  }
+
+  $(".next").on("click", function() {
+      if (currentIndex < totalSlides - 1) {
+          currentIndex++;
+      } else {
+          currentIndex = 0;
+      }
+      updateCarousel();
+  });
+
+  $(".prev").on("click", function() {
+      if (currentIndex > 0) {
+          currentIndex--;
+      } else {
+          currentIndex = totalSlides - 1;
+      }
+      updateCarousel();
   });
 });
 
@@ -43,7 +82,6 @@ $(document).ready(() => {
 //   } else {
 //     navbar.classList.remove("sticky");
 //   }
-// };
 
 
 //hero section
