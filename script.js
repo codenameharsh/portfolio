@@ -38,28 +38,30 @@ $(document).ready(() => {
 
   //project carousel functionality
   let currentIndex = 0;
-  const slides = $(".carousel-slide");
-  const totalSlides = slides.length;
-
+  const totalSlides = document.querySelectorAll(".carousel-slide").length;
+  const carousel = document.querySelector(".carousel");
+  
   function updateCarousel() {
       const offset = -currentIndex * 100 + "%";
-      $(".carousel").css("transform", "translateX(" + offset + ")");
+      carousel.style.transform = "translateX(" + offset + ")";
   }
-
-  $(".next").on("click", function() {
+  
+  // Next button
+  document.querySelector(".next").addEventListener("click", function () {
       if (currentIndex < totalSlides - 1) {
           currentIndex++;
       } else {
-          currentIndex = 0;
+          currentIndex = 0; // Loop back
       }
       updateCarousel();
   });
-
-  $(".prev").on("click", function() {
+  
+  // Previous button
+  document.querySelector(".prev").addEventListener("click", function () {
       if (currentIndex > 0) {
           currentIndex--;
       } else {
-          currentIndex = totalSlides - 1;
+          currentIndex = totalSlides - 1; // Loop back
       }
       updateCarousel();
   });

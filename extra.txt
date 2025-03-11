@@ -410,3 +410,22 @@
       font-size: .9em;
     }
   }
+
+
+  //project highlights
+
+
+                  
+
+
+
+
+
+
+
+
+
+
+
+
+
