@@ -719,6 +719,13 @@ body{
   .project-card{
     flex-direction: column;
   }
+
+  .project-card .descr {
+    opacity: 1;
+    font-size: 0.9rem;
+    color: white;
+    line-height: 1.5;
+  }
   
 }
 
@@ -736,6 +743,13 @@ body{
 
   .project-card{
     flex-direction: column;
+  }
+
+  .project-card .descr {
+    opacity: 1;
+    font-size: 0.9rem;
+    color: white;
+    line-height: 1.5;
   }
 }
 
