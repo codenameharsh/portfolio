@@ -860,7 +860,7 @@ body{
 .portfolio-intro p a{
   color: white;
   text-decoration: none;
-  font-style: italic;
+  font-style: normal;
 }
 
 .portfolio-intro p a:hover{
@@ -993,15 +993,17 @@ body{
 
 .projects {
   position: relative;
-  background: var(--bgColor, #041e32);
+  background: #0b2f44;
   margin: 7rem auto;
   padding: 2rem;
-  width: 100vw;
+  width: 90vw;
   color: var(--accent-grey);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-top: 0;
+  border-radius: 3rem;
 
 }
 
@@ -1018,7 +1020,7 @@ body{
 /* Carousel Container (outer container shows controls) */
 .carousel-container {
   position: relative;
-  width: 50%;
+  width: 80%;
   max-width: 1000px;
   padding: 0 50px; /* Add padding so buttons are not on top of slides */
 }
@@ -1187,15 +1189,16 @@ body{
     width: 90%;
   }
   .carousel-controls .prev {
-    transform: translateX(-100%);
+    transform: translateX(-95%);
   }
 
   .carousel-controls .next {
-    transform: translateX(100%);
+    transform: translateX(95%);
   }
 
   .project-card{
     flex-direction: column;
+    width: 100%;
   }
 
   .project-card .descr {
@@ -1206,12 +1209,124 @@ body{
   }
 }
 
+/* Art & Photography Section */
+.art-container {
+  background-color: #0b2f44;
+  border-radius: 3rem;
+  padding: 1.5rem;
+  max-width: 1000px;
+  margin: auto;
+  margin-top: 0;
+}
+
+/* Grid Layout */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 20px;
+  padding: 20px;
+  width: 100%;
+}
+
+/* Grid Items */
+.grid-item {
+  background: #f4f4f4;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 300px;
+  width: 400px;
+  border-radius: 1rem;
+}
+
+/* Art Section Header */
+#art-head {
+  background-color: #0b2f44;
+  display: flex;
+  flex-direction: column;
+  color: var(--accent-grey);
+  padding: 1.5rem;
+  border-radius: 1rem;
+}
+
+#art-head h2 {
+  padding: 1rem;
+  font-size: 1.8rem;
+}
+
+/* Slideshow Container */
+.slideshow-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+/* Slideshow Slides */
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Active Slide */
+.active {
+  opacity: 1;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+  .grid-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 10px;
+  }
+
+  .grid-item {
+    width: 90%;
+    height: auto;
+    padding: 15px;
+  }
+
+  #art-head {
+    text-align: center;
+    width: 100%;
+  }
+
+  #art-head h2 {
+    font-size: 1.5rem;
+    padding: 0.8rem;
+  }
+
+  .slideshow-container {
+    height: 300px;
+  }
+}
+
+
+
 /* full portfolio */
 .portfolio-full button{
   width: 25rem;
   height: 3rem;
   border-radius: 3rem;
-  margin-top: 0;
+  margin-top: 5rem;
   border: 2px solid var(--light-brown);
   background-color: var(--bg-color);
   color: var(--light-brown);
@@ -1226,6 +1341,27 @@ body{
   color: var(--accent-brown);
   background-color: var(--light-brown);
   transform: translateY(-8px);
+}
+
+/* Responsive Styles */
+@media (max-width: 900px) {
+  .portfolio-full button {
+    width: 20rem;
+    height: 2.8rem;
+    font-size: 0.9rem;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .portfolio-full button {
+    width: 90%;
+    height: 2.5rem;
+    font-size: 0.85rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
 }
 
 

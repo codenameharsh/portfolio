@@ -145,6 +145,8 @@ $(document).ready(() => {
   //     navbar.classList.remove("sticky");
   //   }
   
+
+  //progres bar
   window.addEventListener("scroll", function() {
     let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
     let scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
@@ -178,133 +180,24 @@ $(document).ready(() => {
   
   updateText();
   
-  //portfolio btn lightbox
-  const portfolioBtn = document.getElementById('portfolio'); 
-  
-  portfolioBtn.addEventListener('click', (e) => {
-    const pdfUrl = 'portfolio_design.pdf';
-  
-    // Insert lightbox HTML
-    document.body.insertAdjacentHTML('beforeend', `
-         <div class="lightbox">
-            <div class="lightbox-content">
-                <span class="close-lightbox">&times;</span>
-                <iframe src="${pdfUrl}" width="100%" height="600px"></iframe>
-            </div>
-          </div>
-      `);
-  
-    // Add event listener for closing lightbox
-    document.querySelector('.close-lightbox').addEventListener('click', () => {
-      document.querySelector('.lightbox').remove();
-    });
-  });
-  
-  
-  
-  // Function to cycle background images
-  function cycleBackgrounds(sectionId, images, interval = 3000) {
+
+  //art section
+  function startSlideshow(slideshowId) {
+    let slides = document.querySelectorAll(`#${slideshowId} .slide`);
     let index = 0;
-    const section = document.getElementById(sectionId);
-  
     setInterval(() => {
-      section.style.setProperty('--bg-image', `url(${images[index]})`);
-      index = (index + 1) % images.length;
-    }, interval);
-  }
-  
-  // Correct image paths
-  const webDesignImages = [
-    'images/web/web1.png',
-    'images/web/web2.png',
-    'images/web/web3.png',
-    'images/web/web4.png',
-    'images/web/web5.png',
-    'images/web/web6.png',
-    'images/web/web7.png',
-    'images/web/web8.png',
-    'images/web/web9.png',
-    'images/web/web10.png',
-    'images/web/web11.png',
-  ];
-  
-  const graphicDesignImages = [
-    'images/graphic/graphic1.png',
-    'images/graphic/graphic2.png',
-    'images/graphic/graphic3.png',
-    'images/graphic/graphic4.png',
-    'images/graphic/graphic5.png',
-    'images/graphic/graphic6.png',
-    'images/graphic/graphic7.jpg',
-    'images/graphic/graphic8.jpg',
-    'images/graphic/graphic9.jpg',
-    'images/graphic/graphic10.png',
-    'images/graphic/graphic11.jpeg',
-    'images/graphic/graphic12.png',
-    'images/graphic/graphic13.png',
-    'images/graphic/graphic14.png',
-    'images/graphic/graphic15.png',
-  ];
-  
-  const artImages = [
-    'images/art/art1.jpg',
-    'images/art/art2.jpg',
-    'images/art/art3.jpg',
-    'images/art/art4.JPG',
-    'images/art/art5.JPG',
-    'images/art/art6.JPG',
-    'images/art/art7.JPG',
-    'images/art/art8.JPG',
-    'images/art/art9.JPG',
-    'images/art/art10.JPG',
-    'images/art/art11.JPG',
-    'images/art/art12.JPG',
-    'images/art/art13.JPG',
-    'images/art/art14.JPG',
-    'images/art/art15.JPG',
-    'images/art/art16.JPG',
-    'images/art/art17.JPG',
-    'images/art/art18.JPG',
-    'images/art/art19.JPG',
-    'images/art/art20.JPG',
-    'images/art/art21.JPG',
-    'images/art/art22.JPG',
-    'images/art/art23.JPG',
-    'images/art/art24.JPG',
-    'images/art/art25.JPG',
-    'images/art/art26.JPG',
-  ];
-  
-  // Start cycling backgrounds
-  cycleBackgrounds('web-design', webDesignImages);
-  cycleBackgrounds('graphic-design', graphicDesignImages);
-  cycleBackgrounds('art', artImages);
-  
-  
-  
-  
-  //pdf light box
-  const pdfButtons = document.querySelectorAll('.pdf-button');
-  
-  pdfButtons.forEach(button => {
-      button.addEventListener('click', (e) => {
-          const pdfUrl = button.id === 'web-design-pdf' ? 'portfolio_web.pdf' :
-                         button.id === 'graphic-design-pdf' ? 'portfolio_graphic.pdf' : 'portfolio_art.pdf';
-  
-          document.body.insertAdjacentHTML('beforeend', `
-              <div class="lightbox">
-                  <div class="lightbox-content">
-                      <span class="close-lightbox">&times;</span>
-                      <iframe src="${pdfUrl}" width="100%" height="600px"></iframe>
-                  </div>
-              </div>
-          `);
-  
-          document.querySelector('.close-lightbox').addEventListener('click', () => {
-              document.querySelector('.lightbox').remove();
-          });
-      });
-  });
+        slides[index].classList.remove("active");
+        index = (index + 1) % slides.length;
+        slides[index].classList.add("active");
+    }, 3000);
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    startSlideshow("slideshow1");
+    startSlideshow("slideshow2");
+    startSlideshow("slideshow3");
+});
+
   
   
   
