@@ -11,7 +11,10 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" type="text/javascript"></script>
 </head>
 <body>
-   
+    <div class="progress-container">
+        <div class="progress-bar" id="progress-bar"></div>
+    </div>
+
     <div class="wrapper">
         <!-- header section -->
         <div id="header">
@@ -21,9 +24,8 @@
             <div class="hidden nav-menu-bar" >
                 <ul id="nav-menu">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="about_me/about.html">About</a></li>
-                    <li><a href="#portfolio-head">Portfolio</a></li>
-                    <li><a href="https://www.instagram.com/theharshdiary?igsh=MzRlODBiNWFlZA==">Blog</a></li>
+                    <li><a href="#about-me">About Me</a></li>
+                    <li><a href="#portfolio-start">Portfolio</a></li>
                     <li><a href="index.html#reach-out">Reach out</a></li>
                 </ul>
             </div>
@@ -34,17 +36,97 @@
         <!-- hero section -->
         <div id="hero">
             <div class="text-container">
-                    <!-- <h1><p id="blue-text">Hey there! I am</p>a Graphic Designer</h1> -->
                     <h1>
                         <p id="blue-text">Hey, I'm Harshitha. I am</p>
                         <span id="career-text"></span> <!-- Dynamic Career Text -->
                     </h1>
             </div>
-            <div class="hero-btn">
+            <!-- <div class="hero-btn">
                 <button id="read-more" onclick="window.open('about_me/about.html', '_self')">Read More</button>
                 <button id="resume" onclick="window.open('Resume_HR_2025.pdf', '_blank')">Resume</button>
-            </div>
+            </div> -->
         </div>
+        
+
+        <!-- about me section -->
+        <div class="about-container" id="about-me">                   
+            <!-- About Section -->
+            <div class="about">                
+                <div class="photo-container">
+                    <img src="images/profile.jpeg" alt="Profile Image" />
+                </div>
+                <div class="about-head">
+                    <h1>About Me</h1>
+                    <h4>
+                        From Fashion to Front-End: Designing Experiences, One Pixel at a Time.
+                    </h4>
+                </div>
+            </div>
+
+            <div class="about-intro">
+                <p>
+                    I’m a <strong>visual storyteller and problem solver</strong>, blending 
+                    <strong>graphic design, branding, and UI/UX</strong> to create impactful digital experiences. 
+                    My journey began at the intersection of <strong>fashion and art</strong>, where I discovered my passion 
+                    for design, technology, and creative expression.
+                </p>
+                <br>
+                <p>
+                    Over the years, I’ve worked with <strong>innovative brands and startups</strong>, crafting 
+                    <strong>logos, brand identities, infographics, lookbooks, and interactive UI designs</strong>. 
+                    My skill set extends beyond design, as I’ve also explored 
+                    <strong>front-end development and full-stack JavaScript</strong>, bringing digital projects 
+                    to life through platforms like <em>Meta, and IBM on Coursera, FreeCodeCamp, The Odin Project and DailyUI</em>.
+                </p>
+            </div>
+    
+            <!-- Experience & Journey -->
+            <div class="about-des">
+                <h4>My Journey</h4>
+                <ul>
+                    <li class="milestone">📍 Started in the fashion industry, gaining expertise in:</li>
+                    <ul>
+                        <li>Fashion Management</li>
+                        <li>Digital Design</li>
+                        <li>Business Marketing</li>
+                    </ul>
+                    <li class="milestone">🎨 Transitioned into UI/UX & Front-End Development, focusing on:</li>
+                    <ul>
+                        <li>Intuitive, User-Centered Interfaces</li>
+                        <li>Interactive Digital Experiences</li>
+                    </ul>
+                    <li class="milestone">🚀 Currently a Graphic Designer with expertise in:</li>
+                    <ul>
+                        <li>Branding & Identity</li>
+                        <li>Responsive Web Design</li>
+                        <li>Vector Graphics & Infographics</li>
+                    </ul>
+                </ul>
+            </div>
+    
+            <!-- Key Skills Section -->
+            <div class="skills">
+                <h4>Key Skills</h4>
+                <ul>
+                    <li>UI/UX Design</li>
+                    <li>Front-End Web Development</li>
+                    <li>Graphic Design</li>
+                    <li>Branding & Identity</li>
+                </ul>
+    
+                <!-- Progress Bars -->
+                <div class="skill-progress">                    
+                    <h5>Web Development</h5>
+                    <div class="bar"><div class="fill" style="width: 90%;"></div></div>
+    
+                    <h5>UI/UX Design</h5>
+                    <div class="bar"><div class="fill" style="width: 85%;"></div></div>
+    
+                    <h5>Graphic Design</h5>
+                    <div class="bar"><div class="fill" style="width: 95%;"></div></div>
+                </div>
+            </div>
+        </div> 
 
   
         <!-- Skills banner -->
@@ -94,210 +176,228 @@
             </ul>
         </div>
 
-        <div class="portfolio">
-            <h1 id="portfolio-head">Portfolio</h1>
-            <button id="portfolio">Click to download my complete portfolio!</button>
+        <div class="portfolio-container">
+            <div class="portfolio-intro">
+                <h1 id="portfolio-head">My Portfolio</h1>
+                <p>
+                    A curated selection of my work in <a href="#portfolio-cards">graphic design, branding, UI/UX, and front-end development.</a>  
+                    Explore featured projects below, or <a href="#portfolio-pdf">browse my full portfolio</a> for in-depth case studies.
+                </p>
+                <p>
+                    In addition to UI/UX and branding, I have a deep passion for <a href="">painting, illustration, and photography</a>, 
+                    experimenting with different mediums and techniques to explore my artistic voice.
+                </p>
+            </div>
+
+            <div class="portfolio-grid" id="portfolio-cards">
+
+                <!-- Portfolio project 1 -->
+                <div class="portfolio-item" style="--accent-color:#0B374D">
+                    <img src="aura/logo_2.png" alt="Project 1">
+                    <div class="portfolio-info">
+                        <h3>AURA Lookbook</h3>
+                        <p>A luxury fashion brand identity and lookbook design.</p>
+                        <a href="aura/aura.html" class="btn">View Project</a>
+                    </div>
+                </div>
+        
+                <!-- Portfolio project 2 -->
+                <div class="portfolio-item" style="--accent-color:#1d3446">
+                    <img src="images/EcoCycle.png" alt="Project 2">
+                    <div class="portfolio-info">
+                        <h3>EcoCycle UI Design</h3>
+                        <p>A user-friendly profile experience for an eco-conscious platform.</p>
+                        <a href="eco-cycle/ecocycle.html" class="btn">View Project</a>
+                    </div>
+                </div>
+        
+                <!-- Portfolio Item 3 -->
+                <div class="portfolio-item" style="--accent-color:#364a5a">
+                    <img src="images/madras merch.png" alt="Project 3">
+                    <div class="portfolio-info">
+                        <h3>Madras Merch</h3>
+                        <p>Print-on-demand t-shirt designs inspired by cultural nostalgia.</p>
+                        <a href="madras_merch/madras-merch.html" class="btn">View Project</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="projects">
+                <h1>Portfolio Highlights</h1>
+                <div class="carousel-container">
+                    <!-- Inner wrapper for overflow control -->
+                    <div class="carousel-wrapper">
+                    <div class="carousel">
+                        <div class="carousel-slide">
+                        <div class="project-card" style="--accent-color:#0B374D">
+                            <a href="https://www.figma.com/proto/WI085zE3fwRaF9Duysjyy9/EcoCycle?node-id=28-166&p=f&t=Nmo7PqxOhoBLq2M7-1&scaling=scale-down&content-scaling=fixed&page-id=28%3A164&starting-point-node-id=28%3A166"><img src="images/EcoCycle.png" alt="Project Image" class="project-image"></a>
+                            <div class="title">EcoCycle User Profile</div>
+                            <div class="descr">Designed a sustainable living platform with gamified user engagement.</div>
+                        </div>
+                        </div>
+                        <div class="carousel-slide">
+                        <div class="project-card" style="--accent-color:#1d3446">
+                            <a href="https://www.figma.com/proto/0BvThrCqcaAS4t4zeWN7Pw/ArtFusion-sign-up?node-id=2-86&p=f&t=N8zPznt4wmJr2Q6g-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=2%3A86"><img src="images/ArtFusion.png" alt="Project Image" class="project-image"></a>                        
+                            <div class="title">ArtFusion Sign-Up Page</div>
+                            <div class="descr">A user-friendly registration page for an annual art event.</div>
+                        </div>
+                        </div>
+                        <div class="carousel-slide">
+                        <div class="project-card" style="--accent-color:#364a5a">
+                            <a href="https://github.com/codenameharsh/end_game"><img src="images/Assembly.png" alt="Project Image" class="project-image"></a>
+                            <div class="title">Assembly: End Game</div>
+                            <div class="descr">A word-guessing game built with React, featuring interactive elements.</div>
+                        </div>
+                        </div>
+                        <div class="carousel-slide">
+                        <div class="project-card" style="--accent-color:#4f616f">
+                            <a href="https://codenameharsh.github.io/ecommerce_website/"><img src="images/E-commerce Website.png" alt="Project Image" class="project-image"></a>                        
+                            <div class="title">E-Commerce Website</div>
+                            <div class="descr">A fully functional online store, improving sales and customer engagement with seamless UI/UX.</div>
+                        </div>
+                        </div>
+                        <div class="carousel-slide">
+                        <div class="project-card" style="--accent-color:#9aa5ad">
+                            <a href="https://codenameharsh.github.io/shopping_cart/"><img src="images/Shopping Cart.png" alt="Project Image" class="project-image"></a>                       
+                            <div class="title">E-Commerce Shopping Cart</div>
+                            <div class="descr">A JavaScript-powered shopping cart with real-time updates and checkout functionality.</div>
+                        </div>
+                        </div>
+                        <div class="carousel-slide">
+                        <div class="project-card" style="--accent-color:#0B374D">
+                            <a href="https://codenameharsh.github.io/reading_list_app/"><img src="images/Reading List.png" alt="Project Image" class="project-image"></a>                        
+                            <div class="title">Reading List App</div>
+                            <div class="descr">A digital book-tracking system with features for adding, removing, and marking books as read.</div>
+                        </div>
+                        </div>
+                        <div class="carousel-slide">
+                        <div class="project-card" style="--accent-color:#1d3446">
+                            <a href="https://github.com/codenameharsh/AI_recipe_app"><img src="images/AI Recipe Generator.png" alt="Project Image" class="project-image"></a>                        
+                            <div class="title">AI Recipe Generator</div>
+                            <div class="descr">A React-powered app that uses AI to generate recipes based on user-provided ingredients.</div>
+                        </div>
+                        </div>
+                        <div class="carousel-slide">
+                        <div class="project-card" style="--accent-color:#364a5a">
+                            <a href="https://github.com/codenameharsh/travel_journal"><img src="images/Travel Journal.png" alt="Project Image" class="project-image"></a>                        
+                            <div class="title">Travel Journal</div>
+                            <div class="descr">A dynamic application for documenting travel experiences, featuring an interactive map view.</div>
+                        </div>
+                        </div>
+                        <div class="carousel-slide">
+                        <div class="project-card" style="--accent-color:#4f616f">
+                            <a href="https://codenameharsh.github.io/football_team_stats/"><img src="images/Footbal Stats.png" alt="Project Image" class="project-image"></a>                        
+                            <div class="title">Football Team Stats</div>
+                            <div class="descr">A web application for tracking football statistics, including interactive player cards and search functionality.</div>
+                        </div>
+                        </div>
+                        <div class="carousel-slide">
+                        <div class="project-card" style="--accent-color:#9aa5ad">
+                            <a href="https://github.com/codenameharsh/tenzies"><img src="images/Tenzies.png" alt="Project Image" class="project-image"></a>                        
+                            <div class="title">Tenzies Dice Game</div>
+                            <div class="descr">A React-based game where players roll dice to match values, demonstrating UI interactivity and game logic.</div>
+                        </div>
+                        </div>
+                        <div class="carousel-slide">
+                        <div class="project-card" style="--accent-color:#0B374D">
+                            <img src="images/Kiddo Kraft.png" alt="Project Image" class="project-image">
+                            <div class="title">Kiddo Kraft (Logo & Brand Identity)</div>
+                            <div class="descr">A playful, kid-friendly branding project including logos, typography, and social media assets.</div>
+                        </div>
+                        </div>
+                        <div class="carousel-slide">
+                        <div class="project-card" style="--accent-color:#1d3446">
+                            <img src="images/aura.png" alt="Project Image" class="project-image">
+                            <div class="title">Aura Lookbook (Luxury Fashion Branding)</div>
+                            <div class="descr">A high-end fashion lookbook design, blending celestial themes with elegant typography.</div>
+                        </div>
+                        </div>
+                        <div class="carousel-slide">
+                        <div class="project-card" style="--accent-color:#364a5a">
+                            <img src="images/madras merch.png" alt="Project Image" class="project-image">
+                            <div class="title">Madras Merch (Print-on-Demand Designs)</div>
+                            <div class="descr">A collection of culturally inspired t-shirt designs representing Chennai’s vibrant heritage.</div>
+                        </div>
+                        </div>
+                        <div class="carousel-slide">
+                        <div class="project-card" style="--accent-color:#4f616f">
+                            <img src="images/filter kaapi.png" alt="Project Image" class="project-image">
+                            <div class="title">Madras Filter Kaapi Design</div>
+                            <div class="descr">A minimalist infographic illustrating the iconic South Indian coffee-making process.</div>
+                        </div>
+                        </div>
+                        <div class="carousel-slide">
+                        <div class="project-card" style="--accent-color:#9aa5ad">
+                            <img src="images/auto.png" alt="Project Image" class="project-image">
+                            <div class="title">The Auto Rickshaw Illustration</div>
+                            <div class="descr">A bold and playful tribute to Chennai’s famous auto-rickshaws.</div>
+                        </div>
+                        </div>
+                        <div class="carousel-slide">
+                        <div class="project-card" style="--accent-color:#0B374D">
+                            <img src="images/bharathanatiyam.png" alt="Project Image" class="project-image">
+                            <div class="title">Bharatanatyam Cultural Poster</div>
+                            <div class="descr">A vibrant digital artwork capturing the grace of traditional Indian dance.</div>
+                        </div>
+                        </div>
+                        <div class="carousel-slide">
+                        <div class="project-card" style="--accent-color:#1d3446">
+                            <img src="images/marina natkalhdpi.png" alt="Project Image" class="project-image">
+                            <div class="title">Marina Days Typography Design</div>
+                            <div class="descr">A Tamil typography-based design inspired by Chennai’s iconic Marina Beach.</div>
+                        </div>
+                        </div>
+                        <div class="carousel-slide">
+                        <div class="project-card" style="--accent-color:#364a5a">
+                            <a href="https://github.com/codenameharsh/meme_generator"><img src="images/meme generator.png" alt="Project Image" class="project-image"></a>                        
+                            <div class="title">Meme Generator</div>
+                            <div class="descr">A fun React-powered app allowing users to create and customize memes with text overlays.</div>
+                        </div>
+                        </div>
+                        <div class="carousel-slide">
+                        <div class="project-card" style="--accent-color:#4f616f">
+                            <a href="https://codenameharsh.github.io/black_jack/"><img src="images/blackjack.png" alt="Project Image" class="project-image"></a>                        
+                            <div class="title">Blackjack Simulator</div>
+                            <div class="descr">A JavaScript-powered card game featuring real-time gameplay and interactive elements.</div>
+                        </div>
+                        </div>
+                        <div class="carousel-slide">
+                        <div class="project-card" style="--accent-color:#9aa5ad">
+                            <a href="https://codenameharsh.github.io/digital_clock/"><img src="images/digital clock.png" alt="Project Image" class="project-image"></a>                        
+                            <div class="title">Digital Clock App</div>
+                            <div class="descr">A clean, real-time digital clock UI with dynamic updates and modern design.</div>
+                        </div>
+                        </div>
+                        <!-- Add more slides as needed -->
+                    </div>
+                    </div>
+                    
+                    <div class="carousel-controls">
+                    <button class="prev">❮</button>
+                    <button class="next">❯</button>
+                    </div>
+    
+                    <div class="carousel-dots">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="portfolio-full" id="portfolio-pdf">
+                <button onclick="window.open('portfolio_design.pdf', '_blank')">View complete portfolio</button>
+                <button onclick="window.open('Resume_HR_2025.pdf', '_blank')">Download Resume</button>
+            </div>
+            
+
         </div>
 
-        
-        <!--Project Highlights Carousel -->
-        <div class="projects">
-            <h1>Portfolio Highlights</h1>
-            <div class="carousel-container">
-                <!-- Inner wrapper for overflow control -->
-                <div class="carousel-wrapper">
-                <div class="carousel">
-                    <div class="carousel-slide">
-                    <div class="project-card" style="--accent-color:#0B374D">
-                        <a href="https://www.figma.com/proto/WI085zE3fwRaF9Duysjyy9/EcoCycle?node-id=28-166&p=f&t=Nmo7PqxOhoBLq2M7-1&scaling=scale-down&content-scaling=fixed&page-id=28%3A164&starting-point-node-id=28%3A166"><img src="images/EcoCycle.png" alt="Project Image" class="project-image"></a>
-                        <div class="title">EcoCycle User Profile</div>
-                        <div class="descr">Designed a sustainable living platform with gamified user engagement.</div>
-                    </div>
-                    </div>
-                    <div class="carousel-slide">
-                    <div class="project-card" style="--accent-color:#1d3446">
-                        <a href="https://www.figma.com/proto/0BvThrCqcaAS4t4zeWN7Pw/ArtFusion-sign-up?node-id=2-86&p=f&t=N8zPznt4wmJr2Q6g-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=2%3A86"><img src="images/ArtFusion.png" alt="Project Image" class="project-image"></a>                        
-                        <div class="title">ArtFusion Sign-Up Page</div>
-                        <div class="descr">A user-friendly registration page for an annual art event.</div>
-                    </div>
-                    </div>
-                    <div class="carousel-slide">
-                    <div class="project-card" style="--accent-color:#364a5a">
-                        <a href="https://github.com/codenameharsh/end_game"><img src="images/Assembly.png" alt="Project Image" class="project-image"></a>
-                        <div class="title">Assembly: End Game</div>
-                        <div class="descr">A word-guessing game built with React, featuring interactive elements.</div>
-                    </div>
-                    </div>
-                    <div class="carousel-slide">
-                    <div class="project-card" style="--accent-color:#4f616f">
-                        <a href="https://codenameharsh.github.io/ecommerce_website/"><img src="images/E-commerce Website.png" alt="Project Image" class="project-image"></a>                        
-                        <div class="title">E-Commerce Website</div>
-                        <div class="descr">A fully functional online store, improving sales and customer engagement with seamless UI/UX.</div>
-                    </div>
-                    </div>
-                    <div class="carousel-slide">
-                    <div class="project-card" style="--accent-color:#9aa5ad">
-                        <a href="https://codenameharsh.github.io/shopping_cart/"><img src="images/Shopping Cart.png" alt="Project Image" class="project-image"></a>                       
-                        <div class="title">E-Commerce Shopping Cart</div>
-                        <div class="descr">A JavaScript-powered shopping cart with real-time updates and checkout functionality.</div>
-                    </div>
-                    </div>
-                    <div class="carousel-slide">
-                    <div class="project-card" style="--accent-color:#0B374D">
-                        <a href="https://codenameharsh.github.io/reading_list_app/"><img src="images/Reading List.png" alt="Project Image" class="project-image"></a>                        
-                        <div class="title">Reading List App</div>
-                        <div class="descr">A digital book-tracking system with features for adding, removing, and marking books as read.</div>
-                    </div>
-                    </div>
-                    <div class="carousel-slide">
-                    <div class="project-card" style="--accent-color:#1d3446">
-                        <a href="https://github.com/codenameharsh/AI_recipe_app"><img src="images/AI Recipe Generator.png" alt="Project Image" class="project-image"></a>                        
-                        <div class="title">AI Recipe Generator</div>
-                        <div class="descr">A React-powered app that uses AI to generate recipes based on user-provided ingredients.</div>
-                    </div>
-                    </div>
-                    <div class="carousel-slide">
-                    <div class="project-card" style="--accent-color:#364a5a">
-                        <a href="https://github.com/codenameharsh/travel_journal"><img src="images/Travel Journal.png" alt="Project Image" class="project-image"></a>                        
-                        <div class="title">Travel Journal</div>
-                        <div class="descr">A dynamic application for documenting travel experiences, featuring an interactive map view.</div>
-                    </div>
-                    </div>
-                    <div class="carousel-slide">
-                    <div class="project-card" style="--accent-color:#4f616f">
-                        <a href="https://codenameharsh.github.io/football_team_stats/"><img src="images/Footbal Stats.png" alt="Project Image" class="project-image"></a>                        
-                        <div class="title">Football Team Stats</div>
-                        <div class="descr">A web application for tracking football statistics, including interactive player cards and search functionality.</div>
-                    </div>
-                    </div>
-                    <div class="carousel-slide">
-                    <div class="project-card" style="--accent-color:#9aa5ad">
-                        <a href="https://github.com/codenameharsh/tenzies"><img src="images/Tenzies.png" alt="Project Image" class="project-image"></a>                        
-                        <div class="title">Tenzies Dice Game</div>
-                        <div class="descr">A React-based game where players roll dice to match values, demonstrating UI interactivity and game logic.</div>
-                    </div>
-                    </div>
-                    <div class="carousel-slide">
-                    <div class="project-card" style="--accent-color:#0B374D">
-                        <img src="images/Kiddo Kraft.png" alt="Project Image" class="project-image">
-                        <div class="title">Kiddo Kraft (Logo & Brand Identity)</div>
-                        <div class="descr">A playful, kid-friendly branding project including logos, typography, and social media assets.</div>
-                    </div>
-                    </div>
-                    <div class="carousel-slide">
-                    <div class="project-card" style="--accent-color:#1d3446">
-                        <img src="images/aura.png" alt="Project Image" class="project-image">
-                        <div class="title">Aura Lookbook (Luxury Fashion Branding)</div>
-                        <div class="descr">A high-end fashion lookbook design, blending celestial themes with elegant typography.</div>
-                    </div>
-                    </div>
-                    <div class="carousel-slide">
-                    <div class="project-card" style="--accent-color:#364a5a">
-                        <img src="images/madras merch.png" alt="Project Image" class="project-image">
-                        <div class="title">Madras Merch (Print-on-Demand Designs)</div>
-                        <div class="descr">A collection of culturally inspired t-shirt designs representing Chennai’s vibrant heritage.</div>
-                    </div>
-                    </div>
-                    <div class="carousel-slide">
-                    <div class="project-card" style="--accent-color:#4f616f">
-                        <img src="images/filter kaapi.png" alt="Project Image" class="project-image">
-                        <div class="title">Madras Filter Kaapi Design</div>
-                        <div class="descr">A minimalist infographic illustrating the iconic South Indian coffee-making process.</div>
-                    </div>
-                    </div>
-                    <div class="carousel-slide">
-                    <div class="project-card" style="--accent-color:#9aa5ad">
-                        <img src="images/auto.png" alt="Project Image" class="project-image">
-                        <div class="title">The Auto Rickshaw Illustration</div>
-                        <div class="descr">A bold and playful tribute to Chennai’s famous auto-rickshaws.</div>
-                    </div>
-                    </div>
-                    <div class="carousel-slide">
-                    <div class="project-card" style="--accent-color:#0B374D">
-                        <img src="images/bharathanatiyam.png" alt="Project Image" class="project-image">
-                        <div class="title">Bharatanatyam Cultural Poster</div>
-                        <div class="descr">A vibrant digital artwork capturing the grace of traditional Indian dance.</div>
-                    </div>
-                    </div>
-                    <div class="carousel-slide">
-                    <div class="project-card" style="--accent-color:#1d3446">
-                        <img src="images/marina natkalhdpi.png" alt="Project Image" class="project-image">
-                        <div class="title">Marina Days Typography Design</div>
-                        <div class="descr">A Tamil typography-based design inspired by Chennai’s iconic Marina Beach.</div>
-                    </div>
-                    </div>
-                    <div class="carousel-slide">
-                    <div class="project-card" style="--accent-color:#364a5a">
-                        <a href="https://github.com/codenameharsh/meme_generator"><img src="images/meme generator.png" alt="Project Image" class="project-image"></a>                        
-                        <div class="title">Meme Generator</div>
-                        <div class="descr">A fun React-powered app allowing users to create and customize memes with text overlays.</div>
-                    </div>
-                    </div>
-                    <div class="carousel-slide">
-                    <div class="project-card" style="--accent-color:#4f616f">
-                        <a href="https://codenameharsh.github.io/black_jack/"><img src="images/blackjack.png" alt="Project Image" class="project-image"></a>                        
-                        <div class="title">Blackjack Simulator</div>
-                        <div class="descr">A JavaScript-powered card game featuring real-time gameplay and interactive elements.</div>
-                    </div>
-                    </div>
-                    <div class="carousel-slide">
-                    <div class="project-card" style="--accent-color:#9aa5ad">
-                        <a href="https://codenameharsh.github.io/digital_clock/"><img src="images/digital clock.png" alt="Project Image" class="project-image"></a>                        
-                        <div class="title">Digital Clock App</div>
-                        <div class="descr">A clean, real-time digital clock UI with dynamic updates and modern design.</div>
-                    </div>
-                    </div>
-                    <!-- Add more slides as needed -->
-                </div>
-                </div>
-                
-                <div class="carousel-controls">
-                <button class="prev">❮</button>
-                <button class="next">❯</button>
-                </div>
 
-                <div class="carousel-dots">
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                </div>
-            </div>
-        </div>
-        
-
-        <!-- Projects Banner -->
-        <div class="projects-banner">
-            <!-- Web Design Section -->
-            <div class="web-design-section" id="web-design">
-                <h2 class="section-title">Web Design</h2>
-                <p class="section-description">
-                    Explore my web design projects, showcasing responsive and visually appealing websites.
-                </p>
-                <button class="pdf-button" id="web-design-pdf">Browse</button>
-            </div>
-        
-            <!-- Graphic Design Section -->
-            <div class="graphic-design-section" id="graphic-design">
-                <h2 class="section-title">Graphic Design</h2>
-                <p class="section-description">
-                    Discover my graphic design portfolio, featuring logos, brochures, and creative visuals.
-                </p>
-                <button class="pdf-button" id="graphic-design-pdf">Browse</button>
-            </div>
-        
-            <!-- Art Section -->
-            <div class="art-section" id="art">
-                <h2 class="section-title">Art and Adventure</h2>
-                <p class="section-description">
-                    Have a look at my passion projects showcasing my paintings, illustrations, and photography.
-                </p>
-                <button class="pdf-button" id="art-pdf">Browse</button>
-            </div>
-        </div>
-
-        
+ 
         <!-- contact form -->            
         <div class="contact-container" id="reach-out">
                 <div class="contact-head">
@@ -329,6 +429,8 @@
                     </ul>
                 </div>
         </div>
+
+        
    </div>
     
     <!-- Footer section -->
@@ -342,7 +444,9 @@
             </p>
         </div>
     </footer>
-        
+    
+
+
     <script src="script.js"></script>    
 </body>
 </html>

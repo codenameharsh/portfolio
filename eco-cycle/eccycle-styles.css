@@ -1,0 +1,343 @@
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+Double+Pica:ital@0;1&family=Julius+Sans+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arapey:ital@0;1&display=swap');
+
+
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    --bg-color: #041e32;
+    --light-brown: #847468;
+    --accent-grey: #b3b3b3;
+    --accent-brown: #321804;
+    --text-color: #b3b3b3;
+}
+
+body {
+    font-family: 'Arapey', serif;
+    background-color: #041e32;
+    color: var(--text-color);
+    padding: 60px 5%;
+}
+
+
+/* Progress Bar Styles */
+.progress-container {
+    position: fixed;
+    left: 30px;
+    top: 0px;
+    width: .5rem;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+}
+.progress-bar {
+    width: .25rem;
+    height: 0;
+    background: white;
+    position: absolute;
+    top: 0;
+    border-bottom-left-radius: 3rem;
+}
+
+/* responsive */
+@media (max-width:1024px){
+    .progress-container{
+        display: none;
+    }
+}
+@media (max-width:768px){
+    .progress-container{
+        display: none;
+    }
+}
+@media (max-width:480px){
+    .progress-container{
+        display: none;
+    }
+}
+
+/* general styles */
+
+h1, h2, h3, h4 {
+    font-family: 'IM Fell Double Pica', serif;
+    letter-spacing: 1px;
+    color: var(--light-brown);
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+p, ul, ol {
+    font-size: 1.1rem;
+    color: #b3b3b3;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+ul, ol {
+    padding-left: 20px;
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project-descr, #project-goals, #project-research, #design-process, #project-outcomes, #project-conclusion {
+    margin-bottom: 40px;
+}
+
+/* image preview styles */
+/* Horizontal Image Preview Banner */
+.image-preview-banner {
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 1rem 0;
+    margin-bottom: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    position: relative;
+    border-top: 2px solid var(--light-brown);
+    border-bottom: 2px solid var(--light-brown);
+}
+
+.image-preview-container {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.preview-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex: 0 0 auto;
+}
+
+.preview-item img {
+    width: 120px;
+    height: auto;
+    border-radius: 6px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+
+}
+
+.preview-item img:hover {
+    transform: scale(2);
+}
+
+.preview-item p {
+    font-size: 0.9rem;
+    margin-top: 5px;
+    color: var(--accent-grey);
+    font-family: "Julius Sans One", sans-serif;
+    padding: 1rem;
+    font-weight: bolder;
+}
+
+
+/* Hide scrollbar for all browsers */
+.image-preview-banner {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+}
+
+.image-preview-banner::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, and Opera */
+}
+
+
+/* Styling for case study images */
+.img-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.img-container img {
+    max-width: 60%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.img-container img:hover {
+    transform: scale(1.5);
+}
+
+/* Competitor Analysis Table */
+#competitor-analysis {
+    width: 70%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+
+#competitor-analysis th, #competitor-analysis td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid var(--accent-grey);
+}
+
+#competitor-analysis th {
+    background-color: var(--accent-brown);
+    color: white;
+}
+
+#competitor-analysis td {
+    background-color: var(--bg-color);
+}
+
+
+#afinity {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Creates 3 equal-width columns */
+    grid-template-rows: repeat(2, 1fr);    /* Creates 2 equal-height rows */
+    gap: 1rem;     
+    cursor: pointer;                  /* Centers the items horizontally within the grid */
+}
+
+#afinity img {
+    width: 100%; /* Ensures images fit the container */
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s ease; /* Smooth scaling transition */
+}
+
+#afinity img:hover {
+    transform: scale(2.5); /* Make the images slightly bigger on hover */
+}
+
+#persona img:hover{
+    transform: scale(2.5);
+
+}
+
+#journey img:hover{
+    transform: scale(2.5);
+}
+
+#wireframes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Creates 3 equal-width columns */
+    grid-template-rows: repeat(2, 1fr);    /* Creates 2 equal-height rows */
+    gap: .5rem;     
+    cursor: pointer;                        /* Adds space between the grid items */
+}
+
+#wireframes img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Ensures images fill the grid cell while maintaining aspect ratio */
+}
+
+#wireframes img:hover{
+    transform: scale(2);
+}
+
+#prototypes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Creates 3 equal-width columns */
+    grid-template-rows: repeat(2, 1fr);    /* Creates 2 equal-height rows */
+    gap: .5rem;     
+    cursor: pointer;                        /* Adds space between the grid items */
+}
+
+#prototypes img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Ensures images fill the grid cell while maintaining aspect ratio */
+}
+
+#prototypes img:hover{
+    transform: scale(2);
+}
+
+#moodboard img{
+    max-width: 80%;
+}
+
+/* Section wrappers */
+.section-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.text-container {
+    flex: 1;
+    max-width: 45%;
+}
+
+.img-container {
+    flex: 1;
+    max-width: 45%;
+}
+
+/* Typography for Lists */
+.text-container ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.section-wrapper h4 {
+    margin-top: 15px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .section-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .text-container, .img-container {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .img-container img {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+}
