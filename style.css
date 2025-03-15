@@ -1225,6 +1225,7 @@ body{
 .portfolio-full button:hover{
   color: var(--accent-brown);
   background-color: var(--light-brown);
+  transform: translateY(-8px);
 }
 
 
