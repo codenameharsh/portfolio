@@ -996,7 +996,7 @@ body{
   background: #0b2f44;
   margin: 7rem auto;
   padding: 2rem;
-  width: 90vw;
+  width: 80vw;
   color: var(--accent-grey);
   display: flex;
   flex-direction: column;
@@ -1185,6 +1185,9 @@ body{
 }
 
 @media (max-width: 768px) {
+  .projects{
+    width: 100vw;
+  }
   .carousel-container {
     width: 90%;
   }
@@ -1322,6 +1325,16 @@ body{
 
 
 /* full portfolio */
+.portfolio-full{
+  background-color: #1531499c;
+  width: 80vw;
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+  border-radius: 3rem;
+}
 .portfolio-full button{
   width: 25rem;
   height: 3rem;
@@ -1356,9 +1369,10 @@ body{
 
 @media (max-width: 600px) {
   .portfolio-full button {
-    width: 90%;
+    width: 9rem;
     height: 2.5rem;
-    font-size: 0.85rem;
+    font-size: 0.5rem;
+    font-weight: bolder;
     margin-top: 3rem;
     margin-bottom: 3rem;
   }
