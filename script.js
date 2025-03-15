@@ -155,7 +155,7 @@ $(document).ready(() => {
   //hero section
   const careerTextEl = document.querySelector("#career-text");
   
-  const careers = [" a Graphic Designer", " an UI/UX Designer", "a Freelancer", "a Front-end Web Developer", "a Fashion Illustrator"];
+  const careers = [" a Graphic Designer", " an UI/UX Designer", "a Front-end Web Developer", "a Fashion Illustrator"];
   let careerIndex = 0;
   let characterIndex = 0;
   
