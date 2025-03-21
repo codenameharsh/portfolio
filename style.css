@@ -1283,7 +1283,6 @@ body{
 
 /* Grid Items */
 .grid-item {
-  background: #f4f4f4;
   padding: 20px;
   display: flex;
   align-items: center;
@@ -1296,7 +1295,7 @@ body{
 
 /* Art Section Header */
 #art-head {
-  background-color: #0b2f44;
+  background-image:  linear-gradient(90deg, #031421ae, #093c62a8);
   display: flex;
   flex-direction: column;
   color: var(--accent-grey);
