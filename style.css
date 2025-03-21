@@ -478,6 +478,7 @@ body{
   text-align: justify;
   color: var(--accent-grey);
   line-height: 1.7rem;
+  font-size: 1.2rem;
 }
 
 .about-des {
@@ -494,10 +495,10 @@ body{
 
 }
 
-.about-des ul {
+.outer-list {
   list-style: none;
   padding-left: 20px;
-  border-left: #b3b3b3 3px solid;
+  border-left: var(--light-brown) 3px solid;
 }
 
 .milestone{
@@ -508,14 +509,27 @@ body{
 .about-des ul li {
   margin-bottom: 10px;
   color: var(--accent-grey);
+  border-left: none;
 }
+
+.milestone li{
+  border-left: none;
+}
+
+.about-list{
+  list-style: none;
+  border-left: var(--light-brown) 3px dotted;
+  padding-left: 1rem;
+}
+
+
 
 /* .about-des ul li ul {
   padding-left: 20px;
 } */
 
 .skills {
-  background: linear-gradient(135deg, #0f2333, #022945);
+  background-image:  linear-gradient(135deg, #041e32, #3b352e);
   padding: 1.5rem;
   border-radius: 1rem;
   width: 100%;
@@ -872,7 +886,6 @@ body{
 .portfolio-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  
   gap: 1.5rem;
   max-width: 1200px;
   margin: 2rem auto;
@@ -880,11 +893,12 @@ body{
 
 /* Portfolio Item */
 .portfolio-item {
-  background: var(--accent-color);
+  background-image:  linear-gradient(90deg, #031421ae, #093c62a8);
   border-radius: 1rem;
   overflow: hidden;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease-in-out;
+  padding: .5rem;
 }
 
 .portfolio-item:hover {
@@ -895,12 +909,13 @@ body{
   width: 100%;
   height: 200px;
   object-fit: cover;
-  padding: .5rem;
-  border-radius: 3rem;
+  border-radius: 2rem;
+  padding: 1rem;
 }
 
 .portfolio-info {
   padding: 1.2rem;
+  text-align: justify;
 }
 
 .portfolio-info h3 {
@@ -915,19 +930,40 @@ body{
   margin-bottom: 1rem;
 }
 
+.project-tools{
+  display: flex;
+  flex-direction: row; 
+  align-items: flex-start;
+  justify-content: space-between;
+  color: var(--accent-grey);
+}
+
+.tool-img img{
+  height: 20px;
+  width: 20PX;
+  border-radius: 0;
+  margin: 0;
+  padding: 0;
+  
+}
+
 /* View Project Button */
 .btn {
-  display: inline-block;
+  display: flex;
   padding: 0.6rem 1.2rem;
   border-radius: 2rem;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
   background: var(--bg-color);
-  color:var(--accent-grey);
+  color:var(--light-brown);
   font-family: "Julius Sans One", sans-serif;;
   font-weight: 600;
   font-size: .8rem;
   text-decoration: none;
   transition: all 0.3s ease-in-out;
-  border: 1px solid var(--accent-grey);
+  border: 1px solid var(--light-brown);
+  width: 9rem;
 }
 
 .btn:hover {
@@ -944,6 +980,10 @@ body{
     padding: 1rem;
     line-height: 1rem;
     width: 80vw;
+  }
+
+  .btn{
+    width: 10rem;
   }
 }
 
@@ -964,6 +1004,10 @@ body{
     max-width: 800px;
     margin: 2rem auto;
     padding: 1rem;
+  }
+
+  .btn{
+    width: 10rem;
   }
   
 }
@@ -986,6 +1030,10 @@ body{
     margin: 2rem auto;
     padding: 1rem;
   }
+
+  .btn{
+    width: 10rem;
+  }
 }
 
 
@@ -995,6 +1043,7 @@ body{
 .projects {
   position: relative;
   background: #0b2f44;
+  background-image:  linear-gradient(45deg, #093c62a8, #031421ae);
   margin: 7rem auto;
   padding: 2rem;
   width: 80vw;
@@ -1085,7 +1134,7 @@ body{
 }
 
 .project-card .descr {
-  opacity: 0;
+  opacity: 1;
   font-size: 0.9rem;
   color: white;
   line-height: 1.5;
@@ -1120,7 +1169,7 @@ body{
 
 /* Control Button Styling */
 .carousel-controls button {
-  background-color: #041e3292;
+  background-color: #041e3297;
   color: var(--light-brown);
   border: none;
   padding: 15px;
@@ -1134,12 +1183,10 @@ body{
 /* Move buttons outward */
 .carousel-controls .prev {
   transform: translateX(-150%);
-  border-left:2px dashed var(--accent-grey) ;
 }
 
 .carousel-controls .next {
   transform: translateX(150%);
-  border-right:2px dashed var(--accent-grey) ;
 }
 
 .carousel-dots {
@@ -1216,6 +1263,7 @@ body{
 /* Art & Photography Section */
 .art-container {
   background-color: #0b2f44;
+  background-image:  linear-gradient(135deg, #031421ae, #093c62a8);
   border-radius: 3rem;
   padding: 1.5rem;
   max-width: 1000px;
@@ -1327,20 +1375,23 @@ body{
 
 /* full portfolio */
 .portfolio-full{
-  background-color: #1531499c;
-  width: 80vw;
+  background-color: linear-gradient(135deg, #041e32, #3b352e);
+  background-image:  linear-gradient(135deg,#3b352e, #041e32);
+  width: 70vw;
   display:flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  margin-top: 1rem;
+  margin: 3rem;
+  margin-top: 5rem;
   border-radius: 3rem;
 }
 .portfolio-full button{
   width: 25rem;
   height: 3rem;
   border-radius: 3rem;
-  margin-top: 5rem;
+  margin: 1rem;
+  margin-top: 5rem;  
   border: 2px solid var(--light-brown);
   background-color: var(--bg-color);
   color: var(--light-brown);
@@ -1393,7 +1444,7 @@ body{
   border-image-slice: 1;
   border-radius: 1.5rem;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-  color: #fff;
+  color: var(--accent-grey);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1421,7 +1472,7 @@ body{
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
   letter-spacing: 2px;
-  color: #fff;
+  color: var(--accent-grey);
 }
 
 .contact-head p {
@@ -1460,7 +1511,7 @@ body{
 }
 
 .contact-info {
-  color: #fff;
+  color: var(--accent-grey);
   font-weight: 600;
   text-decoration: none;
   cursor: pointer;
