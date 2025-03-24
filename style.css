@@ -172,7 +172,7 @@ body{
   padding: 1em;
   border-left: 2.5px dashed var(--light-brown);
   border-radius: 3rem ;
-}
+} 
 
 #nav-menu li > a {
   text-decoration: none;
@@ -307,11 +307,11 @@ body{
   height: 100%;
   background: url('images/hero-bg.jpg'); /* Optional texture image */
   opacity: 0.1;
-  animation: moveTexture 30s linear infinite;
+  animation: moveTexture 60s linear infinite;
   z-index: -2; /* Move the texture beneath the borders */
   background-position: center center; /* Center the texture */
   background-size: cover; /* Make the texture cover the section */
-  border: 1px dashed var(--accent-grey);
+  border: 2px dashed var(--accent-grey);
 }
 
 /* Texture movement for subtle depth */
@@ -320,7 +320,7 @@ body{
       transform: translate(0, 0); /* Start at top-left corner */
   }
   100% {
-      transform: translate(550px, 550px); /* Move to bottom-right corner */
+      transform: translate(700px, 700px); /* Move to bottom-right corner */
   }
 }
 
@@ -893,10 +893,10 @@ body{
 
 /* Portfolio Item */
 .portfolio-item {
-  background-image:  linear-gradient(90deg, #031421ae, #093c62a8);
-  border-radius: 1rem;
+  background-image:  linear-gradient(90deg, #041e3199, #093c62a8);
+  border-radius: 3rem;
   overflow: hidden;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); */
   transition: transform 0.3s ease-in-out;
   padding: .5rem;
 }
@@ -968,6 +968,7 @@ body{
 
 .btn:hover {
   background: var(--light-brown);
+  color: var(--accent-grey);
 }
 
 
@@ -1295,7 +1296,7 @@ body{
 
 /* Art Section Header */
 #art-head {
-  background-image:  linear-gradient(90deg, #031421ae, #093c62a8);
+  /* background-image:  linear-gradient(135deg, #031421ae, #093c62a8); */
   display: flex;
   flex-direction: column;
   color: var(--accent-grey);
