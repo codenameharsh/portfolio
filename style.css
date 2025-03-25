@@ -192,6 +192,7 @@ body{
 
 /* Desktop View */
 @media (min-width: 769px) {
+  
   .nav-menu-bar {
     display: flex !important;
   }
@@ -459,7 +460,6 @@ body{
 .about h4 {
   font-size: 1.5rem;
   font-weight: bold;
-  color:var(--accent-grey);
   padding: .5rem;
   padding-left: .7rem;
   font-style: italic;
@@ -781,7 +781,6 @@ body{
     color: var(--color);
   }
 
-/* portfolio download button*/
 
 /* .portfolio{
   background:linear-gradient(135deg, #2c4a62, #1f1b16);
