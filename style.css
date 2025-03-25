@@ -782,60 +782,6 @@ body{
   }
 
 
-/* .portfolio{
-  background:linear-gradient(135deg, #2c4a62, #1f1b16);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 300px;
-  width: 100vw;
-  border-top: 5px solid transparent;
-  border-image: linear-gradient(135 deg, #153149, #0b2f44);
-  border-image-slice: 1;
-}
-
-#portfolio-head{
-  font-size: 2.5rem;
-  color: var(--accent-grey);
-  padding-bottom: 3rem;
-}
-
-.portfolio button {
-  height: 3rem;
-  width: 30vw;
-  border-radius: 4rem;
-  font-family: "Julius Sans One", sans-serif;
-  font-weight: 600;
-  font-size: 1rem;
-  border: 2px solid var(--accent-grey);
-  transition: all 0.3s ease-in-out;
-  background-color: var(--bg-color);
-  color: var(--accent-grey);
-}
-
-.portfolio button:hover{
-  background-color: var(--light-brown);
-  color: #2a1505;
-  transform: scale(1.05);
-}
-
-/* responsive */
-/* @media (max-width: 1024px){
-  .portfolio button{
-    width: 70vw;
-    font-size: .7rem;
-    padding: .5rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .portfolio button{
-    width: 70vw;
-    font-size: .7rem;
-    padding: .5rem;
-  }
-}  */
 
 /* Portfolio Section */
 
