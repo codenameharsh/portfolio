@@ -27,19 +27,21 @@ body {
 }
 
 .logo img{
-    height: 100px;
-    width: 100px;
+    height: 80px;
+    width: 80px;
     position: fixed;
     top: 10px;
-    left: 20px;
+    left: 25px;
     z-index: 10;
-    border-radius: 50%;
-    border: 4px solid var(--jasper);
+    /* border-radius: 50%; */
+    /* border: 4px solid var(--jasper); */
 }
 
 /* Responsive for smaller screens (max-width: 768px) */
 @media (max-width:1024px){
     .logo img {
+        position: fixed;
+        border-radius: 50%;
         height: 70px; /* Reduce size */
         width: 70px;
         top: auto;
@@ -51,6 +53,8 @@ body {
 
 @media (max-width:480px){
     .logo img {
+        position: fixed;
+        border-radius: 50%;
         height: 70px; /* Reduce size */
         width: 70px;
         top: auto;
@@ -62,6 +66,8 @@ body {
 
 @media (max-width: 768px) {
     .logo img {
+        position: fixed;
+        border-radius: 50%;
         height: 70px; /* Reduce size */
         width: 70px;
         top: auto;
