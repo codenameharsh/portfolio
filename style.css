@@ -688,8 +688,8 @@ body{
     font-size: .8rem;
   }
 
-  .about-intro{
-    font-size: .7rem;
+  .about-intro p{
+    font-size: .9rem;
   }
 
   .milestone{
