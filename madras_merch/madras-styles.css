@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=IM+Fell+Double+Pica:ital@0;1&family=Julius+Sans+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Arapey:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
 
 
 /* General Styles */
@@ -7,18 +6,69 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    --bg-color: #041e32;
-    --light-brown: #847468;
-    --accent-grey: #b3b3b3;
-    --accent-brown: #321804;
-    --text-color: #b3b3b3;
+    --dark-cyan: #588b8bff;
+    --white: #ffffffff;
+    --apricot: #ffd5c2ff;
+    --tangerine: #f28f3bff;
+    --jasper: #c8553dff;
 }
 
+html {
+    scroll-behavior: smooth;
+  }
+
 body {
-    font-family: 'Arapey', serif;
-    background-color: #041e32;
-    color: var(--text-color);
+    font-family: "Urbanist", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 400;
+    background-color: var(--white);
     padding: 60px 5%;
+}
+
+.logo img{
+    height: 100px;
+    width: 100px;
+    position: fixed;
+    top: 10px;
+    left: 20px;
+    z-index: 10;
+    border-radius: 50%;
+    border: 4px solid var(--jasper);
+}
+
+/* Responsive for smaller screens (max-width: 768px) */
+@media (max-width:1024px){
+    .logo img {
+        height: 70px; /* Reduce size */
+        width: 70px;
+        top: auto;
+        left: auto;
+        bottom: 10px; /* Move to bottom */
+        right: 20px; /* Move to right */
+    }
+}
+
+@media (max-width:480px){
+    .logo img {
+        height: 70px; /* Reduce size */
+        width: 70px;
+        top: auto;
+        left: auto;
+        bottom: 10px; /* Move to bottom */
+        right: 20px; /* Move to right */
+    }
+}
+
+@media (max-width: 768px) {
+    .logo img {
+        height: 70px; /* Reduce size */
+        width: 70px;
+        top: auto;
+        left: auto;
+        bottom: 10px; /* Move to bottom */
+        right: 20px; /* Move to right */
+    }
 }
 
 
@@ -27,14 +77,14 @@ body {
     position: fixed;
     left: 60px;
     top: 0px;
-    width: .5rem;
+    width: 1rem;
     height: 100%;
-    background: rgba(255, 255, 255, 0.2);
+    background: var(--tangerine);
 }
 .progress-bar {
-    width: .25rem;
+    width: .5rem;
     height: 0;
-    background: white;
+    background: var(--jasper);
     position: absolute;
     top: 0;
     border-bottom-left-radius: 3rem;
@@ -60,9 +110,8 @@ body {
 /* general styles */
 
 h1, h2, h3, h4 {
-    font-family: 'IM Fell Double Pica', serif;
     letter-spacing: 1px;
-    color: var(--light-brown);
+    color: var(--jasper);
 }
 
 h1 {
@@ -88,7 +137,7 @@ h4 {
 
 p, ul, ol {
     font-size: 1.1rem;
-    color: #b3b3b3;
+    color: black;
     line-height: 1.6;
     margin-bottom: 20px;
 }
@@ -114,10 +163,10 @@ ul, ol {
     white-space: nowrap;
     padding: 1rem 0;
     margin-bottom: 1rem;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(57, 157, 156, 0.349);
     position: relative;
-    border-top: 2px solid var(--light-brown);
-    border-bottom: 2px solid var(--light-brown);
+    border-top: 3px solid var(--tangerine);
+    border-bottom: 3px solid var(--tangerine);
 }
 
 .image-preview-container {
@@ -138,7 +187,7 @@ ul, ol {
 }
 
 .preview-item img {
-    width: 220px;
+    width: 250px;
     height: auto;
     border-radius: 6px;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
@@ -170,6 +219,7 @@ ul, ol {
 .image-preview-banner::-webkit-scrollbar {
     display: none; /* Chrome, Safari, and Opera */
 }
+
 
 
 /* Styling for case study images */

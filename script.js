@@ -35,6 +35,38 @@ $(document).ready(() => {
           $("body").css("padding-top", "0");
         }
     });
+
+    //skills
+    function animateElements() {
+      $(".skills ul li").each(function (index) {
+          var position = $(this).offset().top;
+          var windowHeight = $(window).height();
+          var scrollTop = $(window).scrollTop();
+
+          if (scrollTop + windowHeight > position) {
+              $(this).delay(index * 100).queue(function () {
+                  $(this).addClass("shake").dequeue();
+              });
+          }
+      });
+
+      $(".fill").each(function () {
+          var position = $(this).offset().top;
+          var windowHeight = $(window).height();
+          var scrollTop = $(window).scrollTop();
+
+          if (scrollTop + windowHeight > position) {
+              var finalWidth = $(this).attr("style").match(/width:\s*(\d+)%/)[1] + "%";
+              $(this).css({ width: "0%" }).animate({ width: finalWidth }, 1500);
+          }
+      });
+  }
+
+  // Run animations on scroll
+  $(window).on("scroll", animateElements);
+
+  // Run animations on page load if elements are already in view
+  animateElements();
   
     //project carousel functionality
     let currentIndex = 0;
@@ -45,6 +77,8 @@ $(document).ready(() => {
         const offset = -currentIndex * 100 + "%";
         carousel.style.transform = "translateX(" + offset + ")";
     }
+
+
   
     // Next button
     document.querySelector(".next").addEventListener("click", function () {
