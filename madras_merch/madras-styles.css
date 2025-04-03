@@ -161,35 +161,34 @@ ul, ol {
     margin-bottom: 40px;
 }
 
-/* image preview styles */
-/* Horizontal Image Preview Banner */
+/* Ensure all images are aligned in a single row */
 .image-preview-banner {
     width: 100%;
-    overflow-x: auto;
-    white-space: nowrap;
+    overflow: hidden; /* Hide the scrollbar but allow smooth scrolling */
+    white-space: nowrap; 
     padding: 1rem 0;
-    margin-bottom: 1rem;
     background: rgba(57, 157, 156, 0.349);
     position: relative;
     border-top: 3px solid var(--tangerine);
     border-bottom: 3px solid var(--tangerine);
 }
 
+/* Ensure all images are positioned for continuous movement */
 .image-preview-container {
     display: flex;
-    align-items: center;
     gap: 1.5rem;
-    padding: 1rem;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    width: max-content; /* Allows for infinite scrolling */
 }
 
+/* Adjust preview item behavior */
 .preview-item {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    flex: 0 0 auto;
+    flex: 0 0 auto; /* Prevents shrinking */
 }
 
 .preview-item img {
@@ -199,31 +198,20 @@ ul, ol {
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease;
     cursor: pointer;
-
 }
 
 .preview-item img:hover {
     transform: scale(2);
 }
 
-.preview-item p {
-    font-size: 0.9rem;
-    margin-top: 5px;
-    color: var(--accent-grey);
-    font-family: "Julius Sans One", sans-serif;
-    padding: 1rem;
-    font-weight: bolder;
-}
-
-
-/* Hide scrollbar for all browsers */
+/* Hide scrollbar */
 .image-preview-banner {
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; 
+    -ms-overflow-style: none; 
 }
 
 .image-preview-banner::-webkit-scrollbar {
-    display: none; /* Chrome, Safari, and Opera */
+    display: none;
 }
 
 
@@ -291,6 +279,21 @@ ul, ol {
     max-width: 80%;
 }
 
+.final-img-container{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+}
+
+.final-img-container img{
+    width: 100%;  /* Ensures images fit within their grid */
+    max-width: 300px; /* Prevents excessive stretching */
+    height: auto;  /* Maintain aspect ratio */
+    object-fit: cover;
+    border-radius: .5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
 /* Section wrappers */
 .section-wrapper {
     display: flex;
@@ -320,7 +323,17 @@ ul, ol {
 }
 
 /* Responsive Design */
+@media screen and (max-width: 1024px) {
+    .final-img-container {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns for tablets */
+    }
+}
+
 @media screen and (max-width: 768px) {
+    .final-img-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for smaller screens */
+    }
+
     .section-wrapper {
         flex-direction: column;
         align-items: center;
@@ -346,5 +359,15 @@ ul, ol {
 
     h3 {
         font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .final-img-container {
+        grid-template-columns: 1fr; /* 1 column on small screens */
+    }
+
+    .final-img-container img {
+        max-width: 100%; /* Ensures images fit screen width */
     }
 }
