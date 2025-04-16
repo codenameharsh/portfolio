@@ -1,3 +1,5 @@
+console.log("JS loaded");
+
 $(document).ready(()=>{
     //sticky nav
     let navbar = $("#nav-bar");
