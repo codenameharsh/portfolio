@@ -98,6 +98,7 @@
     padding: 1rem;
     padding-bottom: 0;
     font-size: 1.2rem;
+    text-align: right;
 }
 
 .logo h3{
@@ -228,7 +229,6 @@
     }
 
   }
-
 
 
   /* video */
