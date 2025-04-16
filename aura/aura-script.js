@@ -1,26 +1,63 @@
-//image preview banner
-document.addEventListener("DOMContentLoaded", function () {
-    const banner = document.querySelector(".image-preview-banner");
-    let isScrolling;
-
-    function autoScroll() {
-        banner.scrollLeft += 1;
-        if (banner.scrollLeft >= banner.scrollWidth - banner.clientWidth) {
-            banner.scrollLeft = 0;
+$(document).ready(()=>{
+    //sticky nav
+    let navbar = $("#nav-bar");
+    let stickyOffset = navbar.offset().top;
+  
+    $(window).on('scroll', function() {
+        if ($(window).scrollTop() > stickyOffset) {
+            navbar.addClass("sticky");
+            $("body").css("padding-top", navbar.outerHeight() + "px"); // Prevent content jump
+        } else {
+          navbar.removeClass("sticky").css("position", "relative"); // Reset position
+          $("body").css("padding-top", "0");
         }
-        isScrolling = requestAnimationFrame(autoScroll);
-    }
+    });
+})
+  
+  
+  //hamburger menu
+  const hamburgerMenu = document.getElementById('hamburger-menu');
+    const navMenu = document.getElementById('nav-menu');
 
-    banner.addEventListener("mouseenter", () => cancelAnimationFrame(isScrolling));
-    banner.addEventListener("mouseleave", autoScroll);
+    hamburgerMenu.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+    });
 
-    autoScroll(); // Start scrolling on page load
+    //close when link is clicked
+    document.querySelectorAll('.nav-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+          navMenu.classList.remove('active');
+        });
+      });
+
+      // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        const isClickInsideMenu = navMenu.contains(e.target);
+        const isClickOnHamburger = hamburgerMenu.contains(e.target);
+
+        if (!isClickInsideMenu && !isClickOnHamburger) {
+        navMenu.classList.remove('active');
+        }
+    });
+
+    //scroll percentage
+window.addEventListener('scroll', () => {
+  const scrollTop = document.documentElement.scrollTop;
+  const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  const scrolled = Math.round((scrollTop / scrollHeight) * 100);
+  document.getElementById('scroll-percent').textContent = `${scrolled}%`;
 });
 
-//progress bar
-window.addEventListener("scroll", function() {
-    let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-    let scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    let scrolled = (scrollTop / scrollHeight) * 100;
-    document.getElementById("progress-bar").style.height = scrolled + "%";
-});
+//galler scroll on reveal
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.classList.add('active');
+          }, index * 100); // stagger delay
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));

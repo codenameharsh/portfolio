@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Recipe Generator | React Web App | Harshitha Rajendran</title>
+    <link rel="stylesheet" href="ai-styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" type="text/javascript"></script>
+</head>
+<body>
+    <div class="body-wrapper">
+        <div class="nav-bar" id="nav-bar">
+            <div class="logo">
+                <h1>codenameharsh</h1>
+                <h3>AI Recipe Generator</h3>
+
+            </div>
+            <div class="hamburger-menu" id="hamburger-menu">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../index.html/#">About</a></li>
+                    <li><a href="../index.html/#portfolio-head">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+
+        
+        <div id="scroll-img">
+            <img src="../images/scroll.png" alt="scroll">
+          </div>
+
+        <div id="scroll-percent">0%</div>
+
+        <div class="project-video">
+            <video width="100%" autoplay muted loop playsinline>
+                <source src="AI Recipe Generator.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <div class="case-study">
+            <div class="project-skills">
+                <div class="project-skill-carousel">
+                    <div class="p-s-tracks">
+                        <ul class="p-s-list">
+                            <li class="skill-title">REACT WEB APP</li>
+                            <li class="skill-title">FRONT-END WEB-DEVELOPMENT</li>
+                            <li>React.js</li>
+                            <li>JavaScript</li>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>Hugging Face API</li>
+                            <!-- duplicated for seamless loop -->
+                            <li class="skill-title">REACT WEB APP</li>
+                            <li class="skill-title">FRONT-END WEB-DEVELOPMENT</li>
+                            <li>React.js</li>
+                            <li>JavaScript</li>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>Hugging Face API</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="case-study-text">
+                <div class="case-study-intro">
+                    <h1>AI Recipe Generator</h1>
+                    <h2>Case Study | React Web App |  Hugging Face API Integration</h2>
+                    <h3>Duration: 1 week</h3>
+                </div>
+
+                <div class="project-intro project-section">
+                    <h2>Project Overview</h2>
+                    <p>The AI Recipe Generator is a responsive React application designed to simplify the cooking process by generating personalized recipes based on ingredients and dietary preferences entered by the user. Powered by the Hugging Face API, the app transforms simple text input into complete recipe instructions, making it both an intelligent kitchen assistant and a demonstration of seamless user experience design.</p>
+                </div>
+
+                <div class="project-objectives project-section">
+                    <h2>Objective</h2>
+                    <p>To create a web application that blends user interactivity with real-time AI-generated content, allowing users to input available ingredients and receive complete, unique recipes in return. The goal was to explore how AI can be used to enhance everyday decision-making while showcasing frontend development and API handling skills.</p>
+                </div>
+
+                <div class="project-flow project-section">
+                    <h2>User Flow</h2>
+                    <ol>
+                        <li><span>Input Phase: </span>
+                            <p>Users enter a list of ingredients and optional dietary restrictions in an intuitive, accessible form.</p>
+                        </li>
+
+                        <li>
+                            <span>Processing Phase</span>
+                            <p>Upon submission, the input is sent to the Hugging Face API, which returns a structured recipe output.</p>
+                        </li>
+
+                        <li>
+                            <span>Output Phase</span>
+                            <p>The generated recipe, including ingredients and instructions, is dynamically displayed on the page.</p>
+                        </li>
+
+                        <li>
+                            <span>Optional Toggle</span>
+                            <p>Users can reset or modify their input to receive new recipe variations.</p>
+                        </li>
+                    </ol>
+                </div>
+
+                <div class="project-design project-section">
+                    <h2>Key Features</h2>
+                    <ol>
+                        <li><span>Interactive UI: </span>
+                            <p>Built using React’s useState and props, the input form is responsive and easy to use across screen sizes.
+                            </p>
+                        </li>
+
+                        <li>
+                            <span>AI Integration: </span>
+                            <p>The Hugging Face API processes natural language inputs and returns intelligently structured content.</p>
+                        </li>
+
+                        <li>
+                            <span>Conditional Rendering: </span>
+                            <p>Recipes are displayed only when results are returned, using ternary logic for clean UX.</p>
+                        </li>
+
+                        <li>
+                            <span>Responsive Design: </span>
+                            <p>The layout adjusts elegantly for smaller screens, including a touch-friendly carousel for displaying recipes.</p>
+                        </li>
+                        <li>
+                            <span>State Management: </span>
+                            <p>Efficient toggling between input form and results, maintaining a smooth and user-friendly interface.</p>
+                        </li>
+
+
+                    </ol>
+
+                </div>
+
+                <div class="project-tech project-section">
+                    <h2>Technical Stack</h2>
+                    <ul>
+                        <li><span>React.js: </span><p>Component-based architecture for modular development and reusable UI elements.</p></li>
+                        <li>
+                            <span>Hugging Face API: </span>
+                            <p>NLP model integration for real-time, AI-generated recipe content.</p>
+                        </li>
+                        <li>
+                            <span>CSS: </span>
+                            <p>Custom styling with a focus on dynamic layout and responsive design.</p>
+                        </li>
+                        <li>
+                            <span>React Hooks: </span>
+                            <p>useState, useEffect, and event listeners for seamless interaction and logic flow.</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="project-challenges project-section">
+                    <h2>Challenges & Solutions</h2>
+                    <ul>
+                        <li>
+                            <span>Challenge: </span>
+                            <p>Handling asynchronous API responses and maintaining UI responsiveness.</p>
+                            <span>Solution: </span>
+                            <p>Implemented loading states and conditional rendering to improve feedback and user trust.</p>
+                        </li>
+                        <li>
+                            <span>Challenge: </span>
+                            <p>Keeping the layout intuitive across devices.</p>
+                            <span>Solution: </span>
+                            <p>Used CSS grid/flexbox and a carousel component for small-screen optimization.</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="project-conclusion project-section">
+                    <h2>Outcome</h2>
+                    <p>The AI Recipe Generator successfully combines intelligent content generation with thoughtful UI/UX design. It demonstrates an advanced understanding of React, third-party API integration, and responsive front-end development. It also provides a compelling use case for how AI can be practically integrated into user-centric applications.</p>
+                    <P>Here's the link to my <a href="https://github.com/codenameharsh/AI_recipe_app"> GitHub repository.</a></P>
+                </div>
+            </div>
+
+        
+    
+            </div>
+
+        </div>
+
+
+
+
+    </div>
+
+    <footer class="footer">
+        <div class="footer">
+            <p>&copy; 2025 Harshitha Rajendran</p>
+            <p>
+                <a href="#">Home</a> |
+                <a href="#portfolio-start">Portfolio</a> |
+                <a href="#reach-out">Contact</a>
+            </p>
+        </div>
+      </footer>
+
+    <script src="ai-script.js"></script>
+</body>
+</html>

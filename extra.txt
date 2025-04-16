@@ -1,1268 +1,243 @@
-   
-/* } */
-/* For desktop screens */
-@media only screen and (min-width: 1200px) {
-  .projects-banner {
-    padding: 2rem;
-  }
-  .web-design-section, .graphic-design-section, .art-section {
-    padding: 200px 50px;
-  }
-  .section-title {
-    font-size: 3rem;
-  }
-  .section-description {
-    font-size: 1.8rem;
-
-  }
-  .pdf-button {
-    font-size: 1.5rem;
-    padding: 1.5rem 3rem;
-  }
+/* header & nav */
+.logo h1{
+    color: var(--sage);
+    background-color: black;
 }
-
-/* For laptop screens */
-@media only screen and (min-width: 768px) and (max-width: 1199px) {
-  .projects-banner {
-    padding: 1.5rem;
-  }
-  .web-design-section, .graphic-design-section, .art-section {
-    padding: 150px 30px;
-  }
-  .section-title {
-    font-size: 2.5rem;
-  }
-  .section-description {
-    font-size: 1.5rem;
-  }
-  .pdf-button {
-    font-size: 1.2rem;
-    padding: 1rem 2rem;
-  }
-}
-
-/* For tablet screens */
-@media only screen and (min-width: 600px) and (max-width: 767px) {
-  .projects-banner {
-    padding: 1rem;
-  }
-  .web-design-section, .graphic-design-section, .art-section {
-    padding: 100px 20px;
-  }
-  .section-title {
-    font-size: 2rem;
-  }
-  .section-description {
-    font-size: 1.2rem;
-    width: 50vw;
-  }
-  .pdf-button {
-    font-size: 1rem;
-    padding: 0.5rem 1.5rem;
-  }
-}
-
-/* For mobile screens */
-@media only screen and (max-width: 599px) {
-  .projects-banner {
-    padding: 0.5rem;
-  }
-  .web-design-section, .graphic-design-section, .art-section {
-    padding: 50px 10px;
-  }
-  .section-title {
-    font-size: 1.5rem;
-  }
-  .section-description {
-    font-size: 1rem;
-    width: 40vw;
-  }
-  .pdf-button {
-    font-size: 0.8rem;
-    padding: 0.2rem 1rem;
-  }
-}
-
-@media only screen and (min-width: 480px) and (max-width: 767px) {
-/* Landscape mobile styles here */
-#nav-bar{
-  height: 100px;
-}
-
-  #nav-menu {
-    font-size: .7em;
-    position: relative;
+/* NAVBAR */
+.nav-bar {
     display: flex;
-    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    justify-content: space-evenly;
-  }
-
-
-  #hero {
-    width: 100vw;
-    height: 90vh;
-  }
-
-  .text-container h1{
-    font-size: 2.5em;
-  }
-
-  .hero-btn button{
-    font-size: .75em;
-    padding: 15px;
-  }
-
-  .banner_container-2{
-    width: 80vw;
-    position: absolute;
-    right: 70px;
-  }
-
-  .banner_heading{
-    font-size: 35px;
-  }
-
-  .banner_subheading{
-    font-size: 15px;
-  }
-
-  .banner_button_link{
-    width: 100px;
+    height: 100px;
+    padding: 0 1rem;
     position: relative;
-    left: 70px;
+    background-color: black;
+    z-index: 10;
   }
 
-  .contact-container{
-    height: 500px;
-    width: 300px;
-    padding: 1rem;
-  }
-
-  .contact-head{
-    padding-top: 2rem;
-    width: 300px;
-    font-size: 1rem;
-    padding-left: 1rem;
-  }
-
-  .contact-head p{
-    font-size: .9rem;
-    width: 240px;
-  }
-
-  .contact-method{
-    display: flex;
-    flex-direction: column;
-    font-size: .7rem;
-    padding-left: 0;
-  }
-
-  }
-
-  @media only screen and (min-width: 768px) {
-    /* Tablet styles here */
-    #nav-bar{
-      height: 100px;
-    }
-
-    #nav-menu {
-      font-size: .7em;
-      position: relative;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-evenly;
-    }
-
-    #hero {
-      width: 100vw;
-      height: 90vh;
-    }
-  
-    .text-container h1{
-      font-size: 3.5em;
-    }
-  
-    .hero-btn button{
-      font-size: .9em;
-      padding: 15px;
-    }
-  
-    .banner_container-2{
-      width: 80vw;
-      position: absolute;
-      right: 70px;
-    }
-  
-    .banner_heading{
-      font-size: 35px;
-    }
-  
-    .banner_subheading{
-      font-size: 15px;
-    }
-  
-    .banner_button_link{
-      width: 100px;
-      position: relative;
-      left: 70px;
-    }
-  
-    .contact-container{
-      height: 500px;
-      width: 300px;
-      padding: 1rem;
-    }
-  
-    .contact-head{
-      padding-top: 2rem;
-      width: 300px;
-      font-size: 1rem;
-      padding-left: 1rem;
-    }
-  
-    .contact-head p{
-      font-size: .9rem;
-      width: 240px;
-    }
-  
-    .contact-method{
-      display: flex;
-      flex-direction: column;
-      font-size: .7rem;
-      padding-left: 0;
-    }
-
-  }
-  
-  
-  @media only screen and (min-width: 1024px) {
-    /* Large tablet and small desktop styles here */
-    #nav-bar{
-      height: 100px;
-    }
-
-    #nav-menu {
-      font-size: .7em;
-      position: relative;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-evenly;
-    }
-
-    #hero {
-      width: 100vw;
-      height: 90vh;
-    }
-  
-    .text-container h1{
-      font-size: 3.5em;
-    }
-  
-    .hero-btn button{
-      font-size: .9em;
-      padding: 15px;
-    }
-
-    .wrapper{
-      width: 100vw;
-      overflow-x: hidden;
-    }
-
-    .banner-container{
-      width: 100vw;  
-    }
-  
-    .banner_container-2{
-      width: 50vw;
-      position: absolute;
-      left: 25%;
-      margin: 10px 0 10px 0
-    }
-  
-    .banner_heading{
-      font-size: 35px;
-    }
-  
-    .banner_subheading{
-      font-size: 15px;
-    }
-  
-    .banner_button_link{
-      width: 100px;
-      position: relative;
-      left: 70px;
-    }
-  
-    .contact-container{
-      height: 500px;
-      width: 300px;
-      padding: 1rem;
-    }
-  
-    .contact-head{
-      padding-top: 2rem;
-      width: 300px;
-      font-size: 1rem;
-      padding-left: 1rem;
-    }
-  
-    .contact-head p{
-      font-size: .9rem;
-      width: 240px;
-    }
-  
-    .contact-method{
-      display: flex;
-      flex-direction: column;
-      font-size: .7rem;
-      padding-left: 0;
-    }
-  }
-  
-  @media only screen and (min-width: 1200px) {
-    /* Desktop styles here */
-
-    #header{
-      height: 120px;
-    }
-
-    #nav-bar{
-      height: 100px;
-    }
-
-    #logo{
-      height: 120px;
-      width: 120px;
-    }
-
-    #nav-menu {
-      font-size: 1em;
-      position: relative;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-evenly;
-    }
-
-    #hero {
-      width: 100vw;
-      height: 90vh;
-    }
-  
-    .text-container h1{
-      font-size: 4em;
-    }
-  
-    .hero-btn button{
-      font-size: .9em;
-      padding: 15px;
-    }
-
-    .wrapper{
-      width: 100vw;
-      overflow-x: hidden;
-    }
-
-    .banner-container{
-      width: 100vw;
-    }
-  
-    .banner_container-2{
-      width: 50vw;
-      position: absolute;
-      left: 25%;
-      margin: 10px 0 10px 0
-    }
-  
-    .banner_heading{
-      font-size: 35px;
-    }
-  
-    .banner_subheading{
-      font-size: 15px;
-    }
-  
-    .banner_button_link{
-      width: 100px;
-      position: relative;
-      left: 120px;
-    }
-  
-    .container{
-      height: 800px;
-      position: absolute;
-      left: 11em;
-      z-index: -1;
-    }
-
-    /* .form{
-      font-size: 1.5em;
-    }
-  
-    .contact-head{
-      padding: 9em 0em 5em 0em;
-    } */
-
-    #submit{
-      font-size: .9em;
-    }
-  }
-
-
-  //project highlights
-
-
-                  
-
-
-
-
-
-
-
-
-/* Hero Buttons */
-.hero-btn {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-}
-
-.hero-btn button {
-  background: rgba(255, 255, 255, 0.1);
-  color: #fff;
-  border-radius: 2rem;
-  font-family: "Julius Sans One", sans-serif;
-  font-weight: 600;
-  font-size: 1rem;
-  width: 10rem;
-  height: 3.5rem;
-  border: 2px solid var(--accent-grey);
-  transition: all 0.3s ease-in-out;
-}
-
-.hero-btn button:hover {
-  background-color: var(--light-brown);
-  color: #2a1505;
-  transform: scale(1.05);
-}
-
-
-        <div class="projects-banner">
-            <h1>Or browse by Section:</h1>
-            <!-- Web Design Section -->
-            <div class="web-design-section" id="web-design">
-                <h2 class="section-title">Web Design</h2>
-                <p class="section-description">
-                    Explore my web design projects, showcasing responsive and visually appealing websites.
-                </p>
-                <button class="pdf-button" id="web-design-pdf">Browse</button>
-            </div>
-        
-            <!-- Graphic Design Section -->
-            <div class="graphic-design-section" id="graphic-design">
-                <h2 class="section-title">Graphic Design</h2>
-                <p class="section-description">
-                    Discover my graphic design portfolio, featuring logos, brochures, and creative visuals.
-                </p>
-                <button class="pdf-button" id="graphic-design-pdf">Browse</button>
-            </div>
-        
-            <!-- Art Section -->
-            <div class="art-section" id="art">
-                <h2 class="section-title">Art and Adventure</h2>
-                <p class="section-description">
-                    Have a look at my passion projects showcasing my paintings, illustrations, and photography.
-                </p>
-                <button class="pdf-button" id="art-pdf">Browse</button>
-            </div>
-        </div>
-
-
-        /* projects */
-
-.projects-banner {
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* Center content vertically */
-  align-items: center; /* Center content horizontally */
-  text-align: center; /* Ensure text aligns center */
-  padding: 3rem 1rem;
-  width: 100%;
-  background-color: #041e32; /* Blue background */
-  color: #b3b3b3; /* Grey text color */
-}
-
-.projects-banner .section-title {
-  font-size: 2rem;
-  font-weight: bold;
-  text-align: center;
-  color: #fff; /* White text */
-  margin-bottom: 1rem;
-}
-
-.projects-banner .section-description {
-  font-size: 1rem;
-  text-align: center;
-  color: #b3b3b3;
-  margin-bottom: 1.5rem;
-  width: 80%;
-  max-width: 50rem;
-}
-
-.projects-banner .pdf-button {
-  font-family: "Julius Sans One", sans-serif;
-  font-weight: bold;
-  font-size: 1rem;
-  border: 2px solid var(--accent-grey);
-  transition: all 0.3s ease-in-out;
-  background-color: var(--bg-color);
-  color: var(--accent-grey);
-  padding: 1rem 3rem;
-  border-radius: 2rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.projects-banner .pdf-button:hover {
-  background-color: var(--light-brown); /* Brown on hover */
-  color: var(--accent-brown); /* White text on hover */
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Web Design Section */
-.web-design-section {
-  width: 100%;
-  max-width: 1200px;
-  height: 80vh; /* Reduced height */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  position: relative;
-  overflow: hidden;
-  padding: 2rem;
-  margin: 0 auto 2rem;
-  border-top: 1rem solid var(--light-brown);
-  border-radius: 2rem;
-  text-align: center;
-  transition: background 0.3s ease-in-out;
-}
-
-/* Graphic Design Section */
-.graphic-design-section {
-  width: 100%;
-  max-width: 1200px;
-  height: 80vh; /* Reduced height */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  position: relative;
-  overflow: hidden;
-  padding: 2rem;
-  margin: 0 auto 2rem;
-  border-top: 1rem solid var(--light-brown);
-  border-radius: 2rem;
-  text-align: center;
-  transition: background 0.3s ease-in-out;
-}
-
-/* Art Section */
-.art-section {
-  width: 100%;
-  max-width: 1200px;
-  height: 80vh; /* Reduced height */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  position: relative;
-  overflow: hidden;
-  padding: 2rem;
-  margin: 0 auto 2rem;
-  border-top: 1rem solid var(--light-brown);
-  border-radius: 2rem;
-  text-align: center;
-  transition: background 0.3s ease-in-out;
-}
-
-/* Sections */
-.web-design-section,
-.graphic-design-section,
-.art-section {
-    position: relative;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    transition: background 1s ease-in-out;
-    z-index: 1;
-    overflow: hidden; /* Prevents any overflow issues */
-    margin: 2rem auto;  /*Centers the section  */
-    height: auto;
-    min-height: 80vh;
-}
-
-/* 
-  width: 90%;
-  max-width: 1200px;
-  height: auto;  Allow flexibility for content 
-  min-height: 80vh; Ensures it doesn't shrink too much 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  position: relative;
-  overflow: hidden;
-  padding: 2rem;
-  margin: 2rem auto;  Centers the section 
-  border-radius: 2rem;
-  text-align: center;
-  transition: background 0.3s ease-in-out;
- */
-
-/* Blurred background layer */
-.web-design-section::before,
-.graphic-design-section::before,
-.art-section::before {
-    content: "";
-    position: absolute;
+  .sticky {
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    background-image: var(--bg-image);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    filter: blur(2px); /* Adjust blur intensity */
-    z-index: -1;
-    opacity: 0.8; /* Adjust opacity for better contrast */
-    transition: background-image 1s ease-in-out;
-}
-
-/* Overlay for better readability */
-.web-design-section::after,
-.graphic-design-section::after,
-.art-section::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.647); /* Dark overlay */
-    z-index: -1;
-}
-
-
-/* Optional hover effects */
-.web-design-section:hover,
-.graphic-design-section:hover,
-.art-section:hover {
-  background: linear-gradient(to top left, #3e505c, #2c393e);
-}
-
-/* Borders for all sections */
-.web-design-section::before,
-.graphic-design-section::before,
-.art-section::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border-radius: 2rem;
-  z-index: -1;
-}
-
-.web-design-section::before,
-.graphic-design-section::before,
-.art-section::before {
-  border: 2px solid #b3b3b3;
-}
-
-
-
-.section-title {
-  font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 1.5rem;
-}
-
-.section-description {
-  font-size: 1.5rem;
-  color: white;
-  margin-bottom: 1.5rem;
-  max-width: 50rem;
-  font-weight: bold;
-}
-
-.lightbox {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.8);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
-
-.lightbox-content {
-  background: var(--bg-color);
-  padding: 1rem;
-  border-radius: 10px;
-  width: 80%;
-  max-width: 900px;
-  text-align: center;
-}
-
-.close-lightbox {
-  position: absolute;
-  top: 15px;
-  right: 20px;
-  font-size: 3rem;
-  cursor: pointer;
-  color: #fff;
-}
-
-@media (max-width: 1024px) { /* Tablets & smaller */
-  .projects-banner {
-    padding: 2rem 1rem;
+    background-color: black;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    transition: all 0.3s ease-in-out;
   }
 
-  .web-design-section,
-  .graphic-design-section,
-  .art-section {
-    width: 95%; /* Use more screen space */
-    max-width: 1000px;
-    min-height: auto; /* Remove fixed height */
-    padding: 2rem;
-    margin: 1.5rem auto; /* Ensure it's centered */
+
+  .photo-container img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 2px solid var(--fern-green);
   }
 
-  .section-title {
-    font-size: 2.2rem;
-  }
 
-  .section-description {
-    font-size: 1.2rem;
-    width: 90%;
-  }
-}
+          <div class="portfolio-wrapper">
+            <div class="portfolio-intro">
 
-@media (max-width: 768px) { /* Mobile */
-  .projects-banner {
-    padding: 1.5rem 1rem;
-  }
+                <h1 id="portfolio-head">My Portfolio</h1>
+                <p class="portfolio-p">
+                    A curated selection of my work in graphic design, branding, UI/UX, and front-end development.  
+                    Explore <a href="#portfolio-cards">featured projects below</a> , or <a href="#portfolio-pdf">browse my full portfolio</a> for in-depth case studies.
+                </p>
+                <p class="portfolio-p">
+                    In addition to UI/UX and branding, I have a deep passion for <a href="#art-start">painting, illustration, and photography</a>, 
+                    experimenting with different mediums and techniques to explore my artistic voice.
+                </p>
 
-  .web-design-section,
-  .graphic-design-section,
-  .art-section {
-    width: 100%; /* Full width */
-    min-height: auto; /* Remove fixed height */
-    padding: 1.5rem;
-    margin: 1rem auto;
-  }
-
-  .section-title {
-    font-size: .5rem;
-  }
-
-  .section-description {
-    font-size: .3rem;
-    width: 95%;
-  }
-
-  .projects-banner .pdf-button{
-    font-size: .8rem;
-    height:2.5rem;
-    width: 6rem;
-    align-items: center;
-    padding: 1rem;
-    padding-bottom: 1.5rem;
-
-  }
-}
-
-    --bg-color: #041e32;
-    --accent-brown: #847468;
-    --text-grey: #b3b3b3;
-    --dark-brown: #321804;
-    --white: #ffffff;
-
-
-<div class="wrapper">
-        <div id="sidebar">
-            <ul>
-                <li><a href="#project-header">Introduction</a></li>
-                <li><a href="#project-goals">Project Goals</a></li>
-                <li><a href="#project-research">Research</a></li>
-                <li><a href="#design-process">Design Process</a></li>
-                <li><a href="#project-outcomes">Outcomes</a></li>
-                <li><a href="#project-conclusion">Conclusion</a></li>
-            </ul>
-        </div>
-        
-        <div class="project-descr">
-            <div id="project-header">
-                <h1>AURA: Designing a Celestial Brand Identity & Lookbook</h1>
-            </div>
-
-            <div id="project-intro">
-                <h2>Introduction</h2>
-                <p>AURA is a luxury fashion brand that combines ethereal aesthetics with contemporary elegance. With the launch of its latest collection, Ethereal Dreams, AURA sought a visually captivating brand identity and lookbook that would encapsulate the fantasy, sophistication, and celestial inspiration that define the brand.</p>
+                <!-- <div class="work-thumbnails">
+                    <div class="thumbnail-grid">
+                        <img src="thumbnails/1.png" alt="">
+                        <img src="thumbnails/2.png" alt="">
+                        <img src="thumbnails/3.png" alt="" srcset="">
+                        <img src="thumbnails/4.png" alt="">
+                        <img src="thumbnails/6-removebg-preview.png" alt="">
+                        <img src="thumbnails/clothswatch.png" alt="">
+                        <img src="thumbnails/Designer (2).jpeg" alt="">
+                        <img src="thumbnails/Designer (5).jpeg" alt="">
+                        <img src="thumbnails/Designer.jpeg" alt="">
+                        <img src="thumbnails/ecocycle_wireframe1.png" alt="">
+                        <img src="thumbnails/ecocycle_wireframe2.png" alt="">
+                        <img src="thumbnails/ecocycle_wireframe3.png" alt="">
+                        <img src="thumbnails/ecocycle_wireframe4.png" alt="">
+                        <img src="thumbnails/ecocycle_wireframe5.png" alt="">
+                        <img src="thumbnails/fabric_swatch_corners_minimalist_mannequins_draped_in.jpeg" alt="">
+                        <img src="thumbnails/graphic1.png" alt="">
+                        <img src="thumbnails/graphic2.png" alt="">
+                        <img src="thumbnails/graphic3.png" alt="">
+                        <img src="thumbnails/graphic4.png" alt="">
+                        <img src="thumbnails/graphic5.png" alt="">
+                        <img src="thumbnails/graphic6.png" alt="">
+                        <img src="thumbnails/graphic7.png" alt="">
+                        <img src="thumbnails/graphic8.png" alt="">
+                        <img src="thumbnails/graphic9.png" alt="">
+                        <img src="thumbnails/graphic10.png" alt="">
+                        <img src="thumbnails/graphic11.png" alt="">
+                        <img src="thumbnails/graphic12.png" alt="">
+                        <img src="thumbnails/graphic13.png" alt="">
+                        <img src="thumbnails/graphic14.png" alt="">
+                        <img src="thumbnails/graphic15.png" alt="">
+                        <img src="thumbnails/illusti.jpg" alt="">
+                        <img src="thumbnails/illusti.jpg" alt="">
+                        <img src="thumbnails/Memorable design.png" alt="">
+                        <img src="thumbnails/momo [Recovered].jpg" alt="">
+                        <img src="thumbnails/num10.jpeg" alt="">
+                        <img src="thumbnails/prototype1.png" alt="">
+                        <img src="thumbnails/prototype2.png" alt="">
+                        <img src="thumbnails/prototype3.png" alt="">
+                        <img src="thumbnails/prototype4.png" alt="">
+                        <img src="thumbnails/prototype5.png" alt="">
+                    </div>
+                </div> -->
             </div>
         </div>
-        <div id="project-goals">
-            <h2>Project Goals</h2>
-            <ul>
-                <li>Develop a cohesive brand identity that reflects AURA’s celestial and whimsical inspiration.</li>
-                <li>Design a luxury lookbook that enhances the storytelling of Ethereal Dreams and resonates with the target audience.</li>
-                <li>Create fashion illustrations and editorial layouts that highlight the collection’s details while evoking an otherworldly experience.
-                </li>
-            </ul>
-        </div>
 
-        <div id="project-research">
-            <h2>Research & Learning Process</h2>
-            <p>Before diving into the design process, I conducted extensive research to understand:</p>
-            <ol>
-                <li>
-                    <h3>Target Audience & Brand Positioning</h3>
-                    <ul>
-                        <li><strong>Demographics:</strong> Women aged 25-45, particularly creative professionals, artists, and individuals passionate about self-expression.</li>
-                  
-                        <li><strong>Psychographics:</strong> They value uniqueness, artistry, and craftsmanship, preferring luxury brands that evoke emotion and storytelling.</li>
-                
-                        <li><strong>Competitor Analysis:</strong> Studied high-end fashion brands like Elie Saab, Alexander McQueen, and Zuhair Murad to understand their branding, design aesthetics, and storytelling techniques.
-                        </li>
-                    </ul>
-                </li>
+        <h1>My Projects</h1>
 
-                <li>
-                    <h3>Theme & Inspiration</h3>
-                    <p>I explored celestial and fantasy-inspired themes to align with AURA’s vision:</p>
-                    <ul>
-                        <li><strong>Celestial Elements:</strong> Stars, moons, constellations, and cosmic landscapes.</li>
-                  
-                        <li><strong>Fantasy Aesthetics:</strong> Ethereal lighting, flowing fabrics, and intricate embellishments resembling stardust and moonlight.</li>
-                
-                        <li><strong>Color Psychology:</strong> 
-                            <ul>
-                                <li><strong>Deep blues (Velvet Noir - #15193C)</strong>for mystery and elegance.</li>
-                                <li><strong>Soft shimmer (Cerulean Mist - #36586C) </strong>to create an airy, dreamy feel.</li>
-                                <li><strong>Golden accents (Golden Honey - #FFCC66) </strong>to convey luxury and warmth.</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-            </ol>
+            <div class="branding">
+                <h2>Branding & Identity</h2>
+                <div class="aura-brand">
+                    <button><img src="images/logo_final2_darkxxxhdpi.png" alt=""></button>
+                    <h3>Click to read more</h3>
+                </div>
+                <div class="aavaran-brand">
+                    <button><img src="images/Aavaran.png" alt=""></button>
+                    <h3>Click to read more</h3>
+                </div>
+            </div>
+
+            <div class="logo-design">
+                <h2>Logo Designs</h2>
+                <div class="logo-carousel">
+                    <!-- images of logos -->
+                </div>
+            </div>
+
+            <div class="digital-designs">
+                <h2>Digital Designs</h2>
+                <div class="digital-carousel">
+                    <!-- images of digital designs -->
+                </div>
+            </div>
+
+            <div class="ui-designs">
+                <h2>UI/UX Design</h2>
+                <!-- case studies of ui/ux designs -->
+            </div>
+
+            <div class="web-designs">
+                <h2>Web Designs & Personal Projects</h2>
+                <!-- case studies of web designs -->
+            </div>
 
         </div>
 
-        <div id="design-process">
-            <h2>Design Process</h2>
-            <ol>
-                <li>
-                    <h3>Brand Identity Development</h3>
-                    <p>The branding had to be luxurious, artistic, and timeless.</p>
-                    <h4>Logo Design</h4>
-                    <p>I created multiple iterations of the AURA logo, experimenting with typography and celestial motifs. The final logo:</p>
-                    <div class="design-content">
-                        <!-- Images on the left side -->
-                        <div class="img-container">
-                            <img src="logo_final2_darkhdpi.png" alt="">
-                            <img src="logo_final_type.png" alt="">
-                            <img src="logo_2.png" alt="">
-                        </div>
-                        
-                        <!-- Text on the right side -->
-                        <div class="text-container">
-                            <ul>
-                                <li>Features an elegant custom serif font with hand-drawn flourishes reminiscent of constellations.</li>
-                                <li>Includes a subtle, shimmering gold floral motif that enhances its luxury appeal.</li>
-                                <li>Variations for social media, packaging, and digital platforms ensure consistency across touchpoints.</li>
-                            </ul>
-                            <h4>Typography & Color Palette</h4>
-                            <ul>
-                                <li><strong>Typography:</strong>A combination of an elegant cursive font (for headings) and a modern sans-serif (for body text).</li>
-                                <li><strong>Color Palette:</strong>A carefully curated mix of deep blues, soft pastels, and gold accents to reinforce the celestial dream-like theme.</li>
-                            </ul>
+
+
+        <div class="logo-display">
+                        <div class="logo-gallery">
+                            <div class="gallery-item">
+                                <img src="thumbnails/logos/Aavaran.png" alt="">
+                                <div class="caption">Main Logo Designed for Aavaran</div>
+                            </div>
+                            
+                            <img src="thumbnails/logos/Aavaran2.png" alt="">
+                            <img src="thumbnails/logos/Aavaran3.png" alt="">
+                            <img src="thumbnails/logos/Aavaran4.png" alt="">
+                            <img src="thumbnails/logos/auracover.png" alt="">
+                            <img src="thumbnails/logos/logo_final2_darkxxxhdpi.png" alt="">
+                            <img src="thumbnails/logos/logo_final_typexxxhdpi.png" alt="">
+                            <img src="thumbnails/logos/logo_finalxxxhdpi.png" alt="">
+                            <img src="thumbnails/logos/brochure.jpeg" alt="">
+                            <img src="thumbnails/logos/brochure.png" alt="">
+                            <img src="thumbnails/logos/brochure2.jpeg" alt="">
+                            <img src="thumbnails/logos/EcoCycle.png" alt="">
+                            <img src="thumbnails/logos/EcoCycle2.png" alt="">
+                            <img src="thumbnails/logos/EcoCycle3.png" alt="">
+                            <img src="thumbnails/logos/EcoCycle4.png" alt="">
+                            <img src="thumbnails/logos/graphic1.png" alt="">
+                            <img src="thumbnails/logos/graphic3.png" alt="">
+                            <img src="thumbnails/logos/graphic4.png" alt="">
+                            <img src="thumbnails/logos/graphic5.png" alt="">
+                            <img src="thumbnails/logos/graphic7.png" alt="">
+                            <img src="thumbnails/logos/graphic8.png" alt="">
+                            <img src="thumbnails/logos/graphic9.png" alt="">
+                            <img src="thumbnails/logos/graphic10.png" alt="">
+                            <img src="thumbnails/logos/graphic12.png" alt="">
+                            <img src="thumbnails/logos/graphic13.png" alt="">
+                            <img src="thumbnails/logos/kiddokraft.png" alt="">
+                            <img src="thumbnails/logos/mockup.jpeg" alt="">
+                            <img src="thumbnails/logos/mockup2.png" alt="">
+                            <img src="thumbnails/logos/Perfume.jpeg" alt="">
+                            <img src="thumbnails/logos/Memorable design.png" alt="">
+                            <img src="thumbnails/logos/web2.jpeg" alt="">
                         </div>
                     </div>
-                </li>
+                </div>
+            </div>
 
-                <li>
-                    <h3>Lookbook Concept & Layout Design</h3>
-                    <p>AURA’s Ethereal Dreams collection was all about transporting the audience into a world of celestial fantasy. To achieve this:</p>
-                    <h4>Visual Direction & Mood Board</h4>
-                    <img src="aura-moodboard.jpg" alt="aura moodboard">
-                    <p>I developed a mood board that included:</p>
-                    <ul>
-                        <li>Dreamy, star-lit backdrops and soft gradients.</li>
-                        <li>Elegant floating fabrics, reminiscent of cosmic waves.</li>
-                        <li>Editorial layouts that balance negative space with rich, immersive visuals.</li>
-                    </ul>
-                    <h4>Page Layouts & Composition</h4>
-                    <img src="gown_illustration.png" alt="">                        
-                    <img src="gown_photo.png" alt="">                        
-                    <img src="jumpsuit_illustration.png" alt="">                        
-                    <img src="jumpsuit_photo.png" alt="">                        
-                    <img src="scarf_illustration.png" alt="">                        
-                    <img src="scarf_photo.png" alt="">                        
-                    <p>Each spread in the lookbook was designed to:</p>
-                    <ul>
-                        <li>Focus on one key garment per page, emphasizing intricate detailing.</li>
-                        <li>Use cinematic compositions, integrating soft lighting effects and golden hues.</li>
-                        <li>Include poetic descriptions and styling suggestions to enhance the storytelling.</li>
-                    </ul>
-                </li>
-
-                <li>
-                    <h3>Fashion Illustrations & Design Details</h3>
-                    <p>AURA’s garments are statement pieces, and I wanted the illustrations to reflect their intricate craftsmanship.</p>
-                    <h4>Signature Pieces Illustrated</h4>
-                    <ol>
-                        <li>
-                            The Celestial Gown
-                            <img src="look1.png" alt="">
-                            <ul>
-                                <li>A floor-length gown with beaded constellations and shimmering embroidery.</li>
-                                <li>Inspired by the night sky, with deep Velvet Noir hues and flowing layers of silk.</li>
-                            </ul>
-                        </li>
-                        <li>
-                            The Lunar Jumpsuit
-                            <img src="look2.png" alt="">
-                            <ul>
-                                <li>A modern jumpsuit with a dramatic cape and golden embellishments.</li>
-                                <li>Representing the mystery of the moon, featuring subtle sparkles.</li>
-                            </ul>
-                        </li>
-                        <li>
-                            The Stellar Scarf
-                            <img src="look3.png" alt="">
-                            <ul>
-                                <li>A silk scarf adorned with hand-beaded constellations.</li>
-                                <li>Deep navy hues and delicate golden accents to mimic a twinkling night sky.</li>
-                            </ul>
-                        </li>
-                    </ol>
-                    <p>Each illustration was created using Adobe Illustrator with a mix of hand-drawn detailing and digital enhancements to highlight textures and embroidery.</p>
-                </li>
-            </ol>
-        </div>
-
-        <div id="project-outcomes">
-            <h2>Final Outcomes & Impact</h2>
-            <ol>
-                <li>
-                    <h3>Cohesive Brand Identity</h3>
-                    <ul>
-                        <li>The new branding positioned AURA as an exclusive, celestial-inspired fashion house, differentiating it from mainstream luxury brands.</li>
-                        <li>The logo and color palette seamlessly extended into packaging, website design, and social media assets, creating a consistent visual presence.</li>
-                    </ul>
-                </li>
-
-                <li>
-                    <h3>Stunning Visual Storytelling Through the Lookbook</h3>
-                    <ul>
-                        <li>The final lookbook was a blend of high-fashion editorial and poetic storytelling, elevating AURA’s brand perception.</li>
-                        <li>High-quality print and digital versions were designed, allowing AURA to engage both retail and online customers.</li>
-                    </ul>
-                </li>
-                
-                <li>
-                    <h3> Illustration as a Storytelling Tool</h3>
-                    <ul>
-                        <li>Hand-drawn fashion illustrations provided a unique, artistic touch, reinforcing the bespoke nature of the brand.</li>
-                        <li>Attention to detail in illustrations helped highlight the craftsmanship of AURA’s garments.</li>
-                    </ul>
-                </li>
-            </ol>
-        </div>
-
-        <div id="project-conclusion">
-            <h2>Final Thoughts</h2>
-            <p>The AURA brand identity and lookbook was a labor of passion—one that blended artistic vision, storytelling, and meticulous design execution. By integrating celestial themes, elegant typography, and immersive visuals, I was able to craft a brand experience that truly captures the essence of luxury and fantasy.</p>
-            <p>Through this project, I deepened my expertise in branding, editorial design, and fashion illustration, reaffirming my belief that design isn’t just about aesthetics—it’s about evoking emotions and crafting experiences that leave a lasting impact.</p>
-        </div>
-
-
-
-        /* @import url('https://fonts.googleapis.com/css2?family=IM+Fell+Double+Pica:ital@0;1&family=Julius+Sans+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Arapey:ital@0;1&display=swap');
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    --bg-color: #041e32;
-    --light-brown: #847468;
-    --accent-grey: #b3b3b3;
-    --accent-brown: #321804;
-    --text-color: white;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-
-
-body{
-    font-family: "Arapey", serif;
-    font-weight: 400;
-    font-style: normal;
-    background-color: var(--bg-color);
-    width: 100vw;
-    transition: padding-top 0.3s ease;
-    overflow-x: hidden;
-    color: var(--accent-grey);
-}
-
-.im-fell-double-pica-regular {
-    font-family: "IM Fell Double Pica", serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-
-  .im-fell-double-pica-regular-italic {
-    font-family: "IM Fell Double Pica", serif;
-    font-weight: 400;
-    font-style: italic;
-  }
-
-  .julius-sans-one-regular {
-    font-family: "Julius Sans One", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-
-
-  .wrapper{
-    width: 100vw;
-    overflow-x: hidden;
+            /* logo & didtal designs */
+.logo-skills {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
+  }
 
-
-.section-wrapper{
-    display: flex;
-    flex-direction: row;
-}
-
-.img-container img{
-grid-template-columns: repeat(2, 1fr);
-gap: 1rem;
-}
-
-
-#layouts img{
-    height: 22rem;
-} */
-
-@import url('https://fonts.googleapis.com/css2?family=IM+Fell+Double+Pica:ital@0;1&family=Julius+Sans+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Arapey:ital@0;1&display=swap');
-
-
-/* General Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    --bg-color: #041e32;
-    --light-brown: #847468;
-    --accent-grey: #b3b3b3;
-    --accent-brown: #321804;
-    --text-color: white;
-}
-
-body {
-    font-family: 'Arapey', serif;
-    background-color: #041e32;
-    color: #fff;
-    padding: 60px 5%;
-}
-
-h1, h2, h3, h4 {
-    font-family: 'IM Fell Double Pica', serif;
-    letter-spacing: 1px;
-}
-
-h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
-
-h2 {
-    font-size: 2rem;
-    margin-bottom: 15px;
-}
-
-h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-}
-
-h4 {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-}
-
-p, ul, ol {
-    font-size: 1.1rem;
-    color: #b3b3b3;
-    line-height: 1.6;
-    margin-bottom: 20px;
-}
-
-ul, ol {
-    padding-left: 20px;
-}
-
-.wrapper {
-    max-width: 1200px;
+.logo-display{
+    width: 70%;
     margin: 0 auto;
+    padding: 2rem 0;
 }
 
-.project-descr, #project-goals, #project-research, #design-process, #project-outcomes, #project-conclusion {
-    margin-bottom: 40px;
+.logo-gallery{
+  column-count: 5;
+  column-gap: .5rem;
 }
 
-/* Styling for images */
-.img-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: space-between;
-    margin-bottom: 40px;
+.logo-gallery img{
+  width: 100%;
+  margin-bottom: 1.5rem;
+  border-radius: 1rem;
+  background-color:black;
+  padding: 0.5rem;
+  border: 2px solid var(--timberwolf);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
 }
 
-.img-container img {
-    max-width: 48%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
-}
 
-.img-container img:hover {
-    transform: scale(1.5);
-}
-
-#logos {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr); /* Creates 3 equal-width columns */
-    grid-template-rows: repeat(2, auto);    /* Adjust rows to auto size based on content */
-    gap: 1.5rem;                             /* Increase the gap between the grid items */
-    justify-items: center;                   /* Centers the items horizontally within the grid */
-}
-
-#logos img {
-    width: 100%; /* Ensures images fit the container */
-    height: auto;
-    object-fit: cover;
-    transform: scale(1.3); /* Make the images 1.5x bigger */
-    transition: transform 0.3s ease; /* Smooth scaling transition */
-}
-
-#logos img:hover {
-    transform: scale(1.6); /* Make the images slightly bigger on hover */
-}
-
-#layouts {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Creates 3 equal-width columns */
-    grid-template-rows: repeat(2, 1fr);    /* Creates 2 equal-height rows */
-    gap: .5rem;     
-    cursor: pointer;                        /* Adds space between the grid items */
-}
-
-#layouts img {
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .gallery-item img {
+    display: block;
     width: 100%;
     height: auto;
-    object-fit: cover; /* Ensures images fill the grid cell while maintaining aspect ratio */
-}
-
-#layouts img:hover{
-    transform: scale(4);
-}
-
-/* Section wrappers */
-.section-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-bottom: 40px;
-}
-
-.text-container {
-    flex: 1;
-    max-width: 45%;
-}
-
-.img-container {
-    flex: 1;
-    max-width: 45%;
-}
-
-/* Typography for Lists */
-.text-container ul {
-    list-style-type: disc;
-    padding-left: 20px;
-}
-
-.section-wrapper h4 {
-    margin-top: 15px;
-}
-
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-    .section-wrapper {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .text-container, .img-container {
-        max-width: 100%;
-        margin-bottom: 20px;
-    }
-
-    .img-container img {
-        max-width: 80%;
-        margin: 0 auto;
-    }
-
-    h1 {
-        font-size: 2rem;
-    }
-
-    h2 {
-        font-size: 1.5rem;
-    }
-
-    h3 {
-        font-size: 1.2rem;
-    }
-}
-
-
-
+  }
+  
+  .caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(4, 30, 50, 0.7); /* translucent overlay */
+    color: white;
+    padding: 0.5rem;
+    font-size: 0.9rem;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  
+  .masonry-item:hover .caption {
+    opacity: 1;
+    transform: translateY(0);
+  }

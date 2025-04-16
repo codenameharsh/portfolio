@@ -1,29 +1,6 @@
-$(document).ready(() => {
-    // Toggle nav menu for mobile
-    $('#logo').on('click', function() {
-        if ($(window).width() <= 768) {
-            $('.nav-menu-bar').toggleClass('show');
-        }
-    });
-  
-    // Ensure menu is visible for larger screens
-    $(window).on('resize', function() {
-        if ($(window).width() > 768) {
-            $('.nav-menu-bar').removeClass('show').css('display', 'flex');
-        } else {
-            $('.nav-menu-bar').css('display', 'none');
-        }
-    });
-  
-    // Close menu when clicking outside (mobile only)
-    $(document).on('click', function(event) {
-        if ($(window).width() <= 768 && !$(event.target).closest('#header').length) {
-            $('.nav-menu-bar').removeClass('show');
-        }
-    });
-  
-    // Sticky navbar functionality
-    let navbar = $("#header");
+$(document).ready(()=>{
+    //sticky nav
+    let navbar = $("#nav-bar");
     let stickyOffset = navbar.offset().top;
   
     $(window).on('scroll', function() {
@@ -35,206 +12,84 @@ $(document).ready(() => {
           $("body").css("padding-top", "0");
         }
     });
+})
+  
+  
+  //hamburger menu
+  const hamburgerMenu = document.getElementById('hamburger-menu');
+    const navMenu = document.getElementById('nav-menu');
 
-    //skills
-    function animateElements() {
-      $(".skills ul li").each(function (index) {
-          var position = $(this).offset().top;
-          var windowHeight = $(window).height();
-          var scrollTop = $(window).scrollTop();
+    hamburgerMenu.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+    });
 
-          if (scrollTop + windowHeight > position) {
-              $(this).delay(index * 100).queue(function () {
-                  $(this).addClass("shake").dequeue();
-              });
-          }
+    //close when link is clicked
+    document.querySelectorAll('.nav-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+          navMenu.classList.remove('active');
+        });
       });
 
-      $(".fill").each(function () {
-          var position = $(this).offset().top;
-          var windowHeight = $(window).height();
-          var scrollTop = $(window).scrollTop();
+      // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        const isClickInsideMenu = navMenu.contains(e.target);
+        const isClickOnHamburger = hamburgerMenu.contains(e.target);
 
-          if (scrollTop + windowHeight > position) {
-              var finalWidth = $(this).attr("style").match(/width:\s*(\d+)%/)[1] + "%";
-              $(this).css({ width: "0%" }).animate({ width: finalWidth }, 1500);
-          }
-      });
-  }
-
-  // Run animations on scroll
-  $(window).on("scroll", animateElements);
-
-  // Run animations on page load if elements are already in view
-  animateElements();
-  
-    //project carousel functionality
-    let currentIndex = 0;
-    const totalSlides = document.querySelectorAll(".carousel-slide").length;
-    const carousel = document.querySelector(".carousel");
-  
-    function updateCarousel() {
-        const offset = -currentIndex * 100 + "%";
-        carousel.style.transform = "translateX(" + offset + ")";
-    }
-
-
-  
-    // Next button
-    document.querySelector(".next").addEventListener("click", function () {
-        if (currentIndex < totalSlides - 1) {
-            currentIndex++;
-        } else {
-            currentIndex = 0; // Loop back
+        if (!isClickInsideMenu && !isClickOnHamburger) {
+        navMenu.classList.remove('active');
         }
-        updateCarousel();
     });
-  
-    // Previous button
-    document.querySelector(".prev").addEventListener("click", function () {
-        if (currentIndex > 0) {
-            currentIndex--;
-        } else {
-            currentIndex = totalSlides - 1; // Loop back
-        }
-        updateCarousel();
-    });
-  
-    //auto play - carousel
-    let autoSlide = setInterval(function() {
-      $(".next").trigger("click");
-    }, 5000); // Automatically go to the next project every 5 seconds
-  
-    $(".carousel").hover(function() {
-      clearInterval(autoSlide); // Pause autoplay on hover
-    }, function() {
-      autoSlide = setInterval(function() {
-        $(".next").trigger("click");
-      }, 5000); // Restart autoplay after hover
-    });
-  
-    //touch - swipe functionality
-    let startX;
-    let endX;
-    const threshold = 50; // Minimum swipe distance to trigger carousel change
-  
-    // Detect touchstart
-    $(".carousel-container").on("touchstart", function (e) {
-      startX = e.originalEvent.touches[0].clientX;
-    });
-  
-    // Detect touchmove
-    $(".carousel-container").on("touchmove", function (e) {
-      endX = e.originalEvent.touches[0].clientX;
-    });
-  
-    // Detect touchend (when swipe is completed)
-    $(".carousel-container").on("touchend", function () {
-      const diff = startX - endX;
-      if (Math.abs(diff) > threshold) {
-        if (diff > 0) {
-          // Swipe left: next slide
-          if (currentIndex < totalSlides - 1) {
-            currentIndex++;
-          } else {
-            currentIndex = 0;
-          }
-        } else {
-          // Swipe right: previous slide
-          if (currentIndex > 0) {
-            currentIndex--;
-          } else {
-            currentIndex = totalSlides - 1;
-          }
-        }
-        updateCarousel(); // Update the carousel with new slide
-      }
-    });
-  
-    //dots navigation
-    $(".dot").on("click", function() {
-      const index = $(this).index();
-      currentIndex = index;
-      updateCarousel();
-    });
-  
-    //touch
+
+
+//scroll percentage
+window.addEventListener('scroll', () => {
+    const scrollTop = document.documentElement.scrollTop;
+    const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = Math.round((scrollTop / scrollHeight) * 100);
+    document.getElementById('scroll-percent').textContent = `${scrolled}%`;
   });
-  
-  
-  
-  // //sticky navbar
-  // // Get the navbar
-  // var navbar = document.getElementById("header");
-  
-  // // Get the offset position of the navbar
-  // var sticky = navbar.offsetTop;
-  
-  // // Add the sticky class to the navbar when you reach its scroll position
-  // // Remove the "sticky" class when you leave the scroll position
-  // window.onscroll = function() {
-  //   if (window.scrollY >= sticky) {
-  //     navbar.classList.add("sticky");
-  //   } else {
-  //     navbar.classList.remove("sticky");
-  //   }
-  
 
-  //progres bar
-  window.addEventListener("scroll", function() {
-    let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-    let scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    let scrolled = (scrollTop / scrollHeight) * 100;
-    document.getElementById("progress-bar").style.height = scrolled + "%";
-});
-  
-  //hero section
-  const careerTextEl = document.querySelector("#career-text");
-  
-  const careers = [" a Graphic Designer", " an UI/UX Designer", "a Front-end Web Developer", "a Fashion Illustrator"];
-  let careerIndex = 0;
-  let characterIndex = 0;
-  
-  function updateText() {
-      let currentText = careers[careerIndex].slice(0, characterIndex);
-  
-      careerTextEl.textContent = currentText;  // Update only the career text
-  
-      if (characterIndex < careers[careerIndex].length) {
-          characterIndex++;
-          setTimeout(updateText, 100); // Faster typing effect
-      } else {
-          setTimeout(() => {
-              characterIndex = 0;
-              careerIndex = (careerIndex + 1) % careers.length;
-              updateText();
-          }, 1500); // Pause before switching to next career
+
+//skills carousel
+    const carousel = document.querySelector('.skills-carousel');
+    let isDown = false;
+    let startX, scrollLeft;
+
+    carousel.addEventListener('mousedown', (e) => {
+        isDown = true;
+        startX = e.pageX - carousel.offsetLeft;
+        scrollLeft = carousel.scrollLeft;
+        carousel.style.cursor = 'grabbing';
+    });
+
+    carousel.addEventListener('mouseleave', () => {
+        isDown = false;
+        carousel.style.cursor = 'grab';
+    });
+
+    carousel.addEventListener('mouseup', () => {
+        isDown = false;
+        carousel.style.cursor = 'grab';
+    });
+
+    carousel.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - carousel.offsetLeft;
+        const walk = (x - startX) * 2;
+        carousel.scrollLeft = scrollLeft - walk;
+    });
+
+//galler scroll on reveal
+const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          entry.target.classList.add('active');
+        }, index * 100); // stagger delay
+        observer.unobserve(entry.target);
       }
-  }
+    });
+  }, { threshold: 0.1 });
   
-  updateText();
-  
-
-  //art section
-  function startSlideshow(slideshowId) {
-    let slides = document.querySelectorAll(`#${slideshowId} .slide`);
-    let index = 0;
-    setInterval(() => {
-        slides[index].classList.remove("active");
-        index = (index + 1) % slides.length;
-        slides[index].classList.add("active");
-    }, 3000);
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-    startSlideshow("slideshow1");
-    startSlideshow("slideshow2");
-    startSlideshow("slideshow3");
-});
-
-  
-  
-  
-  
-  
-  
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));

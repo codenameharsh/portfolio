@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eco-Cycle | UI Design | Harshitha Rajendran</title>
+    <link rel="stylesheet" href="eco-style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" type="text/javascript"></script>
+</head>
+<body>
+    <div class="body-wrapper">
+        <div class="nav-bar" id="nav-bar">
+            <div class="logo">
+                <h1>codenameharsh</h1>
+                <h3>Eco-Cycle: User Profile</h3>
+
+            </div>
+            <div class="hamburger-menu" id="hamburger-menu">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../index.html/#">About</a></li>
+                    <li><a href="../index.html/#portfolio-head">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+
+        
+        <div id="scroll-img">
+            <img src="../images/scroll.png" alt="scroll">
+          </div>
+
+        <div id="scroll-percent">0%</div>
+
+        <div class="project-video">
+            <video width="100%" autoplay muted loop playsinline>
+                <source src="Eco-Cycle.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <div class="case-study">
+            <div class="project-skills">
+                <div class="project-skill-carousel">
+                    <div class="p-s-tracks">
+                        <ul class="p-s-list">
+                            <li class="skill-title">UI DESIGN</li>
+                            <li class="skill-title">UX DESIGN</li>
+                            <li>Adobe Illustrator</li>
+                            <li>Figma</li>
+                            <li>Sketch</li>
+                            <li>Canva</li>
+                            <!-- duplicated for seamless loop -->
+                            <li class="skill-title">UI DESIGN</li>
+                            <li class="skill-title">UX DESIGN</li>
+                            <li>Adobe Illustrator</li>
+                            <li>Figma</li>
+                            <li>Sketch</li>
+                            <li>Canva</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="case-study-text">
+                <div class="case-study-intro">
+                    <h1>Eco-Cycle: User Profile Design</h1>
+                    <h2>Case Study | UI/UX Design</h2>
+                    <h3>Role: UI Designer</h2>
+                    <h3>Duration: 1.5 weeks</h3>
+                </div>
+
+                <div class="project-intro project-section">
+                    <h2>Introduction</h2>
+                    <p>EcoCycle is a social platform dedicated to sustainable living, aiming to connect eco-conscious individuals and promote green practices. As part of a Daily UI challenge, I designed a user profile page that would serve as a personal sustainability hub, encouraging users to track their eco-friendly activities and engage with the community.</p>
+                </div>
+
+                <div class="project-challenges project-section">
+                    <h2>Project Goals</h2>
+                    <ul>
+                        <li>Create a user-centric profile that effectively displays a user's sustainability efforts.</li>
+                        <li>Encourage community engagement by integrating social features and eco-friendly challenges.</li>
+                        <li>Ensure a seamless user experience with intuitive navigation, clean UI, and personalized elements.</li>
+                        <li>Align with EcoCycle’s mission by incorporating sustainable design principles in both aesthetic and functionality.</li>
+                    </ul>
+                </div>
+
+                <div class="project-research project-section">
+                    <h2>Research & Learning Process</h2>
+                    <ol>
+                        <li><span>Understanding the Target Audience</span>
+                            <p>Before diving into the design, I conducted user research to gain insights into the expectations of EcoCycle’s audience.</p>
+                            <ul>
+                                <span>User Survey Highlights</span>
+                                <p>I surveyed 30 participants who are interested in sustainability. The key takeaways:</p>
+                                <li>80% are motivated by climate change concerns.</li>
+                                <li>60% connect with others through social media groups.</li>
+                                <li>40% believe a user profile could help them connect with like-minded individuals.</li>
+                                <li>55% value customization options for personalizing their profiles.</li>
+                                <li>50% have difficulty finding relevant sustainability-focused content.</li>
+                                <p>Key Highlights:</p>
+                                <li>Community engagement is crucial—users want forums, challenges, and achievement tracking.</li>
+                                <li>Customization matters—users want a profile that reflects their personal sustainability journey.</li>
+                                <li>Discoverability is a challenge—users struggle to find relevant, trustworthy eco-content.</li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <span>Competitor Analysis</span>
+                            <p>I analyzed five sustainability-focused apps and platforms to identify strengths and weaknesses:</p>
+                            <table id="competitor-analysis">
+                                <thead>
+                                  <tr>
+                                    <th>Platform</th>
+                                    <th>Strengths</th>
+                                    <th>Weaknesses</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>EcoLife</td>
+                                    <td>Strong community forum</td>
+                                    <td>Limited personalization</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Greenify</td>
+                                    <td>Gamification elements</td>
+                                    <td>Weak community features</td>
+                                  </tr>
+                                  <tr>
+                                    <td>EarthHero</td>
+                                    <td>Educational resources</td>
+                                    <td>Cluttered interface</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Sustainable Living</td>
+                                    <td>Event calendar & tips</td>
+                                    <td>Outdated design</td>
+                                  </tr>
+                                  <tr>
+                                    <td>EcoWarrior</td>
+                                    <td>Social sharing features</td>
+                                    <td>Lacks a collective impact approach</td>
+                                  </tr>
+                                </tbody>
+                            </table>
+                            <p>Key takeaways:</p>
+                            <ul>
+                                <li>Gamification enhances engagement.</li>
+                                <li>Community forums and social sharing are essential.</li>
+                                <li>Personalization improves user retention.</li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <span>Affinity Mapping</span>
+                            <p>After analyzing the survey data,I created an affinity map to identify patterns and themes. This affinity map highlights the key themes and patterns that emerged from the survey data, including the importance of community features, personalized recommendations, and customization options.</p>
+                        </li>
+
+                        <li>
+                            <span>User Persona</span>
+                            <p>Based on the patterns and themes identified, I created a user persona to help guide through the design process:</p>
+                            <br>
+                            <p>Emma is a 28-year-old eco-conscious marketing specialist who lives sustainably, stays informed on environmental issues, and connects with like-minded communities. She uses social media to promote eco-friendly habits, participates in local clean-up events, and prefers walking or biking over driving.</p>
+
+                            <p>She enjoys outdoor activities, plant-based cooking, and supports sustainable brands like Patagonia and Lush. Emma dislikes fast fashion, single-use plastics, and shallow social media culture. Passionate about making a difference, she uses her skills to advocate for brands that align with her environmental values.</p>
+                        </li>
+
+                        <li>
+                            <span>User Journey</span>
+                            <p>Based on the user persona I created, I designed a user journey map that follows Emma's journey from awareness, onboarding, exploration, connection, sharing and growth to acceptance.</p>
+                        </li>
+                    </ol>
+                </div>
+
+                <div class="project-design project-section">
+                    <h2>Design Process</h2>
+                    <ol>
+                        <li><span>Problem Definition</span>
+                            <p>Based on research, I refined the problem statement: <br>
+                                "How might I design a user profile for EcoCycle that effectively showcases users' eco-friendly activities, encourages community engagement, and supports personalization, while remaining visually appealing and intuitive?"
+                            </p>
+                        </li>
+
+                        <li>
+                            <span>Ideation & Brainstorming</span>
+                            <p>I conducted a solo ideation session using design thinking principles and generated over 50 ideas, which I categorized into:</p>
+                            <ul>
+                                <li><span>Gamification & Incentives</span>
+                                    <ul>
+                                        <li>Eco-Badge System: Users earn badges for sustainable achievements.</li>
+                                        <li>Sustainability Score: A dynamic score based on eco-friendly actions.</li>
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <span>Personalization & Customization</span>
+                                    <ul>
+                                        <li>Customizable Profile Sections:Users select eco-interests, themes, and widgets.</li>
+                                        <li>Personal Sustainability Goals: Users set and track progress towards sustainability milestones.</li>
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <span>Community & Social Engagement</span>
+                                    <ul>
+                                        <li>Social Sharing:Users can share their eco-friendly wins with the community.</li>
+                                        <li>Community Challenges: Monthly challenges to promote sustainable habits.
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li><span>Information & Discoverability</span></li>
+                                <li><span>Content Curation: </span>AI-driven recommendations for eco-friendly tips.</li>
+                                <li><span>Sustainability Leaderboard: </span>Highlights top contributors in the community.</li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <span>Wireframes & Prototypes</span>
+                            <ul>
+                                <li>
+                                    <span>Wireframes (Low-Fidelity Designs)</span>
+                                    <p>I created low-fidelity wireframes to define the layout and information hierarchy:</p>
+                                    <br>
+                                    <p>Key Sections</p>
+                                    <ul>
+                                        <li>
+                                            <span>Profile Overview Wireframe: </span>
+                                            <p>Header with user's name and profile picture, Brief bio and eco-friendly interests, Eco-friendly achievements and badges, Call-to-action (CTA) button to edit profile.</p>
+                                        </li>
+                                        <li>
+                                            <span>Eco-Badge System Wireframe: </span>
+                                            <p>Grid showcasing user's earned badges, Badge details, including description and date earned, CTA button to view all badges, Filter options to sort badges by category or date.</p>
+                                        </li>
+                                        <li>
+                                            <span>Customizable Profile Wireframe: </span>
+                                            <p>Profile picture uploader with cropping tool, Cover photo uploader with resizing tool, Bio editor with formatting options, Eco-friendly interest selector with tags.</p>
+                                        </li>
+                                        <li>
+                                            <span>Social Sharing Wireframe: </span>
+                                            <p>Share button with dropdown menu for social media platforms,Customizable share message with hashtags and tags, Preview of shared post with image and text, CTA button to share post</p>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <span>Prototypes (High-Fidelity Designs)</span>
+                            <p>I developed interactive high-fidelity prototypes in Figma, incorporating refined UI elements:</p>
+                            <ul>
+                                <li>
+                                    <span>UI Design Elements: </span>
+                                    <ul>
+                                        <li>Nature-inspired Color Palette → Deep Green (#2E7D32), Earthy Beige (#F5F5DC), Ocean Blue (#0277BD).</li>
+                                        <li>Typography → Modern sans-serif for readability, cursive accents for elegance.</li>
+                                        <li>Icons & Illustrations → Custom sustainability-themed icons for intuitive navigation.</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <span>Prototype Features: </span>
+                                    <ul>
+                                        <li>Interactive Badge System → Users earn badges for sustainability milestones.</li>
+                                        <li>Customization Options → Personalized profile themes and eco-goal tracking.</li>
+                                        <li>Community Feed & Social Sharing → Engaging and interactive UI to encourage discussions.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+
+                    </ol>
+
+                </div>
+
+                <div class="project-outcome project-section">
+                    <h2>Final Outcomes & Impact</h2>
+                    <ul>
+                        <li>
+                            <span>Engaging & Personalized User Profiles</span>
+                            <ul>
+                                <li>Users now have a centralized hub to track their eco-friendly activities and engage with the community.</li>
+                                <li>Customization features allow users to personalize their sustainability goals and display their impact visually.</li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <span>Increased Community Engagement</span>
+                            <ul>
+                                <li>The Eco-Badge System and Social Sharing features encourage users to actively participate in sustainability initiatives.</li>
+                                <li>The Community Challenges feature fosters collective impact, strengthening the platform’s mission.</li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <span>Enhanced User Experience & Visual Appeal</span>
+                            <li>The clean UI, nature-inspired colors, and user-friendly navigation create an immersive experience.</li>
+                            <li>Gamification elements keep users motivated without feeling overwhelming.</li>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="project-conclusion project-section">
+                    <h2>Final Thoughts</h2>
+                    <p>Designing the EcoCycle User Profile was an insightful experience that strengthened my skills in UI/UX, gamification, and user-centered design. Through research, ideation, and iterative prototyping, I developed a functional, engaging, and aesthetically appealing solution that supports sustainable living and community building.</p>
+                    <p>This project reaffirmed my passion for creating meaningful digital experiences that drive positive impact.</p>
+                </div>
+            </div>
+
+            <div class="project-gallery">
+                <div class="project-skills">
+                    <div class="project-skill-carousel" id="gallery-carousel">
+                        <div class="p-s-tracks">
+                            <ul class="p-s-list">
+                                <li class="skill-title">UI DESIGN</li>
+                                <li class="skill-title">UX DESIGN</li>
+                                <li>Gallery</li>
+                                <li>Gallery</li>
+                                <li>Gallery</li>
+                                <li>Gallery</li>
+                                <!-- duplicated for seamless loop -->
+                                <li class="skill-title">UI DESIGN</li>
+                                <li class="skill-title">UX DESIGN</li>
+                                <li>Gallery</li>
+                                <li>Gallery</li>
+                                <li>Gallery</li>
+                                <li>Gallery</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="gallery">
+                    <div class="gallery-container">
+                        <div class="gallery-item reveal">
+                            <img src="images/ecocycle_wireframe1.png" alt="ecocycle_wireframe1">
+                            <div class="caption">Ecocycle: Wireframe</div>
+                        </div>
+                        <div class="gallery-item reveal">
+                            <img src="images/ecocycle_wireframe2.png" alt="ecocycle_wireframe">
+                            <div class="caption">Ecocycle: Wireframe</div>
+                        </div>
+                        <div class="gallery-item reveal">
+                            <img src="images/ecocycle_wireframe3.png" alt="ecocycle_wireframe">
+                            <div class="caption">Ecocycle: Wireframe</div>
+                        </div>
+                        <div class="gallery-item reveal">
+                            <img src="images/ecocycle_wireframe4.png" alt="ecocycle_wireframe">
+                            <div class="caption">Ecocycle: Wireframe</div>
+                        </div>
+                        <div class="gallery-item reveal">
+                            <img src="images/ecocycle_wireframe5.png" alt="ecocycle_wireframe">
+                            <div class="caption">Ecocycle: Wireframe</div>
+                        </div>
+                        <div class="gallery-item reveal">
+                            <img src="images/prototype1.png" alt="ecocycle prototypes">
+                            <div class="caption">EcoCycle: Prototype</div>
+                        </div>
+                        <div class="gallery-item reveal">
+                            <img src="images/prototype2.png" alt="ecocycle prototypes">
+                            <div class="caption">EcoCycle: Prototype</div>
+                        </div>
+                        <div class="gallery-item reveal">
+                            <img src="images/prototype3.png" alt="ecocycle prototypes">
+                            <div class="caption">EcoCycle: Prototype</div>
+                        </div>
+                        <div class="gallery-item reveal">
+                            <img src="images/prototype4.png" alt="ecocycle prototypes">
+                            <div class="caption">EcoCycle: Prototype</div>
+                        </div>
+                        <div class="gallery-item reveal">
+                            <img src="images/prototype5.png" alt="ecocycle prototypes">
+                            <div class="caption">EcoCycle: Prototype</div>
+                        </div>
+                        <div class="gallery-item reveal">
+                            <img src="images/r1.png" alt="ecocycle user research">
+                            <div class="caption">EcoCycle: User Research</div>
+                        </div>
+                        <div class="gallery-item reveal">
+                            <img src="images/r2.png" alt="ecocycle user research">
+                            <div class="caption">EcoCycle: User Research</div>
+                        </div>
+                        <div class="gallery-item reveal">
+                            <img src="images/r3.png" alt="ecocycle user research">
+                            <div class="caption">EcoCycle: User Research</div>
+                        </div>
+                        <div class="gallery-item reveal">
+                            <img src="images/r4.png" alt="ecocycle user research">
+                            <div class="caption">EcoCycle: User Research</div>
+                        </div>
+                        <div class="gallery-item reveal">
+                            <img src="images/r5.png" alt="ecocycle user research">
+                            <div class="caption">EcoCycle: User Research</div>
+                        </div>
+                        <div class="gallery-item reveal">
+                            <img src="images/r6.png" alt="ecocycle user research">
+                            <div class="caption">EcoCycle: User Research</div>
+                        </div>
+                        <div class="gallery-item reveal">
+                            <img src="images/r7.png" alt="ecocycle user research">
+                            <div class="caption">EcoCycle: User Research</div>
+                        </div>
+                        <div class="gallery-item reveal">
+                            <img src="images/a1.png" alt="ecocycle affinity">
+                            <div class="caption">EcoCycle: Affinity Mapping</div>
+                        </div>
+                        <div class="gallery-item reveal">
+                            <img src="images/a7.png" alt="ecocycle affinity">
+                            <div class="caption">EcoCycle: Affinity Mapping</div>
+                        </div>
+                        <div class="gallery-item reveal">
+                            <img src="images/a2.png" alt="ecocycle affinity">
+                            <div class="caption">EcoCycle: Affinity Mapping</div>
+                        </div>
+                        <div class="gallery-item reveal">
+                            <img src="images/a3.png" alt="ecocycle affinity">
+                            <div class="caption">EcoCycle: Affinity Mapping</div>
+                        </div>
+                        <div class="gallery-item reveal">
+                            <img src="images/a4.png" alt="ecocycle affinity">
+                            <div class="caption">EcoCycle: Affinity Mapping</div>
+                        </div>
+                        <div class="gallery-item reveal">
+                            <img src="images/a5.png" alt="ecocycle affinity">
+                            <div class="caption">EcoCycle: Affinity Mapping</div>
+                        </div>
+                        <div class="gallery-item reveal">
+                            <img src="images/a6.png" alt="ecocycle affinity">
+                            <div class="caption">EcoCycle: Affinity Mapping</div>
+                        </div>
+                        <div class="gallery-item reveal">
+                            <img src="images/a8.png" alt="ecocycle palette">
+                            <div class="caption">EcoCycle: Color Palette</div>
+                        </div>
+                        <div class="gallery-item reveal">
+                            <img src="images/b1.png" alt="ecocycle badges">
+                            <div class="caption">EcoCycle: Badge Design</div>
+                        </div>
+                        <div class="gallery-item reveal">
+                            <img src="images/b2.png" alt="ecocycle badges">
+                            <div class="caption">EcoCycle: Badge Design</div>
+                        </div>
+                        <div class="gallery-item reveal">
+                            <img src="images/b3.png" alt="ecocycle badges">
+                            <div class="caption">EcoCycle: Badge Design</div>
+                        </div>
+                        <div class="gallery-item reveal">
+                            <img src="images/Frame 1.png" alt="ecocycle user journey">
+                            <div class="caption">EcoCycle: User Journey</div>
+                        </div>
+                        
+                    </div>
+                </div>
+    
+    
+            </div>
+
+
+
+
+
+        </div>
+
+
+
+
+    </div>
+
+    <footer class="footer">
+        <div class="footer">
+            <p>&copy; 2025 Harshitha Rajendran</p>
+            <p>
+                <a href="#">Home</a> |
+                <a href="#portfolio-start">Portfolio</a> |
+                <a href="#reach-out">Contact</a>
+            </p>
+        </div>
+      </footer>
+
+    <script src="eco-script.js"></script>
+</body>
+</html>
