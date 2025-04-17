@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meme Generator| React Web App | Harshitha Rajendran</title>
+    <link rel="stylesheet" href="meme-styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" type="text/javascript"></script>
+</head>
+<body>
+    <div class="body-wrapper">
+        <div class="nav-bar" id="nav-bar">
+            <div class="logo">
+                <h1>codenameharsh</h1>
+                <h3>Art-Fusion: UI Design</h3>
+
+            </div>
+            <div class="hamburger-menu" id="hamburger-menu">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../index.html/#">About</a></li>
+                    <li><a href="../index.html/#portfolio-head">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+
+        
+        <div id="scroll-img">
+            <img src="../images/scroll.png" alt="scroll">
+          </div>
+
+        <div id="scroll-percent">0%</div>
+
+        <div class="project-video">
+            <video width="100%" autoplay muted loop playsinline>
+                <source src="Art-fusion.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <div class="case-study">
+            <div class="project-skills">
+                <div class="project-skill-carousel">
+                    <div class="p-s-tracks">
+                        <ul class="p-s-list">
+                            <li class="skill-title">UI DESIGN</li>
+                            <li class="skill-title">UX DESIGN</li>
+                            <li>Adobe Illustrator</li>
+                            <li>Figma</li>
+                            <li>Sketch</li>
+                            <li>Canva</li>
+                            <!-- duplicated for seamless loop -->
+                            <li class="skill-title">UI DESIGN</li>
+                            <li class="skill-title">UX DESIGN</li>
+                            <li>Adobe Illustrator</li>
+                            <li>Figma</li>
+                            <li>Sketch</li>
+                            <li>Canva</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="case-study-text">
+                <div class="case-study-intro">
+                    <h1>ArtFusion: UI Design</h1>
+                    <h2>Case Study | Sign-Up Page for an Art Showcasing Event</h2>
+                    <h3>Duration: 4 days</h3>
+                </div>
+
+                <div class="project-intro project-section">
+                    <h2>Background</h2>
+                    <p>ArtFusion is an annual community-driven art showcasing event that brings together local artists, emerging art students, galleries, and art enthusiasts. The goal of this design challenge was to create a seamless and intuitive sign-up experience that allows artists to submit their work for consideration, while also encouraging community engagement and social sharing.</p>
+                </div>
+
+                <div class="project-objectives project-section">
+                    <h2>Project Overview</h2>
+                    <p>This project was inspired by a Daily UI prompt focused on designing a sign-up page. I took it a step further by conceptualizing a responsive 3-step sign-up flow tailored specifically for the art community.</p>
+                    <p>The challenge was to balance usability and aesthetics—making the process inviting for artists of all backgrounds, while also ensuring the user experience was smooth across mobile, tablet, and desktop devices.</p>
+                </div>
+
+                <div class="project-flow project-section">
+                    <h2>Design Goals</h2>
+                    <ol>
+                        <li>Create an intuitive sign-up process tailored for artists.</li>
+                        <li>Collect all relevant information needed for event curation.</li>
+                        <li>Ensure a consistent and responsive experience across all devices.</li>
+                        <li>Encourage post-submission engagement and social sharing.</li>
+                    </ol>
+                </div>
+
+                <div class="target project-section">
+                    <h2>Target Audience</h2>
+                    <ul>    
+                        <li>
+                            <span>Demographics: </span>
+                            Local artists, art students, and professional art organizations.
+                        </li>
+                        <li>
+                            <span>Age Range: </span>
+                            18–65
+                        </li>
+                        <li>
+                            <span>Device Usage: </span>
+                            Mobile phones, tablets, and desktops.
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="project-flow project-section">
+                    <h2>User Flow</h2>
+                    <ol>
+                        <li>
+                            <span>Landing Page: </span>
+                            <ul>
+                                <li>Quick introduction to ArtFusion</li>
+                                <li>Hero image with clear CTA</li>
+                                <li>Highlights of artist benefits</li>
+                                <li>Footer with social links and contact info</li>
+                            </ul>                            
+                        </li>
+
+                        <li>
+                            <span>3-Step Sign-Up Form: </span>
+                            <ul>
+                                <li>Step 1: Artist Info
+                                    <ul>
+                                        <li>Name</li>
+                                        <li>Email</li>
+                                        <li>Phone Number</li>
+                                    </ul>
+                                </li>
+                                <li>Step 2: Artwork Details
+                                    <ul>
+                                        <li>Title</li>
+                                        <li>Medium</li>
+                                        <li>Dimensions</li>
+                                        <li>Image Upload</li>
+                                    </ul>
+                                </li>
+                                <li>Step 3: Submission Requirements
+                                    <ul>
+                                        <li>Artist Statement</li>
+                                        <li>Additional Notes</li>
+                                        <li>CTA to Submit</li>
+                                    </ul>
+                                </li>
+                            </ul>                            
+                        </li>
+
+                        <li>
+                            <span>Confirmation Page</span>
+                            <ul>
+                                <li>Success message with submission summary</li>
+                                <li>CTA to share the event on social media</li>
+                                <li>Option to download a PDF confirmation</li>
+                            </ul>
+                        </li>
+                        
+                    </ol>
+                </div>
+
+                <div class="project-design project-section">
+                    <h2>Design Decisions</h2>
+                    <ol>
+                        <li><span>Minimalist Layout: </span>
+                            <p>Focus on clarity and ease of use. White space and clean forms reduce cognitive load.</p>
+                        </li>
+
+                        <li>
+                            <span>Progressive Disclosure: </span>
+                            <p>Dividing the form into steps keeps users engaged and prevents overwhelm.</p>
+                        </li>
+
+                        <li>
+                            <span>Responsive Design: </span>
+                            <p>All layouts were designed to adapt beautifully across screen sizes.</p>
+                        </li>
+
+                        <li>
+                            <span>Social Integration: </span>
+                            <p>Post-submission page includes a gentle nudge to share the event—helping boost reach and artist exposure.</p>
+                        </li>
+                    </ol>
+                </div>
+
+                <div class="project-tech project-section">
+                    <h2>Tools Used</h2>
+                    <ul>
+                        <li><span>Figma:</span> UI design + prototyping</li>
+                        <li><span>Illustrator:</span> For icons and vector elements</li>
+                        <li><span>Photoshop:</span> Image prep</li>
+                    </ul>
+                </div>
+
+                <div class="project-conclusion project-section">
+                    <h2>Reflection</h2>
+                    <p>This project gave me the opportunity to think critically about form design for a creative audience. Artists tend to value intuitive, visually engaging experiences, so the challenge was finding a balance between artistic flair and usability. I focused on simplicity, clarity, and responsiveness, which I believe made the design feel both professional and approachable.
+                    </p>
+                    <P>Here's the link to my <a href="https://www.figma.com/proto/0BvThrCqcaAS4t4zeWN7Pw/ArtFusion-sign-up?node-id=2-86&p=f&t=BKOyNMMVfaKiO91R-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=2%3A86"> Figma Prototype.</a></P>
+                </div>
+            </div>
+
+            <div class="project-gallery">
+                <div class="project-skills">
+                    <div class="project-skill-carousel" id="gallery-carousel">
+                        <div class="p-s-tracks">
+                            <ul class="p-s-list">
+                                <li class="skill-title">UI DESIGN</li>
+                                <li class="skill-title">UX DESIGN</li>
+                                <li>Gallery</li>
+                                <li>Gallery</li>
+                                <li>Gallery</li>
+                                <li>Gallery</li>
+                                <!-- duplicated for seamless loop -->
+                                <li class="skill-title">UI DESIGN</li>
+                                <li class="skill-title">UX DESIGN</li>
+                                <li>Gallery</li>
+                                <li>Gallery</li>
+                                <li>Gallery</li>
+                                <li>Gallery</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="gallery">
+                    <div class="gallery-container">
+                        <div class="gallery-item reveal">
+                            <img src="images/landing page.png" alt="landing page_wireframe">
+                            <div class="caption">Art-fusion: Landing Page Wireframe</div>
+                        </div>
+                        <div class="gallery-item reveal">
+                            <img src="images/sign-up form.png" alt="sign-up form_wireframe">
+                            <div class="caption">Art-fusion: Sign-up Form Wireframe</div>
+                        </div>
+                        <div class="gallery-item reveal">
+                            <img src="images/confirmation page.png" alt="confirmation page wireframe">
+                            <div class="caption">Art-fusion: Confirmation Page Wireframe</div>
+                        </div>
+
+                        <div class="gallery-item reveal">
+                            <img src="images/landing page prototype.png" alt="landing page prototype">
+                            <div class="caption">Art-fusion: Landing Page Prototype</div>
+                        </div>
+                        <div class="gallery-item reveal">
+                            <img src="images/sign-up form prototype.png" alt="sign-up form prototype">
+                            <div class="caption">Art-fusion: Sign-up Form Prototype</div>
+                        </div>
+                        <div class="gallery-item reveal">
+                            <img src="images/confirmation page prototype.png" alt="confirmation page prototype">
+                            <div class="caption">Art-fusion: Confirmation Page Prototype</div>
+                        </div>                        
+                    </div>
+                </div>
+    
+    
+            </div>
+
+        
+    
+            </div>
+
+        </div>
+
+
+
+
+    </div>
+
+    <footer class="footer">
+        <div class="footer">
+            <p>&copy; 2025 Harshitha Rajendran</p>
+            <p>
+                <a href="#">Home</a> |
+                <a href="#portfolio-start">Portfolio</a> |
+                <a href="#reach-out">Contact</a>
+            </p>
+        </div>
+      </footer>
+
+    <script src="meme-script.js"></script>
+</body>
+</html>
