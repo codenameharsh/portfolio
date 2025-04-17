@@ -895,7 +895,7 @@
 .style-guide button img {
   height: 200px;
   width: 220px;
-  object-fit: cover;
+  object-fit:contain;
   border-radius: 0.5rem;
 }
 
