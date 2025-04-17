@@ -768,7 +768,7 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    /* padding: 2rem; */
+    padding: 2rem;
     box-sizing: border-box;
   }
   
