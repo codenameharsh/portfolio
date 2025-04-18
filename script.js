@@ -82,16 +82,32 @@ window.addEventListener('scroll', () => {
         carousel.scrollLeft = scrollLeft - walk;
     });
 
-//galler scroll on reveal
-const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach((entry, index) => {
-      if (entry.isIntersecting) {
-        setTimeout(() => {
-          entry.target.classList.add('active');
-        }, index * 100); // stagger delay
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.1 });
   
-  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    //about skills slide in on scroll
+
+    const slideInObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+    
+    document.querySelectorAll('.slide-in-left').forEach((el) => {
+      slideInObserver.observe(el);
+    });
+    
+    
+    // Staggered reveal for .reveal elements (e.g., gallery)
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.classList.add('active');
+          }, index * 100); // stagger delay
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
