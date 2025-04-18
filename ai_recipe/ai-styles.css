@@ -1,19 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kranky&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Yatra+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 
 *{
-    --timberwolf: #dad7cdff;
-    --hunyadi-yellow: #f6bd60ff;
-    --cambridge-blue: #84a59dff;
-    --light-coral: #f28482ff;
-    /* aavaran colors */
-    --sage-olive: #ccd5aeff;
-    --cornsilk: #fefae0ff;
-    --clay-beige: #faedcdff;
-    --rustic-sienna: #d4a373ff;
-    --maroon-fig: #49131cff;
-    --accent-text: "Yatra One", system-ui;
+  --timberwolf: #dad7cd;
+  --hunyadi-yellow: #f6bd60ff;
+  --cambridge-blue: #84a59dff;
+  --light-coral: #f28482ff;
+  --accent-text: "Oswald", sans-serif;
     background-color: black;
     margin: 0;
     padding: 0;
@@ -26,7 +22,6 @@
         "wdth" 100;
     color: var(--timberwolf);
 }
-
 .wrapper{
     height: auto;
     display: flex;
