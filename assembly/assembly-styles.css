@@ -88,6 +88,9 @@
 
 
 /* header & nav */
+.logo a{
+  text-decoration: none;
+}
 .logo h1{
     color: var(--cambridge-blue);
     background-color: black;
