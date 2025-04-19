@@ -140,6 +140,7 @@
     padding-bottom: 0;
     font-size: 1.2rem;
     text-align: right;
+    text-decoration: none;
 }
 
 .logo h3{
@@ -148,6 +149,7 @@
   text-align: right;
   font-family: var(--accent-text);
   font-size: .7rem;
+  text-decoration: none;
 }
 /* NAVBAR */
 .nav-bar {
