@@ -138,7 +138,7 @@
     background-color: black;
     padding: 1rem;
     padding-bottom: 0;
-    font-size: 1.2rem;
+    font-size: 1.55rem;
     text-align: right;
     text-decoration: none;
 }
@@ -148,7 +148,7 @@
   padding-right: 1rem;
   text-align: right;
   font-family: var(--accent-text);
-  font-size: .7rem;
+  font-size: .9rem;
   text-decoration: none;
 }
 /* NAVBAR */
