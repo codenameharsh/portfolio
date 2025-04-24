@@ -40,7 +40,7 @@
 
         <div class="project-video">
             <video width="100%" autoplay muted loop playsinline>
-                <source src="Art-fusion.mp4" type="video/mp4">
+                <source src="meme.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
         </div>
@@ -50,19 +50,23 @@
                 <div class="project-skill-carousel">
                     <div class="p-s-tracks">
                         <ul class="p-s-list">
-                            <li class="skill-title">UI DESIGN</li>
-                            <li class="skill-title">UX DESIGN</li>
-                            <li>Adobe Illustrator</li>
-                            <li>Figma</li>
-                            <li>Sketch</li>
-                            <li>Canva</li>
+                            <li class="skill-title">REACT WEB APP</li>
+                            <li class="skill-title">FRONT-END WEB-DEVELOPMENT</li>
+                            <li class="skill-title">UI/UX DESIGN</li>
+                            <li>React.js</li>
+                            <li>JavaScript</li>
+                            <li>Fetch API</li>
+                            <li>HTML</li>
+                            <li>CSS</li>
                             <!-- duplicated for seamless loop -->
-                            <li class="skill-title">UI DESIGN</li>
-                            <li class="skill-title">UX DESIGN</li>
-                            <li>Adobe Illustrator</li>
-                            <li>Figma</li>
-                            <li>Sketch</li>
-                            <li>Canva</li>
+                            <li class="skill-title">REACT WEB APP</li>
+                            <li class="skill-title">FRONT-END WEB-DEVELOPMENT</li>
+                            <li class="skill-title">UI/UX DESIGN</li>
+                            <li>React.js</li>
+                            <li>JavaScript</li>
+                            <li>Fetch API</li>
+                            <li>HTML</li>
+                            <li>CSS</li>
                         </ul>
                     </div>
                 </div>
@@ -70,97 +74,95 @@
 
             <div class="case-study-text">
                 <div class="case-study-intro">
-                    <h1>ArtFusion: UI Design</h1>
-                    <h2>Case Study | Sign-Up Page for an Art Showcasing Event</h2>
+                    <h1>Meme Generator</h1>
+                    <h2>Case Study | Web-Based Meme Generator</h2>
                     <h3>Duration: 4 days</h3>
                 </div>
 
                 <div class="project-intro project-section">
-                    <h2>Background</h2>
-                    <p>ArtFusion is an annual community-driven art showcasing event that brings together local artists, emerging art students, galleries, and art enthusiasts. The goal of this design challenge was to create a seamless and intuitive sign-up experience that allows artists to submit their work for consideration, while also encouraging community engagement and social sharing.</p>
+                    <h2>Overview</h2>
+                    <p>The Web-Based Meme Generator is a dynamic, user-friendly tool built using React.js, designed for users to create custom memes effortlessly. The project showcases my ability to merge functional programming with playful UI/UX design, allowing users to engage with internet culture in a creative and interactive way.</p>
                 </div>
 
                 <div class="project-objectives project-section">
-                    <h2>Project Overview</h2>
-                    <p>This project was inspired by a Daily UI prompt focused on designing a sign-up page. I took it a step further by conceptualizing a responsive 3-step sign-up flow tailored specifically for the art community.</p>
-                    <p>The challenge was to balance usability and aesthetics—making the process inviting for artists of all backgrounds, while also ensuring the user experience was smooth across mobile, tablet, and desktop devices.</p>
+                    <h2>Project Goals</h2>
+                    <ul>
+                        <li>Build an intuitive meme generation platform using React.js</li>
+                        <li>Allow users to select or randomize meme templates from an external API</li>
+                        <li>Enable customization with text overlays, font styles, and placements</li>
+                        <li>Provide functionality to download the final meme</li>
+                        <li>Practice clean component structure and state management</li>
+                    </ul>
                 </div>
 
                 <div class="project-flow project-section">
-                    <h2>Design Goals</h2>
+                    <h2>Tools & Technologies</h2>
                     <ol>
-                        <li>Create an intuitive sign-up process tailored for artists.</li>
-                        <li>Collect all relevant information needed for event curation.</li>
-                        <li>Ensure a consistent and responsive experience across all devices.</li>
-                        <li>Encourage post-submission engagement and social sharing.</li>
+                        <li><span>React.js </span>(Functional components, Hooks)</li>
+                        <li><span>JavaScript </span>(ES6+)</li>
+                        <li><span>HTML/CSS </span>for styling and layout</li>
+                        <li><span>Meme API </span>(Imgflip API)</li>
                     </ol>
                 </div>
 
                 <div class="target project-section">
-                    <h2>Target Audience</h2>
+                    <h2>Key Features</h2>
                     <ul>    
                         <li>
-                            <span>Demographics: </span>
-                            Local artists, art students, and professional art organizations.
+                            <span>Dynamic Meme Template Fetching: </span>
+                            <ul>
+                                <li>Used <em>useEffect</em> to fetch meme templates from an external API</li>
+                                <li>Stored and updated meme image data using useState</li>
+                            </ul>
                         </li>
                         <li>
-                            <span>Age Range: </span>
-                            18–65
+                            <span>Random Template Generator: </span>
+                            <ul>
+                                <li>Enabled users to click a button and randomly receive a meme template</li>
+                                <li>Improved engagement through a playful "surprise me" element</li>
+                            </ul>
+                           
                         </li>
                         <li>
-                            <span>Device Usage: </span>
-                            Mobile phones, tablets, and desktops.
+                            <span>Text Input & Styling: </span>
+                            <ul>
+                                <li>Users can input top and bottom captions</li>
+                                <li>Adjustable text position, color, font size, and alignment</li>
+                                <li>Maintains text responsiveness across different image sizes</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span> Downloadable Output: </span>
+                            <ul>
+                                <li>Leveraged a canvas conversion library to convert the DOM to an image</li>
+                                <li>Implemented a one-click “Download Meme” functionality</li>
+                                <li>Ensured cross-browser compatibility</li>
+                            </ul>
                         </li>
                     </ul>
                 </div>
 
                 <div class="project-flow project-section">
-                    <h2>User Flow</h2>
+                    <h2>Challenges & Solutions</h2>
                     <ol>
                         <li>
-                            <span>Landing Page: </span>
+                            <span>Image/Text Overlay Positioning: </span>
                             <ul>
-                                <li>Quick introduction to ArtFusion</li>
-                                <li>Hero image with clear CTA</li>
-                                <li>Highlights of artist benefits</li>
-                                <li>Footer with social links and contact info</li>
+                                <li>Used CSS absolute positioning within a relative container to allow layered text styling while maintaining responsiveness.</li>
                             </ul>                            
                         </li>
 
                         <li>
-                            <span>3-Step Sign-Up Form: </span>
+                            <span>Cross-Origin Image Handling: </span>
                             <ul>
-                                <li>Step 1: Artist Info
-                                    <ul>
-                                        <li>Name</li>
-                                        <li>Email</li>
-                                        <li>Phone Number</li>
-                                    </ul>
-                                </li>
-                                <li>Step 2: Artwork Details
-                                    <ul>
-                                        <li>Title</li>
-                                        <li>Medium</li>
-                                        <li>Dimensions</li>
-                                        <li>Image Upload</li>
-                                    </ul>
-                                </li>
-                                <li>Step 3: Submission Requirements
-                                    <ul>
-                                        <li>Artist Statement</li>
-                                        <li>Additional Notes</li>
-                                        <li>CTA to Submit</li>
-                                    </ul>
-                                </li>
+                                <li>Addressed CORS issues with external image APIs by handling image loading with canvas-safe methods.</li>
                             </ul>                            
                         </li>
 
                         <li>
-                            <span>Confirmation Page</span>
+                            <span>State Synchronization: </span>
                             <ul>
-                                <li>Success message with submission summary</li>
-                                <li>CTA to share the event on social media</li>
-                                <li>Option to download a PDF confirmation</li>
+                                <li>Used useEffect and controlled inputs to ensure text overlays synced correctly with template changes.</li>
                             </ul>
                         </li>
                         
@@ -168,43 +170,47 @@
                 </div>
 
                 <div class="project-design project-section">
-                    <h2>Design Decisions</h2>
+                    <h2>Architecture</h2>
                     <ol>
-                        <li><span>Minimalist Layout: </span>
-                            <p>Focus on clarity and ease of use. White space and clean forms reduce cognitive load.</p>
+                        <li><span>Component Breakdown: </span>
+                            <ul>
+                                <li><span>App: </span>Main layout and state holder</li>
+                                <li><span>MemeCanvas: </span>Displays and renders the meme</li>
+                                <li><span>Controls: </span>Text input fields and styling controls</li>
+                                <li><span>TemplateFetcher: </span>Handles API integration and random selection</li>
+                            </ul>
                         </li>
 
                         <li>
-                            <span>Progressive Disclosure: </span>
-                            <p>Dividing the form into steps keeps users engaged and prevents overwhelm.</p>
+                            <span>State Management: </span>
+                            <p>Centralized via useState, with prop drilling for component communication and reactivity.</p>
                         </li>
 
-                        <li>
-                            <span>Responsive Design: </span>
-                            <p>All layouts were designed to adapt beautifully across screen sizes.</p>
-                        </li>
-
-                        <li>
-                            <span>Social Integration: </span>
-                            <p>Post-submission page includes a gentle nudge to share the event—helping boost reach and artist exposure.</p>
-                        </li>
                     </ol>
                 </div>
 
                 <div class="project-tech project-section">
-                    <h2>Tools Used</h2>
+                    <h2>Impact</h2>
                     <ul>
-                        <li><span>Figma:</span> UI design + prototyping</li>
-                        <li><span>Illustrator:</span> For icons and vector elements</li>
-                        <li><span>Photoshop:</span> Image prep</li>
+                        <li>Showcases clean React architecture</li>
+                        <li>Demonstrates thoughtful UX for customization</li>
+                        <li>Offers a practical blend of API data handling and interactive front-end development</li>
+                        <li>A fun, engaging project that balances performance and playfulness</li>
                     </ul>
                 </div>
 
                 <div class="project-conclusion project-section">
-                    <h2>Reflection</h2>
-                    <p>This project gave me the opportunity to think critically about form design for a creative audience. Artists tend to value intuitive, visually engaging experiences, so the challenge was finding a balance between artistic flair and usability. I focused on simplicity, clarity, and responsiveness, which I believe made the design feel both professional and approachable.
-                    </p>
-                    <P>Here's the link to my <a href="https://www.figma.com/proto/0BvThrCqcaAS4t4zeWN7Pw/ArtFusion-sign-up?node-id=2-86&p=f&t=BKOyNMMVfaKiO91R-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=2%3A86"> Figma Prototype.</a></P>
+                    <h2> Reflection & Conclusion</h2>
+                    <p>This project allowed me to dive deep into the interactive potential of React.js, blending fun and functionality in a way that’s both engaging and technically rewarding. Working with real-time API data, managing complex UI state, and translating creative inputs into tangible, downloadable outputs helped sharpen my understanding of reactive user interfaces and component-driven development.</p>
+                    <p>Through this meme generator, I explored not only how users interact with dynamic content, but also how to design an experience that feels fluid, intuitive, and satisfying. From handling text overlays and styling to ensuring seamless downloads, each challenge reinforced the importance of balancing creativity with usability.</p>
+                    <ul>
+                        Moving forward, I see opportunities to extend this project by:
+                        <li>Adding drag-and-drop text positioning</li>
+                        <li>Supporting image uploads for custom meme templates</li>
+                        <li>Implementing user accounts for saving and sharing memes</li>
+                    </ul>
+                    <p>Overall, this was a fun, hands-on project that pushed me to think from both a developer and designer perspective—a reminder that even simple tools can offer deep learning experiences when built with intention and care.</p>
+                    <p>Here's the link to my <a href="https://github.com/codenameharsh/meme_generator/tree/main/meme_generator"> GitHub Repo</a></p>
                 </div>
             </div>
 
@@ -213,15 +219,17 @@
                     <div class="project-skill-carousel" id="gallery-carousel">
                         <div class="p-s-tracks">
                             <ul class="p-s-list">
-                                <li class="skill-title">UI DESIGN</li>
-                                <li class="skill-title">UX DESIGN</li>
+                                <li class="skill-title">REACT WEB APP</li>
+                                <li class="skill-title">FRONT-END WEB-DEVELOPMENT</li>
+                                <li class="skill-title">UI/UX DESIGN</li>
                                 <li>Gallery</li>
                                 <li>Gallery</li>
                                 <li>Gallery</li>
                                 <li>Gallery</li>
                                 <!-- duplicated for seamless loop -->
-                                <li class="skill-title">UI DESIGN</li>
-                                <li class="skill-title">UX DESIGN</li>
+                                <li class="skill-title">REACT WEB APP</li>
+                                <li class="skill-title">FRONT-END WEB-DEVELOPMENT</li>
+                                <li class="skill-title">UI/UX DESIGN</li>
                                 <li>Gallery</li>
                                 <li>Gallery</li>
                                 <li>Gallery</li>
@@ -234,30 +242,13 @@
                 <div class="gallery">
                     <div class="gallery-container">
                         <div class="gallery-item reveal">
-                            <img src="images/landing page.png" alt="landing page_wireframe">
-                            <div class="caption">Art-fusion: Landing Page Wireframe</div>
+                            <img src="images/Screenshot 2025-01-31 153641.png" alt="meme generator">
+                            <div class="caption">Meme Generator</div>
                         </div>
                         <div class="gallery-item reveal">
-                            <img src="images/sign-up form.png" alt="sign-up form_wireframe">
-                            <div class="caption">Art-fusion: Sign-up Form Wireframe</div>
-                        </div>
-                        <div class="gallery-item reveal">
-                            <img src="images/confirmation page.png" alt="confirmation page wireframe">
-                            <div class="caption">Art-fusion: Confirmation Page Wireframe</div>
-                        </div>
-
-                        <div class="gallery-item reveal">
-                            <img src="images/landing page prototype.png" alt="landing page prototype">
-                            <div class="caption">Art-fusion: Landing Page Prototype</div>
-                        </div>
-                        <div class="gallery-item reveal">
-                            <img src="images/sign-up form prototype.png" alt="sign-up form prototype">
-                            <div class="caption">Art-fusion: Sign-up Form Prototype</div>
-                        </div>
-                        <div class="gallery-item reveal">
-                            <img src="images/confirmation page prototype.png" alt="confirmation page prototype">
-                            <div class="caption">Art-fusion: Confirmation Page Prototype</div>
-                        </div>                        
+                            <img src="images/Screenshot 2025-01-31 153938.png" alt="meme generator">
+                            <div class="caption">Meme Generator</div>
+                        </div>                       
                     </div>
                 </div>
     
