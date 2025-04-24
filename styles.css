@@ -881,13 +881,12 @@
 
 /* style guide  */
 .style-guide {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
   padding: 2rem;
-  gap: 1.5rem;
   box-sizing: border-box;
 }
 
