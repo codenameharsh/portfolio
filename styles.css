@@ -437,10 +437,10 @@
     /* border-radius: 50%; */
     object-fit: cover;
     margin-bottom: 1rem;
-    border-bottom: 4px dotted var(--light-coral);
+    border: 4px dotted black;
     filter: contrast(1.5);
     filter:saturate(1);
-    /* background-color: var(--light-coral); */
+    background-color: var(--timberwolf);
   }
 
   .about {
