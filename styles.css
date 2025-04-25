@@ -881,8 +881,7 @@
 
 /* style guide  */
 .style-guide {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
