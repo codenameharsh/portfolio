@@ -1001,30 +1001,32 @@
 /* Gallery Items */
 .logo-gallery img,
 .illust-gallery img {
-  width: 100%;
+  width: 90%;
   margin-bottom: 1.5rem;
   border-radius: 1rem;
   background-color: black;
   padding: 0.5rem;
-  border: 3px dotted var(--hunyadi-yellow);
+  border: 3px solid var(--cambridge-blue);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
   display: block;
   height: auto;
+  align-items: center;
+  justify-content: center;
 }
 
-.logo-gallery img {
-  width: 80%; /* Adjusted from 100% to 80% for smaller images */
+/* .logo-gallery img {
+  width: 80%; 
   height: auto;
   margin-bottom: 1.5rem;
   border-radius: 1rem;
   background-color: black;
   padding: 0.5rem;
-  border: 3px dotted var(--hunyadi-yellow);
+  border: 3px dotted var(--cambridge-blue);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
   display: block;
-}
+} */
 
 
 .logo-gallery .gallery-item,
