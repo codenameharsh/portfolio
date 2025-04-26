@@ -590,18 +590,19 @@
 
   .resume-download button {
     background-color: black;
-    border: 2px solid var(--cambridge-blue);
+    /* border: 2px solid var(--cambridge-blue); */
+    box-shadow: 0 4px 8px rgba(29, 160, 165, 0.242), 0 6px 20px rgba(209, 246, 251, 0.19);
     color: var(--timberwolf);
-    /* font-family: var(--accent-text); */
-    /* border: none; */
+    font-family: var(--accent-text);
+    border: none;
     padding: 1rem;
     width: 13rem;
     font-size: 1rem;
     font-weight: 600;
     /* border-radius: 1rem; */
     cursor: pointer;
-    transition: background-color 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* transition: background-color 0.3s ease; */
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
   }
 
   .resume-download button:hover {
