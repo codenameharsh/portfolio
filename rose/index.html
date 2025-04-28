@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Every Thorn Has Its Rose</title>
+<style>
+  body {
+    margin: 0;
+    background: url('vines.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #ffffff;
+    font-family: 'Arapey', serif;
+    overflow-x: hidden;
+    cursor: url('https://cdn-icons-png.flaticon.com/32/2926/2926754.png') 16 16, auto;
+    position: relative;
+    animation: backgroundMove 60s infinite linear alternate;
+  }
+  @keyframes backgroundMove {
+    0% { background-position: center center; }
+    100% { background-position: center top; }
+  }
+  .overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    pointer-events: none;
+    z-index: 1;
+  }
+  .container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 150px 0;
+    position: relative;
+    z-index: 2;
+  }
+  .stanza {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1.5s ease, color 1.5s ease;
+    margin-bottom: 100px;
+    font-size: 2rem;
+    line-height: 2;
+    animation: fadeSlideIn 2s forwards;
+    animation-delay: var(--delay);
+    color: #e0e0e0;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  }
+  .stanza.active {
+    opacity: 1;
+    transform: translateY(0);
+    color: #ffffff;
+    animation: shimmer 5s infinite alternate;
+  }
+  .signature {
+    text-align: center;
+    margin-top: 150px;
+    font-size: 1.5rem;
+    opacity: 0.8;
+    animation: fadeSlideIn 2s forwards;
+  }
+  @keyframes fadeSlideIn {
+    0% {
+      opacity: 0;
+      transform: translateY(80px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes shimmer {
+    0% { text-shadow: 0 0 5px rgba(255, 255, 255, 0.1); }
+    100% { text-shadow: 0 0 20px rgba(255, 255, 255, 0.4); }
+  }
+</style>
+</head>
+<body>
+
+<div class="overlay"></div>
+<div class="container">
+  <div class="stanza" style="--delay: 0s">My hardened heart grows a thorn.</div>
+  <div class="stanza" style="--delay: 0.5s">A little prick<br>Can maim your soul.<br>Breathe out now,<br>My desperate whole.</div>
+  <div class="stanza" style="--delay: 1s">Watch your feet,<br>Where they fall,<br>Follow your heart,<br>And bury your blood.</div>
+  <div class="stanza" style="--delay: 1.5s">Poison bleeds<br>Through my rosy cheeks,<br>A dead man finds,<br>All that he seeks.<br>Forgiveness haunts<br>And glory weeps.</div>
+  <div class="stanza" style="--delay: 2s">A sudden smile<br>Creeps into my dreams,<br>Sleep is lost,<br>And silence seeps.<br>Alone, at last<br>I cry at will.</div>
+  <div class="stanza" style="--delay: 2.5s">My petals bloom<br>With each shuddered breath,<br>Beauty lies,<br>And I yearn to be held.<br>My sunshine burns,<br>My skin blood red.</div>
+  <div class="stanza" style="--delay: 3s"><strong>I rose again from the land of the dead.</strong></div>
+
+  <div class="signature">- h.a.r</div>
+</div>
+
+<audio id="background-music" src="https://cdn.pixabay.com/download/audio/2023/04/11/audio_1fa719b4f5.mp3?filename=ambient-soft-piano-14675.mp3" autoplay loop></audio>
+
+<script>
+  const stanzas = document.querySelectorAll('.stanza');
+
+  const revealOnScroll = () => {
+    const triggerBottom = window.innerHeight * 0.9;
+    stanzas.forEach(stanza => {
+      const stanzaTop = stanza.getBoundingClientRect().top;
+      if (stanzaTop < triggerBottom) {
+        stanza.classList.add('active');
+      }
+    });
+  };
+
+  window.addEventListener('scroll', revealOnScroll);
+  revealOnScroll();
+
+  // Lower music volume
+  const music = document.getElementById('background-music');
+  music.volume = 0.05;
+</script>
+
+</body>
+</html>
