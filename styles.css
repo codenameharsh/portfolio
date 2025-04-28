@@ -331,8 +331,8 @@
     padding: 1rem;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     flex-shrink: 0;
-    border: 3px dashed #dad7cd71;
-    animation: border-dash 2s infinite;
+    /* border: 3px dotted #dad7cd71; */
+    /* animation: border-dash 2s infinite; */
     transition: smooth;   
     /* border-radius: 15%; */
   }
@@ -675,7 +675,7 @@
   }
 
   .software-carousel{
-    padding: 4rem;
+    padding: 5rem;
   }
 
   .resume-download {
