@@ -279,7 +279,7 @@
 .hero-vid {
     width: 100%;
     overflow: hidden;
-    border-radius: 8px;
+    /* border-radius: 8px; */
     /* border: 2px dotted var(--hunter-green); */
   }
 
@@ -302,8 +302,8 @@
 .skills-carousel {
     overflow: hidden;
     width: 100%;
-    padding: 1rem 0;
-    margin: 1rem 0;
+    /* padding: 1rem 0; */
+    /* margin: 1rem 0; */
     cursor: grab;
   }
 
@@ -320,7 +320,6 @@
 
   .skills-carousel:hover ul {
     animation-play-state: paused;
-    background-color: black;
   }
 
   .skills-list li {
@@ -331,6 +330,7 @@
     padding: 1rem;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     flex-shrink: 0;
+    
     /* border: 3px dotted #dad7cd71; */
     /* animation: border-dash 2s infinite; */
     transition: smooth;   
