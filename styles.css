@@ -1261,33 +1261,37 @@
   .contact-container {
     width: 90%;
     padding: 1.5rem;
+    border: 2px solid var(--hunyadi-yellow);
+  }
+
+  .contact-head{
+    align-items: center;
+    justify-content: center;
   }
 
   .contact-head h1 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
 
   .contact-head p {
-    font-size: 1rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .contact-head ul {
-    grid-template-columns: 1fr; /* Stack items on smaller screens */
-  }
-
-  .contact-method{
-    justify-content: space-between;
-    padding: 1rem;
+    font-size: .8rem;
+    margin-bottom: 1rem;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
   }
 
   .contact-icon {
     font-size: 1rem;
+    /* padding: 1rem; */
+    margin-bottom: 0;
   }
 
   .contact-icon img {
     width: 2rem;
     height: 2rem;
+    margin: .5rem;
+
   }
 }
 
