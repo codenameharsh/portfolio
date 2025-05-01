@@ -618,11 +618,11 @@
 
   .resume-download button {
     background-color: black;
-    /* border: 2px solid var(--cambridge-blue); */
+    border: 2px solid var(--cambridge-blue);
     box-shadow: 0 4px 8px rgba(29, 160, 165, 0.242), 0 6px 20px rgba(209, 246, 251, 0.19);
     color: var(--timberwolf);
     font-family: var(--accent-text);
-    border: none;
+    /* border: none; */
     padding: 1rem;
     width: 13rem;
     font-size: 1rem;
@@ -735,7 +735,7 @@
     width: 80vw;
     padding: 1rem 0;
     cursor: grab;
-    border-top: 2px dotted var(--light-coral);
+    border-top: 2px solid var(--light-coral);
     margin: 0 auto; /* This centers the container */
     box-sizing: border-box;
   }
@@ -829,7 +829,8 @@
   }
   
   .web-dev button {
-    /* border: 3px solid var(--cambridge-blue); */
+    /* border: 5px dotted black;
+    background-color: var(--cambridge-blue); */
     border: none;
     align-items: center;
     justify-content: center;
@@ -837,14 +838,16 @@
     cursor: pointer;
     margin: 1rem;
     /* border-radius: 1rem;   */
-    box-shadow: 0 4px 8px rgba(29, 160, 165, 0.242), 0 6px 20px rgba(209, 246, 251, 0.19);
-    transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(29, 160, 165, 0.384), 0 6px 20px rgba(209, 246, 251, 0.395);
+    /* box-shadow: var(--cambridge-blue) 0px 0px 0px 3px, var(--hunyadi-yellow) 0px 0px 0px 6px,var(--light-coral) 0px 0px 0px 9px; */
     /* background: var(--cambridge-blue); */
   }
+
   
   .web-dev button:hover {
     transform: scale(1.05);
-    border: 2px solid var(--hunyadi-yellow);
+    /* border: 2px solid var(--hunyadi-yellow); */
+    box-shadow: 0 4px 8px rgba(206, 184, 58, 0.544), 0 6px 20px rgba(227, 189, 76, 0.368);
   }
   
   .web-dev button p {
@@ -855,6 +858,7 @@
     text-align: center;
     /* border-radius: .5rem; */
     margin: 1rem;
+    /* background-color: var(--cambridge-blue); */
   }
   
   .web-dev button img {
@@ -924,14 +928,14 @@
   cursor: pointer;
   margin: 1rem;
   /* border-radius: 1rem; */
-  box-shadow: 0 4px 8px rgba(29, 160, 165, 0.242), 0 6px 20px rgba(209, 246, 251, 0.19);
+  box-shadow: 0 4px 8px rgba(29, 160, 165, 0.384), 0 6px 20px rgba(209, 246, 251, 0.395);
   transition: transform 0.3s ease;
   background: none;
 }
 
 .style-guide button:hover {
   transform: scale(1.05);
-  border: 2px solid var(--hunyadi-yellow);
+  box-shadow: 0 4px 8px rgba(206, 184, 58, 0.544), 0 6px 20px rgba(227, 189, 76, 0.368);
 }
 
 .style-guide button p {
