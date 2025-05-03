@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Kranky&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Yatra+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
 
 *{
   --timberwolf: #dad7cd;
@@ -10,6 +10,7 @@
   --cambridge-blue: #84a59dff;
   --light-coral: #f28482ff;
   --accent-text: "Oswald", sans-serif;
+  --logo-text: "Satisfy", cursive;
     background-color: black;
     margin: 0;
     padding: 0;
@@ -162,7 +163,7 @@
   text-decoration: none;
 }
 .logo a h1{
-    color: var(--cambridge-blue);
+    color: var(--timberwolf);
     background-color: black;
     padding: 1rem;
     padding-bottom: 0;
@@ -172,10 +173,10 @@
 }
 
 .logo a h3{
-  color: var(--timberwolf);
+  color: var(--hunyadi-yellow);
   padding-right: 1rem;
   text-align: right;
-  font-family: var(--accent-text);
+  font-family: var(--logo-text);
   font-size: .9rem;
   text-decoration: none;
 }
@@ -352,23 +353,23 @@
 
   .skills-list li {
     white-space: nowrap;
-    font-family: var(--accent-text);
+    font-family: var(--logo-text);
     color: var(--hunyadi-yellow);
     font-size: 1.3rem;
     padding: 1rem;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     flex-shrink: 0;
-    
+
     /* border: 3px dotted #dad7cd71; */
     /* animation: border-dash 2s infinite; */
-    transition: smooth;   
+    transition: smooth;
     /* border-radius: 15%; */
   }
 
   @keyframes border-dash {
     0% {
       border-style: dotted;
- 
+
     }
     50% {
       border-style: solid;
@@ -378,7 +379,7 @@
       border-style: dotted;
     }
   }
- 
+
 
   /* Scroll Animation */
   @keyframes scroll-skills {
@@ -462,13 +463,14 @@
 .photo-container img {
     width: 150px;
     height: 150px;
-    /* border-radius: 50%; */
-    object-fit: cover;
+    /* border-radius: 40%; */
+    object-fit:cover;
     margin-bottom: 1rem;
-    border: 4px dotted black;
+    /* border-bottom: 6px dotted black; */
     filter: contrast(1.5);
     filter:saturate(1);
     background-color: var(--timberwolf);
+    box-shadow: 0 4px 8px rgba(206, 184, 58, 0.544), 0 6px 20px rgba(227, 189, 76, 0.368);
   }
 
   .about {
@@ -788,30 +790,30 @@
       padding: 0.5rem 0;
       border-top: 1px dotted var(--light-coral);
     }
-  
+
     .p-s-list {
       gap: 1rem;
       animation-duration: 60s; /* Slower scroll on smaller screens */
     }
-  
+
     .p-s-list li {
       font-size: 0.85rem;
       padding: 0.4rem 0.8rem;
       box-shadow: 0 1px 3px rgba(0,0,0,0.1);
     }
   }
-  
+
   @media screen and (max-width: 480px) {
     .project-skill-carousel {
       width: 95vw;
       padding: 0.5rem 0;
     }
-  
+
     .p-s-list {
       gap: 0.75rem;
       animation-duration: 70s;
     }
-  
+
     .p-s-list li {
       font-size: 0.75rem;
       padding: 0.3rem 0.6rem;
@@ -827,7 +829,7 @@
     padding: 2rem;
     box-sizing: border-box;
   }
-  
+
   .web-dev button {
     /* border: 5px dotted black;
     background-color: var(--cambridge-blue); */
@@ -843,13 +845,13 @@
     /* background: var(--cambridge-blue); */
   }
 
-  
+
   .web-dev button:hover {
     transform: scale(1.05);
     /* border: 2px solid var(--hunyadi-yellow); */
     box-shadow: 0 4px 8px rgba(206, 184, 58, 0.544), 0 6px 20px rgba(227, 189, 76, 0.368);
   }
-  
+
   .web-dev button p {
     color: var(--timberwolf);
     padding: .8rem;
@@ -860,7 +862,7 @@
     margin: 1rem;
     /* background-color: var(--cambridge-blue); */
   }
-  
+
   .web-dev button img {
     height: 300px;
     width: 320px;
@@ -868,23 +870,23 @@
     /* border-radius: 0.5rem; */
     padding: 0;
   }
-  
+
   /* Responsive: Tablet */
   @media screen and (max-width: 1024px) {
     .web-dev {
       grid-template-columns: repeat(1, 1fr);
     }
-  
+
     .web-dev button img {
       height: 180px;
       width: 170px;
     }
-  
+
     .web-dev button p {
       font-size: 0.9rem;
     }
   }
-  
+
   /* Responsive: Mobile */
   @media screen and (max-width: 600px) {
     .style-guide {
@@ -892,17 +894,17 @@
       align-items: center;
       padding: 1rem;
     }
-  
+
     .style-guide button {
       width: 90%;
       margin: 0.75rem 0;
     }
-  
+
     .style-guide button img {
       height: 160px;
       width: 100%;
     }
-  
+
     .style-guide button p {
       font-size: 0.85rem;
       padding: 0.5rem;
@@ -1046,7 +1048,7 @@
 }
 
 /* .logo-gallery img {
-  width: 80%; 
+  width: 80%;
   height: auto;
   margin-bottom: 1.5rem;
   border-radius: 1rem;
@@ -1255,7 +1257,7 @@
 }
 
 .contact-method:hover .contact-info {
-  color: var(--tangerine); 
+  color: var(--tangerine);
   transform: translateY(5px); /* Shift text to the right */
   text-decoration: underline;
 }
@@ -1308,7 +1310,7 @@
  }
 
 .footer {
-  background-color: var(--tangerine); 
+  background-color: var(--tangerine);
   color: var(--white);
   padding: 2rem 0;
   text-align: center;
@@ -1324,7 +1326,7 @@
 }
 
 .footer a {
-  color: var(--light-coral); 
+  color: var(--light-coral);
   font-style: var(--accent-text);
   text-decoration: none;
   margin: 0 15px; /* Add more space between the links */
