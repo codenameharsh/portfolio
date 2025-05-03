@@ -357,8 +357,9 @@
     color: var(--hunyadi-yellow);
     font-size: 1.3rem;
     padding: 1rem;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-shadow: 0 4px 8px rgba(206, 184, 58, 0.544), 0 6px 20px rgba(227, 189, 76, 0.368);
     flex-shrink: 0;
+
 
     /* border: 3px dotted #dad7cd71; */
     /* animation: border-dash 2s infinite; */
