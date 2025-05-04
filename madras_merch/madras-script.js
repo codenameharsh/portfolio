@@ -13,7 +13,20 @@ $(document).ready(()=>{
         }
     });
 })
+
+//loader
+window.addEventListener("load", function () {
+  const loader = document.getElementById("loader-wrapper");
+  loader.style.display = "none";
+});
   
+
+//loader
+window.addEventListener("load", function () {
+  const loader = document.getElementById("loader-wrapper");
+  loader.style.display = "none";
+});
+
 //scroll percentage
 window.addEventListener('scroll', () => {
   const scrollTop = document.documentElement.scrollTop;

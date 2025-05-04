@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
 
 *{
@@ -60,48 +58,6 @@
   100% { transform: rotate(360deg); }
 }
 
- /* scroll arrow indicator */
-
- /* .scroll-down {
-    position: fixed;
-    bottom: 35px;
-    right: 30px;
-    font-size: 4rem;
-    font-weight: 800;
-    color: var(--light-coral);
-    text-decoration: none;
-    animation: bounce 1s infinite;
-    z-index: 1000;
-    background-color: transparent;
-  }
-
-  .scroll-down img{
-    height: 35px;
-    background-color: transparent;
-  }
-
-  @keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
-      transform: translateY(0);
-    }
-    40% {
-      transform: translateY(8px);
-    }
-    60% {
-      transform: translateY(4px);
-    }
-  }
-
-  .scroll-down:hover {
-    color: var(--hunyadi-yellow);
-  }
-
-  @media (max-width: 768px) {
-    .scroll-down {
-        font-size: 3rem;
-        right: 15px;
-    }
-} */
 #scroll-img{
   position: fixed;
   right: 25px;
@@ -162,23 +118,22 @@
 .logo a{
   text-decoration: none;
 }
-.logo a h1{
-    color: var(--timberwolf);
+
+.logo h1{
+    color: var(--cambridge-blue);
     background-color: black;
     padding: 1rem;
     padding-bottom: 0;
-    font-size: 1.55rem;
+    font-size: 1.2rem;
     text-align: right;
-    text-decoration: none;
 }
 
-.logo a h3{
+.logo h3{
   color: var(--hunyadi-yellow);
   padding-right: 1rem;
   text-align: right;
   font-family: var(--logo-text);
-  font-size: .9rem;
-  text-decoration: none;
+  font-size: .7rem;
 }
 /* NAVBAR */
 .nav-bar {

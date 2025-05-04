@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Kranky&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Yatra+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
 
 *{
   --timberwolf: #dad7cd;
@@ -10,6 +11,7 @@
   --cambridge-blue: #84a59dff;
   --light-coral: #f28482ff;
   --accent-text: "Oswald", sans-serif;
+  --logo-text: "Satisfy", cursive;
     background-color: black;
     margin: 0;
     padding: 0;
@@ -86,6 +88,35 @@
   }
 }
 
+#loader-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Loader Animation */
+#loader {
+  border: 8px solid var(--hunyadi-yellow);
+  border-top: 8px solid var(--cambridge-blue); 
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
 
 /* header & nav */
 .logo a{
@@ -102,10 +133,10 @@
 }
 
 .logo h3{
-  color: var(--timberwolf);
+  color: var(--hunyadi-yellow);
   padding-right: 1rem;
   text-align: right;
-  font-family: var(--accent-text);
+  font-family: var(--logo-text);
   font-size: .7rem;
 }
 /* NAVBAR */
@@ -356,7 +387,7 @@
 }
 
 .case-study-intro h1{
-    color: var(--light-coral);
+    color: var(--cambridge-blue);
     animation: pulse 5s infinite ease-in-out;
 }
 
@@ -420,23 +451,17 @@ li span{
 }
 
 @media (max-width: 1024px) {
-    .case-study-intro,
-    .project-section {
-      width: 80vw;
-    }
+
   }
   
   @media (max-width: 768px) {
-    .case-study-intro,
-    .project-section {
-      width: 90vw;
-    }
+
   }
   
   @media (max-width: 480px) {
     .case-study-intro,
     .project-section {
-      width: 95vw;
+      width: 80vw;
       padding: 0.5rem;
     }
     .case-study-intro {

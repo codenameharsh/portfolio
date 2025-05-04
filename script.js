@@ -21,7 +21,8 @@ window.addEventListener("load", function () {
   const loader = document.getElementById("loader-wrapper");
   loader.style.display = "none";
 });
-  
+
+//nav menu  
   //hamburger menu
   const hamburgerMenu = document.getElementById('hamburger-menu');
     const navMenu = document.getElementById('nav-menu');

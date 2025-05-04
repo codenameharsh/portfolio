@@ -13,6 +13,12 @@ $(document).ready(()=>{
         }
     });
 })
+
+//loader
+window.addEventListener("load", function () {
+  const loader = document.getElementById("loader-wrapper");
+  loader.style.display = "none";
+});
   
   
   //hamburger menu
