@@ -490,7 +490,7 @@ li span{
   }
   .gallery-container {
     width: 60vw;
-    column-count: 3;
+    column-count: 2;
     column-gap: 1rem;
     padding: 2rem;
   }
@@ -505,7 +505,7 @@ li span{
     border-radius: 1rem;
     background-color: black;
     padding: 0.5rem;
-    border: 2px solid var(--hunyadi-yellow);
+    /* border: 2px solid var(--hunyadi-yellow); */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
   }
