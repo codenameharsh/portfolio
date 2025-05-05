@@ -22,6 +22,10 @@
     color: var(--timberwolf);
 }
 
+body {
+  cursor: url('favicon.ico'), auto;
+}
+
 .wrapper{
     height: auto;
     display: flex;
