@@ -48,9 +48,9 @@ body {
 }
 
 /* Loader Animation */
-#loader {
+/* #loader {
   border: 8px solid var(--hunyadi-yellow);
-  border-top: 8px solid var(--cambridge-blue); /* Use your brown brand color */
+  border-top: 8px solid var(--cambridge-blue); 
   border-radius: 50%;
   width: 60px;
   height: 60px;
@@ -60,7 +60,7 @@ body {
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
-}
+} */
 
 
 
