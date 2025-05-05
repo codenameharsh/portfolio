@@ -47,6 +47,24 @@ body {
   align-items: center;
 }
 
+@media screen and (max-width: 1024px) {
+  #loader img{
+    padding: 1rem;
+    width:70%;
+    height: auto;
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  #loader img{
+    width:70%;
+    height: auto;
+  }
+}
+
+
+
 /* Loader Animation */
 /* #loader {
   border: 8px solid var(--hunyadi-yellow);
