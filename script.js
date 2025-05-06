@@ -57,6 +57,20 @@ window.addEventListener('scroll', () => {
     document.getElementById('scroll-percent').textContent = `${scrolled}%`;
   });
 
+  window.addEventListener('scroll', () => {
+    const scrollTop = document.documentElement.scrollTop;
+    const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrollPercent = (scrollTop / docHeight) * 100;
+    document.getElementById('progressBar').style.height = scrollPercent + '%';
+  });
+
+  window.addEventListener('scroll', () => {
+    const scrollTop = document.documentElement.scrollTop;
+    const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrollPercent = (scrollTop / docHeight) * 100;
+    document.getElementById('bottom').style.height = scrollPercent + '%';
+  });
+
 
 //skills carousel
     const carousel = document.querySelector('.skills-carousel');

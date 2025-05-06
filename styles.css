@@ -81,15 +81,6 @@ body {
 } */
 
 
-
-#scroll-img{
-  position: fixed;
-  right: 25px;
-  top: 85%;
-  transform: translateY(-50%);
-  z-index: 1000;
-}
-
 #scroll-percent {
   position: fixed;
   right: 20px;
@@ -99,10 +90,9 @@ body {
   font-family: var(--accent-text);
   font-weight: bolder;
   color: var(--cambridge-blue); 
-  background-color: transparent;
+  background-color:transparent;
   padding: 1rem;
   z-index: 1000;
-  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -333,10 +323,10 @@ body {
   .skills-list li {
     white-space: nowrap;
     font-family: var(--logo-text);
-    color: var(--hunyadi-yellow);
+    color: var(--timberwolf);
     font-size: 1.3rem;
     padding: 1rem;
-    text-shadow: 0 4px 8px rgba(206, 184, 58, 0.544), 0 6px 20px rgba(227, 189, 76, 0.368);
+    /* text-shadow: 0 4px 8px rgba(206, 184, 58, 0.544), 0 6px 20px rgba(227, 189, 76, 0.368); */
     flex-shrink: 0;
 
 
