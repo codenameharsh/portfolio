@@ -293,6 +293,7 @@ body {
   @media (max-width: 768px) {
     .hero-vid video {
         height: 60vh;
+        padding: 1rem;
     }
 }
 
@@ -301,6 +302,7 @@ body {
 
 /* skills section */
 .skills-carousel {
+  display: none;
     overflow: hidden;
     width: 100%;
     /* padding: 1rem 0; */
