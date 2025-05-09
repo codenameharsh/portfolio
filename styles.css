@@ -192,12 +192,10 @@ body {
     margin: 1rem;
   }
 
-  .hamburger-menu .bar {
-    height: 3px;
-    width: 100%;
-    background-color: var(--timberwolf);
-    border-radius: 2px;
+  .hamburger-menu:hover{
+    scale: 1.1;
   }
+
 
   /* NAV MENU - Hidden by default */
   .nav-menu {
@@ -1030,9 +1028,12 @@ body {
   justify-content: center;
 }
 
-.gallery-item img{
+.gallery-item img,
+.display-item img{
   border-radius: 2rem;
 }
+
+
 
 /* .logo-gallery img {
   width: 80%;
