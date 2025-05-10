@@ -1100,7 +1100,7 @@ body {
 @media screen and (max-width: 1024px) {
   .logo-gallery img,
 .illust-gallery img {
-  border: 1px dotted rgba(218, 215, 205, 0.426);
+  /* border: 1px dotted rgba(218, 215, 205, 0.426); */
   padding: .2rem;
   /* border-radius: 5px; */
 }
@@ -1124,7 +1124,7 @@ body {
 @media screen and (max-width: 600px) {
   .logo-gallery img,
   .illust-gallery img {
-    border: 1px dotted rgba(218, 215, 205, 0.426);
+    /* border: 1px dotted rgba(218, 215, 205, 0.426); */
     padding: .2rem;
     /* border-radius: 5px; */
   }

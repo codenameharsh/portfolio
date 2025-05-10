@@ -270,6 +270,8 @@ body {
 
   }
 
+  
+
   /* video */
 
   .project-video {
@@ -419,9 +421,6 @@ body {
     font-family: var(--accent-text);
 }
 
-.case-study-intro h3{
-    font-weight: 300;
-}
 
 .case-study-intro h3 span{
     color: var(--hunyadi-yellow);
@@ -431,19 +430,6 @@ body {
 /* general styles */
 h2{
     color: var(--light-coral);
-}
-
-p{
-    font-weight: 300;
-}
-
-
-ul li{
-    font-weight: 300;
-}
-
-ol li{
-    font-weight: 300;
 }
 
 li span{
@@ -600,6 +586,46 @@ li span{
     }
   }
   
+    /* controls */
+.controls-wrapper{
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+.portfolio-controls{
+  width: 60vw;
+  display: flex;
+  flex-direction: row;
+  align-items: left;
+  justify-content: left;
+}
+
+.portfolio-nav{
+  padding: 1rem;
+  margin: 1rem;
+  width: 20vw;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--cambridge-blue);
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(29, 160, 165, 0.242), 0 6px 20px rgba(209, 246, 251, 0.19);
+  cursor: pointer;
+  align-items: center;
+}
+
+.portfolio-nav:hover {
+  background-color: var(--cambridge-blue);
+  color: black;
+}
+
+.portfolio-nav img{
+  width: 20px;
+  height: auto;
+  background-color: transparent;
+}
   
   /* Footer Styling */
  footer{
