@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-commerce Website | Front-end Development | Harshitha Rajendran</title>
+    <title>E-Commerce Shopping Cart | Front-end Development | Harshitha Rajendran</title>
     <link rel="stylesheet" href="cart-styles.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" type="text/javascript"></script>
     <link rel="icon" type="image/x-icon" href="../favicon.ico">
@@ -94,16 +94,16 @@
 
             <div class="case-study-text">
                 <div class="case-study-intro">
-                    <h1>E-Commerce Website</h1>
+                    <h1>E-Commerce Shopping Cart</h1>
                     <h2>Case Study | Front-end Development</h2>
-                    <h3>Duration: 1.5 weeks</h3>
+                    <h3>Duration: 5 days</h3>
                 </div>
 
                 <div class="project-intro project-section">
                     <h2>Introduction</h2>
-                    <p>The E-Commerce Website project is a fully functional online shopping platform designed to provide users with a seamless and intuitive shopping experience. The website features a clean UI, responsive design, shopping cart functionality, and product pages. Built using HTML, CSS, and JavaScript, this project highlights my expertise in front-end development, UI/UX design, and JavaScript interactivity.</p>
+                    <p>The E-Commerce Shopping Cart is a standalone, functional module designed to handle dynamic cart interactions within an e-commerce website. This project highlights core functionalities such as adding/removing items, updating product quantities, and real-time cost calculation — providing users with a seamless and intuitive checkout experience.</p>
 
-                    <p>This project was created as part of my learning journey on Meta's Front-End Development course on Coursera, where I developed hands-on experience in building interactive web applications.</p>
+                    <p>This was developed as part of my hands-on practice with JavaScript interactivity and DOM manipulation, building on the foundations laid during the Meta Front-End Development Professional Certificate on Coursera.</p>
                 </div>
 
                 <div class="project-flow project-section">
@@ -111,23 +111,34 @@
                     <ul>
                         <li>
                             <span>Ideation & Planning</span>
-                            <p>The primary goal was to design a visually appealing, easy-to-navigate e-commerce site that allows users to browse products, add items to their cart, and proceed to checkout effortlessly.</p>
+                            <p>The core objective was to simulate real-world cart behavior found in modern e-commerce platforms, ensuring that it could be easily integrated into any product listing interface.</p>
                             <p>Key considerations included:</p>
                             <ul>
                                 <li>
-                                    <span>User-friendly navigation: </span>
-                                    <p>Ensuring a smooth browsing experience across multiple pages.
-                                    </p>
+                                    <span>Dynamic Cart Behavior: </span>
+                                    <p>Allow users to manage product quantities, remove items, and see real-time price updates.</p>
                                 </li>
                                 <li>
-                                    <span>Responsive design: </span>
-                                    <p>The website had to work seamlessly on desktops, tablets, and mobile devices.</p>
+                                    <span>Interactive UI: </span>
+                                    <p>Responsive updates without needing to reload the page.</p>
                                 </li>
                                 <li>
-                                    <span>Shopping cart functionality: </span>
-                                    <p>Users should be able to add, remove, and update products in their cart dynamically.</p>
+                                    <span>"Buy Now" Simulation: </span>
+                                    <p>Clear the cart and reset the session upon purchase.</p>
                                 </li>
                             </ul>
+                        </li>
+
+                        <li>
+                            <span>User Flow</span>
+                            <p>I mapped a straightforward user journey to reflect typical shopping cart behavior: </p>
+                            <ol>
+                                <li>Add products to cart from a catalog</li>
+                                <li>View items and quantities in cart</li>
+                                <li>Update quantities or remove items</li>
+                                <li>View real-time totals</li>
+                                <li>"Buy Now" to simulate checkout and reset cart</li>
+                            </ol>
                         </li>
 
                     </ul>
@@ -135,32 +146,27 @@
 
 
                 <div class="project-flow project-section">
-                    <h2>User Flow</h2>
-                    <ol>
-                        <li>
-                            <span>Wireframing & UI/UX Design</span>
-                            <p>Before development, I designed wireframes focusing on:</p>
-                            <ul>
-                                <li>
-                                    <span>Header & Navigation Bar: </span>
-                                    <p>Featuring a logo, menu links, and shopping cart icon.</p>
-                                </li>
-                                <li>
-                                    <span>Product Grid Layout: </span>
-                                    <p>Showcasing products with images, descriptions, and prices.</p>
-                                </li>
-                                <li>
-                                    <span>Shopping Cart Page: </span>
-                                    <p>Displaying selected products, total price, and checkout button.</p>
-                                </li>
-                                <li>
-                                    <span>Footer Section: </span>
-                                    <p>Containing contact information and social media links.</p>
-                                </li>
-                            </ul>
-                        </li>
-                        
-                    </ol>
+                    <h2>Wireframing & UI/UX Design</h2>
+                        <p>Key UI sections included: </p>
+                        <ul>
+                            <li>
+                                <span>Product Cards: </span>
+                                <p>Interactive buttons to add items to the cart</p>
+                            </li>
+                            <li>
+                                <span>Cart Sidebar/Section: </span>
+                                <p> Displays selected items with controls for quantity and removal</p>
+                            </li>
+                            <li>
+                                <span>Total Display: </span>
+                                <p>Auto-updated subtotal and total cost</p>
+                            </li>
+                            <li>
+                                <span>Checkout Button: </span>
+                                <p>Final "Buy Now" interaction with cart reset</p>
+                            </li>
+                        </ul>
+                        <p>The layout was designed to be minimal, clean, and intuitive, with clear visual hierarchy and feedback on all actions.</p>
                 </div>
 
 
@@ -168,46 +174,43 @@
                 <div class="project-tech project-section">
                     <h2>Tools Used</h2>
                     <ul>
-                        <ul>
-                            <li>
-                                <span>Front-End Technologies Used:</span>
-                                <ul>
-                                    <li>HTML5: Structured the layout using semantic markup.</li>
-                                    <li>CSS3: Designed a clean, responsive interface with flexbox and grid layouts.</li>
-                                    <li>JavaScript (ES6+): Implemented shopping cart logic, dynamic UI updates, and interactive elements.</li>
-                                </ul>
-
-                            </li>
+                        <span>Front-End Technologies Used:</span>
+                        <li>HTML5: Structured the layout using semantic markup.</li>
+                        <li>CSS3: Designed a clean, responsive interface with flexbox and grid layouts.</li>
+                        <li>JavaScript (ES6+): Implemented shopping cart logic, dynamic UI updates, and interactive elements.</li>       
                     </ul>
                 </div>
                 <div class="project-tech project-section">
                     <h2>Key Functionalities Implemented: </h2>                          
                     <ul>
-                        <li><span> Product Listing Page: </span>
+                        <li><span>Add/Remove from Cart: </span>
                             <ul>
-                                <li>Grid-based layout for product display.</li>
-                                <li>Clickable product cards with additional details.
-                                </li>
+                                <li>Users can add products or remove them individually</li>
                             </ul>
                         </li>
                         <li>
-                            <span>Shopping Cart System:</span>
+                            <span>Quantity Update: </span>
                             <ul>
-                                <li>Add/remove products from the cart.</li>
-                                <li>Update product quantities dynamically.</li>
-                                <li>Display total cost calculations in real time.</li>
+                                <li>Modify item quantities directly within the cart</li>
                             </ul>
                         </li>
                         <li>
-                            <span>Responsive Design:</span>
+                            <span>Live Total Calculation: </span>
                             <ul>
-                                <li>Optimized for various screen sizes using media queries.</li>
+                                <li>Automatically recalculates cart total with every update</li>
                             </ul>
                         </li>
                         <li>
-                            Checkout Flow:
+                            <span>Buy Now Simulation: </span>
                             <ul>
-                                <li>"Buy Now" functionality to simulate order placement.</li>
+                                <li>Clears cart and shows success feedback on purchase</li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <span>Responsive Interactivity:</span>
+                            <ul>
+                                <li>All interactions update the DOM in real time</li>
                             </ul>
                         </li>
                     </ul>
@@ -217,34 +220,34 @@
                     <h2>Challenges & Learnings</h2>
                     <ul>
                         <span>Challenges Faced:</span>
-                        <li><span>Cart State Management: </span>Managing dynamic product updates while keeping the UI responsive.</li>
-                        <li><span>Mobile Optimization: </span>Ensuring elements like buttons and images scaled well across devices.</li>
-                        <li><span>User Experience Refinement: </span>Balancing aesthetics with usability for smooth navigation.</li>
+                        <li><span>DOM Synchronization: </span> Ensuring UI and internal cart state remained in sync</li>
+                        <li><span>Quantity Logic: </span>Preventing edge cases like negative quantities or empty item lists</li>
+                        <li><span>Feedback & UX: </span>Providing real-time user feedback without overwhelming the interface</li>
                     </ul>
                     <ul>
                         <span>Key Learnings:</span>
-                        <li>Improved understanding of DOM manipulation and event handling in JavaScript.
+                        <li>Deepened my understanding of event-driven JavaScript and state management
                         </li>
-                        <li>Learned best practices in UI/UX design for e-commerce platforms.</li>
-                        <li>Strengthened responsive design techniques using CSS flexbox and grid.</li>
+                        <li>Learned best practices for reusable UI components in pure HTML/CSS/JS</li>
+                        <li>Refined skills in responsive design and accessible markup for interactive interfaces</li>
                     </ul>
                 </div>
 
                 <div class="project-outcome project-section">
                     <h2>Final Outcome & Impact</h2>
-                    <p>The final e-commerce website successfully delivered:</p>
+                    <p>The final result was a responsive and modular shopping cart system that:</p>
                     <ul>
-                        <li>A fully functional shopping platform with interactive product browsing.</li>
-                        <li>A smooth shopping cart experience with dynamic updates.</li>
-                        <li>A modern, responsive design optimized for multiple devices.</li>
-                        <li>A demonstration of front-end web development expertise applicable to real-world scenarios.</li>
+                        <li>Enables smooth product selection and checkout simulation</li>
+                        <li>Demonstrates scalable cart logic for real-world e-commerce integration</li>
+                        <li>Enhances user experience with immediate feedback and real-time interactivity</li>
+                        <li>Showcases practical knowledge of DOM manipulation, JavaScript logic, and clean front-end architecture</li>
                     </ul>
                 </div>
 
                 <div class="project-conclusion project-section">
                     <h2>Final Thoughts  </h2>
-                    <p>This project showcases my ability to build interactive, user-friendly web applications with a strong emphasis on UI/UX. It reinforced my skills in JavaScript, CSS, and responsive design, preparing me for larger-scale e-commerce development in the future.</p>
-                    <P>Here are the links to the <a href="https://codenameharsh.github.io/ecommerce_website/"> hosted project website</a> and my <a href="https://github.com/codenameharsh/ecommerce_website">GitHub repository</a></P>
+                    <p>This project served as an excellent exercise in building an essential e-commerce feature from scratch. It solidified my understanding of core front-end principles, enhanced my problem-solving in real-time UI updates, and provided a reusable foundation for future e-commerce applications.</p>
+                    <P>Here are the links to the <a href="https://codenameharsh.github.io/shopping_cart/"> hosted project website</a> and my <a href="https://github.com/codenameharsh/shopping_cart">GitHub repository</a></P>
                 </div>
             </div>      
     
@@ -252,14 +255,14 @@
 
             <div class="controls-wrapper">
                 <div class="portfolio-controls">
-                    <button class="portfolio-nav" onclick="window.open('../art_fusion/art-index.html', '_self')">
-                        Previous: Art Fusion Sign Up Page
+                    <button class="portfolio-nav" onclick="window.open('../meme/meme-index.html', '_self')">
+                        Previous: Meme Generator
                     </button>
                     <button class="portfolio-nav" onclick="window.open('#', '_self')">
                         Back to Top
                     </button>
-                    <button class="portfolio-nav" onclick="window.open('../assembly/assembly-index.html', '_self')">
-                        Next Up: Assembly: End-Game
+                    <button class="portfolio-nav" onclick="window.open('../aura/aura-index.html', '_self')">
+                        Next Up: Aura: Ethereal Dreams
                     </button>
                 </div>
             </div>
