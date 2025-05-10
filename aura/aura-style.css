@@ -390,9 +390,6 @@ body {
     font-family: var(--accent-text);
 }
 
-.case-study-intro h3{
-    font-weight: 300;
-}
 
 .case-study-intro h3 span{
     color: var(--light-coral);
@@ -425,10 +422,6 @@ body {
     color: var(--cambridge-blue);
 }
 
-.project-intro p{
-    font-weight: 300;
-}
-
 .project-goals{
     width: 60vw;
     align-items: left;
@@ -453,11 +446,6 @@ body {
     content: "★ ";
     color: var(--hunyadi-yellow);
     margin-right: 8px;
-}
-
-.project-goals ul li p{
-    
-    font-weight: 300;
 }
 
 .project-research{
@@ -486,12 +474,6 @@ body {
     margin-right: 8px;
 }
 
-.project-research ul li p{
-    
-    font-weight: 300;
-}
-
-
 
 .project-design{
   width: 60vw;
@@ -512,14 +494,8 @@ body {
 }
 
 
-.project-design ol li p{
-  
-  font-weight: 300;
-}
-
 
 .project-design ul li{
-  font-weight: 300;
   list-style: none;
   padding-left: 0;
   color: var(--timberwolf);
@@ -531,10 +507,6 @@ body {
   margin-right: 8px;
 }
 
-.project-design ul li p{
-  
-  font-weight: 300;
-}
 
 .project-outcome{
   width: 60vw;
@@ -549,9 +521,7 @@ body {
   color: var(--cambridge-blue);
 }
 
-.project-outcome p{
-  font-weight: 300;
-}
+
 
 .personal-reflections{
   width: 60vw;
@@ -565,9 +535,6 @@ body {
   color: var(--cambridge-blue);
 }
 
-.personal-reflections p{
-  font-weight: 300;
-}
 
 li span{
   color: var(--cambridge-blue);
@@ -698,6 +665,71 @@ width: 100vw;
     margin-bottom: 0.5rem;
   }
 }
+
+    /* controls */
+    .controls-wrapper{
+      width: 100vw;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1rem;
+    }
+    .portfolio-controls{
+      width: 60vw;
+      display: flex;
+      flex-direction: row;
+      align-items: left;
+      justify-content: left;
+    }
+    
+    .portfolio-nav{
+      padding: 1rem;
+      margin: 1rem;
+      width: 20vw;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid var(--cambridge-blue);
+      border-radius: 1rem;
+      box-shadow: 0 4px 8px rgba(29, 160, 165, 0.242), 0 6px 20px rgba(209, 246, 251, 0.19);
+      cursor: pointer;
+      align-items: center;
+    }
+    
+    .portfolio-nav:hover {
+      background-color: var(--cambridge-blue);
+      color: black;
+    }
+    
+    .portfolio-nav img{
+      width: 20px;
+      height: auto;
+      background-color: transparent;
+    }
+    
+    /* Responsive design */
+    @media (max-width: 768px) {
+        .portfolio-controls {
+          flex-direction: column;
+          align-items: center;
+        }
+      
+        .portfolio-nav {
+          width: 90%;
+          max-width: none;
+        }
+      }
+      
+      @media (max-width: 480px) {
+        .portfolio-nav {
+          flex-direction: column;
+          text-align: center;
+        }
+      
+        .portfolio-nav img {
+          width: 16px;
+        }
+      }
 
  /* Footer Styling */
  footer{
