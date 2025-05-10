@@ -609,6 +609,30 @@ li span{
   height: auto;
   background-color: transparent;
 }
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .portfolio-controls {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .portfolio-nav {
+    width: 90%;
+    max-width: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio-nav {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .portfolio-nav img {
+    width: 16px;
+  }
+}
   
    /* Footer Styling */
  footer{
