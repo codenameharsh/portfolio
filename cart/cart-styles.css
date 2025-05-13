@@ -329,6 +329,7 @@ body {
     margin: 0;
     animation: project-skills 45s linear infinite;
     /* width: max-content; */
+    overflow-x: visible;
   }
 
   .p-s-list:hover{

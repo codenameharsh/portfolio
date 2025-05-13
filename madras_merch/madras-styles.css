@@ -312,6 +312,7 @@ body {
     padding: 0;
     margin: 0;
     animation: project-skills 45s linear infinite;
+    overflow-x: visible;
     /* width: max-content; */
   }
 

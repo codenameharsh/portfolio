@@ -318,6 +318,7 @@ body {
     /* margin: 1rem 0; */
     cursor: grab;
     opacity: .5;
+    overflow-x: visible;
   }
 
 
@@ -329,6 +330,7 @@ body {
     margin: 0;
     animation: scroll-skills 15s linear infinite;
     gap: 1rem;
+    overflow-x: visible;
   }
 
   .skills-carousel:hover ul {
@@ -739,6 +741,8 @@ body {
     padding: 0;
     margin: 0;
     animation: project-skills 45s linear infinite;
+    overflow-x: visible;
+
     /* width: max-content; */
   }
 
@@ -756,7 +760,7 @@ body {
     /* border-radius: 8px; */
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     flex-shrink: 0;
-
+    overflow-x: visible;
   }
 
   .p-s-list .skill-title{
