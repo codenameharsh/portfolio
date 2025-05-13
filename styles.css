@@ -727,7 +727,7 @@ body {
     width: 80vw;
     padding: 1rem 0;
     cursor: grab;
-    border-top: 2px solid var(--light-coral);
+    /* border-top: 2px solid var(--light-coral); */
     margin: 0 auto; /* This centers the container */
     box-sizing: border-box;
   }
@@ -761,6 +761,7 @@ body {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     flex-shrink: 0;
     overflow-x: visible;
+    text-shadow: 0 4px 8px rgba(29, 160, 165, 0.384), 0 6px 20px rgba(209, 246, 251, 0.395);
   }
 
   .p-s-list .skill-title{
@@ -1185,7 +1186,7 @@ body {
   margin: 40px auto;
   margin-top: 10rem;
   border-radius: 1rem;
-  border: 5px solid var(--cambridge-blue);
+  /* border: 5px solid var(--cambridge-blue);  */
   border-radius: 1.5rem;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
   display: flex;
@@ -1280,7 +1281,6 @@ body {
   .contact-container {
     width: 90%;
     padding: 1.5rem;
-    border: 2px solid var(--cambridge-blue);
   }
 
   .contact-head{
@@ -1317,8 +1317,8 @@ body {
 
  /* Footer Styling */
  footer{
-  border-top: 3px solid var(--hunyadi-yellow);
-  border-bottom: 3px solid var(--hunyadi-yellow);
+  /* border-top: 3px solid var(--hunyadi-yellow); */
+  /* border-bottom: 3px solid var(--hunyadi-yellow); */
   margin-bottom: 0;
  }
 
@@ -1364,7 +1364,7 @@ body {
   }
 
   .footer a {
-    font-size: 1rem;
+    font-size: .6rem;
     margin: 0 8px; /* Reduce spacing between links on smaller screens */
   }
 }
