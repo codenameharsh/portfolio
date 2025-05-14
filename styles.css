@@ -104,6 +104,7 @@ body {
   width: 60px;
   height: 60px;
   background-color: transparent;
+  /* background-image: url(images/papyrus.png); */
   
 }
 
@@ -312,6 +313,7 @@ body {
 
 /* skills section */
 .skills-carousel {
+  display: none;
     overflow: hidden;
     width: 100%;
     /* padding: 1rem 0; */
