@@ -710,6 +710,10 @@ body {
     display: flex;
     flex-direction: column;
   }
+
+  .resume-download p a{
+    overflow-y: visible;
+  }
 }
 
   /* Portfolio section */
