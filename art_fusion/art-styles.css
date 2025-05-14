@@ -323,7 +323,7 @@ body {
   .p-s-list li{
     /* white-space: nowrap; */
     font-family: var(--accent-text);
-    color: var(--hunyadi-yellow );
+    color: var(--timberwolf );
     font-size: 1rem;
     padding: 0.5rem 1rem;
     border-radius: 8px;
@@ -333,7 +333,7 @@ body {
   }
 
   .p-s-list .skill-title{
-    color: var(--light-coral);
+    color: var(--cambridge-blue);
   }
 
   @keyframes project-skills {
@@ -649,8 +649,8 @@ li span{
   
  /* Footer Styling */
  footer{
-  border-top: 3px solid var(--hunyadi-yellow);
-  border-bottom: 3px solid var(--hunyadi-yellow);
+  /* border-top: 3px solid var(--hunyadi-yellow); */
+  /* border-bottom: 3px solid var(--hunyadi-yellow); */
   margin-bottom: 0;
  }
 
@@ -696,7 +696,7 @@ li span{
   }
 
   .footer a {
-    font-size: 1rem;
+    font-size: .6rem;
     margin: 0 8px; /* Reduce spacing between links on smaller screens */
   }
 }

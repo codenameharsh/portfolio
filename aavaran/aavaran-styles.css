@@ -327,7 +327,7 @@ body {
   .p-s-list li{
     /* white-space: nowrap; */
     font-family: var(--accent-text);
-    color: var(--hunyadi-yellow );
+    color: var(--timberwolf );
     font-size: 1rem;
     padding: 0.5rem 1rem;
     border-radius: 8px;
@@ -337,7 +337,7 @@ body {
   }
 
   .p-s-list .skill-title{
-    color: var(--light-coral);
+    color: var(--cambridge-blue);
   }
 
   @keyframes project-skills {
@@ -627,56 +627,56 @@ li span{
         }
   
   
-   /* Footer Styling */
- footer{
-  border-top: 3px solid var(--hunyadi-yellow);
-  border-bottom: 3px solid var(--hunyadi-yellow);
-  margin-bottom: 0;
- }
-
-.footer {
-  background-color: var(--tangerine);
-  color: var(--white);
-  padding: 2rem 0;
-  text-align: center;
-  width: 100%;
-  position: relative; /* Change position to relative for better layout control */
-  z-index: 1;
-}
-
-.footer p {
-  font-size: 1rem;
-  margin: 0.5rem 0;
-  color: var(--cambridge-blue); /* Lighter grey text */
-}
-
-.footer a {
-  color: var(--cambridge-blue);
-  font-style: var(--accent-text);
-  text-decoration: none;
-  margin: 0 15px; /* Add more space between the links */
-  font-weight: 600;
-  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover */
-}
-
-.footer a:hover {
-  color: #fff; /* Change color on hover */
-  text-decoration: underline; /* Underline on hover for better interactivity */
-  transform: translateY(-2px); /* Slight hover effect for the links */
-}
-
-.footer a:focus {
-  outline: none;
-  text-decoration: underline;
-}
-
-@media (max-width: 768px) {
+  /* Footer Styling */
+  footer{
+    /* border-top: 3px solid var(--hunyadi-yellow); */
+    /* border-bottom: 3px solid var(--hunyadi-yellow); */
+    margin-bottom: 0;
+   }
+  
+  .footer {
+    background-color: var(--tangerine);
+    color: var(--white);
+    padding: 2rem 0;
+    text-align: center;
+    width: 100%;
+    position: relative; /* Change position to relative for better layout control */
+    z-index: 1;
+  }
+  
   .footer p {
-    font-size: 0.9rem; /* Adjust text size on smaller screens */
-  }
-
-  .footer a {
     font-size: 1rem;
-    margin: 0 8px; /* Reduce spacing between links on smaller screens */
+    margin: 0.5rem 0;
+    color: var(--cambridge-blue); /* Lighter grey text */
   }
-}
+  
+  .footer a {
+    color: var(--cambridge-blue);
+    font-style: var(--accent-text);
+    text-decoration: none;
+    margin: 0 15px; /* Add more space between the links */
+    font-weight: 600;
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover */
+  }
+  
+  .footer a:hover {
+    color: #fff; /* Change color on hover */
+    text-decoration: underline; /* Underline on hover for better interactivity */
+    transform: translateY(-2px); /* Slight hover effect for the links */
+  }
+  
+  .footer a:focus {
+    outline: none;
+    text-decoration: underline;
+  }
+  
+  @media (max-width: 768px) {
+    .footer p {
+      font-size: 0.9rem; /* Adjust text size on smaller screens */
+    }
+  
+    .footer a {
+      font-size: .6rem;
+      margin: 0 8px; /* Reduce spacing between links on smaller screens */
+    }
+  }
