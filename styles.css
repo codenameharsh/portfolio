@@ -317,7 +317,7 @@ body {
     /* padding: 1rem 0; */
     /* margin: 1rem 0; */
     cursor: grab;
-    opacity: .5;
+    opacity: 1;
     overflow-x: visible;
   }
 
@@ -328,7 +328,7 @@ body {
     width: 100vw;
     padding: 1rem;
     margin: 0;
-    animation: scroll-skills 15s linear infinite;
+    animation: scroll-skills 20s linear infinite;
     gap: 1rem;
     overflow-x: visible;
   }
@@ -340,7 +340,7 @@ body {
   .skills-list li {
     white-space: nowrap;
     font-family: var(--accent-text);
-    color: var(--timberwolf);
+    color: var(--cambridge-blue);
     font-size: 1.3rem;
     padding: 1rem;
     /* text-shadow: 0 4px 8px rgba(206, 184, 58, 0.544), 0 6px 20px rgba(227, 189, 76, 0.368); */
@@ -348,22 +348,22 @@ body {
 
 
     /* border: 3px dotted #dad7cd71; */
-    /* animation: border-dash 2s infinite; */
+    animation: border-dash 2s infinite;
     transition: smooth;
     /* border-radius: 15%; */
   }
 
-  @keyframes border-dash {
+  @keyframes blink {
     0% {
-      border-style: dotted;
+      opacity: 1;
 
     }
     50% {
-      border-style: solid;
+     opacity: .5;
 
     }
     100% {
-      border-style: dotted;
+      opacity: 1;
     }
   }
 
@@ -657,9 +657,11 @@ body {
   @keyframes slide {
     0%, 100% {
       transform: scale(1);
+      opacity:.5;
     }
     50% {
       transform: scale(1.1);
+      opacity: 1;
     }
   }
 
