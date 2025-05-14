@@ -348,7 +348,7 @@ body {
 
 
     /* border: 3px dotted #dad7cd71; */
-    animation: border-dash 2s infinite;
+    animation: blink 2s infinite;
     transition: smooth;
     /* border-radius: 15%; */
   }
