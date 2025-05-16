@@ -162,7 +162,7 @@ body {
   height: 100px;
   padding: 0 1rem;
   position: relative; /* this becomes fixed when sticky class is added */
-  background-color: transparent;
+  background-color: black;
   z-index: 1000;
   overflow-y: hidden;
     /* border-top: 3px solid var(--cambridge-blue);
@@ -174,7 +174,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    /* background-color: black; */
+    background-color: black;
     /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
     z-index: 100;
     transition: all 0.3s ease-in-out;
