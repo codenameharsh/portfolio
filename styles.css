@@ -140,7 +140,7 @@ body {
 /* header & nav */
 
 .logo{
-  background-color: black;
+  background-color: transparent;
 }
 
 .logo a{
@@ -151,6 +151,7 @@ body {
 .logo img{
   height: 150px;
   width: auto;
+  background-color: transparent;
 }
 /* NAVBAR */
 .nav-bar {
@@ -161,10 +162,8 @@ body {
   height: 100px;
   padding: 0 1rem;
   position: relative; /* this becomes fixed when sticky class is added */
-  background-color: black;
-  background-image: url(images/header-bg.gif);
-  background-size: auto;
-  z-index: 10;
+  background-color: transparent;
+  z-index: 1000;
   overflow-y: hidden;
     /* border-top: 3px solid var(--cambridge-blue);
     border-bottom: 3px solid var(--cambridge-blue); */
@@ -175,14 +174,14 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: black;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* background-color: black; */
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
     z-index: 100;
     transition: all 0.3s ease-in-out;
   }
 
   .hamburger-menu{
-    margin-left: auto; /* 💡 add this */
+    /* margin-left: auto;  */
     width: 30px;
     height: 30px;
     cursor: pointer;
@@ -190,6 +189,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    overflow-y: hidden;
   }
 
   /* HAMBURGER */
@@ -202,6 +202,7 @@ body {
     max-width: 100%;
     height: auto;
     display: block;
+    overflow: hidden;
   }
 
   .hamburger-menu:hover{
@@ -272,6 +273,10 @@ body {
       height: 35px;
     }
 
+    .nav-bar{
+      overflow-x: hidden;
+    }
+
   }
 
   @media (min-width: 1024px){
@@ -281,8 +286,13 @@ body {
 
     .hamburger-menu{
       width: 60px;
-      height: 60px;
+      height: 60px; 
     }
+
+    .nav-bar{
+      overflow-x: hidden;
+    }
+
 
   }
 
@@ -307,6 +317,7 @@ body {
         padding: 1rem;
     }
 }
+
 
 
 
@@ -1271,12 +1282,9 @@ body {
 }
 
 .contact-icon:hover {
-  transform: translateX(10px); /* Subtle hover animation */
+  transform: translateY(-10px); /* Subtle hover animation */
 }
 
-.contact-icon:hover img {
-  transform: scale(1.2); /* Slightly enlarge icons on hover */
-}
 
 .contact-method:hover .contact-info {
   color: var(--tangerine);
