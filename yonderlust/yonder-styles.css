@@ -435,7 +435,27 @@ li span{
     align-items: left;
     text-align: justify;
     line-height: 2rem;
+    list-style: none;
+  padding-left: 1.5rem;
 }
+
+.project-section li{
+  position: relative;
+  padding-left: 1.2rem;
+  margin-bottom: 0.5rem;
+ 
+}
+
+.project-section li::before{
+  content: "➲"; /* Unicode right arrow */
+  color: var(--hunyadi-yellow); /* Your brown */
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1rem;
+  font-weight: bolder;
+}
+
 
 @media (max-width: 1024px) {
   }
@@ -477,6 +497,27 @@ li span{
 
 #competitor-analysis td {
     background-color: black;
+}
+
+#pulse{
+  animation: pulse 5s infinite ease-in-out;
+  text-decoration: none;
+  color: var(--hunyadi-yellow);
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 

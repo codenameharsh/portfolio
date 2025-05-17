@@ -48,18 +48,6 @@ window.addEventListener("load", function () {
     });
 
 
-//down arrow
-const downArrow = document.getElementById("down-arrow");
-
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 10) {
-    downArrow.classList.add("hidden");
-  } else {
-    downArrow.classList.remove("hidden");
-  }
-});
-
-
 //scroll percentage
 window.addEventListener('scroll', () => {
     const scrollTop = document.documentElement.scrollTop;
