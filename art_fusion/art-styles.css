@@ -299,7 +299,7 @@ body {
     width: 80vw;
     padding: 1rem 0;
     cursor: grab;
-    border-top: 2px dotted var(--timberwolf);
+    /* border-top: 2px dotted var(--timberwolf); */
   }
 
   .p-s-list {
@@ -331,6 +331,8 @@ body {
     flex-shrink: 0;
 
   }
+
+
 
   .p-s-list .skill-title{
     color: var(--cambridge-blue);
@@ -429,11 +431,34 @@ li span{
 }
 
 .project-section{
-    padding: 1rem;
-    width: 60vw;
-    align-items: left;
-    text-align: justify;
-    line-height: 2rem;
+  padding: 1rem;
+  width: 60vw;
+  align-items: left;
+  text-align: justify;
+  line-height: 2rem;
+  list-style: none;
+padding-left: 1.5rem;
+}
+
+.project-section li{
+position: relative;
+padding-left: 1.2rem;
+margin-bottom: 0.5rem;
+
+}
+
+.project-section li::before{
+content: "➲"; /* Unicode right arrow */
+color: var(--hunyadi-yellow); /* Your brown */
+position: absolute;
+left: 0;
+top: 0;
+font-size: 1rem;
+font-weight: bolder;
+}
+
+.project-section ul span{
+  color: var(--cambridge-blue);
 }
 
 @media (max-width: 1024px) {

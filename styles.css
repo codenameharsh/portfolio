@@ -301,6 +301,7 @@ body {
 .hero-vid {
     width: 100%;
     overflow: hidden;
+    padding-top: 100px;
     /* border-radius: 8px; */
     /* border: 2px dotted var(--hunter-green); */
   }
@@ -313,7 +314,7 @@ body {
 
   @media (max-width: 768px) {
     .hero-vid video {
-        height: 60vh;
+        height: 50vh;
         padding: 1rem;
     }
 }
