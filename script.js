@@ -2,16 +2,18 @@ console.log("JS loaded");
 
 // Get the navbar
 const navbar = document.getElementById("nav-bar");
+const hero =document.querySelector(".hero-section")
 
-// Get the offset position of the navbar
 const sticky = navbar.offsetTop;
+const navHeight = navbar.offsetHeight;
 
-// Add the scroll event listener
 window.addEventListener("scroll", () => {
   if (window.scrollY >= sticky) {
     navbar.classList.add("sticky");
+    hero.style.paddingTop = `${navHeight}px`; // Add only when sticky
   } else {
     navbar.classList.remove("sticky");
+    hero.style.paddingTop = "0px"; // Remove when not sticky
   }
 });
 

@@ -269,6 +269,7 @@ body {
   .project-video {
     width: 100%;
     overflow: hidden;
+    padding-top: 100px;
   }
   .project-video video {
     width: 100%;
