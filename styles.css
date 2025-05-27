@@ -226,13 +226,14 @@ body {
     padding: 2rem 1rem;
     z-index: 999;
     transition: right 0.3s ease-in-out;
-    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.5);
+    /* box-shadow: -2px 0 10px rgba(0, 0, 0, 0.5); */
     align-items: center;
     justify-content: center;
-    border-top: 3px solid var(--cambridge-blue);
+    /* border-top: 3px solid var(--cambridge-blue);
     border-left: 3px solid var(--light-coral);
-    border-right: 3px solid var(--timberwolf);
+    border-right: 3px solid var(--timberwolf); */
     border-radius: 20px;
+    box-shadow:  0 6px 20px rgba(227, 189, 76, 0.368);
   }
 
   .nav-menu.active {
