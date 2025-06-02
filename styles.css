@@ -491,7 +491,7 @@ body {
   .about h1{
     font-size: 2rem;
     color: var(--hunyadi-yellow);
-    font-family: var(--accent-text);
+    /* font-family: var(--accent-text); */
     text-align: left;
     padding: 1rem;
   }
