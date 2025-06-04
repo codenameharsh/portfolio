@@ -282,7 +282,6 @@ body {
     .nav-bar{
       overflow-x: hidden;
     }
-
   }
 
   @media (min-width: 1024px){
@@ -298,8 +297,6 @@ body {
     .nav-bar{
       overflow-x: hidden;
     }
-
-
   }
 
 /* hero section */
@@ -490,9 +487,10 @@ body {
 
   .about h1{
     font-size: 2rem;
-    color: var(--hunyadi-yellow);
+    /* font-weight: lighter; */
+    color: var(--light-coral);
     font-family: var(--accent-text);
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     text-align: left;
     padding: 1rem;
   }
