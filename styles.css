@@ -229,11 +229,11 @@ body {
     /* box-shadow: -2px 0 10px rgba(0, 0, 0, 0.5); */
     align-items: center;
     justify-content: center;
-    /* border-top: 3px solid var(--cambridge-blue);
+    border-top: 3px solid var(--cambridge-blue);
     border-left: 3px solid var(--light-coral);
-    border-right: 3px solid var(--timberwolf); */
+    border-right: 3px solid var(--timberwolf);
     border-radius: 20px;
-    box-shadow:  0 6px 20px rgba(227, 189, 76, 0.368);
+    /* box-shadow:  0 6px 20px rgba(227, 189, 76, 0.368); */
   }
 
   .nav-menu.active {
