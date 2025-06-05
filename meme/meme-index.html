@@ -99,28 +99,69 @@
 
                 <div class="project-intro project-section">
                     <h2>Overview</h2>
-                    <p>The Web-Based Meme Generator is a dynamic, user-friendly tool built using React.js, designed for users to create custom memes effortlessly. The project showcases my ability to merge functional programming with playful UI/UX design, allowing users to engage with internet culture in a creative and interactive way.</p>
+                    <p>The Meme Generator is a web-based application that lets users create their own custom memes by combining dynamic templates, personalized captions, and downloadable output—all in a fun, intuitive interface. While it’s a lighthearted concept on the surface, this project challenged me to blend technical precision with playful UI/UX design, and to think deeply about how users engage creatively with tools online.</p>
+                    <p>It was built using React.js, with real-time integration of external meme templates from the Imgflip API, and demonstrates how even a humorous project can offer serious opportunities for learning, design iteration, and user empathy.</p>
                 </div>
 
                 <div class="project-objectives project-section">
                     <h2>Project Goals</h2>
+                    <p>Before diving in, I outlined specific goals for the project: </p>
                     <ul>
-                        <li>Build an intuitive meme generation platform using React.js</li>
-                        <li>Allow users to select or randomize meme templates from an external API</li>
-                        <li>Enable customization with text overlays, font styles, and placements</li>
-                        <li>Provide functionality to download the final meme</li>
-                        <li>Practice clean component structure and state management</li>
+                        <li>Build a fully functional meme editor that’s easy and fun to use.</li>
+                        <li>Integrate a meme template API and support random selection for spontaneous creativity.</li>
+                        <li>Allow full customization of captions—text styling, alignment, size, and position.</li>
+                        <li>Enable users to download their creations as image files.</li>
+                        <li>Use the opportunity to practice React hooks, component architecture, and responsive design principles.</li>
                     </ul>
                 </div>
 
-                <div class="project-flow project-section">
-                    <h2>Tools & Technologies</h2>
-                    <ol>
-                        <li><span>React.js </span>(Functional components, Hooks)</li>
-                        <li><span>JavaScript </span>(ES6+)</li>
-                        <li><span>HTML/CSS </span>for styling and layout</li>
-                        <li><span>Meme API </span>(Imgflip API)</li>
-                    </ol>
+                <div class="research project-section">
+                    <h2>Research & Learning Process</h2>
+                    <p>To design a meme tool that felt both lightweight and expressive, I began by researching:</p>
+                    <ul>
+                        <li>User interaction patterns on similar platforms like Imgflip and Canva’s meme maker.</li>
+                        <li>The emotional flow of meme creation: humor often stems from spontaneity, so the experience needed to be quick, satisfying, and low-friction.</li>
+                        <li>Canvas rendering and cross-browser image downloading—a tricky but crucial part of the puzzle.</li>
+                    </ul>
+                    <p>I also used this project as a sandbox to sharpen my React.js skills, especially around state management, prop drilling, and render performance with dynamic inputs.</p>
+                </div>
+
+                <div class="design project-section">
+                    <h2>Design Process</h2>
+                    <ul>
+                        <span>Problem Definition</span>
+                        <p  style="font-style: italic;">How might I design a meme generator that’s not only technically sound but emotionally satisfying to use—allowing users to express humor, creativity, or irony quickly and easily?</p>
+                    </ul>
+                    <ul>
+                        <span>Ideation</span>
+                        <p>The concept was simple: let users pick a meme, customize it, and save it. But the real question was: what would make that process enjoyable?</p>
+                        <ul>
+                            <li>I envisioned a "surprise me" button to spark spontaneity.</li>
+                            <li>Text customization needed to be both flexible and easy—with clear labels and real-time updates.</li>
+                            <li>Most importantly, the UI had to feel lightweight and responsive, like a sketchpad—not a complex editor.</li>
+                        </ul>
+                    </ul>
+                    <ul>
+                        <span>Wireframes & Prototypes</span>
+                        <p>I sketched rough UI flows:</p>
+                        <li>A two-panel layout—preview on one side, controls on the other.</li>
+                        <li>Template preview grid, with clear CTA for "Get New Meme".</li>
+                        <li>Simple text input fields that updated live.</li>
+                        <li>Minimalist aesthetic with focus on meme canvas clarity.</li>
+                        <p>Prototyped in the browser directly—React’s component-based structure made it easy to modularize and iterate.</p>
+                    </ul>
+                    <ul>
+                        <span>Tech Stack</span>
+                        <li>React.js with hooks (useState, useEffect) for state and lifecycle handling.</li>
+                        <li>HTML/CSS for layout, positioning, and text responsiveness.</li>
+                        <li>Imgflip API to fetch meme templates in real-time.</li>
+                    </ul>
+                    <ul>
+                        <span>Coding Challenges & Solutions</span>
+                        <li><span>mage/Text Layering & Positioning: </span>Achieved via CSS absolute positioning within a relative meme container, ensuring captions stayed in place across sizes.</li>
+                        <li><span>Cross-Origin Image Issues: </span>Used crossOrigin="anonymous" on <img> tags and tested safe rendering workflows for canvas conversion.</li>
+                        <li><span>Synchronized State Updates: </span>Maintained clean one-way data flow and updated states in tandem using useEffect to avoid lag or misalignment.</li>
+                    </ul>
                 </div>
 
                 <div class="target project-section">

@@ -114,6 +114,22 @@ body {
   }
 }
 
+/* Mobile */
+@media screen and (max-width: 600px) {
+  #scroll-img {
+    right: 15px;
+    top: 89%;
+  }
+
+  #scroll-percent {
+    right: 12px;
+    top: 94%;
+    font-size: 1rem;
+    padding: 0.6rem;
+  }
+}
+
+
 /* header & nav */
 
 .logo{
@@ -261,12 +277,15 @@ body {
       height: 60px;
     }
 
-  }    
+  }
+  
+
   /* video */
 
   .project-video {
     width: 100%;
     overflow: hidden;
+    padding-top: 100px;
   }
   .project-video video {
     width: 100%;
@@ -299,7 +318,7 @@ body {
     width: 80vw;
     padding: 1rem 0;
     cursor: grab;
-    border-top: 2px dotted var(--timberwolf);
+    /* border-top: 2px dotted var(--timberwolf); */
   }
 
   .p-s-list {
@@ -322,7 +341,7 @@ body {
   .p-s-list li{
     /* white-space: nowrap; */
     font-family: var(--accent-text);
-    color: var(--timberwolf);
+    color: var(--timberwolf );
     font-size: 1rem;
     padding: 0.5rem 1rem;
     border-radius: 8px;
@@ -332,7 +351,7 @@ body {
   }
 
   .p-s-list .skill-title{
-    color: var(--light-coral);
+    color: var(--cambridge-blue);
   }
 
   @keyframes project-skills {
@@ -412,6 +431,7 @@ body {
     font-family: var(--accent-text);
 }
 
+
 .case-study-intro h3 span{
     color: var(--hunyadi-yellow);
 }
@@ -427,11 +447,34 @@ li span{
 }
 
 .project-section{
-    padding: 1rem;
-    width: 60vw;
-    align-items: left;
-    text-align: justify;
-    line-height: 2rem;
+  padding: 1rem;
+  width: 60vw;
+  align-items: left;
+  text-align: justify;
+  line-height: 2rem;
+  list-style: none;
+padding-left: 1.5rem;
+}
+
+.project-section li{
+position: relative;
+padding-left: 1.2rem;
+margin-bottom: 0.5rem;
+
+}
+
+.project-section li::before{
+content: "➲"; /* Unicode right arrow */
+color: var(--hunyadi-yellow); /* Your brown */
+position: absolute;
+left: 0;
+top: 0;
+font-size: 1rem;
+font-weight: bolder;
+}
+
+.project-section ul span{
+  color: var(--cambridge-blue);
 }
 
 @media (max-width: 1024px) {
@@ -575,8 +618,8 @@ li span{
       margin-bottom: 0.5rem;
     }
   }
-
-        /* controls */
+  
+    /* controls */
 .controls-wrapper{
   width: 100vw;
   display: flex;
@@ -640,7 +683,6 @@ li span{
     width: 16px;
   }
 }
-  
   
  /* Footer Styling */
  footer{
