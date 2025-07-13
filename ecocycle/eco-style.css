@@ -23,9 +23,9 @@
     overflow-x: hidden;
 }
 
-body {
+/* body {
   cursor: url('../favicon.ico'), auto;
-}
+} */
 
 .wrapper{
     height: auto;
@@ -506,14 +506,21 @@ font-weight: bolder;
 
 @media (max-width: 768px) {
   #competitor-analysis {
-      width: 80vw;
+      width: 50vw;
+      overflow-x: scroll;
   }
+
+  table {
+    overflow-x: scroll;
+  }
+
 
   #competitor-analysis th,
   #competitor-analysis td {
     width: 80vw;
       padding: 8px;
       font-size: 14px;
+      overflow-x:scroll;
   }
 }
 

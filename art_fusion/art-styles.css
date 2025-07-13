@@ -23,9 +23,9 @@
     overflow-x: hidden;
 }
 
-body {
+/* body {
   cursor: url('../favicon.ico'), auto;
-}
+} */
 
 .wrapper{
     height: auto;
