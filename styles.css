@@ -262,6 +262,7 @@ html {
 
   .nav-menu li a:hover{
     color: var(--hunyadi-yellow);
+    scale: 1.01;
   }
   /* responsive styling */
   @media (min-width: 480px){
