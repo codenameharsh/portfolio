@@ -54,27 +54,3 @@ document.querySelectorAll('.nav-links a').forEach(link => {
         document.body.style.overflow = 'auto';
     });
 });
-
-
-// Intersection Observer for Scroll Animations
-const observerOptions = {
-    root: null, // Use the viewport
-    threshold: 0.1, // Trigger when 10% of the element is visible
-    rootMargin: "0px 0px -50px 0px" // Slightly offset for a better feel
-};
-
-const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('reveal-active');
-            // Stop observing once it has revealed
-            observer.unobserve(entry.target);
-        }
-    });
-}, observerOptions);
-
-// Target all major sections and grid items
-document.querySelectorAll('section, .mood-item, .skill-card, .translation-box').forEach(el => {
-    el.classList.add('reveal-hidden'); // Add initial hidden state
-    observer.observe(el);
-});
