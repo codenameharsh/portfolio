@@ -20,8 +20,62 @@ body {
     line-height: 1.6;
 }
 
-.section {
+
+section {
   margin-top: 4rem;
+}
+
+@keyframes textReveal {
+  from {
+    opacity: 0;
+    letter-spacing: 0.15em;
+  }
+  to {
+    opacity: 1;
+    letter-spacing: normal;
+  }
+}
+
+.reveal-text {
+  animation: textReveal 1s ease-out forwards;
+}
+
+@keyframes microTilt {
+  from {
+    opacity: 0;
+    transform: rotate(-2deg) translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(0) translateY(0);
+  }
+}
+
+
+.pill:nth-child(odd) {
+  transform: rotate(-2deg);
+}
+
+.pill:nth-child(even) {
+  transform: rotate(2deg);
+}
+
+.card:nth-child(odd) {
+  transform: rotate(-1deg);
+}
+
+.card:nth-child(even) {
+  transform: rotate(1deg);
+}
+
+
+.card {
+  transition: transform 0.3s ease;
+  transform-style: preserve-3d;
+}
+
+.card:hover {
+  transform: perspective(600px) rotateX(6deg) rotateY(-6deg);
 }
 
 /* Progress bar */
@@ -108,6 +162,7 @@ body {
     padding-top: 100px; /* Offset for absolute nav */
     text-align: center;
     margin-top: 3rem;
+    cursor: url('welcome-back.png'), pointer;
 }
 
 .hero-branding {
@@ -375,6 +430,7 @@ h1 i {
     padding: 80px 10%;
     background-image: linear-gradient(to bottom, #585858, #7f7d7e, #a8a4a5, #d4cdcc, #fff9f4);
     border-top: 2px dashed var(--grey-text);
+        cursor: url('portfolio.png'), pointer;
 }
 
 .portfolio-title-italic{
@@ -484,6 +540,7 @@ h1 i {
   background-color: var(--bg-cream);
     padding: 80px 5%;
     text-align: center;
+    cursor: url('about.png'), pointer;
 }
 
 .mood-grid {
@@ -578,6 +635,7 @@ h1 i {
     color: var(--grey-text);
     padding: 80px 5%;
     text-align: center;
+    cursor: url('about.png'), pointer;
 }
 
 /* Header Styles */
@@ -718,6 +776,7 @@ h1 i {
 .toolbox-section {
     padding: 80px 10%;
     background-color: var(--bg-cream); /* #FFF9F4 */
+       cursor: url('toolbox.png'), pointer;
 }
 
 .toolbox-grid {
@@ -816,6 +875,7 @@ h1 i {
     padding: 120px 5%;
     background-color: var(--bg-cream);
     text-align: center;
+           cursor: url('call-me.png'), pointer;
 }
 
 .contact-heading {
