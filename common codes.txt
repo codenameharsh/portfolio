@@ -97,8 +97,25 @@ font-family: 'Inter', sans-serif;
 line-height: 1.6;
 }
 
-.section {
+section {
 margin-top: 5rem;
+}
+
+/* Font Classes */
+.playfair { 
+  font-family: 'Playfair Display', serif; }
+.inter { font-family: 'Inter', sans-serif; }
+.italic-sub { font-style: italic; font-size: 0.9rem; margin: 5px 0 25px 0; font-weight: bold;}
+.accent-red { color: #D14D4D; }
+.bold{
+  font-weight: bolder;
+}
+.caps{
+  text-transform: uppercase;
+}
+
+.italic{
+  font-style: italic;
 }
 
 /* Progress bar */
