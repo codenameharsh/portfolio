@@ -20,7 +20,7 @@ font-family: 'Inter', sans-serif;
 line-height: 1.6;
 }
 
-.section {
+section {
 margin-top: 5rem;
 }
 
@@ -269,6 +269,476 @@ font-family: 'Playfair Display', serif;
 }
 
 
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.card {
+  padding: 36px;
+  border: 1px solid #e9e2dc;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.dark {
+  background: var(--grey-text);
+  color: #ffffff;
+}
+
+.light {
+  background: var(--bg-cream);
+}
+
+.problem {
+  grid-column: span 2;
+  border: 2px solid var(--red-accent);
+  text-align: center;
+}
+
+h2 {
+  font-family: "Playfair Display", serif;
+  letter-spacing: 0.08em;
+  font-size: 1.5rem;
+  font-weight: bolder;
+  margin: 0;
+}
+
+.subtitle {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  margin: 6px 0 24px;
+    /* font-size: 1.75rem; */
+}
+
+.accent {
+  color: var(--red-accent);
+
+}
+
+p {
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.pillar {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.number {
+  font-family: "Playfair Display", serif;
+  font-size: 3rem;
+  color: var(--red-accent);
+}
+
+.pillar h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--grey-text);
+}
+
+.dna {
+  list-style: none;
+  padding: 0;
+  margin: 24px 0;
+}
+
+.dna li {
+  margin-bottom: 12px;
+}
+
+.focus {
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+.stack {
+  display: flex;
+  gap: 24px;
+  font-weight: 600;
+  margin: 20px 0;
+}
+
+.stack span img{
+  width: 40px;
+}
+
+.stack-desc {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+blockquote {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-size: 22px;
+  font-weight: bold;
+  margin: 24px auto 0;
+  max-width: 800px;
+  line-height: 1.6;
+}
+
+
+@media (max-width: 1024px) {
+  body {
+    padding: 32px;
+  }
+
+  .grid {
+    gap: 24px;
+  }
+
+  .card {
+    padding: 32px;
+  }
+
+  blockquote {
+    font-size: 20px;
+  }
+}
+
+/* =========================
+   MOBILE (≤ 768px)
+========================= */
+
+@media (max-width: 768px) {
+  body {
+    padding: 24px;
+  }
+
+  .title{
+    font-size: 3rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .problem {
+    grid-column: span 1;
+  }
+
+  h2 {
+    font-size: 18px;
+    letter-spacing: 0.06em;
+  }
+
+    /* .subtitle {
+    color: var(--red-accent);
+    margin-bottom: 20px;
+    font-size: 1rem;
+  } */
+
+  .subtitle-dark {
+    color: var(--bg-cream);
+    margin-bottom: 20px;
+    font-size: 1rem;
+  }
+
+
+  p {
+    font-size: 15px;
+  }
+
+  .pillar {
+    gap: 14px;
+  }
+
+  .number {
+    font-size: 2rem;
+  }
+
+  .stack {
+    justify-content: flex-start;
+    gap: 16px;
+  }
+
+  blockquote {
+    font-size: 19px;
+    padding: 0 10px;
+  }
+}
+
+/* =========================
+   SMALL MOBILE (≤ 480px)
+========================= */
+
+@media (max-width: 480px) {
+  body {
+    padding: 20px 16px;
+  }
+
+  .card {
+    padding: 24px;
+  }
+
+  h2 {
+    font-size: 16px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 1.65;
+  }
+
+  .pillar {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .number {
+    font-size: 2rem;
+  }
+
+  .stack {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  blockquote {
+    font-size: 17px;
+    line-height: 1.5;
+  }
+}
+
+/* Container Spacing */
+
+/* Font Classes */
+.playfair { 
+  font-family: 'Playfair Display', serif; }
+.inter { font-family: 'Inter', sans-serif; }
+.italic-sub { font-style: italic; font-size: 0.9rem; margin: 5px 0 25px 0; font-weight: bold;}
+.accent-red { color: #D14D4D; }
+.bold{
+  font-weight: bolder;
+}
+.caps{
+  text-transform: uppercase;
+}
+
+.italic{
+  font-style: italic;
+}
+
+
+.features-section {
+  max-width: 1100px;
+  margin: 80px auto;
+  padding: 0 20px;
+ /* Mimics the grey-to-white background transition */
+}
+
+.features-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+/* 2x2 Grid for Cards */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.feature-card {
+  background-color: #FFF9F4;
+  padding: 40px;
+  border: 1px solid #EBE4DE;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 15px;
+}
+
+.feature-card h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+
+.challenge{
+  box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+}
+
+.small-margin { margin: 2px 0 0 0 !important; }
+
+.screenshot-gallery {
+  /* Mimics the grey-to-white background transition in the image */
+  background: linear-gradient(to bottom, #FFF9F4 0%, #d6d6d6 30%, #f4f4f406 100%);
+  padding: 80px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+}
+
+.refinement-card{
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Exact side-by-side layout */
+  gap: 30px;
+  max-width: 1100px;
+  width: 100%;
+}
+
+.img-wrapper {
+  background: var(--bg-cream);
+  /* padding: 10px; */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4); /* Deep shadow for depth */
+  position: relative;
+  overflow: hidden;
+}
+
+/* Replicating the "Rough/Paper" edge look */
+.stitched-edge {
+  filter: url(#rough-edge); 
+  border: 1px solid #ccc;
+}
+
+.img-wrapper img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit:fill;
+}
+
+/* Responsive Handling */
+@media (max-width: 850px) {
+  .gallery-grid {
+    grid-template-columns: 1fr; /* Stack on mobile */
+    gap: 20px;
+  }
+  
+  .screenshot-gallery {
+    padding: 40px 20px;
+  }
+}
+
+/* Responsive Overrides */
+@media (max-width: 850px) {
+  .features-grid, .gallery-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .feature-card {
+    padding: 30px;
+  }
+}
+
+.takeaways-section {
+  max-width: 1100px;
+  margin: 100px auto;
+  padding: 0 20px;
+}
+
+.takeaways-header {
+  text-align: center;
+  margin-bottom: 60px;
+  position: relative;
+}
+
+/* The decorative line in the header */
+/* .takeaways-header::after {
+  content: "";
+  display: block;
+  width: 250px;
+  height: 1px;
+  background: #ccc;
+  margin: 10px auto;
+} */
+
+.takeaways-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.takeaway-card {
+  padding: 60px 40px;
+  min-height: 450px;
+}
+
+.takeaway-card h3 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+}
+
+/* Dark Hurdles Card */
+.dark-takeaway {
+  background-color: #585858;
+  color:var(--bg-cream);
+  border: 4px solid #D14D4D; /* Red left-accent border style */
+}
+
+/* Light Insights Card */
+.insights-card {
+  background-color:var(--bg-cream);
+  color: #585858;
+  border: 4px solid #D14D4D; /* Full red border matching reference */
+}
+
+/* List Styling */
+.takeaway-card ul, 
+.takeaway-card ol {
+  padding-left: 20px;
+  font-size: 1.15rem;
+  line-height: 1.6;
+}
+
+.takeaway-card li {
+  margin-bottom: 25px;
+}
+
+/* Bullet Customization */
+.dark-takeaway ul {
+  list-style-type: disc;
+}
+
+.insights-card ol {
+  list-style-type: decimal;
+}
+
+/* Responsive Stack */
+@media (max-width: 850px) {
+  .takeaways-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .takeaway-card {
+    min-height: auto;
+    padding: 40px 25px;
+  }
+}
+
+.scope{
+  text-align: left;
+}
+
+.scope ul{
+  padding-left: 20px;
+  font-size: 1.15rem;
+  line-height: 1.6;
+  list-style-type: disc;  
+}
 
 /* final outcome */
 .final-outcome {
