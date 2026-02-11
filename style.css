@@ -78,6 +78,22 @@ section {
   transform: perspective(600px) rotateX(6deg) rotateY(-6deg);
 }
 
+/* Font Classes */
+.playfair { 
+  font-family: 'Playfair Display', serif; }
+.inter { font-family: 'Inter', sans-serif; }
+.italic-sub { font-style: italic; font-size: 0.9rem; margin: 5px 0 25px 0; font-weight: bold;}
+.accent-red { color: #D14D4D; }
+.bold{
+  font-weight: bolder;
+}
+.caps{
+  text-transform: uppercase;
+}
+
+.italic{
+  font-style: italic;
+}
 /* Progress bar */
 /* Container: The background of the progress bar */
 .progress-container {
@@ -581,10 +597,18 @@ h1 i {
 .item-art { grid-area: art; }
 .item-bio { 
     grid-area: bio; 
+    color: var(--grey-text);
     padding: 20px; 
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
     font-weight: 500;
+}
+
+.bio-text{
+    padding: 1.5rem;
+    border: 3px dashed var(--grey-text);
+    border-radius: 5px;
+    /* box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset; */
 }
 .item-social { 
     grid-area: social; 
