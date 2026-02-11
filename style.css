@@ -588,11 +588,15 @@ h1 i {
 }
 .item-social { 
     grid-area: social; 
-    background-color: var(--red-accent); /* #D14D4D */
+    background-color:white; /* #D14D4D */
     display: flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
+}
+
+.item-social:hover{
+    transform: translateY(-10px);
 }
 
 /* Typography specifics for Poem */
@@ -619,8 +623,8 @@ h1 i {
             "poem poem poem poem"
             "portrait portrait interior interior"
             "nature nature nature nature"
-            "art art bio bio"
-            "social social social social";
+            "art art social social"
+            "bio bio bio bio";
     }
 
     .item-social {
