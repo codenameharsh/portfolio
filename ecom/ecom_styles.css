@@ -29,21 +29,22 @@ section {
 /* Progress bar */
 /* Container: The background of the progress bar */
 .progress-container {
-  width: 100%;
-  height: 4px; /* Thin and elegant */
-  background: transparent; /* Blends with your navbar/bg */
-  position: fixed;
-  top: 0; /* Or adjust to sit below your sticky nav */
-  z-index: 1001; /* Ensure it stays above the navbar */
+width: 100%;
+height: 4px; /* Thin and elegant */
+background: transparent; /* Blends with your navbar/bg */
+position: fixed;
+top: 0; /* Or adjust to sit below your sticky nav */
+z-index: 1001; /* Ensure it stays above the navbar */
 }
 
 /* The actual bar: Uses your red accent #D14D4D */
 .progress-bar {
-  height: 4px;
-  background: #D14D4D;
-  width: 0%; /* Initial state */
-  transition: width 0.1s ease-out;
+height: 4px;
+background: #D14D4D;
+width: 0%; /* Initial state */
+transition: width 0.1s ease-out;
 }
+
 
 /* --- Navigation --- */
 .logo{
@@ -187,48 +188,50 @@ section {
 
 /* --- Footer Styles --- */
 .footer {
-    /* Uses your palette background color */
-    background-color: #FFF9F4;
+/* Uses your palette background color */
+background-color: #FFF9F4;
 
-    /* Thin grey line at the top as seen in the image */
-    border-top: 1px solid #DDE0E2;
 
-    padding: 60px 20px;
-    text-align: center;
-    width: 100%;
-box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+/* Thin grey line at the top as seen in the image */
+border-top: 1px solid #DDE0E2;
+
+padding: 60px 20px;
+text-align: center;
+width: 100%;
+
+
 }
 
 .footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
+max-width: 1200px;
+margin: 0 auto;
 }
 
 .footer-copyright {
-    font-family: 'Inter', sans-serif;
-    font-size: 0.95rem;
-    color: #585858; /* Your Grey Palette color */
-    margin-bottom: 8px;
-    letter-spacing: 0.5px;
+font-family: 'Inter', sans-serif;
+font-size: 0.95rem;
+color: #585858; /* Your Grey Palette color */
+margin-bottom: 8px;
+letter-spacing: 0.5px;
 }
 
 .footer-tagline {
-    font-family: 'Inter', sans-serif;
-    font-size: 1rem;
-    font-weight: 500;
-    /* Your Red Palette color for the tagline */
-    color: #D14D4D;
-    margin: 0;
+font-family: 'Inter', sans-serif;
+font-size: 1rem;
+font-weight: 500;
+/* Your Red Palette color for the tagline */
+color: #D14D4D;
+margin: 0;
 }
 
 /* Optional: Mobile adjustment */
 @media (max-width: 768px) {
-    .footer {
-        padding: 40px 15px;
-    }
-    .footer-copyright, .footer-tagline {
-        font-size: 0.85rem;
-    }
+.footer {
+padding: 40px 15px;
+}
+.footer-copyright, .footer-tagline {
+font-size: 0.85rem;
+}
 }
 
 .section-title-bold {
