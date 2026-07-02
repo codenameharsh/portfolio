@@ -3,352 +3,851 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Harshitha</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-
-<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <title>Harshitha Rajendran | Product & Brand Experience Designer</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Ambient Background Lighting Glows -->
+    <div class="ambient-glow glow-1"></div>
+    <div class="ambient-glow glow-2"></div>
+    <div class="ambient-glow glow-3"></div>
 
-    <div class="progress-container">
-      <div class="progress-bar" id="myBar"></div>
-    </div>
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
+    <div class="custom-cursor-dot"></div>
 
-    <nav class="navbar">
+    <!-- Navigation Header -->
+    <header class="header">
         <div class="nav-container">
-            <div class="logo">
-              <a href="#"><img src="logo.png" alt="" height="30" width="30"></a>
-            </div>
-
-            <div class="menu-toggle" id="mobile-menu">
-              <span class="bar"></span>
-              <span class="bar"></span>
-              <span class="bar"></span>
-          </div>
-            
-
-            <ul class="nav-links">
-                <li><a href="#work">WORK</a></li>
-                <li><a href="#about">ABOUT</a></li>
-                <li><a href="#skills">SKILLS</a></li>
-                <li><a href="#contact">CONTACT</a></li>
-            </ul>
+            <a href="#" class="logo" id="nav-logo">HR<span class="dot">.</span></a>
+            <nav class="nav-menu">
+                <a href="#hero" class="nav-link active">Home</a>
+                <a href="#selected-work" class="nav-link">Work</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#resume" class="nav-link">Resume</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
         </div>
-    </nav>
+    </header>
 
-    <section class="hero section">
-        <header class="hero-branding reveal-text">
-            <span class="designer-name">harshitha rajendran</span>
-            <div class="line-divider"></div>
-            <h2 class="tagline">FASHION <span class="red-x">X</span> TECHNOLOGY</h2>
-        </header>
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="hero-content">
+                <p class="hero-tagline">Product & Brand Experience Designer</p>
+                <h1 class="hero-title">
+                    Hi, I'm <span class="highlight">Harshitha</span><br>
+                    I design <span id="typing-text"></span>
+                </h1>
+                <p class="hero-subtitle">Creating visually compelling, user-centered digital experiences for ecommerce, lifestyle, and consumer-focused brands.</p>
+                <div class="hero-actions">
+                    <a href="#selected-work" class="btn btn-primary">See My Work <i class="fa-solid fa-arrow-down"></i></a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="visual-card-wrapper">
+                    <div class="visual-card card-main">
+                        <div class="card-header">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <div class="card-body">
+                            <span class="code-keyword">const</span> <span class="code-variable">designer</span> = {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;name: <span class="code-string">"Harshitha Rajendran"</span>,<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;role: <span class="code-string">"Product & Brand Experience Designer"</span>,<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;skills: [<span class="code-string">"UI/UX"</span>, <span class="code-string">"Branding"</span>, <span class="code-string">"Front-End"</span>],<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;location: <span class="code-string">"Austin, TX"</span><br>
+                            };
+                        </div>
+                    </div>
+                    <div class="visual-card card-sub floating">
+                        <div class="stat-row">
+                            <div class="stat-circle"></div>
+                            <div>
+                                <span class="stat-title">Immersive UX</span>
+                                <span class="stat-val">Design & Code</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="#selected-work" class="scroll-indicator" aria-label="Scroll to Selected Work">
+                <span class="mouse">
+                    <span class="wheel"></span>
+                </span>
+            </a>
+        </section>
 
-        <div class="hero-main">
-            <h1>Bridging the Gap <br> Between <i>Haute</i> <br> <i>Couture</i> and <br> <i>Digital Experience</i></h1>
-            
-            <p class="description reveal-text">
-                A product designer with roots in fashion management, <br>
-                bringing the art of visual storytelling to the world of technology
-            </p>
+        <!-- Selected Work Section -->
+        <section id="selected-work" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Showcase</span>
+                    <h2 class="section-title">Selected Projects</h2>
+                </div>
 
-            <div class="button-group">
-                <a href="#work" class="btn-work">VIEW SELECTED WORK</a>
-                <a href="#about" class="btn-learn">LEARN MORE <span class="chevron"></span></a>
+                <div class="projects-grid">
+                    <!-- Project 1: AI Stylist -->
+                    <article class="project-card" data-project="ai-stylist">
+                        <div class="project-img-wrapper">
+                            <div class="project-img-placeholder stylized-bg-1">
+                                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-category">Product Design & AI Fashion</span>
+                            <h3 class="project-card-title">AI Stylist (ishtyle)</h3>
+                            <p class="project-desc">AI-powered fashion app that recommends outfits based on users' wardrobe, occasion, weather, and mood. Designed high-fidelity mobile screens and refined flows based on user testing.</p>
+                            <div class="project-tags">
+                                <span>Figma</span>
+                                <span>Android Studio</span>
+                                <span>Kotlin</span>
+                            </div>
+                            <a href="#" class="project-link" data-modal="modal-ai-stylist">Explore Details <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <!-- Project 2: EcoCycle -->
+                    <article class="project-card" data-project="ecocycle">
+                        <div class="project-img-wrapper">
+                            <div class="project-img-placeholder stylized-bg-3">
+                                <i class="fa-solid fa-leaf"></i>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-category">UX Design & Sustainability</span>
+                            <h3 class="project-card-title">EcoCycle</h3>
+                            <p class="project-desc">Community platform for eco-enthusiasts to share sustainability goals, inspiration, and everyday practices. Mapped user flows, prototyped layouts, and validated interactions.</p>
+                            <div class="project-tags">
+                                <span>Figma</span>
+                                <span>Illustrator</span>
+                                <span>UX Research</span>
+                            </div>
+                            <a href="#" class="project-link" data-modal="modal-ecocycle">Explore Details <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <!-- Project 3: Bookish -->
+                    <article class="project-card" data-project="bookish">
+                        <div class="project-img-wrapper">
+                            <div class="project-img-placeholder stylized-bg-2">
+                                <i class="fa-solid fa-book-open"></i>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-category">UX Design & Mobile Development</span>
+                            <h3 class="project-card-title">Bookish</h3>
+                            <p class="project-desc">Book tracking platform for managing reading progress, organizing personal libraries, and writing reviews. Crafted interactive prototypes and mapped user journeys.</p>
+                            <div class="project-tags">
+                                <span>Figma</span>
+                                <span>XCode</span>
+                                <span>SwiftUI</span>
+                            </div>
+                            <a href="#" class="project-link" data-modal="modal-bookish">Explore Details <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <!-- Project 4: YonderLust -->
+                    <article class="project-card" data-project="yonderlust">
+                        <div class="project-img-wrapper">
+                            <div class="project-img-placeholder stylized-bg-4">
+                                <i class="fa-solid fa-compass"></i>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-category">UX Design & Travel</span>
+                            <h3 class="project-card-title">YonderLust</h3>
+                            <p class="project-desc">Solo travel planning app for creating itineraries, discovering destinations, and simplifying trip bookings through user-centered navigation and layouts.</p>
+                            <div class="project-tags">
+                                <span>Figma</span>
+                                <span>UX Research</span>
+                                <span>Prototyping</span>
+                            </div>
+                            <a href="#" class="project-link" data-modal="modal-yonderlust">Explore Details <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <!-- Project 5: Aura -->
+                    <article class="project-card" data-project="aura">
+                        <div class="project-img-wrapper">
+                            <div class="project-img-placeholder stylized-bg-2">
+                                <i class="fa-solid fa-moon"></i>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-category">Brand Identity & Editorial</span>
+                            <h3 class="project-card-title">Aura Lookbook</h3>
+                            <p class="project-desc">Brand Style Guide & Fashion Editorial Lookbook created to establish a cohesive visual identity and showcase seasonal collections through premium storytelling.</p>
+                            <div class="project-tags">
+                                <span>Illustrator</span>
+                                <span>Photoshop</span>
+                                <span>InDesign</span>
+                            </div>
+                            <a href="#" class="project-link" data-modal="modal-aura">Explore Details <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="section section-alt">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Timeline</span>
+                    <h2 class="section-title">Brand Experience</h2>
+                </div>
+
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">2020 - Present</div>
+                        <div class="timeline-content">
+                            <h3 class="timeline-role">Freelance Product & Brand Designer</h3>
+                            <h4 class="timeline-company">Remote</h4>
+                            <ul class="timeline-bullets" style="list-style-type: disc; margin-left: 1.5rem; margin-top: 0.5rem; color: var(--text-secondary);">
+                                <li>Designed 5 end-to-end branding and digital experience projects for fashion and consumer brands, conducting stakeholder interviews across discovery, validation, and feedback cycles.</li>
+                                <li>Delivered ecommerce and branding solutions contributing to measurable business outcomes (1,500+ visitors, 1,000+ leads, and 1,000+ sales for KiddoKraft; 850+ sales for Madras Merch).</li>
+                                <li>Collaborated directly with founders and clients to translate business goals into user-centered experiences.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">2019 - 2020</div>
+                        <div class="timeline-content">
+                            <h3 class="timeline-role">Fashion Consultant</h3>
+                            <h4 class="timeline-company">Scotch & Soda | Chennai, India</h4>
+                            <ul class="timeline-bullets" style="list-style-type: disc; margin-left: 1.5rem; margin-top: 0.5rem; color: var(--text-secondary);">
+                                <li>Executed visual merchandising and in-store storytelling strategies aligned with seasonal campaigns to enhance customer engagement.</li>
+                                <li>Supported 4 seasonal campaigns and collaborated with a 10-member team to deliver a consistent customer experience.</li>
+                                <li>Delivered personalized styling recommendations using trend forecasting and customer profiling.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">2016</div>
+                        <div class="timeline-content">
+                            <h3 class="timeline-role">Quality Control Intern</h3>
+                            <h4 class="timeline-company">JAK Industries | Chennai, India</h4>
+                            <ul class="timeline-bullets" style="list-style-type: disc; margin-left: 1.5rem; margin-top: 0.5rem; color: var(--text-secondary);">
+                                <li>Inspected 500+ garments and 300+ fabric samples, identifying 50+ quality defects while maintaining 95% compliance with standards.</li>
+                                <li>Partnered with 3 production teams across 6 manufacturing stages to support quality assurance.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section section-alt">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-info">
+                        <div class="section-header">
+                            <span class="section-tag">Biography</span>
+                            <h2 class="section-title">About Me</h2>
+                        </div>
+                        <p class="about-text">
+                            I am a Product & Brand Experience Designer with a background in Fashion Technology, UI/UX Design, and front-end development. I specialize in creating visually compelling digital experiences for ecommerce, lifestyle, and consumer-focused brands.
+                        </p>
+                        <p class="about-text">
+                            By combining product thinking, branding, and responsive design, I bridge the gap between strong visual storytelling, usability, and business strategy to create engaging, intuitive, and brand-aligned digital products.
+                        </p>
+                        
+                        <div class="skills-box">
+                            <h3 class="skills-heading">Skills & Expertise</h3>
+                            <div class="skills-list">
+                                <span class="skill-tag">Product Design</span>
+                                <span class="skill-tag">UX Research</span>
+                                <span class="skill-tag">Interaction Design</span>
+                                <span class="skill-tag">Design Systems</span>
+                                <span class="skill-tag">Brand Identity</span>
+                                <span class="skill-tag">Typography & Color Systems</span>
+                                <span class="skill-tag">Figma</span>
+                                <span class="skill-tag">Photoshop / Illustrator</span>
+                                <span class="skill-tag">HTML5 / CSS3</span>
+                                <span class="skill-tag">JavaScript / React.js</span>
+                                <span class="skill-tag">SwiftUI / Kotlin</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-graphic">
+                        <div class="graphic-container">
+                            <div class="avatar-backdrop"></div>
+                            <div class="avatar-placeholder">
+                                <i class="fa-solid fa-pen-nib"></i>
+                            </div>
+                            <div class="floating-badge badge-1">
+                                <span class="badge-num">IE</span>
+                                <span class="badge-lbl">Branding Cert</span>
+                            </div>
+                            <div class="floating-badge badge-2">
+                                <span class="badge-num">Google</span>
+                                <span class="badge-lbl">UX Cert</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resume Section -->
+        <section id="resume" class="section">
+            <div class="container text-center">
+                <div class="section-header text-center">
+                    <span class="section-tag">Credentials</span>
+                    <h2 class="section-title">Resume & Education</h2>
+                </div>
+                <p class="resume-intro max-w-2xl mx-auto">
+                    <strong>Master's in Fashion Management</strong> – Manipal Academy of Higher Education, 2020<br>
+                    <strong>Bachelor's in Fashion Technology</strong> – National Institute of Fashion Technology, 2017
+                </p>
+                <div class="resume-actions">
+                    <a href="Product and Brand EXP Designer_ Harshitha R.pdf" class="btn btn-primary" download id="download-resume-btn"><i class="fa-solid fa-download"></i> Download Resume (PDF)</a>
+                    <a href="#contact" class="btn btn-secondary">Direct Inquiry</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section section-alt">
+            <div class="container text-center">
+                <div class="section-header text-center">
+                    <span class="section-tag">Get In Touch</span>
+                    <h2 class="section-title">Let's Connect</h2>
+                </div>
+                <p class="contact-text max-w-2xl mx-auto" style="max-width: 600px; margin: 0 auto 3rem auto; color: var(--text-secondary); font-size: 1.1rem;">
+                    Have an exciting project you want to collaborate on or a question about my design and brand experience services? Reach out directly via email or connect with me on social media. Let's build something exceptional.
+                </p>
+                
+                <div class="contact-static-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; max-width: 700px; margin: 0 auto 3rem auto;">
+                    <div class="method-item" style="justify-content: center; background: var(--card-bg); border: 1px solid var(--card-border); padding: 2rem; border-radius: var(--border-radius-lg); flex-direction: column; gap: 1rem;">
+                        <div class="method-icon" style="margin: 0;"><i class="fa-solid fa-envelope"></i></div>
+                        <div style="text-align: center;">
+                            <span class="method-label">Email</span>
+                            <a href="mailto:harshitha167@gmail.com" class="method-link" style="font-size: 1.1rem; color: var(--secondary);">harshitha167@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="method-item" style="justify-content: center; background: var(--card-bg); border: 1px solid var(--card-border); padding: 2rem; border-radius: var(--border-radius-lg); flex-direction: column; gap: 1rem;">
+                        <div class="method-icon" style="margin: 0;"><i class="fa-solid fa-location-dot"></i></div>
+                        <div style="text-align: center;">
+                            <span class="method-label">Location</span>
+                            <span class="method-link" style="font-size: 1.1rem;">Austin, Texas</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="social-links" style="justify-content: center; gap: 1.5rem;">
+                    <a href="https://github.com/codenameharsh" target="_blank" aria-label="GitHub" style="width: 50px; height: 50px; font-size: 1.3rem;"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://linkedin.com/in/codenameharsh" target="_blank" aria-label="LinkedIn" style="width: 50px; height: 50px; font-size: 1.3rem;"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-main">
+        <div class="container text-center">
+            <p class="copyright">&copy; 2026 Harshitha Rajendran. Designed & Built with <i class="fa-solid fa-heart"></i>. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Case Study Modals (For interactive detail display) -->
+    <!-- AI Stylist Modal -->
+    <div class="modal" id="modal-ai-stylist">
+        <div class="modal-overlay"></div>
+        <div class="modal-container">
+            <button class="modal-close" aria-label="Close modal"><i class="fa-solid fa-xmark"></i></button>
+            <div class="modal-body">
+                <h2>AI Stylist (ishtyle)</h2>
+                <p class="modal-subtitle text-highlight">Product Design & AI Systems | Figma, Android Studio, Kotlin</p>
+                <hr>
+                
+                <h3>Introduction</h3>
+                <img src="ai-stylist-hero.png" alt="ishtyle AI Outfit Recommendation" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
+                <p><strong>Tagline:</strong> Your wardrobe. Your stylist. Your confidence.<br>
+                <strong>Role:</strong> Lead UX/UI Designer & Android Engineer<br>
+                <strong>Focus:</strong> Minimalist closet management and AI style matchmaking.</p>
+
+                <h3>2. Overview</h3>
+                <p><strong>ishtyle</strong> is an intelligent fashion ecosystem designed to bridge the gap between cluttered physical closets and daily wardrobe confidence. It integrates instant wardrobe digitization, AI color analysis, body shape matching, and virtual try-ons, alongside optional human stylist consultations.</p>
+
+                <h3>3. The Problem</h3>
+                <p>Users face significant morning decision fatigue. Despite full closets, they feel they "have nothing to wear," struggle with impulse shopping/duplicate purchases, lack general styling confidence, have difficulty identifying cuts matching their body shape, and contribute to environmental fashion waste.</p>
+
+                <h3>4. Project Goals</h3>
+                <ul>
+                    <li><strong>Reduce Friction:</strong> Create a swift 4-step digitization workflow to upload clothes and remove backgrounds instantly.</li>
+                    <li><strong>Decentralize Choice:</strong> Generate personalized outfit options matching weather, calendar events, and mood in under 60 seconds.</li>
+                    <li><strong>Encourage Mindful Habits:</strong> Auto-detect wardrobe gaps (e.g. "14 tops but only 2 formal bottoms") to limit impulse buying.</li>
+                </ul>
+
+                <h3>5. Competitive Research</h3>
+                                <img src="hmv.png" alt="ishtyle competitive research" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
+                <p>We analyzed leading closet apps: <em>Whering</em> (strong organization, weak AI), <em>Acloset</em> (good database, high UI cognitive load), <em>Cladwell</em> (capsule focus, lacks try-ons), <em>Indyx</em> (excellent human styling, high cost), and <em>Alta</em> (standalone AI styling, lacks closet synchronization). ishtyle combines the strengths of all these approaches.</p>
+
+                <h3>6. Key Insights</h3>
+                                <img src="insights.png" alt="ishtyle insights" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
+
+                <ul>
+                    <li><strong>The Market Gap:</strong> Competitor apps fail to bridge the gap between automated AI algorithms and human stylist consultations in one unified experience.</li>
+                    <li><strong>Need Spectrum:</strong> Users don't just need functional closet storage; they seek emotional reassurance and social validation for their style choices.</li>
+                </ul>
+
+                <h3>7. Persona</h3>
+                 <img src="ishtyle_persona.png" alt="ishtyle insights" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
+                <p><strong>Mia, 28 — Busy Urban Professional:</strong> Mia values fashion but suffers from decision fatigue. Her calendar is packed, and she needs to transition seamlessly between corporate meetings and creative agency workspaces without changing outfits.</p>
+
+                <h3>8. User Journey Map</h3>
+                                 <img src="user journey.png" alt="ishtyle insights" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
+                <ul>
+                    <li><strong>Morning Prep:</strong> Mia wakes up, opens her closet, feels overwhelmed (decision fatigue), and experiences anxiety about her client schedule.</li>
+                    <li><strong>App Consult:</strong> Mia opens ishtyle, views a recommended outfit matching the local weather and her Google Calendar events, and confirms the look on her 3D avatar.</li>
+                    <li><strong>Outcome:</strong> Mia leaves home feeling confident, saving 15 minutes of outfit planning.</li>
+                </ul>
+
+                <h3>9. How Might We (HMW)</h3>
+                <ul>
+                    <li>How might we make wardrobe digitization feel fast, automated, and engaging?</li>
+                    <li>How might we align styling recommendations with daily mood changes and event requirements?</li>
+                    <li>How might we visually spotlight wardrobe imbalances to encourage conscious consumption?</li>
+                </ul>
+
+                <h3>10. Information Architecture</h3>
+                                                 <img src="IA.jpg" alt="ishtyle insights" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
+                <p>The app structure features five primary tabs:
+                <strong>Home Dashboard</strong> (Daily Outfits, Mood Stylist, Calendar Sync), 
+                <strong>Wardrobe</strong> (Tops, Bottoms, Shoes, Outerwear), 
+                <strong>Style Lab</strong> (Color analysis, Body scanner), 
+                <strong>Shop</strong> (Closet gap recommendations), and 
+                <strong>Sustainability Tracker</strong> (Cost-per-wear index).</p>
+
+                <h3>11. User Flow (First-Time Onboarding)</h3>
+                    <img src="userflow_onboarding.png" alt="ishtyle insights" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
+
+                <p>Sign Up ➔ Style DNA Quiz ➔ Quick Vibe Swipe Match ➔ Skin Undertone Scan ➔ Wardrobe Import ➔ Profile Generated ➔ Daily Outfit Delivery.</p>
+
+                <h3>12. Wireframes</h3>
+                    <img src="wireframes.png" alt="ishtyle insights" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
+                <p>Designed a clean mobile wireframe hierarchy: a splash landing page featuring the cursive wordmark, onboarding screens utilizing rounded cards, a spacious 2-column dashboard layout, and a step-by-step add-garment wizard (Viewfinder, Background Removal, Categorization, and Closet Confirmation).</p>
+
+                <h3>13. UI Design System</h3>
+                    <img src="designsystem.png" alt="ishtyle insights" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
+                <p>Defined brand styles in code:
+                <strong>Mint Luster</strong> (#DDFFF7) for backgrounds/canvas, 
+                <strong>Soft Peach</strong> (#FFA69E) for borders/dividers, 
+                <strong>Rich Mauve</strong> (#AA4465) for buttons/CTAs, 
+                <strong>Deep Plum</strong> (#2E131B) for typography structure, and 
+                <strong>Warm Canvas</strong> (#FAF8F6) for page surfaces. 
+                Fonts pair editorial <em>Playfair Display</em> with readable <em>Source Sans 3</em>.</p>
+
+                <h3>14. Final UI Screen Showcase</h3>
+                    <img src="prototype.png" alt="ishtyle insights" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
+                <p>Refined high-fidelity components to feature flat cards with micro-thin borders instead of heavy shadows, clean icons representing shirts/pants/shoes/jackets, and spacious, decluttered grids where garments are the heroes.</p>
+
+                <h3>15. Interactive Prototype</h3>
+                    <img src="interactive_prototype.png" alt="ishtyle insights" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
+                <p>Designed a fully functional interactive prototype flow in Jetpack Compose: Splash delay transition, swipeable onboarding pages, active grid categories, and a multi-step camera digitization wizard complete with a shutter flash animation and laser scanner overlay.</p>
+
+                <h3>16. Usability Testing</h3>
+                    <img src="usability_testing.png" alt="ishtyle insights" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
+                <p>Tested with 5 participants:
+                <strong>Time-to-Digitize</strong> averaged 38 seconds (exceeding target of &lt;45s), 
+                <strong>Style Quiz Completion</strong> sat at 90%, and 
+                <strong>Category auto-detection</strong> accuracy achieved 92% success during initial image uploads.</p>
+
+                <h3>17. Reflection</h3>
+                <p>Combining design systems with functional code structures early avoids layout regression. High-fashion aesthetics (like editorial typography and a custom warm palette) elevate the utility from a simple closet inventory list to a desirable, daily lifestyle companion.</p>
             </div>
         </div>
-    </section>
-
-<section id="work" class="portfolio-section section reveal-text">
-    <div class="grid-header">
-        <h3 class="portfolio-title-italic">selected work</h3>
-        <div class="portfolio-line-divider-long"></div>
-        <h2 class="portfolio--title-bold">A CURATED COLLECTION</h2>
     </div>
 
-    <div class="work-grid">
-        <div class="card work-item landscape" onclick="window.open('ecom/ecom_index.html', '_self')">
-            <img src="images/E-commerce Website.png" alt="Web Projects">
-            <div class="item-overlay">E-commerce Interface</div>
+    <!-- EcoCycle Modal -->
+    <div class="modal" id="modal-ecocycle">
+        <div class="modal-overlay"></div>
+        <div class="modal-container">
+            <button class="modal-close" aria-label="Close modal"><i class="fa-solid fa-xmark"></i></button>
+            <div class="modal-body">
+                <h2>EcoCycle</h2>
+                <p class="modal-subtitle text-highlight">Building a community that makes sustainable living feel social</p>
+                <hr>
+
+                <h3>1. Introduction</h3>
+                <img src="1.png" alt="EcoCycle Logo" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
+                <p><strong>Role:</strong> UX Research • Product Design • UI Design<br>
+                <strong>Duration:</strong> 4 Weeks<br>
+                <strong>Tools:</strong> Figma • FigJam • Miro</p>
+
+                <h3>2. Overview</h3>
+                <p>EcoCycle is a community-driven platform designed for people who want to live more sustainably. While many sustainability apps focus on tracking habits, EcoCycle encourages users to connect, share progress, exchange resources, and stay motivated through a supportive community. For this project, I focused on designing a personalized profile experience that helps users showcase their sustainability journey while encouraging meaningful community engagement.</p>
+
+                <h3>3. The Problem</h3>
+                <p>People who care about sustainability often rely on scattered resources such as social media groups, forums, and blogs to learn and connect with others. Existing platforms make it difficult to discover relevant information, celebrate personal progress, or build lasting relationships with like-minded individuals.</p>
+
+                <h3>4. Project Goals</h3>
+                <ul>
+                    <li>Highlights users' eco-friendly activities and achievements</li>
+                    <li>Encourages community participation</li>
+                    <li>Supports personalization and customization</li>
+                    <li>Helps users discover relevant people, content, and sustainability resources</li>
+                </ul>
+
+                <h3>5. Research</h3>
+                    <img src="research1.png" alt="EcoCycle Research Insights" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
+                    <img src="research2.png" alt="EcoCycle Research Insights" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
+                    <img src="research3.png" alt="EcoCycle Research Insights" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
+                    <img src="research4.png" alt="EcoCycle Research Insights" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
+                    <img src="research5.png" alt="EcoCycle Research Insights" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
+                    <img src="research6.png" alt="EcoCycle Research Insights" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
+                    <img src="research7.png" alt="EcoCycle Research Insights" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
+                    <img src="affinity.png" alt="EcoCycle Research Insights" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
+
+                <p><strong>Research Methods:</strong> 40 user interviews, Affinity mapping, Persona creation, User journey mapping, Competitive research.</p>
+
+                <h3>6. Key Insights</h3>
+                <ul>
+                    <li><strong>🌱 Climate concerns drive sustainable behavior:</strong> 80% of participants said concerns about climate change were their primary motivation for adopting a sustainable lifestyle.</li>
+                    <li><strong>🤝 Community matters:</strong> 60% already connect with other eco-conscious people through online communities and forums.</li>
+                    <li><strong>📚 People want practical resources:</strong> Participants consistently requested discussion boards, event calendars, and resource sharing instead of another habit tracker.</li>
+                    <li><strong>👤 Personal identity encourages engagement:</strong> 55% considered profile customization important, while many wanted profiles to showcase achievements and sustainability goals.</li>
+                </ul>
+                <p><strong>Pain Points:</strong> Sustainability information is scattered across multiple platforms; existing communities don't encourage meaningful engagement; users struggle to track and showcase progress; most platforms lack personalized experiences.</p>
+
+                <h3>7. Persona</h3>
+                <img src="eco-persona.png" alt="EcoCycle User Persona" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
+                <p><strong>Emma, 'The Eco-Conscious Millennial':</strong> Emma regularly uses social media to share eco-friendly content and connect with eco-conscious communities. She participates in local cleanups and volunteer groups, but wants a central space to track her personal achievements and find trusted local resources.</p>
+
+                <h3>8. User Journey Map</h3>
+                <img src="eco-user-journey.png" alt="EcoCycle User Journey Map" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
+                <p>Mapped Emma's journey when trying to find reliable eco-actions, showing how she goes from initial confusion and scattered searches to finding a community, setting her goals, gaining recognition via badges, and sharing them to inspire others.</p>
+
+                <h3>9. How Might We (HMW)</h3>
+
+                <p><strong>Guiding Question:</strong> How might we design a user profile that showcases eco-friendly achievements, encourages community engagement, and creates a personalized experience that motivates users to stay engaged?</p>
+
+                <h3>10. Information Architecture</h3>
+                    <img src="eco_info_archxxxhdpi.png" alt="EcoCycle Wireframes" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
+
+                <p>I simplified navigation so users could quickly access their profile, discover community content, participate in challenges, and monitor their sustainability progress from a single ecosystem.</p>
+
+                <h3>11. User Flow</h3>
+                    <img src="eco_userflow.png" alt="EcoCycle Wireframes" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
+                <p>The primary user flow focuses on helping users create a profile, personalize their sustainability identity, participate in community activities, and celebrate achievements.</p>
+
+                <h3>12. Wireframes</h3>
+                <img src="eco-wireframes.png" alt="EcoCycle Wireframes" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
+                <p>I explored multiple low-fidelity layouts to determine the best balance between personal achievements, community content, and profile customization before moving into high-fidelity designs.</p>
+
+                <h3>13. Design System</h3>
+                <p>The visual language reflects EcoCycle's mission through: nature-inspired color palette, accessible typography, reusable card components, consistent spacing system, and badge-based achievement patterns.</p>
+
+                <h3>14. Final UI Solution</h3>
+                <p>The redesigned profile enables users to personalize their profile, showcase sustainability milestones, share eco-friendly achievements, discover community resources, and connect with people who share similar environmental interests. The experience transforms a static profile into a social hub that encourages long-term participation.</p>
+
+                <h3>15. Prototype</h3>
+                <img src="eco_prototytpe1.png" alt="EcoCycle Interactive Prototype" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
+                <img src="eco_prototype2.png" alt="EcoCycle Interactive Prototype" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
+                <p>Developed a high-fidelity interactive prototype to demonstrate the onboarding, badge selection, and sharing overlays on mobile viewports.</p>
+
+                <h3>16. Usability Testing</h3>
+                <p>Conducted usability tests evaluating navigation clarity, task completion rates for setting goals, and the social sharing functionality for unlocked environmental achievements.</p>
+
+                <h3>17. Reflection</h3>
+                <p>This project reinforced that sustainability platforms succeed through community as much as functionality. While users wanted tools to track progress, they were equally motivated by opportunities to connect, learn, and celebrate achievements together. If I continued developing EcoCycle, I would expand the community experience by introducing local events, group challenges, and personalized sustainability recommendations to encourage ongoing engagement.</p>
+            </div>
         </div>
-
-        <div class="card work-item portrait" onclick="window.open('aura/aura_index.html', '_self')">
-            <img src="Aura Style Guide (7).png" alt="Palette Usage">
-            <div class="item-overlay">Aura - Brand Identity</div>
-        </div>
-
-        <div class="card work-item landscape" onclick="window.open('yonderlust/yonder_index.html', '_self')">
-            <img src="Yonderlust (3).png" alt="UX Wireframes">
-            <div class="item-overlay">Yonderlust - UI Design</div>
-        </div>
-
-        <div class="card work-item portrait" onclick="window.open('scotch/scotch_index.html', '_self')">
-            <img src="scotch & soda.png" alt="Visual Merchandising">
-            <div class="item-overlay">Scotch & Soda - VM</div>
-        </div>
-
-        <div class="card work-item landscape">
-            <img src="Eco-Cycle (2).png" alt="Eco-Cycle">
-            <div class="item-overlay">Eco-Cycle - UI/UX Design</div>
-        </div>
-
-        <div class="card work-item square">
-            <img src="Aavaran Style Guide (2).png" alt="Visual Identity">
-            <div class="item-overlay">Aavaran - Brand Identity</div>
-        </div>
-
-    </div>
-</section>
-
-<section id="about" class="mood-board-section section">
-    <div class="grid-header reveal-text">
-        <h3 class="section-title-italic">the mood board</h3>
-        <div class="line-divider-long"></div>
-        <h2 class="section-title-bold">BEYOND THE PORTFOLIO</h2>
-        <p class="section-subtitle">decoding complexity with an artist's soul</p>
-    </div>
-
-    <div class="mood-grid">
-        <div class="mood-item item-poem">
-            <p class="poem-quote">"rise and burn"</p>
-            <p class="poem-body">
-                In the skies I hid<br>
-                A part of my love<br>
-                And each night she burns,<br>
-                To show me her warmth.<br>
-                Passion, she fumes<br>
-                Runs deep in my blood,<br>
-                Rise, she ordains,<br>
-                For my banes<br>
-                To ashes,<br>
-                This fire can tame.
-            </p>
-            <p class="poem-author">-h. a. r</p>
-        </div>
-
-        <div class="mood-item item-portrait">
-            <img src="profileshot.jpeg" alt="Harshitha Portrait">
-        </div>
-
-        <div class="mood-item item-nature">
-            <img src="images/storm.JPG" alt="Stormy Horizon">
-        </div>
-
-        <div class="mood-item item-interior">
-            <img src="images/japanese room.JPG" alt="Interior Architecture">
-        </div>
-
-        <div class="mood-item item-art">
-            <img src="fashion2.jpeg" alt="Wolf Illustration">
-        </div>
-
-        <div class="mood-item item-bio">
-            <div class="card bio-text">
-                <p class="playfair bold "> <span class="italic bold accent-red">Creative Designer. <br> Visual Storyteller. </span><br> <span class="italic ">Professional declutterer of complex ideas.</span></p>
-                <br> 
-                <p class="">I build thoughtful digital spaces with a heavy focus on typography and intent. Offline, you’ll find me hunting for <span>the world's best spicy food or with a paintbrush in hand.</span></p>                
-            </div> 
-        </div>
-
-        <a href="https://www.instagram.com/theharshdiary?igsh=d2dlNmFlczc5aHo0" class="mood-item item-social">
-            <!-- <svg viewBox="0 0 24 24" fill="white" width="40" height="40">
-                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-            </svg> -->
-            <img src="IMG_20260211_082904_008.png" alt="">
-        </a>
-    </div>
-</section>
-
-<section class="translation-section section">
-    <div class="grid-header reveal-text">
-        <h3 class="section-title-italic">the translation</h3>
-        <div class="header-line"></div>
-        <h2 class="section-title-bold">FROM FASHION TO TECH</h2>
-        <p class="subtitle-italic">
-            how years of fashion management unearthed skills that power exceptional product design
-        </p>
     </div>
 
-    <div class="translation-grid">
-        
-        <div class="card translation-box cream-box">
-            <div class="icon-row">
-                <img src="images/shop.png" alt="Boutique Icon" class="icon">
-                <span class="arrow">→</span>
-                <img src="images/wireframe.png" alt="Wireframe Icon" class="icon">
+    <!-- Bookish Modal -->
+    <div class="modal" id="modal-bookish">
+        <div class="modal-overlay"></div>
+        <div class="modal-container">
+            <button class="modal-close" aria-label="Close modal"><i class="fa-solid fa-xmark"></i></button>
+            <div class="modal-body">
+                <h2>Bookish</h2>
+                <p class="modal-subtitle text-highlight">Bookish — A Minimalist Reading Tracker</p>
+                <hr>
+
+                <h3>1. Introduction</h3>
+                    <img src="bookish_intro.png" alt="EcoCycle Interactive Prototype" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
+                <p>In a world dominated by noisy social reading platforms, Bookish was born out of a desire for simplicity. Built for iPhone using SwiftUI and Xcode, Bookish is a distraction-free digital library companion designed to help readers catalog their books and consistently hit their reading milestones without unnecessary friction.</p>
+
+                <h3>2. Overview</h3>
+                <p><strong>Role:</strong> Solo Product Designer & iOS Developer<br>
+                <strong>Timeline:</strong> 4 Weeks<br>
+                <strong>Platform:</strong> iOS 17+ (iPhone)<br>
+                <strong>Tech Stack:</strong> SwiftUI, SwiftData, Xcode</p>
+
+                <h3>3. The Problem</h3>
+                <p>Modern reading tracking applications suffer from severe feature bloat. Users looking for a simple digital shelf are instead forced through complex social feeds, heavy community gamification, and confusing navigation paths. This turns the quiet, personal habit of reading into an intimidating administrative task, driving users away from tracking their books altogether.</p>
+
+                <h3>4. Project Goals</h3>
+                <ul>
+                    <li><strong>Zero Friction Cataloging:</strong> Enable users to log, view, and modify books in under three taps.</li>
+                    <li><strong>Clear Habits Reinforcement:</strong> Create a clean, visually motivating goal tracker that encourages consistency without inducing guilt.</li>
+                    <li><strong>Native iOS Fidelity:</strong> Utilize modern SwiftUI architecture and native components to make the app feel lightweight, snappy, and deeply integrated into the iOS ecosystem.</li>
+                </ul>
+
+                <h3>5. Research</h3>
+                <p>Competitive analysis was conducted on prominent reading trackers (Goodreads, StoryGraph) alongside analogue tracking habits (bullet journaling). Key findings revealed that while power users enjoy extensive data analytics, the average reader abandons these platforms because setting up an entry takes too much effort, and the constant pressure of public social metrics diminishes the intrinsic joy of reading.</p>
+
+                <h3>6. Key Insights</h3>
+                <ul>
+                    <li><strong>The "Just Started" Drop-off:</strong> Users frequently abandon tracking when met with a cold, confusing empty state on their first app launch.</li>
+                    <li><strong>Status Fluidity:</strong> A book’s lifecycle isn't linear. Readers switch back and forth between reading, pausing, or even abandoning books completely (Did Not Finish).</li>
+                    <li><strong>Private Micro-Milestones:</strong> Users feel more motivated by small, adjustable personal metrics (e.g., a monthly target) than long-term, rigid yearly challenges.</li>
+                </ul>
+
+                <h3>7. Persona</h3>
+                    <img src="bookish_persona.png" alt="EcoCycle Interactive Prototype" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
+                <p><strong>Clara, 28 • The Intentional Reader</strong><br>
+                <strong>Bio:</strong> A busy marketing professional who reads to unwind before bed.<br>
+                <strong>Needs:</strong> A clean, private interface to keep track of her stack of bedside books and a light motivational push to read a few pages every night instead of scrolling social media.<br>
+                <strong>Frustrations:</strong> Hates cluttered UI, dislikes apps that require setting up an account just to log a single book, and finds public reading challenges performative and stressful.</p>
+
+                <h3>8. User Journey Map</h3>
+                    <img src="bookish_user_journey.png" alt="EcoCycle Interactive Prototype" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
+                <ul>
+                    <li><strong>Discovery:</strong> Clara opens Bookish for the first time and is greeted by a calm, clean screen.</li>
+                    <li><strong>Action:</strong> She taps a single button to add her current novel, logs its basic info, and sets it to "Reading."</li>
+                    <li><strong>Habit:</strong> Throughout the month, she updates her status, checks her progress bar on her goals tab, and experiences a delightful micro-interaction when she hits her target.</li>
+                    <li><strong>Completion:</strong> She smoothly transitions the book to "Read," automatically updating both her personal library shelf and her monthly progress tracking.</li>
+                </ul>
+
+                <h3>9. How Might We (HMW)</h3>
+                <ul>
+                    <li>How might we make the process of adding and editing a book feel as instant and natural as turning a physical page?</li>
+                    <li>How might we design an empty library state that feels like an open invitation rather than a blank chore?</li>
+                    <li>How might we celebrate a user's reading milestones with minimalist visual design that rewards progress without feeling loud or overwhelming?</li>
+                </ul>
+
+                <h3>10. Information Architecture</h3>
+                <p>The application layout relies on a clean, decentralized component tree designed to separate data models, view layouts, and persistent states cleanly within Xcode:</p>
+                <pre style="background: rgba(255,255,255,0.05); padding: 1rem; border-radius: 8px; font-family: monospace; overflow-x: auto; color: var(--text-primary); margin: 1.5rem 0; border: 1px solid var(--card-border);">
+BookTracker (Root)
+│
+├── 📁 Models
+│   ├── Book.swift           # Core data model entity
+│   └── BookStatus.swift     # Status states (Read, Want to Read, DNF)
+│
+├── 📁 ViewModels
+│   └── BookStore.swift      # Central state manager & business logic
+│
+├── 📁 Views
+│   ├── ContentView.swift    # Root tab container
+│   │
+│   ├── 📁 Library
+│   │   ├── LibraryView.swift      # Main library list
+│   │   ├── AddBookView.swift      # New book form modal
+│   │   ├── EditBookView.swift     # Entry modification view
+│   │   └── BookDetailView.swift   # Detailed focus card
+│   │
+│   ├── 📁 Goals
+│   │   └── GoalView.swift         # Progress tracking screen
+│   │
+│   └── 📁 Components
+│       ├── BookRow.swift          # Custom list cell item
+│       ├── StatusBadge.swift      # Context-colored status label
+│       └── EmptyLibraryView.swift # Onboarding placeholder view
+│
+└── 📁 Helpers & Assets</pre>
+
+                <p>To support this structure cleanly, I implemented a native SwiftData schema mapping out a flexible, lightweight configuration for our core domain model:</p>
+                <pre style="background: rgba(255,255,255,0.05); padding: 1rem; border-radius: 8px; font-family: monospace; overflow-x: auto; color: var(--text-primary); margin: 1.5rem 0; border: 1px solid var(--card-border);">
+<span style="color: #f472b6;">import</span> Foundation
+<span style="color: #f472b6;">import</span> SwiftData
+
+<span style="color: #818cf8;">@Model</span>
+<span style="color: #f472b6;">final class</span> <span style="color: #34d399;">Book</span> {
+    <span style="color: #f472b6;">var</span> title: String
+    <span style="color: #f472b6;">var</span> author: String
+    <span style="color: #f472b6;">var</span> status: BookStatus
+    <span style="color: #f472b6;">var</span> review: String
+    
+    <span style="color: #f472b6;">init</span>(title: String, author: String, status: BookStatus = .wantToRead, review: String = "") {
+        <span style="color: #f472b6;">self</span>.title = title
+        <span style="color: #f472b6;">self</span>.author = author
+        <span style="color: #f472b6;">self</span>.status = status
+        <span style="color: #f472b6;">self</span>.review = review
+    }
+}
+
+<span style="color: #f472b6;">enum</span> <span style="color: #34d399;">BookStatus</span>: String, Codable, CaseIterable {
+    <span style="color: #f472b6;">case</span> wantToRead = "Want to Read"
+    <span style="color: #f472b6;">case</span> reading = "Reading"
+    <span style="color: #f472b6;">case</span> read = "Read"
+    <span style="color: #f472b6;">case</span> dnf = "DNF"
+}</pre>
+
+                <h3>11. User Flow</h3>
+                <p>The primary user flows move effortlessly through a persistent, low-profile navigation map. As mapped out in the wireframes, the application is anchored by a two-tab split:</p>
+                <ul>
+                    <li><strong>Library Stream:</strong> Launch App ➔ Home (Library) ➔ Tap Book ➔ View Book Details ➔ Tap Edit ➔ Save Changes ➔ View Updated Library. Alternatively, users can clear entries via a swift slide gesture (Swipe Delete ➔ Remove Book).</li>
+                    <li><strong>Goals Stream:</strong> Launch App ➔ Goals Tab ➔ Adjust Monthly Target ➔ Real-time Books Count Update ➔ Target Check (Conditional branch: If No ➔ Normal view; If Yes ➔ Celebration State).</li>
+                </ul>
+
+                <h3>12. Wireframes</h3>
+                <img src="bookish wireframes_001.png" alt="Bookish Wireframes" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
+                <p>The blueprint layout for Bookish emphasizes clear geometric proportions, generous negative space, and intuitive touch targets. It maps out a consistent, predictable lifecycle for screen interactions:</p>
+                <ul>
+                    <li><strong>Library (My Books):</strong> A scannable list featuring structured cells, each displaying a book cover silhouette, book metadata, and a dedicated status badge alignment.</li>
+                    <li><strong>Add New Book & Edit Book:</strong> Symmetrical form layouts featuring clean text input fields and dropdown menus for status settings (Want to Read, Read, DNF).</li>
+                    <li><strong>Goals & Celebration Screen:</strong> Minimalist stepping controls (− / +) paired with a horizontal progress indicator bar that transforms into a custom star element upon milestone achievement.</li>
+                    <li><strong>Empty State:</strong> A delightful, low-weight icon-centered overlay that communicates structural purpose before any data is entered.</li>
+                </ul>
+
+                <h3>13. Design System</h3>
+                <img src="bookish_design _system.png" alt="Bookish Color Palette" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
+                <p>The visual style steps away from harsh stark blacks, choosing instead a warm, calming color spectrum reminiscent of an indie bookstore:</p>
+                <ul>
+                    <li><strong>Deep Charcoal (#2F4858):</strong> The primary typographic and dominant structural baseline.</li>
+                    <li><strong>Warm Amber (#F6AE2D):</strong> Accent color indicating active focus points, primary call-to-actions, and interactive stepping controls.</li>
+                    <li><strong>Terracotta Crimson (#F26419):</strong> Accent highlight used for celebratory conditions and goal states.</li>
+                    <li><strong>Soft Mint (#D0E6E2):</strong> Low-contrast structural tint used for cards, text fields, and soft screen backdrops.</li>
+                </ul>
+
+                <h3>14. Final UI</h3>
+                    <img src="bookish_finalUI.png" alt="Bookish Color Palette" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
+                <p>By mapping the layout specifications from wireframes to SwiftUI views, the final interface achieves exceptional visual clarity. To bridge the layout gap between data entry and presentation contexts, I designed a fluid modal sheet utilizing native iOS presentation structures:</p>
+                <pre style="background: rgba(255,255,255,0.05); padding: 1rem; border-radius: 8px; font-family: monospace; overflow-x: auto; color: var(--text-primary); margin: 1.5rem 0; border: 1px solid var(--card-border);">
+<span style="color: #f472b6;">struct</span> <span style="color: #34d399;">AddBookView</span>: View {
+    <span style="color: #f472b6;">@Environment</span>(\.dismiss) <span style="color: #f472b6;">private var</span> dismiss
+    <span style="color: #f472b6;">@Environment</span>(\.modelContext) <span style="color: #f472b6;">private var</span> modelContext
+    
+    <span style="color: #f472b6;">@State private var</span> title = ""
+    <span style="color: #f472b6;">@State private var</span> author = ""
+    <span style="color: #f472b6;">@State private var</span> status = BookStatus.wantToRead
+
+    <span style="color: #f472b6;">var</span> body: <span style="color: #f472b6;">some</span> View {
+        NavigationStack {
+            Form {
+                Section("Book Details") {
+                    TextField("Enter book title", text: $title)
+                    TextField("Enter author", text: $author)
+                }
+                
+                Section("Status") {
+                    Picker("Reading Status", selection: $status) {
+                        ForEach(BookStatus.allCases, id: \.self) { status in
+                            Text(status.rawValue).tag(status)
+                        }
+                    }
+                }
+            }
+            .navigationTitle("Add New Book")
+            .toolbar {
+                ToolbarItem(placement: .cancellationAction) {
+                    Button("Cancel") { dismiss() }
+                }
+                ToolbarItem(placement: .confirmationAction) {
+                    Button("Save") {
+                        let newBook = Book(title: title, author: author, status: status)
+                        modelContext.insert(newBook)
+                        dismiss()
+                    }
+                    .disabled(title.isEmpty || author.isEmpty)
+                }
+            }
+        }
+    }
+}</pre>
+                <ul>
+                    <li><strong>The Core Shelf:</strong> Uses custom StatusBadges dynamically tinted to separate states effortlessly. The background relies on the calming undertone of the Soft Mint color space.</li>
+                    <li><strong>Fluid Sheets:</strong> The Add and Edit workflows slide up as elegant modal sheets, configured with native `.presentationDetents([.medium, .large])` to keep user context grounded.</li>
+                    <li><strong>Context-Aware Rows:</strong> Books dynamically display customized metadata, ensuring high typographic legibility using the Deep Charcoal font family against a clean layout grid.</li>
+                </ul>
+
+                <h3>15. Prototype</h3>
+                    <img src="bookish_prototype.png" alt="Bookish Color Palette" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
+                <p>The live interactive prototype was built directly inside Xcode using SwiftUI's powerful live canvas previews. Transitions are incredibly fast, passing state data bindings between views automatically:</p>
+                <ul>
+                    <li>Tapping a book cell triggers an intuitive NavigationLink push transition into the BookDetailView.</li>
+                    <li>The GoalView features an interactive stepper that recalculates progress instantly on screen, moving smoothly between standard tracking states and the targeted achievement milestone.</li>
+                </ul>
+
+                <h3>16. Testing & Iteration</h3>
+                <p>Usability testing was conducted with a pool of five target readers using an Xcode simulator environment.</p>
+                <ul>
+                    <li><strong>Successes:</strong> Users praised the speed of logging a new book, completing the form in under 6 seconds on average. The Swipe-to-Delete gesture was highly discoverable due to native iOS familiarity.</li>
+                    <li><strong>Iterations:</strong> Initial testers noted a lack of structural confirmation when editing a book—they felt unsure if their modifications had actively persisted. To solve this, I introduced explicit physical feedback to the save pipeline using a hardware notification engine:</li>
+                </ul>
+                <pre style="background: rgba(255,255,255,0.05); padding: 1rem; border-radius: 8px; font-family: monospace; overflow-x: auto; color: var(--text-primary); margin: 1.5rem 0; border: 1px solid var(--card-border);">
+Button("Save Changes") {
+    // 1. Commit the active local UI bindings directly to SwiftData Context
+    try? modelContext.save()
+    
+    // 2. Resolve testing ambiguity by triggering physical hardware confirmation
+    let generator = UINotificationFeedbackGenerator()
+    generator.notificationOccurred(.success)
+    
+    dismiss()
+}</pre>
+
+                <h3>17. Reflection</h3>
+                <p>Building Bookish highlighted the incredible harmony between product design and modern engineering workflows. Utilizing SwiftUI allowed for rapid iteration, transforming wireframes into clean, declarative code with minimal middleware. By focusing exclusively on fundamental user needs and avoiding feature creep, Bookish proves that a highly specialized, lightweight app can provide a far more rewarding experience than a massive, overcrowded platform.</p>
             </div>
-            <h4 class="skill-label">Visual Merchandising</h4>
-            <div class="skill-divider"></div>
-            <h3>Information Architecture</h3>
-            <p>Translating spatial storytelling into digital navigation patterns.</p>
         </div>
-
-        <div class="card translation-box cream-box">
-            <div class="icon-row">
-                <img src="images/quality-control.png" alt="QC Icon" class="icon">
-                <span class="arrow">→</span>
-                <img src="images/usability.png" alt="Usability Icon" class="icon">
-            </div>
-            <h4 class="skill-label">Quality Control</h4>
-            <div class="skill-divider"></div>
-            <h3>Usability Testing</h3>
-            <p>Applying meticulous attention to detail for seamless user experiences.</p>
-        </div>
-
-        <div class="card translation-box cream-box">
-            <div class="icon-row">
-                <img src="images/forecast-analytics.png" alt="Trend Icon" class="icon">
-                <span class="arrow">→</span>
-                <img src="images/screening.png" alt="Research Icon" class="icon">
-            </div>
-            <h4 class="skill-label">Trend Forecasting</h4>
-            <div class="skill-divider"></div>
-            <h3>User Research & Strategy</h3>
-            <p>Anticipating user needs through cultural and behavioral insights.</p>
-        </div>
-
-        <div class="link-box-container">
-            <a href="Harshitha Rajendran.pdf" target="_blank" class="social-link-btn">RESUME</a>
-            <a href="https://www.linkedin.com/in/codenameharsh/" target="_blank" class="social-link-btn">LINKEDIN</a>
-            <a href="https://github.com/codenameharsh" target="_blank" class="social-link-btn">GITHUB</a>
-        </div>
-
     </div>
-</section>
 
-<section id="skills" class="toolbox-section">
-    <div class="grid-header">
-        <h3 class="section-title-italic">the toolbox</h3>
-        <div class="header-line "></div>
-        <h2 class="section-title-bold">TOOLS OF THE TRADE</h2>
+    <!-- YonderLust Modal -->
+    <div class="modal" id="modal-yonderlust">
+        <div class="modal-overlay"></div>
+        <div class="modal-container">
+            <button class="modal-close" aria-label="Close modal"><i class="fa-solid fa-xmark"></i></button>
+            <div class="modal-body">
+                <h2>YonderLust</h2>
+                <p class="modal-subtitle text-highlight">UX Design | Figma</p>
+                <hr>
+                <h3>Overview</h3>
+                <p>A solo travel planning app for creating itineraries, discovering new destinations, and simplifying travel bookings.</p>
+                <h3>Contributions & Process</h3>
+                <ul>
+                    <li>Researched travel planning behaviors through 10 detailed user interviews.</li>
+                    <li>Translated research insights into user personas, flows, and 10 responsive layout screens.</li>
+                    <li>Improved layout navigation and trip booking flows through iterative prototype testing with 3 participants.</li>
+                </ul>
+            </div>
+        </div>
     </div>
 
-    <div class="toolbox-grid">
-        <div class="card skill-card">
-            <div class="pill-group">
-                <span class="pill grey">Stakeholder Interviews</span>
-                <span class="pill grey">Critical Thinking</span>
-                <span class="pill grey">User Research</span>
-                <span class="pill grey">Empathy Mapping</span>
+    <!-- Aura Lookbook Modal -->
+    <div class="modal" id="modal-aura">
+        <div class="modal-overlay"></div>
+        <div class="modal-container">
+            <button class="modal-close" aria-label="Close modal"><i class="fa-solid fa-xmark"></i></button>
+            <div class="modal-body">
+                <h2>Aura LOOKBOOK</h2>
+                <p class="modal-subtitle text-highlight">Brand Identity & Editorial | Illustrator, Photoshop, InDesign</p>
+                <hr>
+                <h3>Overview</h3>
+                <p>A brand style guide and fashion editorial lookbook created to establish a cohesive visual identity and showcase seasonal fashion collections through premium storytelling.</p>
+                <h3>Contributions & Process</h3>
+                <ul>
+                    <li>Created editorial layouts, custom illustrations, and a cohesive visual design system that strengthened the brand's celestial-inspired identity.</li>
+                    <li>Established typography, visual hierarchy rules, and campaign assets for consistent storytelling across print and digital marketing channels.</li>
+                </ul>
             </div>
-            <h4 class="red-title">Collaborative Research</h4>
-            <p class="red-sub">leading cross-functional teams through user research and creative problem-solving to align features with objectives.</p>
-        </div>
-
-        <div class="card skill-card tall-card">
-            <div class="pill-group center">
-                <span class="pill red">UI/UX Design</span>
-                <span class="pill red">Design Systems</span>
-                <span class="pill red">Usability Testing</span>
-                <span class="pill red">Wireframing</span>
-                <span class="pill red">WCAG Accesibility</span>
-                <span class="pill red">Prototyping</span>
-            </div>
-            <h4 class="red-title">Digital Product Design</h4>
-            <p>crafting intuitive digital experiences through high-fidelity prototypes and user-centered design methodologies.</p>
-        </div>
-
-        <div class="card skill-card">
-            <div class="pill-group">
-                <span class="pill grey">Graphic Design</span>
-                <span class="pill grey">Figma</span>
-                <span class="pill grey">Sketch</span>
-                <span class="pill grey">Infographics</span>
-                <span class="pill grey">Adobe Creative Suite</span>
-                <span class="pill grey">Canva</span>
-            </div>
-            <h4 class="red-title">Visual & Creative Design</h4>
-            <p class="red-sub">crafting intuitive digital experiences through high-fidelity prototypes and user-centered design methodologies.</p>
-        </div>
-
-        <div class="card skill-card">
-            <div class="pill-group">
-                <span class="pill red">React</span>
-                <span class="pill red">HTML5</span>
-                <span class="pill red">JavaScript ES6+</span>
-                <span class="pill red">CSS3</span>
-                <span class="pill red">API Integration</span>
-                <span class="pill red">jQuery</span>
-            </div>
-            <h4 class="red-title">Front-End Development</h4>
-            <p>building responsive, performant web applications with modern javascript frameworks and best practices.</p>
-        </div>
-
-        <div class="card skill-card middle-bottom">
-            <div class="pill-group">
-                <span class="pill grey">ISO Standards</span>
-                <span class="pill grey">Quality Assurance</span>
-                <span class="pill grey">Product Compliance</span>
-            </div>
-            <h4 class="grey-title">Technical Quality & Production</h4>
-        </div>
-
-        <div class="card skill-card">
-            <div class="pill-group">
-                <span class="pill red">SEO</span>
-                <span class="pill red">A/B Testing</span>
-                <span class="pill red">Product Imagery</span>
-                <span class="pill red">Conversion Optimisation</span>
-            </div>
-            <h4 class="red-title">E-Commerce & Conversion</h4>
-            <p class="red-sub">optimizing digital storefronts with seo strategies and ux practices that increase retention and reduce bounce rates.</p>
-        </div>
-        
-        <div class="card skill-card wide-card">
-            <div class="pill-group">
-                <span class="pill red">Brand Identity</span>
-                <span class="pill red">Fashion Management</span>
-                <span class="pill red">Visual Merchandising</span>
-                <span class="pill red">Trend Forecasting</span>
-            </div>
-            <h4 class="red-title">Fashion & Brand Strategy</h4>
-            <p class="red-sub">developing cohesive brand identities for contemporary and luxury fashion through visual merchandising and trend forecasting.</p>
-        </div>
-
-        <div class="card skill-card wide-card">
-            <div class="pill-group">
-                <span class="pill grey">Photography</span>
-                <span class="pill grey">Interactive Design</span>
-                <span class="pill grey">Poetry</span>
-                <span class="pill grey">Game Design</span>
-            </div>
-            <h4 class="grey-title">Multimedia & Artistic Expression</h4>
-            <p>exploring creative boundaries through photography, interactive experiences, and published literary works.</p>
         </div>
     </div>
-</section>
 
-<section id="contact" class="contact-section">
-    <div class="contact-content">
-        <h2 class="contact-heading">
-            Ready to <span class="italic">create</span> <br>
-            something beautiful <br>
-            <span class="accent-text">together?</span>
-        </h2>
-        
-        <p class="contact-subtext reveal-text">
-            From wireframes to watercolor, I'm always down for a creative deep dive—or a recommendation for the spiciest food in town.
-        </p>
-        <p class="cta-text">Let's talk shop.</p>
 
-        <div class="contact-buttons">
-            <a href="mailto:harshitha167@gmail.com" class="contact-btn">E-MAIL</a>
-            <a href="https://www.linkedin.com/in/codenameharsh/" target="_blank" class="contact-btn">LINKEDIN</a>
-            <a href="tel:+16574109970" class="contact-btn">PHONE</a>
-        </div>
-    </div>
-</section>
-
-<footer class="footer">
-    <div class="footer-content">
-        <p class="footer-copyright">&copy; 2026 Harshitha Rajendran</p>
-        <p class="footer-tagline">Design mastered. Mischief managed.</p>
-    </div>
-</footer>
-
-<script src="script.js"></script>
+    <!-- Scripts -->
+    <script src="script.js"></script>
 </body>
 </html>
