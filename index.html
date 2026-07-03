@@ -17,14 +17,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Stylesheet -->
     <link rel="stylesheet" href="styles.css">
-
+    <!-- favicon -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-
-<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 </head>
 <body>
+    <!-- Scroll Progress Bar -->
+    <div id="scroll-progress" class="scroll-progress-bar"></div>
+
     <!-- Ambient Background Lighting Glows -->
     <div class="ambient-glow glow-1"></div>
     <div class="ambient-glow glow-2"></div>
@@ -120,7 +122,7 @@
                         </div>
                         <div class="project-info">
                             <span class="project-category">Product Design & AI Fashion</span>
-                            <h3 class="project-card-title">AI Stylist (ishtyle)</h3>
+                            <h3 class="project-card-title">ishtyle</h3>
                             <p class="project-desc">AI-powered fashion app that recommends outfits based on users' wardrobe, occasion, weather, and mood. Designed high-fidelity mobile screens and refined flows based on user testing.</p>
                             <div class="project-tags">
                                 <span>Figma</span>
@@ -200,7 +202,7 @@
                         </div>
                         <div class="project-info">
                             <span class="project-category">Brand Identity & Editorial</span>
-                            <h3 class="project-card-title">Aura Lookbook</h3>
+                            <h3 class="project-card-title">Aura</h3>
                             <p class="project-desc">Brand Style Guide & Fashion Editorial Lookbook created to establish a cohesive visual identity and showcase seasonal collections through premium storytelling.</p>
                             <div class="project-tags">
                                 <span>Illustrator</span>
@@ -270,16 +272,31 @@
             <div class="container">
                 <div class="about-grid">
                     <div class="about-info">
-                        <div class="section-header">
-                            <span class="section-tag">Biography</span>
-                            <h2 class="section-title">About Me</h2>
+                        <div class="section-header" style="display: flex; align-items: center; gap: 1.5rem; margin-bottom: 3rem;">
+                            <div style="width: 80px; height: 80px; border-radius: 50%; border: 2.5px solid var(--secondary); overflow: hidden; box-shadow: 0 4px 20px rgba(6, 182, 212, 0.25); display: flex; align-items: center; justify-content: center;">
+                                <img src="abou_photo.png" alt="Harshitha Rajendran" style="width: 100%; height: 100%; object-fit: cover; transform: scale(1.7); transform-origin: center 80%;">
+                            </div>
+                            <div>
+                                <span class="section-tag">Biography</span>
+                                <h2 class="section-title" style="margin: 0;">About Me</h2>
+                            </div>
                         </div>
-                        <p class="about-text">
-                            I am a Product & Brand Experience Designer with a background in Fashion Technology, UI/UX Design, and front-end development. I specialize in creating visually compelling digital experiences for ecommerce, lifestyle, and consumer-focused brands.
+                        <p class="about-text" style="margin-bottom: 1.25rem;">
+                            Hello, I’m <strong>Harshitha Rajendran</strong>. I design digital experiences where <strong>brand narrative meets flawless execution</strong>. My path to product design wasn’t typical, and that’s my greatest asset. I started in <strong>Fashion Technology and Management</strong>, where I spent years decoding consumer desires, mastering visual merchandising, and obsessing over systemic quality control down to the millimeter. I learned early on that an exceptional experience is a meticulous blend of <strong>emotional storytelling</strong> and <strong>strict functional standards</strong>.
                         </p>
-                        <p class="about-text">
-                            By combining product thinking, branding, and responsive design, I bridge the gap between strong visual storytelling, usability, and business strategy to create engaging, intuitive, and brand-aligned digital products.
+                        <p class="about-text" style="margin-bottom: 1.25rem;">
+                            Today, I <strong>bridge the gap between design and development</strong>. As a Product & Brand Experience Designer, I don’t just hand off flat UI layouts in Figma; I <strong>build, test, and iterate</strong> on actual mobile and web interfaces using <strong>SwiftUI, Kotlin, and React</strong>. Whether conducting dozens of deep-dive user interviews to build an AI stylist app (like ishtyle) or optimizing conversion funnels that generate thousands of leads and sales for e-commerce brands, I bring a <strong>grounded, data-driven approach</strong> to human-centered design.
                         </p>
+                        <blockquote class="about-quote">
+                            <p class="about-text" style="margin: 0;">
+                                <strong><span class="text-highlight">The superpower I bring to your team:</span></strong> I am a <strong>practical systems thinker</strong>. I love the messy chaos of inventing new concepts, but my true zone of genius is <strong>bringing structure to that chaos</strong>, transforming big, abstract strategies into sustainable, highly polished, and <strong>meticulously executed digital realities</strong>.
+                            </p>
+                        </blockquote>
+                        <blockquote class="about-quote" style="margin-top: 1.25rem;">
+                            <p class="about-text" style="margin: 0;">
+                                <strong><span class="text-highlight">When I’m not designing:</span></strong> You’ll likely find me <strong>capturing stories through a camera lens</strong> (PSI award-winner!), nose-deep in a fantasy book, writing poetry, or advocating for inclusive, accessible, and ethical technology.
+                            </p>
+                        </blockquote>
                         
                         <div class="skills-box">
                             <h3 class="skills-heading">Skills & Expertise</h3>
@@ -297,20 +314,63 @@
                                 <span class="skill-tag">SwiftUI / Kotlin</span>
                             </div>
                         </div>
+
+                        <!-- Certifications & Education Box -->
+                        <div class="education-certs-box" style="margin-top: 2.5rem;">
+                            <h3 class="skills-heading">Education & Certifications</h3>
+                            <ul class="education-certs-list" style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 1rem;">
+                                <li style="display: flex; align-items: flex-start; gap: 0.75rem;">
+                                    <i class="fa-solid fa-graduation-cap" style="color: var(--secondary); margin-top: 0.25rem; font-size: 1.1rem; width: 20px;"></i>
+                                    <div>
+                                        <strong style="color: var(--text-primary);">Master's in Fashion Management</strong><br>
+                                        <span style="font-size: 0.9rem; color: var(--text-secondary);">Manipal Academy of Higher Education | 2020</span>
+                                    </div>
+                                </li>
+                                <li style="display: flex; align-items: flex-start; gap: 0.75rem;">
+                                    <i class="fa-solid fa-graduation-cap" style="color: var(--secondary); margin-top: 0.25rem; font-size: 1.1rem; width: 20px;"></i>
+                                    <div>
+                                        <strong style="color: var(--text-primary);">Bachelor's in Fashion Technology</strong><br>
+                                        <span style="font-size: 0.9rem; color: var(--text-secondary);">National Institute of Fashion Technology (NIFT) | 2017</span>
+                                    </div>
+                                </li>
+                                <li style="display: flex; align-items: flex-start; gap: 0.75rem;">
+                                    <i class="fa-solid fa-certificate" style="color: var(--primary); margin-top: 0.25rem; font-size: 1.1rem; width: 20px;"></i>
+                                    <div>
+                                        <strong style="color: var(--text-primary);">Google Professional UX Design Certificate</strong><br>
+                                        <span style="font-size: 0.9rem; color: var(--text-secondary);">Google Professional Certification</span>
+                                    </div>
+                                </li>
+                                <li style="display: flex; align-items: flex-start; gap: 0.75rem;">
+                                    <i class="fa-solid fa-certificate" style="color: var(--primary); margin-top: 0.25rem; font-size: 1.1rem; width: 20px;"></i>
+                                    <div>
+                                        <strong style="color: var(--text-primary);">Brand Identity & Brand Strategy Certificate</strong><br>
+                                        <span style="font-size: 0.9rem; color: var(--text-secondary);">IE Business School</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="about-graphic">
                         <div class="graphic-container">
                             <div class="avatar-backdrop"></div>
                             <div class="avatar-placeholder">
-                                <i class="fa-solid fa-pen-nib"></i>
+                                <i class="fa-solid fa-gem"></i>
                             </div>
                             <div class="floating-badge badge-1">
-                                <span class="badge-num">IE</span>
-                                <span class="badge-lbl">Branding Cert</span>
+                                <i class="fa-solid fa-mobile-screen" style="font-size: 1.25rem; color: var(--secondary); margin-bottom: 0.25rem;"></i>
+                                <span class="badge-lbl">Product Designer</span>
                             </div>
                             <div class="floating-badge badge-2">
-                                <span class="badge-num">Google</span>
-                                <span class="badge-lbl">UX Cert</span>
+                                <i class="fa-solid fa-compass-drafting" style="font-size: 1.25rem; color: var(--primary); margin-bottom: 0.25rem;"></i>
+                                <span class="badge-lbl">Brand Designer</span>
+                            </div>
+                            <div class="floating-badge badge-3">
+                                <i class="fa-solid fa-palette" style="font-size: 1.25rem; color: #a855f7; margin-bottom: 0.25rem;"></i>
+                                <span class="badge-lbl">Illustrator</span>
+                            </div>
+                            <div class="floating-badge badge-4">
+                                <i class="fa-solid fa-code" style="font-size: 1.25rem; color: #06b6d4; margin-bottom: 0.25rem;"></i>
+                                <span class="badge-lbl">Front-end Dev</span>
                             </div>
                         </div>
                     </div>
@@ -323,11 +383,10 @@
             <div class="container text-center">
                 <div class="section-header text-center">
                     <span class="section-tag">Credentials</span>
-                    <h2 class="section-title">Resume & Education</h2>
+                    <h2 class="section-title">Resume & Portfolio</h2>
                 </div>
-                <p class="resume-intro max-w-2xl mx-auto">
-                    <strong>Master's in Fashion Management</strong> – Manipal Academy of Higher Education, 2020<br>
-                    <strong>Bachelor's in Fashion Technology</strong> – National Institute of Fashion Technology, 2017
+                <p class="resume-intro max-w-2xl mx-auto" style="max-width: 600px; margin: 0 auto 2.5rem auto; color: var(--text-secondary); font-size: 1.1rem;">
+                    Download my full resume document to view detailed timelines, projects context, and professional methodologies.
                 </p>
                 <div class="resume-actions">
                     <a href="Product and Brand EXP Designer_ Harshitha R.pdf" class="btn btn-primary" download id="download-resume-btn"><i class="fa-solid fa-download"></i> Download Resume (PDF)</a>
@@ -347,26 +406,41 @@
                     Have an exciting project you want to collaborate on or a question about my design and brand experience services? Reach out directly via email or connect with me on social media. Let's build something exceptional.
                 </p>
                 
-                <div class="contact-static-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; max-width: 700px; margin: 0 auto 3rem auto;">
-                    <div class="method-item" style="justify-content: center; background: var(--card-bg); border: 1px solid var(--card-border); padding: 2rem; border-radius: var(--border-radius-lg); flex-direction: column; gap: 1rem;">
-                        <div class="method-icon" style="margin: 0;"><i class="fa-solid fa-envelope"></i></div>
-                        <div style="text-align: center;">
+                <div class="contact-static-grid">
+                    <!-- Left: Email -->
+                    <div class="method-item contact-method-card">
+                        <div class="method-icon"><i class="fa-solid fa-envelope"></i></div>
+                        <div>
                             <span class="method-label">Email</span>
-                            <a href="mailto:harshitha167@gmail.com" class="method-link" style="font-size: 1.1rem; color: var(--secondary);">harshitha167@gmail.com</a>
+                            <a href="mailto:harshitha167@gmail.com" class="method-link">harshitha167@gmail.com</a>
                         </div>
                     </div>
-                    <div class="method-item" style="justify-content: center; background: var(--card-bg); border: 1px solid var(--card-border); padding: 2rem; border-radius: var(--border-radius-lg); flex-direction: column; gap: 1rem;">
-                        <div class="method-icon" style="margin: 0;"><i class="fa-solid fa-location-dot"></i></div>
-                        <div style="text-align: center;">
+                    <!-- Middle: Phone -->
+                    <div class="method-item contact-method-card">
+                        <div class="method-icon"><i class="fa-solid fa-phone"></i></div>
+                        <div>
+                            <span class="method-label">Phone</span>
+                            <a href="tel:+16574109970" class="method-link">+1 (657) 410-9970</a>
+                        </div>
+                    </div>
+                    <!-- Right: Location -->
+                    <div class="method-item contact-method-card">
+                        <div class="method-icon"><i class="fa-solid fa-location-dot"></i></div>
+                        <div>
                             <span class="method-label">Location</span>
-                            <span class="method-link" style="font-size: 1.1rem;">Austin, Texas</span>
+                            <span class="method-link" style="pointer-events: none; cursor: default;">Austin, TX</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="social-links" style="justify-content: center; gap: 1.5rem;">
-                    <a href="https://github.com/codenameharsh" target="_blank" aria-label="GitHub" style="width: 50px; height: 50px; font-size: 1.3rem;"><i class="fa-brands fa-github"></i></a>
-                    <a href="https://linkedin.com/in/codenameharsh" target="_blank" aria-label="LinkedIn" style="width: 50px; height: 50px; font-size: 1.3rem;"><i class="fa-brands fa-linkedin"></i></a>
+                <!-- Smaller Social Media Icons below -->
+                <div class="contact-social-links">
+                    <!-- Left: LinkedIn -->
+                    <a href="https://www.linkedin.com/in/codenameharsh/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <!-- Middle: GitHub -->
+                    <a href="https://github.com/codenameharsh" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                    <!-- Right: Instagram -->
+                    <a href="https://www.instagram.com/thehappinessofbeing" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
                 </div>
             </div>
         </section>
@@ -384,7 +458,7 @@
     <div class="modal" id="modal-ai-stylist">
         <div class="modal-overlay"></div>
         <div class="modal-container">
-            <button class="modal-close" aria-label="Close modal"><i class="fa-solid fa-xmark"></i></button>
+            <button class="modal-close" aria-label="Back to Portfolio"><i class="fa-solid fa-house"></i></button>
             <div class="modal-body">
                 <h2>AI Stylist (ishtyle)</h2>
                 <p class="modal-subtitle text-highlight">Product Design & AI Systems | Figma, Android Studio, Kotlin</p>
@@ -423,7 +497,7 @@
 
                 <h3>7. Persona</h3>
                  <img src="ishtyle_persona.png" alt="ishtyle insights" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
-                <p><strong>Mia, 28 — Busy Urban Professional:</strong> Mia values fashion but suffers from decision fatigue. Her calendar is packed, and she needs to transition seamlessly between corporate meetings and creative agency workspaces without changing outfits.</p>
+                <p><strong>Mia, 28 - Busy Urban Professional:</strong> Mia values fashion but suffers from decision fatigue. Her calendar is packed, and she needs to transition seamlessly between corporate meetings and creative agency workspaces without changing outfits.</p>
 
                 <h3>8. User Journey Map</h3>
                                  <img src="user journey.png" alt="ishtyle insights" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
@@ -485,6 +559,11 @@
 
                 <h3>17. Reflection</h3>
                 <p>Combining design systems with functional code structures early avoids layout regression. High-fashion aesthetics (like editorial typography and a custom warm palette) elevate the utility from a simple closet inventory list to a desirable, daily lifestyle companion.</p>
+                
+                <div class="modal-nav">
+                    <a href="#selected-work" class="btn btn-secondary modal-nav-btn prev-modal-btn" data-action="close-scroll"><i class="fa-solid fa-arrow-left"></i> Selected Work</a>
+                    <button type="button" class="btn btn-primary modal-nav-btn next-modal-btn" data-next="modal-ecocycle">Next Project <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
             </div>
         </div>
     </div>
@@ -493,7 +572,7 @@
     <div class="modal" id="modal-ecocycle">
         <div class="modal-overlay"></div>
         <div class="modal-container">
-            <button class="modal-close" aria-label="Close modal"><i class="fa-solid fa-xmark"></i></button>
+            <button class="modal-close" aria-label="Back to Portfolio"><i class="fa-solid fa-house"></i></button>
             <div class="modal-body">
                 <h2>EcoCycle</h2>
                 <p class="modal-subtitle text-highlight">Building a community that makes sustainable living feel social</p>
@@ -581,6 +660,11 @@
 
                 <h3>17. Reflection</h3>
                 <p>This project reinforced that sustainability platforms succeed through community as much as functionality. While users wanted tools to track progress, they were equally motivated by opportunities to connect, learn, and celebrate achievements together. If I continued developing EcoCycle, I would expand the community experience by introducing local events, group challenges, and personalized sustainability recommendations to encourage ongoing engagement.</p>
+                
+                <div class="modal-nav">
+                    <button type="button" class="btn btn-secondary modal-nav-btn prev-modal-btn" data-prev="modal-ai-stylist"><i class="fa-solid fa-arrow-left"></i> Prev Project</button>
+                    <button type="button" class="btn btn-primary modal-nav-btn next-modal-btn" data-next="modal-bookish">Next Project <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
             </div>
         </div>
     </div>
@@ -589,10 +673,10 @@
     <div class="modal" id="modal-bookish">
         <div class="modal-overlay"></div>
         <div class="modal-container">
-            <button class="modal-close" aria-label="Close modal"><i class="fa-solid fa-xmark"></i></button>
+            <button class="modal-close" aria-label="Back to Portfolio"><i class="fa-solid fa-house"></i></button>
             <div class="modal-body">
                 <h2>Bookish</h2>
-                <p class="modal-subtitle text-highlight">Bookish — A Minimalist Reading Tracker</p>
+                <p class="modal-subtitle text-highlight">Bookish | A Minimalist Reading Tracker</p>
                 <hr>
 
                 <h3>1. Introduction</h3>
@@ -796,7 +880,7 @@ BookTracker (Root)
                 <p>Usability testing was conducted with a pool of five target readers using an Xcode simulator environment.</p>
                 <ul>
                     <li><strong>Successes:</strong> Users praised the speed of logging a new book, completing the form in under 6 seconds on average. The Swipe-to-Delete gesture was highly discoverable due to native iOS familiarity.</li>
-                    <li><strong>Iterations:</strong> Initial testers noted a lack of structural confirmation when editing a book—they felt unsure if their modifications had actively persisted. To solve this, I introduced explicit physical feedback to the save pipeline using a hardware notification engine:</li>
+                    <li><strong>Iterations:</strong> Initial testers noted a lack of structural confirmation when editing a book; they felt unsure if their modifications had actively persisted. To solve this, I introduced explicit physical feedback to the save pipeline using a hardware notification engine:</li>
                 </ul>
                 <pre style="background: rgba(255,255,255,0.05); padding: 1rem; border-radius: 8px; font-family: monospace; overflow-x: auto; color: var(--text-primary); margin: 1.5rem 0; border: 1px solid var(--card-border);">
 Button("Save Changes") {
@@ -812,6 +896,11 @@ Button("Save Changes") {
 
                 <h3>17. Reflection</h3>
                 <p>Building Bookish highlighted the incredible harmony between product design and modern engineering workflows. Utilizing SwiftUI allowed for rapid iteration, transforming wireframes into clean, declarative code with minimal middleware. By focusing exclusively on fundamental user needs and avoiding feature creep, Bookish proves that a highly specialized, lightweight app can provide a far more rewarding experience than a massive, overcrowded platform.</p>
+                
+                <div class="modal-nav">
+                    <button type="button" class="btn btn-secondary modal-nav-btn prev-modal-btn" data-prev="modal-ecocycle"><i class="fa-solid fa-arrow-left"></i> Prev Project</button>
+                    <button type="button" class="btn btn-primary modal-nav-btn next-modal-btn" data-next="modal-yonderlust">Next Project <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
             </div>
         </div>
     </div>
@@ -820,19 +909,163 @@ Button("Save Changes") {
     <div class="modal" id="modal-yonderlust">
         <div class="modal-overlay"></div>
         <div class="modal-container">
-            <button class="modal-close" aria-label="Close modal"><i class="fa-solid fa-xmark"></i></button>
+            <button class="modal-close" aria-label="Back to Portfolio"><i class="fa-solid fa-house"></i></button>
             <div class="modal-body">
                 <h2>YonderLust</h2>
-                <p class="modal-subtitle text-highlight">UX Design | Figma</p>
+                <p class="modal-subtitle text-highlight">Designing a solo travel experience that feels safe, personal, and empowering</p>
                 <hr>
-                <h3>Overview</h3>
-                <p>A solo travel planning app for creating itineraries, discovering new destinations, and simplifying travel bookings.</p>
-                <h3>Contributions & Process</h3>
+
+                <h3>1. Introduction</h3>
+                <img src="yonder_intro.png" alt="Bookish Color Palette" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
+
+
+                <p>YonderLust is a conceptual mobile app that helps solo travelers discover destinations, plan itineraries, and explore confidently through a personalized, safety-focused experience. The project was completed as a two-day design sprint to explore how thoughtful product design can reduce travel anxiety while preserving the excitement of independent travel.</p>
+            
+                <p>Solo travel offers freedom and self-discovery, but planning a trip alone can also feel overwhelming. Safety concerns, itinerary planning, and the uncertainty of exploring unfamiliar places often discourage people from traveling independently.</p>
+
+                <h3>2. Overview</h3>
+                <p><strong>Role:</strong> Product Designer<br>
+                <strong>Duration:</strong> 2-Day Design Sprint<br>
+                <strong>Tools:</strong> Figma • FigJam • Illustrator<br>
+                <strong>Deliverables:</strong> User Research • User Flow • Wireframes • Design System • High-Fidelity Prototype</p>
+
+                <h3>3. The Problem</h3>
+                <p>Solo travelers face three recurring challenges:</p>
                 <ul>
-                    <li>Researched travel planning behaviors through 10 detailed user interviews.</li>
-                    <li>Translated research insights into user personas, flows, and 10 responsive layout screens.</li>
-                    <li>Improved layout navigation and trip booking flows through iterative prototype testing with 3 participants.</li>
+                    <li>Planning trips across multiple platforms</li>
+                    <li>Feeling unsafe in unfamiliar destinations</li>
+                    <li>Missing opportunities to connect with other travelers</li>
                 </ul>
+                <p>Most travel apps prioritize bookings rather than the emotional needs of solo travelers, leaving users to manage planning, safety, and discovery on their own.</p>
+
+                <h3>4. Project Goals</h3>
+                <ul>
+                    <li><strong>Simplify Itinerary Planning:</strong> Create a unified space to organize destinations, logistics, and daily tasks.</li>
+                    <li><strong>Build Confidence:</strong> Surface accessible, context-aware safety features without raising anxiety levels.</li>
+                    <li><strong>Calm & Intuitive UI:</strong> Present information simply, avoiding cognitive overload.</li>
+                    <li><strong>Immersive Exploration:</strong> Design an emotionally engaging product that celebrates independence.</li>
+                </ul>
+
+                <h3>5. Research</h3>
+                <img src="yonder_research_painpopints.png" alt="Bookish Color Palette" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
+
+                <p>Although this was a two-day sprint, I grounded the design in qualitative research by reviewing travel communities and existing products. My research methods included: analysis of Reddit solo travel discussions, travel blog comments, App Store / Google Play reviews, and competitive analysis of existing travel applications. These sources helped identify common frustrations and unmet user needs.</p>
+
+                <h3>6. Key Insights</h3>
+                <ul>
+                    <li><strong>Travelers want independence without feeling isolated:</strong> Many travelers valued solo experiences but wished they had opportunities to connect with like-minded people when desired.</li>
+                    <li><strong>Safety influences every stage of the journey:</strong> Users wanted reassurance before and during trips without intrusive safety features.</li>
+                    <li><strong>Planning is mentally exhausting:</strong> Managing destinations, accommodations, transportation, and activities across multiple apps created unnecessary cognitive load.</li>
+                    <li><strong>Simplicity builds confidence:</strong> Users preferred clean interfaces with clear navigation over feature-heavy travel applications.</li>
+                </ul>
+
+                <h3>7. Persona</h3>
+                <img src="yonder_user_persona.png" alt="Bookish Color Palette" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
+                <p><strong>Maya Patel, 29 • The Solo Explorer</strong><br>
+                <strong>Goal:</strong> Plan safe, personalized solo trips without juggling multiple apps.<br>
+                <strong>Pain Points:</strong> Trip planning feels overwhelming; safety is a constant concern; information is scattered across different platforms.<br>
+                <strong>Needs:</strong> Personalized recommendations, simple itinerary planning, and built-in safety features.<br>
+                <em>"I want to focus on enjoying my trip, not managing it."</em></p>
+
+                <h3>8. User Journey Map</h3>
+                <img src="yonder_journey_map.png" alt="Bookish Color Palette" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
+                <!-- <div style="overflow-x: auto; margin: 1.5rem 0; border: 1px solid var(--card-border); border-radius: 8px;">
+                    <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 0.9rem; background: var(--card-bg);">
+                        <thead>
+                            <tr style="border-bottom: 2px solid var(--card-border); color: var(--secondary);">
+                                <th style="padding: 1rem;">Stage</th>
+                                <th style="padding: 1rem;">Discover</th>
+                                <th style="padding: 1rem;">Plan</th>
+                                <th style="padding: 1rem;">Explore</th>
+                                <th style="padding: 1rem;">Reflect</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="border-bottom: 1px solid var(--card-border);">
+                                <td style="padding: 1rem; font-weight: bold; color: var(--text-primary);">Goal</td>
+                                <td style="padding: 1rem; color: var(--text-secondary);">Find a destination</td>
+                                <td style="padding: 1rem; color: var(--text-secondary);">Organize the trip</td>
+                                <td style="padding: 1rem; color: var(--text-secondary);">Travel confidently</td>
+                                <td style="padding: 1rem; color: var(--text-secondary);">Save memories</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid var(--card-border);">
+                                <td style="padding: 1rem; font-weight: bold; color: var(--text-primary);">Pain Point</td>
+                                <td style="padding: 1rem; color: var(--text-secondary);">Too many options</td>
+                                <td style="padding: 1rem; color: var(--text-secondary);">Multiple apps</td>
+                                <td style="padding: 1rem; color: var(--text-secondary);">Safety concerns</td>
+                                <td style="padding: 1rem; color: var(--text-secondary);">Difficult to organize</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 1rem; font-weight: bold; color: var(--text-primary);">Opportunity</td>
+                                <td style="padding: 1rem; color: var(--text-secondary);">Personalized tips</td>
+                                <td style="padding: 1rem; color: var(--text-secondary);">Unified itinerary</td>
+                                <td style="padding: 1rem; color: var(--text-secondary);">Safety tools & insights</td>
+                                <td style="padding: 1rem; color: var(--text-secondary);">Trip history log</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div> -->
+
+                <h3>9. How Might We (HMW)</h3>
+                <p><strong>Key Design Opportunity:</strong> How might we simplify solo travel planning while helping users feel confident and safe throughout their journey?</p>
+
+                <h3>10. Information Architecture</h3>
+                <img src="yonder_IA.png" alt="Bookish Color Palette" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
+
+                <!-- <div class="project-img-placeholder stylized-bg-4" style="height: 150px; border-radius: 8px; margin: 1.5rem 0; font-size: 1.5rem; flex-direction: column; gap: 0.5rem;">
+                    <i class="fa-solid fa-sitemap" style="font-size: 2.5rem;"></i>
+                    <span style="font-size: 0.95rem; font-family: var(--font-heading); font-weight: 600;">Sitemap Diagram (Discover ➔ Plan ➔ Explore ➔ Safety Tools)</span>
+                </div> -->
+                <p>The sitemap was organized around discover, plan, explore, and safety. Grouping features by intent reduced navigation complexity and made frequently used actions easier to access.</p>
+
+                <h3>11. User Flow</h3>
+                <img src="yonder_user_flow.png" alt="Bookish Color Palette" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
+                <!-- <div class="project-img-placeholder stylized-bg-2" style="height: 150px; border-radius: 8px; margin: 1.5rem 0; font-size: 1.5rem; flex-direction: column; gap: 0.5rem;">
+                    <i class="fa-solid fa-route" style="font-size: 2.5rem;"></i>
+                    <span style="font-size: 0.95rem; font-family: var(--font-heading); font-weight: 600;">User Journey Navigation Flow Diagram</span>
+                </div> -->
+                <p>The primary flow follows a traveler from destination discovery through itinerary planning, exploration, and trip management while surfacing safety features at appropriate moments instead of interrupting the experience.</p>
+
+                <h3>12. Wireframes</h3>
+                <img src="yonder_wireframes.png" alt="Bookish Color Palette" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
+
+                <!-- <div class="project-img-placeholder stylized-bg-1" style="height: 150px; border-radius: 8px; margin: 1.5rem 0; font-size: 1.5rem; flex-direction: column; gap: 0.5rem;">
+                    <i class="fa-solid fa-cubes" style="font-size: 2.5rem;"></i>
+                    <span style="font-size: 0.95rem; font-family: var(--font-heading); font-weight: 600;">Low-Fidelity Screen Wireframe Layouts</span>
+                </div> -->
+                <p>Early wireframes focused on layout, hierarchy, and navigation. I explored structures centered around a personalized home dashboard, interactive map exploration, a visual itinerary builder, and persistent access to safety features.</p>
+
+                <h3>13. Design System</h3>
+                <img src="yonder_design_system.png" alt="Bookish Color Palette" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
+
+                <!-- <div class="project-img-placeholder stylized-bg-3" style="height: 150px; border-radius: 8px; margin: 1.5rem 0; font-size: 1.5rem; flex-direction: column; gap: 0.5rem;">
+                    <i class="fa-solid fa-palette" style="font-size: 2.5rem;"></i>
+                    <span style="font-size: 0.95rem; font-family: var(--font-heading); font-weight: 600;">Approach & Color Spec (Soft Teal & Rounded Shapes)</span>
+                </div> -->
+                <p>The visual language was intentionally calm and approachable to reinforce trust: soft teal palette to communicate safety and exploration, rounded components for a welcoming interface, clear typography, and consistent spacing targets.</p>
+
+                <h3>14. Final UI</h3>
+                <img src="yonder_final_UIxxxhdpi.png" alt="Bookish Color Palette" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
+                <p>The final prototype combines itinerary planning, destination discovery, and safety features like emergency contacts, live location sharing, and quick-access SOS functionality into one cohesive mobile experience.</p>
+
+                <h3>15. Prototype</h3>
+                <img src="yonder_prototype.png" alt="Bookish Color Palette" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
+                <p>The prototype demonstrates Maya's core travel planning experience from onboarding through itinerary creation and destination exploration.</p>
+                <!-- <div class="project-img-placeholder stylized-bg-4" style="height: 200px; border-radius: 8px; margin: 1.5rem 0; font-size: 1.5rem; flex-direction: column; gap: 0.75rem;">
+                    <i class="fa-solid fa-mobile-screen-button" style="font-size: 3rem;"></i>
+                    <span style="font-size: 1rem; font-family: var(--font-heading); font-weight: 600;">Interactive Prototype Stream</span>
+                </div> -->
+
+                <h3>16. Testing</h3>
+                <p>Due to the project's two-day timeframe, formal usability testing wasn't conducted. Instead, I iterated on the interface using research insights, heuristic evaluation, and continuous design reviews throughout the sprint. Future iterations would include moderated usability testing to validate navigation and feature discoverability with solo travelers.</p>
+
+                <h3>17. Reflection</h3>
+                <p>This project reinforced that designing for travel extends beyond booking experiences. Solo travelers need products that reduce uncertainty while preserving the excitement of exploration. If I continued developing YonderLust, I would expand the product with AI-powered itinerary recommendations, community features for connecting with fellow travelers, and location-based safety insights to create a more personalized and supportive travel experience.</p>
+                
+                <div class="modal-nav">
+                    <button type="button" class="btn btn-secondary modal-nav-btn prev-modal-btn" data-prev="modal-bookish"><i class="fa-solid fa-arrow-left"></i> Prev Project</button>
+                    <button type="button" class="btn btn-primary modal-nav-btn next-modal-btn" data-next="modal-aura">Next Project <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
             </div>
         </div>
     </div>
@@ -841,22 +1074,160 @@ Button("Save Changes") {
     <div class="modal" id="modal-aura">
         <div class="modal-overlay"></div>
         <div class="modal-container">
-            <button class="modal-close" aria-label="Close modal"><i class="fa-solid fa-xmark"></i></button>
+            <button class="modal-close" aria-label="Back to Portfolio"><i class="fa-solid fa-house"></i></button>
             <div class="modal-body">
-                <h2>Aura LOOKBOOK</h2>
-                <p class="modal-subtitle text-highlight">Brand Identity & Editorial | Illustrator, Photoshop, InDesign</p>
+                <h2>AURA</h2>
+                <p class="modal-subtitle text-highlight">Designing a luxury fashion brand through editorial storytelling</p>
                 <hr>
-                <h3>Overview</h3>
-                <p>A brand style guide and fashion editorial lookbook created to establish a cohesive visual identity and showcase seasonal fashion collections through premium storytelling.</p>
-                <h3>Contributions & Process</h3>
+
+                <h3>1. Introduction</h3>
+                <img src="aura_1.png" alt="Bookish Color Palette" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
+                <p>Luxury fashion is built on more than products. Every touchpoint, from the logo to packaging and digital experiences, shapes how customers perceive the brand.</p>
+                <p>AURA is a conceptual luxury fashion brand inspired by celestial storytelling, combining editorial aesthetics with contemporary elegance to create a cohesive identity across print and digital experiences.</p>
+
+                <h3>2. Overview</h3>
+                <p><strong>Role:</strong> Brand Experience Designer<br>
+                <strong>Duration:</strong> 2 Weeks<br>
+                <strong>Tools:</strong> Adobe Illustrator • Photoshop • InDesign<br>
+                <strong>Deliverables:</strong> Brand Strategy • Visual Identity • Editorial Lookbook • Style Guide • Packaging Concepts • Digital Brand Guidelines</p>
+
+                <h3>3. The Challenge</h3>
+                <p>Create a premium fashion brand that feels emotionally engaging and visually distinctive while maintaining consistency across every customer touchpoint, from editorial layouts to packaging and digital experiences.</p>
+
+                <h3>4. Project Goals</h3>
                 <ul>
-                    <li>Created editorial layouts, custom illustrations, and a cohesive visual design system that strengthened the brand's celestial-inspired identity.</li>
-                    <li>Established typography, visual hierarchy rules, and campaign assets for consistent storytelling across print and digital marketing channels.</li>
+                    <li>Develop a recognizable luxury brand identity.</li>
+                    <li>Create a scalable visual system for print and digital.</li>
+                    <li>Establish consistent typography, color, and imagery guidelines.</li>
+                    <li>Design an editorial lookbook that introduces the debut collection through visual storytelling.</li>
                 </ul>
+
+                <h3>5. Brand Strategy</h3>
+                <p>AURA is positioned as a luxury fashion house where contemporary elegance meets celestial fantasy. Every design decision reinforces the brand's core values of artistry, emotion, elegance, authenticity, and imagination, creating an immersive and memorable brand experience.</p>
+
+                <h3>6. Creative Direction</h3>
+                <img src="aura_moodboardxxxhdpi.png" alt="Bookish Color Palette" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
+                <p>The visual direction draws inspiration from celestial landscapes, soft lighting, and editorial fashion photography.</p>
+                <p><strong>Design Principles:</strong> Celestial-inspired storytelling, elegant editorial layouts, premium typography, rich atmospheric color palette, and minimal yet expressive compositions.</p>
+
+
+                <h3>7. Visual Identity</h3>
+                <h4>Logo</h4>
+                <img src="aura_logo_1.png" alt="Bookish Color Palette" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
+                <img src="aura_logo_2.png" alt="Bookish Color Palette" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
+                <p>The custom wordmark reflects AURA's ethereal personality through refined typography and hand-crafted details, creating a timeless identity that feels both modern and luxurious.</p>
+                <!-- <div class="project-img-placeholder stylized-bg-1" style="height: 150px; border-radius: 8px; margin: 1.5rem 0; font-size: 1.5rem; flex-direction: column; gap: 0.5rem;">
+                    <i class="fa-solid fa-signature" style="font-size: 2.5rem;"></i>
+                    <span style="font-size: 0.95rem; font-family: var(--font-heading); font-weight: 600;">Logo Concept & Typography Exploration Sheet</span>
+                </div> -->
+
+                <h4>Color System</h4>
+                <img src="aura_palette1.png" alt="Bookish Color Palette" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
+                <img src="aura_palette2.png" alt="Bookish Color Palette" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
+                <p>The palette combines deep navy tones with warm gold accents and soft neutrals to evoke mystery, elegance, and celestial beauty while maintaining strong visual contrast across print and digital applications.</p>
+                <!-- <div class="project-img-placeholder stylized-bg-4" style="height: 150px; border-radius: 8px; margin: 1.5rem 0; font-size: 1.5rem; flex-direction: column; gap: 0.5rem;">
+                    <i class="fa-solid fa-palette" style="font-size: 2.5rem;"></i>
+                    <span style="font-size: 0.95rem; font-family: var(--font-heading); font-weight: 600;">Celestial Palette Swatches (Navy, Gold, Ivory, Grey)</span>
+                </div> -->
+
+                <h4>Typography</h4>
+                <img src="aura_typography.png" alt="Bookish Color Palette" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
+                <p>A combination of Major Mono Display, Arapey, and Ubuntu establishes a clear visual hierarchy while balancing editorial sophistication with readability across different media.</p>
+                <!-- <div class="project-img-placeholder stylized-bg-3" style="height: 150px; border-radius: 8px; margin: 1.5rem 0; font-size: 1.5rem; flex-direction: column; gap: 0.5rem;">
+                    <i class="fa-solid fa-font" style="font-size: 2.5rem;"></i>
+                    <span style="font-size: 0.95rem; font-family: var(--font-heading); font-weight: 600;">Typography Spec System (Heading, Subheading, Body hierarchy)</span>
+                </div> -->
+
+                <h3>8. Editorial System</h3>
+                <img src="aura_editorial.png" alt="Bookish Color Palette" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
+                <p>To create a cohesive storytelling experience, I developed a flexible editorial system that includes: grid-based layouts, consistent typography hierarchy, full-bleed imagery, generous whitespace, and fashion illustrations integrated with photography. This system ensures visual consistency while allowing each collection to communicate its own narrative.</p>
+                <!-- <div class="project-img-placeholder stylized-bg-2" style="height: 150px; border-radius: 8px; margin: 1.5rem 0; font-size: 1.5rem; flex-direction: column; gap: 0.5rem;">
+                    <i class="fa-solid fa-book-open" style="font-size: 2.5rem;"></i>
+                    <span style="font-size: 0.95rem; font-family: var(--font-heading); font-weight: 600;">Lookbook Spread Grid System & Spacing Spec Templates</span>
+                </div> -->
+
+                <h3>9. Brand Applications</h3>
+                <p>The identity extends beyond print into multiple customer touchpoints.</p>
+                
+                <h4>Packaging</h4>
+                <img src="aura_packaging.png" alt="Bookish Color Palette" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
+                <p>Designed premium packaging featuring navy boxes, gold foil branding, patterned tissue paper, and poetic message cards to reinforce the unboxing experience.</p>
+                
+                <h4>Digital Experience</h4>
+                <img src="aura_digital.png" alt="Bookish Color Palette" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
+                <p>Created guidelines for editorial web layouts, social media content, iconography, and interface elements to ensure the brand remains consistent across digital platforms.</p>
+                
+                <h4>Retail Experience</h4>
+                <p>Developed merchandising concepts inspired by celestial environments, incorporating ambient lighting, layered fabrics, and constellation-inspired displays to create an immersive in-store experience.</p>
+
+                <h3>10. Final Deliverables</h3>
+                
+                <ul>
+                    <li>Brand Identity</li>
+                    <li>Logo System</li>
+                    <li>Typography Guidelines</li>
+                    <li>Color Palette</li>
+                    <li>Editorial Lookbook</li>
+                    <li>Fashion Illustrations</li>
+                    <li>Packaging Concepts</li>
+                    <li>Digital Style Guide</li>
+                    <li>Social Media Direction</li>
+                </ul>
+
+                <div class="aura-gallery-container">
+                    <div class="aura-gallery-slides">
+                        <div class="aura-gallery-slide active">
+                            <img src="aura_editorial.png" alt="AURA Editorial Lookbook Spreads">
+                            <p class="aura-gallery-caption">Astria Collection & Editorial Spreads</p>
+                        </div>
+                        <div class="aura-gallery-slide">
+                            <img src="aura_palette1.png" alt="AURA Dreamscapes Palette">
+                            <p class="aura-gallery-caption">Dreamscapes - Muted Luxury Palette</p>
+                        </div>
+                        <div class="aura-gallery-slide">
+                            <img src="aura_logo_1.png" alt="AURA Stellar Logo Usage">
+                            <p class="aura-gallery-caption">Stellar Usage - Logo Clean Space Guidelines</p>
+                        </div>
+                        <div class="aura-gallery-slide">
+                            <img src="aura_typography.png" alt="AURA Ethereal Content Style">
+                            <p class="aura-gallery-caption">Ethereal Content - Imagery Composition Rules</p>
+                        </div>
+                        <div class="aura-gallery-slide">
+                            <img src="aura_moodboardxxxhdpi.png" alt="AURA Celestial Moodboard">
+                            <p class="aura-gallery-caption">Debut Collection Creative Direction Moodboard</p>
+                        </div>
+                    </div>
+                    
+                    <button type="button" class="aura-gallery-arrow prev" aria-label="Previous Slide"><i class="fa-solid fa-chevron-left"></i></button>
+                    <button type="button" class="aura-gallery-arrow next" aria-label="Next Slide"><i class="fa-solid fa-chevron-right"></i></button>
+                    
+                    <div class="aura-gallery-dots">
+                        <span class="aura-dot active" data-slide="0"></span>
+                        <span class="aura-dot" data-slide="1"></span>
+                        <span class="aura-dot" data-slide="2"></span>
+                        <span class="aura-dot" data-slide="3"></span>
+                        <span class="aura-dot" data-slide="4"></span>
+                    </div>
+                </div>
+
+                <h3>11. Reflection</h3>
+                <p>AURA strengthened my ability to design beyond individual assets and think holistically about brand experience. Building a complete identity system reinforced how consistency, storytelling, and thoughtful design decisions shape how people perceive a brand across physical and digital touchpoints.</p>
+                <p>If I expanded the project, I would design a responsive ecommerce experience, interactive digital lookbook, and comprehensive design system to extend the brand seamlessly into a modern online retail experience.</p>
+                
+                <div class="modal-nav">
+                    <button type="button" class="btn btn-secondary modal-nav-btn prev-modal-btn" data-prev="modal-yonderlust"><i class="fa-solid fa-arrow-left"></i> Prev Project</button>
+                    <a href="#selected-work" class="btn btn-primary modal-nav-btn next-modal-btn" data-action="close-scroll">Selected Work <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
             </div>
         </div>
     </div>
 
+
+    <!-- Image Lightbox Modal for Mobile/Tablet -->
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close"><i class="fa-solid fa-xmark"></i></span>
+        <img class="lightbox-content" id="lightbox-img" alt="Enlarged Case Study View">
+    </div>
 
     <!-- Scripts -->
     <script src="script.js"></script>

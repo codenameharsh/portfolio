@@ -140,6 +140,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const targetModal = document.getElementById(modalId);
             if (targetModal) {
                 targetModal.classList.add('active');
+                targetModal.querySelector('.modal-container').scrollTop = 0;
                 document.body.style.overflow = 'hidden'; // Lock background scroll
             }
         });
@@ -157,6 +158,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const targetModal = document.getElementById(modalId);
             if (targetModal) {
                 targetModal.classList.add('active');
+                targetModal.querySelector('.modal-container').scrollTop = 0;
                 document.body.style.overflow = 'hidden';
             }
         });
@@ -275,5 +277,122 @@ document.addEventListener('DOMContentLoaded', () => {
 
         footerObserver.observe(footer);
     }
+
+    // 9. AURA Case Study Gallery Slider
+    const auraGallery = document.querySelector('.aura-gallery-container');
+    if (auraGallery) {
+        const slides = auraGallery.querySelectorAll('.aura-gallery-slide');
+        const prevBtn = auraGallery.querySelector('.aura-gallery-arrow.prev');
+        const nextBtn = auraGallery.querySelector('.aura-gallery-arrow.next');
+        const dots = auraGallery.querySelectorAll('.aura-dot');
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            slides[currentSlide].classList.remove('active');
+            dots[currentSlide].classList.remove('active');
+            
+            currentSlide = (index + slides.length) % slides.length;
+            
+            slides[currentSlide].classList.add('active');
+            dots[currentSlide].classList.add('active');
+        }
+
+        prevBtn.addEventListener('click', () => showSlide(currentSlide - 1));
+        nextBtn.addEventListener('click', () => showSlide(currentSlide + 1));
+
+        dots.forEach(dot => {
+            dot.addEventListener('click', () => {
+                const index = parseInt(dot.getAttribute('data-slide'));
+                showSlide(index);
+            });
+        });
+    }
+
+    // 10. Scroll Progress Bar
+    window.addEventListener('scroll', () => {
+        const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        if (height > 0) {
+            const scrolled = (winScroll / height) * 100;
+            const progress = document.getElementById('scroll-progress');
+            if (progress) progress.style.width = scrolled + '%';
+        }
+    });
+
+    // 11. Image Lightbox for Mobile/Tablet Screens
+    const caseImages = document.querySelectorAll('.modal-body img');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxClose = document.querySelector('.lightbox-close');
+
+    caseImages.forEach(img => {
+        img.addEventListener('click', () => {
+            if (window.innerWidth <= 1024) {
+                lightboxImg.src = img.src;
+                lightboxImg.alt = img.alt;
+                lightbox.classList.add('active');
+            }
+        });
+    });
+
+    if (lightbox && lightboxClose) {
+        lightboxClose.addEventListener('click', () => {
+            lightbox.classList.remove('active');
+        });
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                lightbox.classList.remove('active');
+            }
+        });
+    }
+
+    // 12. Modal Bottom Navigation Buttons
+    const modalNavButtons = document.querySelectorAll('.modal-nav-btn');
+    modalNavButtons.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            const currentModal = btn.closest('.modal');
+            const action = btn.getAttribute('data-action');
+            const nextModalId = btn.getAttribute('data-next');
+            const prevModalId = btn.getAttribute('data-prev');
+
+            if (currentModal) {
+                currentModal.classList.remove('active');
+                
+                if (action === 'close-scroll') {
+                    document.body.style.overflow = '';
+                } else if (nextModalId) {
+                    const nextModal = document.getElementById(nextModalId);
+                    if (nextModal) {
+                        setTimeout(() => {
+                            nextModal.classList.add('active');
+                            nextModal.querySelector('.modal-container').scrollTop = 0;
+                            document.body.style.overflow = 'hidden';
+                        }, 250);
+                    }
+                } else if (prevModalId) {
+                    const prevModal = document.getElementById(prevModalId);
+                    if (prevModal) {
+                        setTimeout(() => {
+                            prevModal.classList.add('active');
+                            prevModal.querySelector('.modal-container').scrollTop = 0;
+                            document.body.style.overflow = 'hidden';
+                        }, 250);
+                    }
+                }
+            }
+        });
+    });
+
+    // 13. Close open modals when main navigation links are clicked
+    const mainNavLinks = document.querySelectorAll('.nav-link, .logo');
+    mainNavLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            const activeModals = document.querySelectorAll('.modal.active');
+            activeModals.forEach(m => {
+                m.classList.remove('active');
+            });
+            document.body.style.overflow = '';
+        });
+    });
 
 });
