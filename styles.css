@@ -1162,31 +1162,7 @@ body {
     transform: translateY(0);
 }
 
-.modal-close {
-    position: sticky;
-    top: 1.5rem;
-    float: right;
-    z-index: 100;
-    margin-bottom: -3.5rem;
-    background: rgba(10, 10, 15, 0.85);
-    border: 1px solid var(--card-border);
-    backdrop-filter: var(--glass-blur);
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--text-primary);
-    cursor: pointer;
-    transition: var(--transition-fast);
-}
 
-.modal-close:hover {
-    background: var(--primary);
-    border-color: var(--primary);
-    color: var(--white);
-}
 
 .modal-body h2 {
     font-family: var(--font-heading);
