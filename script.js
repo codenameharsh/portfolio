@@ -140,7 +140,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const targetModal = document.getElementById(modalId);
             if (targetModal) {
                 targetModal.classList.add('active');
-                targetModal.querySelector('.modal-container').scrollTop = 0;
+                targetModal.scrollTop = 0;
                 document.body.style.overflow = 'hidden'; // Lock background scroll
             }
         });
@@ -158,7 +158,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const targetModal = document.getElementById(modalId);
             if (targetModal) {
                 targetModal.classList.add('active');
-                targetModal.querySelector('.modal-container').scrollTop = 0;
+                targetModal.scrollTop = 0;
                 document.body.style.overflow = 'hidden';
             }
         });
@@ -365,7 +365,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     if (nextModal) {
                         setTimeout(() => {
                             nextModal.classList.add('active');
-                            nextModal.querySelector('.modal-container').scrollTop = 0;
+                            nextModal.scrollTop = 0;
                             document.body.style.overflow = 'hidden';
                         }, 250);
                     }
@@ -374,7 +374,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     if (prevModal) {
                         setTimeout(() => {
                             prevModal.classList.add('active');
-                            prevModal.querySelector('.modal-container').scrollTop = 0;
+                            prevModal.scrollTop = 0;
                             document.body.style.overflow = 'hidden';
                         }, 250);
                     }
