@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let wordIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
-    let typingSpeed = 100;
+    let typingSpeed = 70;
 
     function type() {
         const currentWord = words[wordIndex];
@@ -51,20 +51,20 @@ document.addEventListener('DOMContentLoaded', () => {
         if (isDeleting) {
             typingText.textContent = currentWord.substring(0, charIndex - 1);
             charIndex--;
-            typingSpeed = 50; // Speed up when deleting
+            typingSpeed = 35; // Speed up when deleting
         } else {
             typingText.textContent = currentWord.substring(0, charIndex + 1);
             charIndex++;
-            typingSpeed = 100; // Normal speed when typing
+            typingSpeed = 70; // Normal speed when typing
         }
 
         if (!isDeleting && charIndex === currentWord.length) {
-            typingSpeed = 2000; // Pause at full word
+            typingSpeed = 1500; // Pause at full word
             isDeleting = true;
         } else if (isDeleting && charIndex === 0) {
             isDeleting = false;
             wordIndex = (wordIndex + 1) % words.length;
-            typingSpeed = 500; // Pause before typing next word
+            typingSpeed = 300; // Pause before typing next word
         }
 
         setTimeout(type, typingSpeed);
@@ -231,30 +231,81 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 7. Interactive visual card shift on hover (3D-like tilt)
-    const heroVisual = document.querySelector('.hero-visual');
-    if (heroVisual) {
-        heroVisual.addEventListener('mousemove', (e) => {
-            const rect = heroVisual.getBoundingClientRect();
-            const x = e.clientX - rect.left - (rect.width / 2);
-            const y = e.clientY - rect.top - (rect.height / 2);
+    // 7. Interactive Before/After Comparison Slider (Design vs. Code)
+    const sliderContainer = document.getElementById('hero-slider-container');
+    const sliderHandle = document.getElementById('slider-handle');
+    const panelDesign = document.getElementById('panel-design');
+
+    if (sliderContainer && sliderHandle && panelDesign) {
+        let isDragging = false;
+
+        // Keep inner panel contents matching the container width for stable centering
+        function resizeSlider() {
+            const width = sliderContainer.clientWidth;
+            const contents = sliderContainer.querySelectorAll('.slider-panel-content');
+            contents.forEach(content => {
+                content.style.width = `${width}px`;
+            });
+        }
+
+        function updateSlider(clientX) {
+            const rect = sliderContainer.getBoundingClientRect();
+            let position = ((clientX - rect.left) / rect.width) * 100;
             
-            // Subtle rotation adjustments
-            const rotateX = -y / 15;
-            const rotateY = x / 15;
+            // Constrain slider position between 5% and 95%
+            position = Math.max(5, Math.min(95, position));
             
-            const card = heroVisual.querySelector('.visual-card-wrapper');
-            if (card) {
-                card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+            sliderHandle.style.left = `${position}%`;
+            panelDesign.style.width = `${position}%`;
+        }
+
+        // Mouse Events
+        sliderHandle.addEventListener('mousedown', (e) => {
+            isDragging = true;
+            sliderContainer.classList.add('dragging');
+            e.preventDefault();
+        });
+
+        window.addEventListener('mouseup', () => {
+            isDragging = false;
+            if (sliderContainer) {
+                sliderContainer.classList.remove('dragging');
             }
         });
 
-        heroVisual.addEventListener('mouseleave', () => {
-            const card = heroVisual.querySelector('.visual-card-wrapper');
-            if (card) {
-                card.style.transform = 'rotateX(0deg) rotateY(0deg)';
+        window.addEventListener('mousemove', (e) => {
+            if (!isDragging) return;
+            updateSlider(e.clientX);
+        });
+
+        // Touch Events for Mobile
+        sliderHandle.addEventListener('touchstart', (e) => {
+            isDragging = true;
+            sliderContainer.classList.add('dragging');
+        }, { passive: true });
+
+        window.addEventListener('touchend', () => {
+            isDragging = false;
+            if (sliderContainer) {
+                sliderContainer.classList.remove('dragging');
             }
         });
+
+        window.addEventListener('touchmove', (e) => {
+            if (!isDragging) return;
+            if (e.touches && e.touches[0]) {
+                updateSlider(e.touches[0].clientX);
+            }
+        });
+
+        // Support container click interaction
+        sliderContainer.addEventListener('click', (e) => {
+            if (e.target.closest('.inline-card') || e.target.closest('.slider-handle')) return;
+            updateSlider(e.clientX);
+        });
+
+        window.addEventListener('resize', resizeSlider);
+        resizeSlider(); // Initial run
     }
 
     // 8. Scroll Indicator Footer Collision Avoidance
