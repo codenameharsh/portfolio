@@ -231,82 +231,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 7. Interactive Before/After Comparison Slider (Design vs. Code)
-    const sliderContainer = document.getElementById('hero-slider-container');
-    const sliderHandle = document.getElementById('slider-handle');
-    const panelDesign = document.getElementById('panel-design');
-
-    if (sliderContainer && sliderHandle && panelDesign) {
-        let isDragging = false;
-
-        // Keep inner panel contents matching the container width for stable centering
-        function resizeSlider() {
-            const width = sliderContainer.clientWidth;
-            const contents = sliderContainer.querySelectorAll('.slider-panel-content');
-            contents.forEach(content => {
-                content.style.width = `${width}px`;
-            });
-        }
-
-        function updateSlider(clientX) {
-            const rect = sliderContainer.getBoundingClientRect();
-            let position = ((clientX - rect.left) / rect.width) * 100;
-            
-            // Constrain slider position between 5% and 95%
-            position = Math.max(5, Math.min(95, position));
-            
-            sliderHandle.style.left = `${position}%`;
-            panelDesign.style.width = `${position}%`;
-        }
-
-        // Mouse Events
-        sliderHandle.addEventListener('mousedown', (e) => {
-            isDragging = true;
-            sliderContainer.classList.add('dragging');
-            e.preventDefault();
-        });
-
-        window.addEventListener('mouseup', () => {
-            isDragging = false;
-            if (sliderContainer) {
-                sliderContainer.classList.remove('dragging');
-            }
-        });
-
-        window.addEventListener('mousemove', (e) => {
-            if (!isDragging) return;
-            updateSlider(e.clientX);
-        });
-
-        // Touch Events for Mobile
-        sliderHandle.addEventListener('touchstart', (e) => {
-            isDragging = true;
-            sliderContainer.classList.add('dragging');
-        }, { passive: true });
-
-        window.addEventListener('touchend', () => {
-            isDragging = false;
-            if (sliderContainer) {
-                sliderContainer.classList.remove('dragging');
-            }
-        });
-
-        window.addEventListener('touchmove', (e) => {
-            if (!isDragging) return;
-            if (e.touches && e.touches[0]) {
-                updateSlider(e.touches[0].clientX);
-            }
-        });
-
-        // Support container click interaction
-        sliderContainer.addEventListener('click', (e) => {
-            if (e.target.closest('.inline-card') || e.target.closest('.slider-handle')) return;
-            updateSlider(e.clientX);
-        });
-
-        window.addEventListener('resize', resizeSlider);
-        resizeSlider(); // Initial run
-    }
+    // 7. Circular Before/After Auto-Transition Alignment (Design vs. Code)
+    // Removed to prevent performance-intensive layout reflow calculations on mobile window resizing.
 
     // 8. Scroll Indicator Footer Collision Avoidance
     const scrollIndicator = document.querySelector('.scroll-indicator');
