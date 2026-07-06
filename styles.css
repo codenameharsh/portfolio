@@ -1329,13 +1329,14 @@ body {
     }
 
     .nav-menu {
-        position: fixed;
-        top: 4.8rem;
+        position: absolute !important; /* Absolute layout inside fixed header keeps it perfectly flush and fixed relative to viewport */
+        top: 100% !important; /* Always start exactly at the bottom border of the header */
         left: 0;
         width: 100%;
-        bottom: 0;
-        background: rgba(10, 10, 15, 0.95);
-        backdrop-filter: var(--glass-blur);
+        height: 100vh; /* Fills screen height smoothly */
+        background: #0a0a0f !important; /* Solid background prevents nested fixed overlay blending bugs */
+        backdrop-filter: none !important; /* Disables nested backdrop-filter to fix rendering opacity glitches */
+        -webkit-backdrop-filter: none !important;
         border-top: 1px solid var(--card-border);
         flex-direction: column;
         align-items: center;
@@ -1345,6 +1346,7 @@ body {
         opacity: 0;
         pointer-events: none;
         transition: var(--transition-smooth);
+        z-index: -1 !important; /* Positions behind header logo/bar, sliding out from underneath it */
     }
 
     .nav-menu.active {
