@@ -303,12 +303,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const lightboxClose = document.querySelector('.lightbox-close');
 
     caseImages.forEach(img => {
+        img.style.cursor = 'zoom-in'; // Visual indicator that images can be expanded
         img.addEventListener('click', () => {
-            if (window.innerWidth <= 1024) {
-                lightboxImg.src = img.src;
-                lightboxImg.alt = img.alt;
-                lightbox.classList.add('active');
-            }
+            lightboxImg.src = img.src;
+            lightboxImg.alt = img.alt;
+            lightbox.classList.add('active');
         });
     });
 
