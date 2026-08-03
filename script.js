@@ -285,7 +285,29 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 10. Scroll Progress Bar
+    // 10. Foundmoon Final UI Gallery Slider
+    const foundmoonGallery = document.querySelector('.foundmoon-gallery');
+    if (foundmoonGallery) {
+        const slides = foundmoonGallery.querySelectorAll('.foundmoon-gallery-slide');
+        const prevBtn = foundmoonGallery.querySelector('.foundmoon-gallery-arrow.prev');
+        const nextBtn = foundmoonGallery.querySelector('.foundmoon-gallery-arrow.next');
+        const dots = foundmoonGallery.querySelectorAll('.foundmoon-gallery-dot');
+        let currentSlide = 0;
+
+        function showFoundmoonSlide(index) {
+            slides[currentSlide].classList.remove('active');
+            dots[currentSlide].classList.remove('active');
+            currentSlide = (index + slides.length) % slides.length;
+            slides[currentSlide].classList.add('active');
+            dots[currentSlide].classList.add('active');
+        }
+
+        prevBtn.addEventListener('click', () => showFoundmoonSlide(currentSlide - 1));
+        nextBtn.addEventListener('click', () => showFoundmoonSlide(currentSlide + 1));
+        dots.forEach(dot => dot.addEventListener('click', () => showFoundmoonSlide(Number(dot.dataset.slide))));
+    }
+
+    // 11. Scroll Progress Bar
     window.addEventListener('scroll', () => {
         const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
         const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;

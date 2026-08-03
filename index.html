@@ -203,23 +203,23 @@
                         </div>
                     </article>
 
-                    <!-- Project 3: Bookish -->
-                    <article class="project-card" data-project="bookish">
+                    <!-- Project 3: Foundmoon -->
+                    <article class="project-card" data-project="foundmoon-app">
                         <div class="project-img-wrapper">
                             <div class="project-img-placeholder stylized-bg-2">
                                 <i class="fa-solid fa-book-open"></i>
                             </div>
                         </div>
                         <div class="project-info">
-                            <span class="project-category">UX Design & Mobile Development</span>
-                            <h3 class="project-card-title">Bookish</h3>
-                            <p class="project-desc">Book tracking platform for managing reading progress, organizing personal libraries, and writing reviews. Crafted interactive prototypes and mapped user journeys.</p>
+                            <span class="project-category">Android Product Design & Development</span>
+                            <h3 class="project-card-title">Foundmoon</h3>
+                            <p class="project-desc">A thoughtful Android book tracker that helps readers build a personal library, track reading progress, and keep a calm record of every finished story.</p>
                             <div class="project-tags">
                                 <span>Figma</span>
-                                <span>XCode</span>
-                                <span>SwiftUI</span>
+                                <span>Android</span>
+                                <span>Jetpack Compose</span>
                             </div>
-                            <a href="#" class="project-link" data-modal="modal-bookish">Explore Details <i class="fa-solid fa-arrow-right"></i></a>
+                            <a href="#" class="project-link" data-modal="modal-foundmoon-app">Explore Details <i class="fa-solid fa-arrow-right"></i></a>
                         </div>
                     </article>
 
@@ -836,7 +836,247 @@ ishtyle (Root)
                 
                 <div class="modal-nav">
                     <button type="button" class="btn btn-secondary modal-nav-btn prev-modal-btn" data-prev="modal-ai-stylist"><i class="fa-solid fa-arrow-left"></i> Prev Project</button>
-                    <button type="button" class="btn btn-primary modal-nav-btn next-modal-btn" data-next="modal-bookish">Next Project <i class="fa-solid fa-arrow-right"></i></button>
+                    <button type="button" class="btn btn-primary modal-nav-btn next-modal-btn" data-next="modal-foundmoon-app">Next Project <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Foundmoon Android App Modal -->
+    <div class="modal" id="modal-foundmoon-app">
+        <div class="modal-overlay"></div>
+        <div class="modal-container">
+            <div class="modal-body">
+                <h2>Foundmoon</h2>
+                <p class="modal-subtitle text-highlight">An intentional Android reading companion built for private progress</p>
+                <hr>
+
+                <h3>1. Introduction</h3>
+                <img src="foundmoon_feature_graphic.png" alt="Foundmoon app feature graphic" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
+                <p>Foundmoon is a native Android app for readers who want a quieter, more personal way to manage a reading life. It brings current reads, a searchable collection, reflective notes, monthly goals, and gentle reminders into one private place—without a social feed or public performance layer.</p>
+
+                <h3>2. Overview</h3>
+                <p><strong>Role:</strong> Product Designer & Android Developer<br>
+                <strong>Platform:</strong> Android 8.0+<br>
+                <strong>Build:</strong> Kotlin, Jetpack Compose, Material 3, WorkManager<br>
+                <strong>Data:</strong> Private versioned JSON storage with import/export support</p>
+
+                <h3>3. The Problem</h3>
+                <p>Reading trackers often turn a restorative habit into an overloaded catalog or a social performance. Foundmoon was designed around a different question: how might a book tracker make it easier to return to a book, record a thought, and see meaningful progress without demanding more attention than reading itself?</p>
+
+                <h3>4. Project Goals</h3>
+                <ul>
+                    <li><strong>Private by default:</strong> The library, notes, goals, and preferences remain on-device; readers can export a portable JSON copy when they choose.</li>
+                    <li><strong>Progress without pressure:</strong> Reading is tracked through flexible statuses—Want to Read, Currently Reading, Read, and DNF—plus adjustable monthly targets.</li>
+                    <li><strong>Quietly helpful:</strong> Reminders are configurable by frequency and content, including an end-of-month prompt to carry an unfinished title forward.</li>
+                </ul>
+
+                <h3>5. Competitive Research</h3>
+                <p>Foundmoon takes a deliberately different position from social-first book platforms and data-heavy trackers: it prioritizes an individual reader’s library, progress, notes, and reminders. The product avoids a public activity feed and keeps core records in private app storage, making the experience feel more like a personal reading journal than a performance space.</p>
+
+                <h3>6. Key Insights</h3>
+                <ul>
+                    <li><strong>Reading is non-linear:</strong> A reader needs permission to pause, return to, finish, or stop a book without breaking their history.</li>
+                    <li><strong>Active choice needs a boundary:</strong> Limiting the active shelf to three Currently Reading titles helps readers commit to a manageable next read.</li>
+                    <li><strong>Ownership builds trust:</strong> Import and export make the library portable instead of trapping reading history inside the app.</li>
+                </ul>
+
+                <h3>7. Persona</h3>
+                <p><strong>Clara, 28 · Intentional Reader:</strong> Clara reads to decompress after demanding workdays. She wants a private, visually calm place to remember the books she owns, see what she is reading now, and record a thought before moving on—without the pressure of public ratings or streaks.</p>
+
+                <h3>8. User Journey Map</h3>
+                <ul>
+                    <li><strong>Choose:</strong> Clara searches her Collection and promotes one title to Currently Reading.</li>
+                    <li><strong>Continue:</strong> She returns to Journey, updates the book’s status or notes, and sees her goal progress.</li>
+                    <li><strong>Reflect:</strong> At month end, a configurable reminder helps her decide whether an unfinished Want to Read title should roll over.</li>
+                </ul>
+
+                <h3>9. How Might We (HMW)</h3>
+                <ul>
+                    <li>How might we make a personal library feel inviting without reproducing the noise of a social platform?</li>
+                    <li>How might we support flexible reading states while helping readers keep their active shelf focused?</li>
+                    <li>How might reminders encourage a return to reading without becoming another source of pressure?</li>
+                </ul>
+
+                <h3>10. Information Architecture</h3>
+                <p>Foundmoon centers its Android navigation on three primary destinations: <strong>Journey</strong> for the current reading timeline, <strong>Collection</strong> for searchable shelves, and <strong>Goals</strong> for monthly progress. Full-screen editor, settings, and notification views support those destinations without crowding the main navigation.</p>
+                <pre style="background: rgba(255,255,255,0.05); padding: 1rem; border-radius: 8px; font-family: monospace; overflow-x: auto; color: var(--text-primary); margin: 1.5rem 0; border: 1px solid var(--card-border);"><span style="color: #818cf8;">enum class</span> <span style="color: #34d399;">Status</span>(<span style="color: #f472b6;">val</span> label: String) {
+    READ(<span style="color: #fb923c;">"Read"</span>),
+    WANT(<span style="color: #fb923c;">"Want to Read"</span>),
+    CURRENTLY_READING(<span style="color: #fb923c;">"Currently Reading"</span>),
+    DNF(<span style="color: #fb923c;">"DNF"</span>)
+}
+
+<span style="color: #818cf8;">data class</span> <span style="color: #34d399;">Book</span>(
+    <span style="color: #f472b6;">val</span> id: String = UUID.randomUUID().toString(),
+    <span style="color: #f472b6;">val</span> title: String,
+    <span style="color: #f472b6;">val</span> author: String,
+    <span style="color: #f472b6;">val</span> status: Status = Status.WANT,
+    <span style="color: #f472b6;">val</span> review: String = <span style="color: #fb923c;">""</span>,
+    <span style="color: #f472b6;">val</span> genre: String = <span style="color: #fb923c;">"Uncategorized"</span>
+)</pre>
+
+                <h3>11. User Flow</h3>
+                <p>Launch App ➔ Journey ➔ Add New Book or Open Existing Book ➔ Set Status, Genre & Notes ➔ Save ➔ Collection Updates ➔ Goals Reflect Current Month Progress. From Menu, readers can adjust appearance and notifications or safely import/export their library.</p>
+
+                <h3>12. Wireframes</h3>
+                <p>The screen hierarchy moves from a welcoming landing experience into a persistent three-tab reading space. The full-screen book editor keeps data entry focused, while book details use an in-context sheet for faster edits, status changes, and reflection.</p>
+
+                <h3>13. UI Design System</h3>
+                <p>The interface uses a night-sky reading palette—Deep Plum, Cream, Lavender, Coral, and Teal—supported by rounded cards, Material 3 controls, and a system/light/dark appearance setting. The implementation keeps those core values centralized for a consistent visual language.</p>
+                <pre style="background: rgba(255,255,255,0.05); padding: 1rem; border-radius: 8px; font-family: monospace; overflow-x: auto; color: var(--text-primary); margin: 1.5rem 0; border: 1px solid var(--card-border);"><span style="color: #f472b6;">private val</span> Plum = Color(<span style="color: #fb923c;">0xFF3E2A4D</span>)
+<span style="color: #f472b6;">private val</span> Cream = Color(<span style="color: #fb923c;">0xFFF7F1E8</span>)
+<span style="color: #f472b6;">private val</span> Lavender = Color(<span style="color: #fb923c;">0xFFB28ACA</span>)
+<span style="color: #f472b6;">private val</span> Coral = Color(<span style="color: #fb923c;">0xFFD47A78</span>)
+<span style="color: #f472b6;">private val</span> Teal = Color(<span style="color: #fb923c;">0xFF7AA6A6</span>)</pre>
+
+                <h3>14. Final UI Screen Showcase</h3>
+                <div class="foundmoon-gallery" aria-label="Foundmoon final UI gallery">
+                    <div class="foundmoon-gallery-slides">
+                        <figure class="foundmoon-gallery-slide active">
+                            <img src="foundmoon_journey.png" alt="Foundmoon Journey screen with monthly reading cards">
+                            <figcaption>Journey · browse your reading month and keep current titles in view.</figcaption>
+                        </figure>
+                        <figure class="foundmoon-gallery-slide">
+                            <img src="foundmoon_add_book.png" alt="Foundmoon Add New Book form">
+                            <figcaption>Add New Book · capture the essentials, reading status, and personal notes.</figcaption>
+                        </figure>
+                        <figure class="foundmoon-gallery-slide">
+                            <img src="foundmoon_goals.png" alt="Foundmoon monthly goals screen">
+                            <figcaption>Goals · set a monthly target and review reading progress over time.</figcaption>
+                        </figure>
+                        <figure class="foundmoon-gallery-slide">
+                            <img src="foundmoon_collection.png" alt="Foundmoon Collection screen">
+                            <figcaption>Collection · search, sort, and scan a complete personal library.</figcaption>
+                        </figure>
+                        <figure class="foundmoon-gallery-slide">
+                            <img src="foundmoon_collection_alt.png" alt="Foundmoon Collection screen alternate capture">
+                            <figcaption>Collection · status and genre treatments make each shelf easy to read.</figcaption>
+                        </figure>
+                    </div>
+                    <button type="button" class="foundmoon-gallery-arrow prev" aria-label="Previous Foundmoon screen"><i class="fa-solid fa-chevron-left"></i></button>
+                    <button type="button" class="foundmoon-gallery-arrow next" aria-label="Next Foundmoon screen"><i class="fa-solid fa-chevron-right"></i></button>
+                    <div class="foundmoon-gallery-dots" aria-label="Foundmoon screen selection">
+                        <button type="button" class="foundmoon-gallery-dot active" aria-label="Show Journey screen" data-slide="0"></button>
+                        <button type="button" class="foundmoon-gallery-dot" aria-label="Show Add New Book screen" data-slide="1"></button>
+                        <button type="button" class="foundmoon-gallery-dot" aria-label="Show Goals screen" data-slide="2"></button>
+                        <button type="button" class="foundmoon-gallery-dot" aria-label="Show Collection screen" data-slide="3"></button>
+                        <button type="button" class="foundmoon-gallery-dot" aria-label="Show alternate Collection screen" data-slide="4"></button>
+                    </div>
+                </div>
+                <p>The polished library surface puts a reader’s books first, using clear status treatment and searchable collection controls. The code uses Compose state to prevent an overloaded active shelf, then presents an explicit replacement choice when a fourth Currently Reading title is selected.</p>
+                <ul>
+                    <li><strong>Journey:</strong> Browse a time-based reading view, search by title or author, and quickly add a new book.</li>
+                    <li><strong>Collection:</strong> Filter a personal shelf by newest, genre, Want to Read, Currently Reading, DNF, or Read.</li>
+                    <li><strong>Goals:</strong> Set a monthly target from 1–20 books, review prior months, and receive a small celebration when the current goal is met.</li>
+                </ul>
+
+                <pre style="background: rgba(255,255,255,0.05); padding: 1rem; border-radius: 8px; font-family: monospace; overflow-x: auto; color: var(--text-primary); margin: 1.5rem 0; border: 1px solid var(--card-border);"><span style="color: #818cf8;">fun</span> <span style="color: #34d399;">saveBook</span>(book: Book) {
+    <span style="color: #f472b6;">val</span> otherCurrent = books.count {
+        it.id != book.id && it.status == Status.CURRENTLY_READING
+    }
+    <span style="color: #f472b6;">if</span> (book.status == Status.CURRENTLY_READING && otherCurrent >= <span style="color: #fb923c;">3</span>) {
+        pendingCurrentlyReading = book
+        <span style="color: #f472b6;">return</span>
+    }
+    books = <span style="color: #f472b6;">if</span> (existing == <span style="color: #f472b6;">null</span>) books + book <span style="color: #f472b6;">else</span> books.map {
+        <span style="color: #f472b6;">if</span> (it.id == book.id) book <span style="color: #f472b6;">else</span> it
+    }
+}</pre>
+
+                <h3>15. Interactive Prototype</h3>
+                <p>The shipped Android build packages the Compose experience as a debug APK and release AAB. Its interactive prototype includes the landing flow, book editor, status management, goals, dark mode, import/export, and notifications—so design decisions can be evaluated in the same environment where readers will use them.</p>
+
+                <h3>16. Usability Testing & Iteration</h3>
+                <p>Implementation validation focused on key user paths: adding and editing books, moving between reading states, enforcing the active-reading limit, preserving data across launches, merging an imported library, and respecting notification permission on Android 13+. A formal participant study is the next step; this case study does not present unverified usability metrics.</p>
+
+                <h3>17. Reflection</h3>
+                <p>The app stores a versioned data file in private app storage and migrates legacy preferences on first load. Readers can export their library as <code>foundmoon-books.json</code> and import it later; incoming records are merged by unique ID instead of overwriting the existing shelf.</p>
+                <p>Foundmoon is a study in designing for continuity rather than engagement metrics. The product reduces the effort required to remember what a reader is reading, gives them ownership over their data, and uses Android-native capabilities only when they support the reading habit.</p>
+
+                <div class="modal-nav">
+                    <button type="button" class="btn btn-secondary modal-nav-btn prev-modal-btn" data-prev="modal-ecocycle"><i class="fa-solid fa-arrow-left"></i> Prev Project</button>
+                    <button type="button" class="btn btn-primary modal-nav-btn next-modal-btn" data-next="modal-yonderlust">Next Project <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Foundmoon Modal -->
+    <div class="modal" id="modal-foundmoon">
+        <div class="modal-overlay"></div>
+        <div class="modal-container">
+            <div class="modal-body">
+                <h2>Foundmoon</h2>
+                <p class="modal-subtitle text-highlight">Foundmoon | An intentional Android book tracker</p>
+                <hr>
+
+                <h3>1. Introduction</h3>
+                <img src="bookish_intro.png" alt="Foundmoon Android book tracker overview" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
+                <p>Foundmoon is a calm Android companion for readers who want to remember the books that move them without turning reading into another noisy social feed. It brings a personal library, progress tracking, thoughtful notes, and gentle goals into one focused mobile experience.</p>
+
+                <h3>2. Overview</h3>
+                <p><strong>Role:</strong> Product Designer & Android Developer<br>
+                <strong>Platform:</strong> Android<br>
+                <strong>Focus:</strong> Personal library management, reading progress, and reflective book logging<br>
+                <strong>Tech Stack:</strong> Kotlin, Jetpack Compose, Room, Material 3</p>
+
+                <h3>3. The Problem</h3>
+                <p>Many book apps prioritize reviews, recommendations, and public activity over the private reading habit. Readers need a lightweight place to keep their shelves organized, capture progress quickly, and return to their next read without unnecessary setup or distraction.</p>
+
+                <h3>4. Product Goals</h3>
+                <ul>
+                    <li><strong>Make tracking effortless:</strong> Let readers add a title, update progress, or change a status in only a few taps.</li>
+                    <li><strong>Support a private reading ritual:</strong> Keep the experience focused on personal shelves, notes, and goals rather than social pressure.</li>
+                    <li><strong>Feel native to Android:</strong> Pair a warm editorial visual system with accessible Material 3 patterns and responsive touch targets.</li>
+                </ul>
+
+                <h3>5. Research & Key Insights</h3>
+                <p>Early conversations with active readers revealed a repeated need for clarity over complexity. Users wanted to know what they were reading now, what to pick up next, and how their small sessions added up over time.</p>
+                <ul>
+                    <li><strong>Reading status is fluid:</strong> A title can be paused, restarted, completed, or left unfinished without judgment.</li>
+                    <li><strong>Progress should be lightweight:</strong> Readers prefer a quick update over detailed daily reporting.</li>
+                    <li><strong>Personal context matters:</strong> Short notes and a clear shelf history make a tracker feel meaningful long after a book is finished.</li>
+                </ul>
+
+                <h3>6. Persona & Journey</h3>
+                <img src="bookish_persona.png" alt="Foundmoon reader persona" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
+                <p><strong>Clara, 28 · The Intentional Reader</strong><br>She reads to decompress after demanding workdays, but loses momentum when her books, notes, and reading goals live in separate places. Foundmoon gives Clara one calm home for her current read, her backlog, and the milestones she wants to celebrate privately.</p>
+
+                <h3>7. Core Experience</h3>
+                <img src="bookish_user_journey.png" alt="Foundmoon user journey" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
+                <ul>
+                    <li><strong>Discover:</strong> Open a clear home screen that immediately highlights the current book.</li>
+                    <li><strong>Log:</strong> Add a title to the library and choose a flexible status: Want to Read, Reading, Finished, or DNF.</li>
+                    <li><strong>Continue:</strong> Update progress in seconds and keep a small note alongside the book.</li>
+                    <li><strong>Reflect:</strong> Return to a personal shelf that records a reading life over time.</li>
+                </ul>
+
+                <h3>8. Information Architecture</h3>
+                <p>Foundmoon uses a focused Android navigation model built around the moments readers revisit most: their library, active reading, and personal goals.</p>
+                <ul>
+                    <li><strong>Home:</strong> Current read, progress snapshot, and a quick add action.</li>
+                    <li><strong>Library:</strong> Searchable shelves filtered by reading status.</li>
+                    <li><strong>Book Details:</strong> Progress, notes, metadata, and status controls.</li>
+                    <li><strong>Goals:</strong> A simple monthly target with encouraging milestone feedback.</li>
+                    <li><strong>Profile:</strong> Reading preferences and lightweight account settings.</li>
+                </ul>
+
+                <h3>9. Wireframes & Design System</h3>
+                <img src="bookish wireframes_001.png" alt="Foundmoon Android wireframes" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
+                <img src="bookish_design _system.png" alt="Foundmoon visual system" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
+                <p>The interface pairs warm, bookstore-inspired tones with generous spacing, rounded cards, and accessible Android controls. Covers and personal reading context remain the visual focus, while typography and status chips make shelves easy to scan.</p>
+
+                <h3>10. Final Android UI</h3>
+                <img src="bookish_finalUI.png" alt="Foundmoon final Android interface" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
+                <p>The final experience uses Jetpack Compose to keep core interactions responsive and consistent: a bottom navigation scaffold for orientation, modal sheets for focused book edits, and state-aware reading badges that let readers understand each shelf at a glance.</p>
+
+                <h3>11. Reflection</h3>
+                <p>Foundmoon demonstrates how a focused Android product can make a small ritual feel more sustainable. By reducing the work of logging a book and removing performative social pressure, the app leaves more attention for reading itself.</p>
+
+                <div class="modal-nav">
+                    <button type="button" class="btn btn-secondary modal-nav-btn prev-modal-btn" data-prev="modal-ecocycle"><i class="fa-solid fa-arrow-left"></i> Prev Project</button>
+                    <button type="button" class="btn btn-primary modal-nav-btn next-modal-btn" data-next="modal-yonderlust">Next Project <i class="fa-solid fa-arrow-right"></i></button>
                 </div>
             </div>
         </div>
@@ -1236,7 +1476,7 @@ Button("Save Changes") {
                 <p>This project reinforced that designing for travel extends beyond booking experiences. Solo travelers need products that reduce uncertainty while preserving the excitement of exploration. If I continued developing YonderLust, I would expand the product with AI-powered itinerary recommendations, community features for connecting with fellow travelers, and location-based safety insights to create a more personalized and supportive travel experience.</p>
                 
                 <div class="modal-nav">
-                    <button type="button" class="btn btn-secondary modal-nav-btn prev-modal-btn" data-prev="modal-bookish"><i class="fa-solid fa-arrow-left"></i> Prev Project</button>
+                    <button type="button" class="btn btn-secondary modal-nav-btn prev-modal-btn" data-prev="modal-foundmoon-app"><i class="fa-solid fa-arrow-left"></i> Prev Project</button>
                     <button type="button" class="btn btn-primary modal-nav-btn next-modal-btn" data-next="modal-aura">Next Project <i class="fa-solid fa-arrow-right"></i></button>
                 </div>
             </div>
