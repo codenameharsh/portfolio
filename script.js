@@ -132,6 +132,26 @@ document.addEventListener('DOMContentLoaded', () => {
     const modals = document.querySelectorAll('.modal');
     const closeButtons = document.querySelectorAll('.modal-close');
     const overlays = document.querySelectorAll('.modal-overlay');
+    let modalScrollPosition = 0;
+
+    function lockBackgroundScroll() {
+        if (document.body.classList.contains('modal-open')) return;
+        modalScrollPosition = window.scrollY;
+        document.body.style.top = `-${modalScrollPosition}px`;
+        document.body.classList.add('modal-open');
+    }
+
+    function unlockBackgroundScroll() {
+        if (!document.body.classList.contains('modal-open')) return;
+        document.body.classList.remove('modal-open');
+        document.body.style.top = '';
+        window.scrollTo(0, modalScrollPosition);
+    }
+
+    function resetModalScroll(modal) {
+        const container = modal.querySelector('.modal-container');
+        if (container) container.scrollTop = 0;
+    }
 
     modalTriggers.forEach(trigger => {
         trigger.addEventListener('click', (e) => {
@@ -140,8 +160,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const targetModal = document.getElementById(modalId);
             if (targetModal) {
                 targetModal.classList.add('active');
-                targetModal.scrollTop = 0;
-                document.body.style.overflow = 'hidden'; // Lock background scroll
+                resetModalScroll(targetModal);
+                lockBackgroundScroll();
             }
         });
     });
@@ -158,15 +178,15 @@ document.addEventListener('DOMContentLoaded', () => {
             const targetModal = document.getElementById(modalId);
             if (targetModal) {
                 targetModal.classList.add('active');
-                targetModal.scrollTop = 0;
-                document.body.style.overflow = 'hidden';
+                resetModalScroll(targetModal);
+                lockBackgroundScroll();
             }
         });
     });
 
     function closeModal(modal) {
         modal.classList.remove('active');
-        document.body.style.overflow = ''; // Restore background scroll
+        unlockBackgroundScroll();
     }
 
     closeButtons.forEach(btn => {
@@ -234,27 +254,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // 7. Circular Before/After Auto-Transition Alignment (Design vs. Code)
     // Removed to prevent performance-intensive layout reflow calculations on mobile window resizing.
 
-    // 8. Scroll Indicator Footer Collision Avoidance
-    const scrollIndicator = document.querySelector('.scroll-indicator');
-    const footer = document.querySelector('.footer-main');
-
-    if (scrollIndicator && footer) {
-        const footerObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    scrollIndicator.classList.add('at-footer');
-                } else {
-                    scrollIndicator.classList.remove('at-footer');
-                }
-            });
-        }, {
-            root: null, // Viewport
-            threshold: 0 // Trigger as soon as footer enters
-        });
-
-        footerObserver.observe(footer);
-    }
-
     // 9. AURA Case Study Gallery Slider
     const auraGallery = document.querySelector('.aura-gallery-container');
     if (auraGallery) {
@@ -307,16 +306,21 @@ document.addEventListener('DOMContentLoaded', () => {
         dots.forEach(dot => dot.addEventListener('click', () => showFoundmoonSlide(Number(dot.dataset.slide))));
     }
 
-    // 11. Scroll Progress Bar
-    window.addEventListener('scroll', () => {
+    // 11. Fixed Scroll Percentage
+    function updateScrollPercentage() {
         const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
         const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        if (height > 0) {
-            const scrolled = (winScroll / height) * 100;
-            const progress = document.getElementById('scroll-progress');
-            if (progress) progress.style.width = scrolled + '%';
+        const percentage = height > 0 ? Math.round((winScroll / height) * 100) : 0;
+        const indicator = document.getElementById('scroll-percentage-indicator');
+        const label = document.getElementById('scroll-percentage');
+        if (indicator && label) {
+            indicator.setAttribute('aria-valuenow', percentage);
+            label.textContent = `${percentage}%`;
         }
-    });
+    }
+
+    window.addEventListener('scroll', updateScrollPercentage, { passive: true });
+    updateScrollPercentage();
 
     // 11. Image Lightbox for Mobile/Tablet Screens
     const caseImages = document.querySelectorAll('.modal-body img');
@@ -357,14 +361,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 currentModal.classList.remove('active');
                 
                 if (action === 'close-scroll') {
-                    document.body.style.overflow = '';
+                    unlockBackgroundScroll();
                 } else if (nextModalId) {
                     const nextModal = document.getElementById(nextModalId);
                     if (nextModal) {
                         setTimeout(() => {
                             nextModal.classList.add('active');
-                            nextModal.scrollTop = 0;
-                            document.body.style.overflow = 'hidden';
+                            resetModalScroll(nextModal);
+                            lockBackgroundScroll();
                         }, 250);
                     }
                 } else if (prevModalId) {
@@ -372,8 +376,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     if (prevModal) {
                         setTimeout(() => {
                             prevModal.classList.add('active');
-                            prevModal.scrollTop = 0;
-                            document.body.style.overflow = 'hidden';
+                            resetModalScroll(prevModal);
+                            lockBackgroundScroll();
                         }, 250);
                     }
                 }
@@ -389,7 +393,7 @@ document.addEventListener('DOMContentLoaded', () => {
             activeModals.forEach(m => {
                 m.classList.remove('active');
             });
-            document.body.style.overflow = '';
+            unlockBackgroundScroll();
         });
     });
 
