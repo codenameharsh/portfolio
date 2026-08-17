@@ -103,28 +103,34 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 4. Scroll Spy Navigation (Highlight Active Section)
     const sections = document.querySelectorAll('section');
-    const scrollSpyOptions = {
-        threshold: 0.3,
-        rootMargin: '0px 0px -20% 0px'
-    };
-
-    const scrollSpyObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const activeId = entry.target.getAttribute('id');
-                navLinks.forEach(link => {
-                    link.classList.remove('active');
-                    if (link.getAttribute('href') === `#${activeId}`) {
-                        link.classList.add('active');
-                    }
-                });
-            }
+    function setActiveNav(activeId) {
+        navLinks.forEach(link => {
+            link.classList.toggle('active', link.getAttribute('href') === `#${activeId}`);
         });
-    }, scrollSpyOptions);
+    }
 
-    sections.forEach(section => {
-        scrollSpyObserver.observe(section);
+    function updateActiveNav() {
+        const checkpoint = window.innerHeight * 0.35;
+        let activeSection = null;
+
+        sections.forEach(section => {
+            const { top, bottom } = section.getBoundingClientRect();
+            if (top <= checkpoint && bottom > checkpoint) activeSection = section;
+        });
+
+        if (activeSection) setActiveNav(activeSection.id);
+    }
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            const targetId = link.getAttribute('href').slice(1);
+            if (targetId) setActiveNav(targetId);
+        });
     });
+
+    window.addEventListener('scroll', updateActiveNav, { passive: true });
+    window.addEventListener('resize', updateActiveNav);
+    updateActiveNav();
 
 
     // 5. Case Study Modals Logic
