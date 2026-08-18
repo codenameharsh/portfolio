@@ -74,7 +74,129 @@ document.addEventListener('DOMContentLoaded', () => {
         type();
     }
 
-    // 3. Mobile Navigation Menu Toggle
+    // 3. Interactive visual gallery
+    const galleryGrid = document.querySelector('.visual-gallery-grid');
+    const visualGallerySection = document.getElementById('visual-gallery');
+    const resumeSection = document.getElementById('resume');
+    const personalGalleryWorks = [
+        { category: 'painting', title: 'Moonlit Grove', src: 'gallery/personal-work/painting-moonlit-trees.jpg', shape: 'gallery-item-wide' },
+        { category: 'painting', title: 'Golden Temple', src: 'gallery/personal-work/painting-golden-temple.jpg', shape: 'gallery-item-tall' },
+        { category: 'painting', title: 'Lamp and Moon', src: 'gallery/personal-work/painting-lamp-and-moon.jpg', shape: 'gallery-item-tall' },
+        { category: 'painting', title: 'Sunset Architecture', src: 'gallery/personal-work/painting-sunset-architecture.jpg', shape: '' },
+        { category: 'painting', title: 'Sunflower Study', src: 'gallery/personal-work/painting-sunflower-study.jpg', shape: '' },
+        { category: 'painting', title: 'Bamboo Study', src: 'gallery/personal-work/painting-bamboo-study.jpg', shape: 'gallery-item-tall' },
+        { category: 'painting', title: 'City at Dusk', src: 'gallery/personal-work/painting-city-at-dusk.jpg', shape: '' },
+        { category: 'painting', title: 'Yellow Horizon', src: 'gallery/personal-work/painting-yellow-horizon.jpg', shape: 'gallery-item-tall' },
+        { category: 'painting', title: 'Wolf at Twilight', src: 'gallery/personal-work/painting-wolf-at-twilight.jpg', shape: 'gallery-item-tall' },
+        { category: 'painting', title: 'Mountain Cabin', src: 'gallery/personal-work/painting-mountain-cabin.jpg', shape: '' },
+        { category: 'painting', title: 'Moonlit Silhouettes', src: 'gallery/personal-work/painting-moonlit-silhouettes.jpg', shape: 'gallery-item-tall' },
+        { category: 'painting', title: 'Tulip Figure', src: 'gallery/personal-work/painting-tulip-figure.jpg', shape: 'gallery-item-tall' },
+        { category: 'painting', title: 'Bridal Portrait', src: 'gallery/personal-work/painting-bridal-portrait.jpg', shape: 'gallery-item-tall' },
+        { category: 'painting', title: 'Cornfield Sunset', src: 'gallery/personal-work/painting-cornfield-sunset.jpg', shape: 'gallery-item-tall' },
+        { category: 'painting', title: 'Mountain Triptych', src: 'gallery/personal-work/painting-mountain-triptych.jpg', shape: 'gallery-item-wide' },
+        { category: 'illustration', title: 'Tamil Letterforms', src: 'gallery/personal-work/illustration-tamil-letterforms.png', shape: '' },
+        { category: 'illustration', title: 'Madras Auto', src: 'gallery/personal-work/illustration-madras-auto.png', shape: '' },
+        { category: 'illustration', title: 'Bharatanatyam', src: 'gallery/personal-work/illustration-bharatanatyam.png', shape: 'gallery-item-tall' },
+        { category: 'illustration', title: 'Chennai Central', src: 'gallery/personal-work/illustration-chennai-central.png', shape: '' },
+        { category: 'illustration', title: 'Filter Kaapi', src: 'gallery/personal-work/illustration-filter-kaapi.png', shape: 'gallery-item-tall' },
+        { category: 'illustration', title: 'Idli, Vada, Sambar', src: 'gallery/personal-work/illustration-idli-vada-sambar.png', shape: '' },
+        { category: 'illustration', title: 'Madras Presidency Map', src: 'gallery/personal-work/illustration-madras-map.png', shape: 'gallery-item-tall' },
+        { category: 'illustration', title: 'Marina Natkal', src: 'gallery/personal-work/illustration-marina-natkal.png', shape: 'gallery-item-tall' },
+        { category: 'illustration', title: 'Mediterranean Hues', src: 'gallery/personal-work/illustration-mediterranean-hues.png', shape: '' },
+        { category: 'illustration', title: 'Rabbit', src: 'gallery/personal-work/illustration-rabbit.png', shape: '' },
+        { category: 'illustration', title: 'Peacock Motif', src: 'gallery/personal-work/illustration-peacock.png', shape: '' },
+        { category: 'illustration', title: 'Saree Studies', src: 'gallery/personal-work/illustration-fashion-collection.jpg', shape: 'gallery-item-tall' },
+        { category: 'illustration', title: 'Embroidered Heels', src: 'gallery/personal-work/illustration-embroidered-heels.jpg', shape: 'gallery-item-tall' },
+        { category: 'illustration', title: 'Blue Lineup', src: 'gallery/personal-work/illustration-fashion-blue.jpg', shape: 'gallery-item-tall' },
+        { category: 'illustration', title: 'Neutral Lineup', src: 'gallery/personal-work/illustration-fashion-neutral.jpg', shape: 'gallery-item-tall' },
+        { category: 'illustration', title: 'Saree Collection', src: 'gallery/personal-work/illustration-fashion-saree.png', shape: 'gallery-item-tall' },
+        { category: 'illustration', title: 'Tailored in Blue', src: 'gallery/personal-work/illustration-fashion-tailoring.png', shape: 'gallery-item-tall' },
+        { category: 'illustration', title: 'Saree Palette', src: 'gallery/personal-work/illustration-fashion-saree-color.png', shape: 'gallery-item-tall' },
+        { category: 'illustration', title: 'Saree Details', src: 'gallery/personal-work/illustration-fashion-saree-edit.png', shape: 'gallery-item-tall' },
+        { category: 'photography', title: 'Alpine Reflection', src: 'gallery/personal-work/photo-alpine-reflection.jpg', shape: 'gallery-item-tall' },
+        { category: 'photography', title: 'Coastal Sunset', src: 'gallery/personal-work/photo-coastal-sunset.jpg', shape: 'gallery-item-wide' },
+        { category: 'photography', title: 'Spring Hillside', src: 'gallery/personal-work/photo-spring-hillside.jpg', shape: 'gallery-item-tall' },
+        { category: 'photography', title: 'Lakeside After Dark', src: 'gallery/personal-work/photo-lakeside-after-dark.jpg', shape: 'gallery-item-tall' },
+        { category: 'photography', title: 'City Lights', src: 'gallery/personal-work/photo-city-lights.jpg', shape: 'gallery-item-wide' },
+        { category: 'photography', title: 'Lake Crossing', src: 'gallery/personal-work/photo-lake-crossing.jpg', shape: 'gallery-item-tall' },
+        { category: 'photography', title: 'Resting by the Sea', src: 'gallery/personal-work/photo-resting-by-the-sea.jpg', shape: 'gallery-item-tall' },
+        { category: 'photography', title: 'Quiet Interior', src: 'gallery/personal-work/photo-quiet-interior.jpg', shape: '' },
+        { category: 'photography', title: 'Pier Light', src: 'gallery/personal-work/photo-pier-light.jpg', shape: '' },
+        { category: 'photography', title: 'Storm on the Shore', src: 'gallery/personal-work/photo-storm-on-the-shore.jpg', shape: '' },
+        { category: 'photography', title: 'Winter Lake', src: 'gallery/personal-work/photo-winter-lake.jpg', shape: 'gallery-item-tall' },
+        { category: 'photography', title: 'Pink Horizon', src: 'gallery/personal-work/photo-pink-horizon.jpg', shape: 'gallery-item-tall' },
+        { category: 'photography', title: 'Coastal Beacon', src: 'gallery/personal-work/photo-coastal-beacon.jpg', shape: 'gallery-item-tall' },
+        { category: 'photography', title: 'Monsoon Coast', src: 'gallery/personal-work/photo-monsoon-coast.jpg', shape: 'gallery-item-tall' },
+        { category: 'photography', title: 'Umbrella Canopy', src: 'gallery/personal-work/photo-umbrella-canopy.jpg', shape: 'gallery-item-tall' },
+        { category: 'photography', title: 'Autumn Valley', src: 'gallery/personal-work/photo-autumn-valley.jpg', shape: 'gallery-item-tall' }
+    ];
+
+    if (galleryGrid) {
+        galleryGrid.innerHTML = personalGalleryWorks.map(work => `
+            <button type="button" class="gallery-item ${work.shape}" data-gallery-category="${work.category}" data-gallery-title="${work.title}" data-gallery-src="${work.src}">
+                <span class="gallery-image-frame"><img loading="lazy" src="${work.src}" alt="${work.title}"></span>
+                <span class="gallery-item-caption">${work.title} <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+            </button>
+        `).join('');
+    }
+
+    if (visualGallerySection && resumeSection) {
+        resumeSection.insertAdjacentElement('afterend', visualGallerySection);
+    }
+
+    const galleryFilters = document.querySelectorAll('.gallery-filter');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    const galleryLightbox = document.getElementById('gallery-lightbox');
+    const galleryLightboxImage = document.getElementById('gallery-lightbox-image');
+    const galleryLightboxTitle = document.getElementById('gallery-lightbox-title');
+    const galleryLightboxClose = document.querySelector('.gallery-lightbox-close');
+
+    const closeGalleryLightbox = () => {
+        if (!galleryLightbox) return;
+        galleryLightbox.classList.remove('is-open');
+        galleryLightbox.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('gallery-open');
+    };
+
+    const selectGalleryCategory = (category) => {
+        galleryFilters.forEach(item => {
+            const isSelected = item.dataset.galleryFilter === category;
+            item.classList.toggle('active', isSelected);
+            item.setAttribute('aria-pressed', isSelected ? 'true' : 'false');
+        });
+        galleryItems.forEach(item => item.classList.toggle('is-hidden', item.dataset.galleryCategory !== category));
+    };
+
+    galleryFilters.forEach(filter => {
+        filter.addEventListener('click', () => {
+            selectGalleryCategory(filter.dataset.galleryFilter);
+        });
+    });
+
+    selectGalleryCategory('photography');
+
+    galleryItems.forEach(item => {
+        item.addEventListener('click', () => {
+            if (!galleryLightbox || !galleryLightboxImage || !galleryLightboxTitle) return;
+            galleryLightboxImage.src = item.dataset.gallerySrc;
+            galleryLightboxImage.alt = item.querySelector('img')?.alt || '';
+            galleryLightboxTitle.textContent = item.dataset.galleryTitle || '';
+            galleryLightbox.classList.add('is-open');
+            galleryLightbox.setAttribute('aria-hidden', 'false');
+            document.body.classList.add('gallery-open');
+            galleryLightboxClose?.focus();
+        });
+    });
+
+    galleryLightboxClose?.addEventListener('click', closeGalleryLightbox);
+    galleryLightbox?.addEventListener('click', event => {
+        if (event.target === galleryLightbox) closeGalleryLightbox();
+    });
+    document.addEventListener('keydown', event => {
+        if (event.key === 'Escape' && galleryLightbox?.classList.contains('is-open')) closeGalleryLightbox();
+    });
+
+    // 4. Mobile Navigation Menu Toggle
     const menuToggle = document.getElementById('menu-toggle');
     const navMenu = document.querySelector('.nav-menu');
     const navLinks = document.querySelectorAll('.nav-link');
