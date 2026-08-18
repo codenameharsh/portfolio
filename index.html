@@ -24,8 +24,9 @@
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 </head>
 <body>
-    <!-- Scroll Progress Bar -->
-    <div id="scroll-progress" class="scroll-progress-bar"></div>
+    <aside class="scroll-percentage" id="scroll-percentage-indicator" role="progressbar" aria-label="Page scroll progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+        <span id="scroll-percentage">0%</span>
+    </aside>
 
     <!-- Ambient Background Lighting Glows -->
     <div class="ambient-glow glow-1"></div>
@@ -70,88 +71,31 @@
                 </div>
             </div>
             <div class="hero-visual" style="display: flex; align-items: center; justify-content: center; width: 100%;">
-                <!-- Outer Wrapper to allow uncropped overflowing dot -->
-                <div class="slider-wrapper-outer">
-                    <!-- Circular Container -->
-                    <div class="slider-comparison-container" id="hero-slider-container" style="max-width: 100%; height: 100%; margin: 0;">
-                        
-                        <!-- Left Slide: Profile Card (Design View) -->
-                        <div class="slider-panel panel-left" id="panel-design">
-                            <div class="slider-panel-content">
-                                <div class="premium-product-card inline-card" style="text-align: center; border-image: linear-gradient(135deg, var(--secondary), var(--primary)) 1; border-radius: var(--border-radius-lg); position: relative; overflow: visible;">
-                                    
-                                    <!-- Rotating Gradient Portrait Frame (Zero-Reflow GPU Spun Ring) -->
-                                    <div class="profile-photo-container" style="position: relative; width: 75px; height: 75px; margin: 0 auto 0.75rem auto;">
-                                        <div class="rotating-glow-ring" style="position: absolute; top: -3px; left: -3px; right: -3px; bottom: -3px; background: linear-gradient(135deg, var(--primary), var(--secondary), #a855f7); border-radius: 50%; animation: rotateRing 8s linear infinite; z-index: 1; filter: drop-shadow(0 0 8px rgba(6, 182, 212, 0.45));"></div>
-                                        <div style="position: relative; width: 100%; height: 100%; border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; overflow: hidden; background: #0a0a0f; z-index: 2; border: 2.5px solid rgba(255,255,255,0.15);">
-                                            <img src="abou_photo.png" alt="Harshitha Rajendran" style="width: 100%; height: 100%; object-fit: cover; transform: scale(1.7); transform-origin: center 80%;">
-                                        </div>
-                                    </div>
-
-                                    <!-- Glowing Gradient Title -->
-                                    <h4 style="font-size: 1.2rem; font-weight: 900; background: linear-gradient(135deg, #ffffff 40%, var(--secondary) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin: 0 0 0.15rem 0; letter-spacing: 0.5px; display: inline-flex; align-items: center; gap: 0.4rem; justify-content: center; width: 100%;">
-                                        Harshitha                              <span style="width: 7px; height: 7px; background: #10b981; border-radius: 50%; box-shadow: 0 0 8px #10b981; display: inline-block; animation: pulseGlow 2s infinite;"></span>
-                                    </h4>
-                                    <p style="font-size: 0.65rem; color: var(--secondary); font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; margin: 0 0 0.5rem 0;">Product & Brand EXP Designer</p>
-                                    <p style="font-size: 0.72rem; color: var(--text-secondary); line-height: 1.35; margin: 0 0 0.75rem 0; font-weight: 400; padding: 0 0.1rem;">
-                                        <span style="font-size: 0.65rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; display: block; margin-bottom: 0.35rem; font-weight: 600;">If I was a brand my slogan would be…</span>
-                                        <span style="font-size: 0.88rem; font-weight: 600; color: var(--white); font-style: italic; letter-spacing: 0.5px; display: block; line-height: 1.4;">"Quiet creativity, bold impact."</span>
-                                    </p>
-                                    
-                                    <!-- Creative Social Pill Badges -->
-                                    <div style="display: flex; gap: 0.5rem; justify-content: center; align-items: center;">
-                                        <a href="https://www.linkedin.com/in/codenameharsh/" target="_blank" aria-label="LinkedIn" style="display: flex; align-items: center; gap: 0.3rem; font-size: 0.65rem; font-weight: 700; color: var(--text-primary); background: rgba(255, 255, 255, 0.03); border: 1px solid var(--card-border); padding: 0.35rem 0.65rem; border-radius: 20px; transition: all 0.3s ease; text-decoration: none;" onmouseover="this.style.background='var(--secondary)'; this.style.borderColor='var(--secondary)'; this.style.color='#0a0a0f';" onmouseout="this.style.background='rgba(255, 255, 255, 0.03)'; this.style.borderColor='var(--card-border)'; this.style.color='var(--text-primary)';">
-                                            <i class="fa-brands fa-linkedin-in"></i>
-                                        </a>
-                                        <a href="https://www.instagram.com/thehappinessofbeing" target="_blank" aria-label="Instagram" style="display: flex; align-items: center; gap: 0.3rem; font-size: 0.65rem; font-weight: 700; color: var(--text-primary); background: rgba(255, 255, 255, 0.03); border: 1px solid var(--card-border); padding: 0.35rem 0.65rem; border-radius: 20px; transition: all 0.3s ease; text-decoration: none;" onmouseover="this.style.background='var(--primary)'; this.style.borderColor='var(--primary)'; this.style.color='#ffffff';" onmouseout="this.style.background='rgba(255, 255, 255, 0.03)'; this.style.borderColor='var(--card-border)'; this.style.color='var(--text-primary)';">
-                                            <i class="fa-brands fa-instagram"></i> 
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Right Slide: Profile CSS (Code View) -->
-                        <div class="slider-panel panel-right" id="panel-code">
-                            <div class="slider-panel-content">
-                                <div class="product-code-card inline-card">
-                                    <div class="card-header" style="align-items: center; display: flex;">
-                                        <span class="dot red"></span>
-                                        <span class="dot yellow"></span>
-                                        <span class="dot green"></span>
-                                        <span class="file-name" style="font-family: monospace; font-size: 0.75rem; color: var(--text-muted); margin-left: auto;">profile.css</span>
-                                    </div>
-                                    <div class="card-body" style="font-family: monospace; font-size: 0.7rem; line-height: 1.4; padding-top: 0.5rem; text-align: left;">
-                                        <span class="code-selector">.profile-ring</span> {<br>
-                                        &nbsp;&nbsp;<span class="code-keyword">border-radius</span>: 60% 40% 30% 70%;<br>
-                                        &nbsp;&nbsp;<span class="code-keyword">animation</span>: rotateRing 8s linear infinite;<br>
-                                        &nbsp;&nbsp;<span class="code-keyword">filter</span>: drop-shadow(0 0 8px var(--cyan));<br>
-                                        }<br><br>
-                                        <span class="code-selector">@keyframes rotateRing</span> {<br>
-                                        &nbsp;&nbsp;0% { <span class="code-keyword">transform</span>: rotate(0deg); }<br>
-                                        &nbsp;&nbsp;100% { <span class="code-keyword">transform</span>: rotate(360deg); }<br>
-                                        }
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                <div class="hero-scrapbook" aria-label="A scrapbook collage of Harshitha's selected work">
+                    <span class="hero-scrapbook-kicker">A few things I’ve made</span>
+                    <a class="hero-scrapbook-card scrapbook-card-main" href="#selected-work">
+                        <img src="smart-rewards-case-study-cover.png" alt="Smart Rewards product design work">
+                        <span>Product systems</span>
+                    </a>
+                    <a class="hero-scrapbook-card scrapbook-card-eco" href="#selected-work">
+                        <img src="ecocycle-case-study-cover.png" alt="EcoCycle sustainability experience work">
+                        <span>Purposeful experiences</span>
+                    </a>
+                    <a class="hero-scrapbook-card scrapbook-card-brand" href="#selected-work">
+                        <img src="ishtyle-case-study-cover.png" alt="Ishtyle brand and commerce work">
+                        <span>Brand with feeling</span>
+                    </a>
+                    <a class="hero-scrapbook-card scrapbook-card-digital" href="#selected-work">
+                        <img src="foundmoon-case-study-cover.png" alt="Foundmoon digital product work">
+                        <span>Ideas made tangible</span>
+                    </a>
+                    <div class="hero-scrapbook-note" aria-hidden="true">
+                        <i class="fa-solid fa-sparkles"></i>
+                        <span>Strategy · UX/UI · Brand · Build</span>
                     </div>
-
-                    <!-- Rounded Rectangle Path Tracing Line -->
-                    <svg class="rect-trace-svg" viewBox="0 0 100 100" preserveAspectRatio="none">
-                        <rect x="0.5" y="0.5" width="99" height="99" rx="5" ry="5" class="rect-trace-path"></rect>
-                    </svg>
-
-                    <!-- Dynamic Floating Circle Badges (Fade in during pauses) -->
-                    <div class="circle-badge design-badge">Design</div>
-                    <div class="circle-badge dev-badge">Development</div>
+                    <div class="hero-scrapbook-stamp" aria-hidden="true">Made<br>with care</div>
                 </div>
             </div>
-            <a href="#selected-work" class="scroll-indicator" aria-label="Scroll to Selected Work">
-                <span class="mouse">
-                    <span class="wheel"></span>
-                </span>
-            </a>
         </section>
 
         <!-- Selected Work Section -->
@@ -163,12 +107,28 @@
                 </div>
 
                 <div class="projects-grid">
+                    <!-- Project 1: Smart Rewards -->
+                    <article class="project-card" data-project="smart-rewards">
+                        <div class="project-img-wrapper">
+                            <img class="project-cover-image" src="smart-rewards-case-study-cover.png" alt="Smart Rewards loyalty recommendation case study collage">
+                        </div>
+                        <div class="project-info">
+                            <span class="project-category">Product Design &amp; Loyalty</span>
+                            <h3 class="project-card-title">Smart Rewards</h3>
+                            <p class="project-desc">A recommendation layer that helps loyalty members confidently choose and redeem the most relevant reward—without taking away the full catalog.</p>
+                            <div class="project-tags">
+                                <span>Product Strategy</span>
+                                <span>UX Design</span>
+                                <span>Experimentation</span>
+                            </div>
+                            <a href="#" class="project-link" data-modal="modal-smart-rewards">Explore Details <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
                     <!-- Project 1: AI Stylist -->
                     <article class="project-card" data-project="ai-stylist">
                         <div class="project-img-wrapper">
-                            <div class="project-img-placeholder stylized-bg-1">
-                                <i class="fa-solid fa-wand-magic-sparkles"></i>
-                            </div>
+                            <img class="project-cover-image" src="ishtyle-case-study-cover.png" alt="ishtyle AI fashion product design case study collage">
                         </div>
                         <div class="project-info">
                             <span class="project-category">Product Design & AI Fashion</span>
@@ -186,9 +146,7 @@
                     <!-- Project 2: EcoCycle -->
                     <article class="project-card" data-project="ecocycle">
                         <div class="project-img-wrapper">
-                            <div class="project-img-placeholder stylized-bg-3">
-                                <i class="fa-solid fa-leaf"></i>
-                            </div>
+                            <img class="project-cover-image" src="ecocycle-case-study-cover.png" alt="EcoCycle sustainability community case study collage">
                         </div>
                         <div class="project-info">
                             <span class="project-category">UX Design & Sustainability</span>
@@ -206,9 +164,7 @@
                     <!-- Project 3: Foundmoon -->
                     <article class="project-card" data-project="foundmoon-app">
                         <div class="project-img-wrapper">
-                            <div class="project-img-placeholder stylized-bg-2">
-                                <i class="fa-solid fa-book-open"></i>
-                            </div>
+                            <img class="project-cover-image" src="foundmoon-case-study-cover.png" alt="Foundmoon reading companion case study collage">
                         </div>
                         <div class="project-info">
                             <span class="project-category">Android Product Design & Development</span>
@@ -226,9 +182,7 @@
                     <!-- Project 4: YonderLust -->
                     <article class="project-card" data-project="yonderlust">
                         <div class="project-img-wrapper">
-                            <div class="project-img-placeholder stylized-bg-4">
-                                <i class="fa-solid fa-compass"></i>
-                            </div>
+                            <img class="project-cover-image" src="yonderlust-case-study-cover.png" alt="YonderLust travel planning case study collage">
                         </div>
                         <div class="project-info">
                             <span class="project-category">UX Design & Travel</span>
@@ -246,9 +200,7 @@
                     <!-- Project 5: Aura -->
                     <article class="project-card" data-project="aura">
                         <div class="project-img-wrapper">
-                            <div class="project-img-placeholder stylized-bg-2">
-                                <i class="fa-solid fa-moon"></i>
-                            </div>
+                            <img class="project-cover-image" src="aura-case-study-cover.png" alt="Aura brand identity case study collage">
                         </div>
                         <div class="project-info">
                             <span class="project-category">Brand Identity & Editorial</span>
@@ -732,8 +684,121 @@ ishtyle (Root)
                 <p>Combining design systems with functional code structures early avoids layout regression. High-fashion aesthetics (like editorial typography and a custom warm palette) elevate the utility from a simple closet inventory list to a desirable, daily lifestyle companion.</p>
                 
                 <div class="modal-nav">
-                    <a href="#selected-work" class="btn btn-secondary modal-nav-btn prev-modal-btn" data-action="close-scroll"><i class="fa-solid fa-arrow-left"></i> Selected Work</a>
+                    <button type="button" class="btn btn-secondary modal-nav-btn prev-modal-btn" data-prev="modal-foundmoon-app"><i class="fa-solid fa-arrow-left"></i> Prev Project</button>
                     <button type="button" class="btn btn-primary modal-nav-btn next-modal-btn" data-next="modal-ecocycle">Next Project <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Smart Rewards Modal -->
+    <div class="modal" id="modal-smart-rewards">
+        <div class="modal-overlay"></div>
+        <div class="modal-container">
+            <div class="modal-body">
+                <h2>Smart Rewards</h2>
+                <p class="modal-subtitle text-highlight">Helping loyalty members redeem with confidence</p>
+                <hr>
+
+                <h3>1. Overview</h3>
+                <img src="smart_rewards_hero.png" alt="Smart Rewards recommendation experience" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
+                <p>Smart Rewards is a recommendation layer for a loyalty platform that helps members choose and redeem rewards with less friction.</p>
+                <p>The project began with a simple observation: members were earning points, but many were not redeeming them. The issue was not a lack of rewards. It was the difficulty of deciding which reward was actually worth choosing.</p>
+                <p>My role: Product Designer<br>Scope: Research synthesis, problem framing, member experience, marketer controls, MVP definition, and measurement strategy</p>
+
+                <h3>2. The problem</h3>
+                <img src="smart_rewards_problem.png" alt="Smart Rewards problem: a difficult-to-compare reward catalog" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
+                <p>Loyalty members often reach the point of redemption and face a long list of rewards that are difficult to compare. This creates decision fatigue:</p>
+                <ul>
+                    <li>“Which reward gives me the best value?”</li>
+                    <li>“Should I save my points for later?”</li>
+                    <li>“Can I use this reward right now?”</li>
+                    <li>“I’ll decide later.”</li>
+                </ul>
+                <p>That hesitation can become abandonment. Points accumulate, rewards are forgotten, and the loyalty program feels less valuable.</p>
+                <p>For the business, this can lead to lower redemption, weaker engagement, fewer loyalty-driven purchases, and increased churn risk.</p>
+
+                <h3>3. The opportunity</h3>
+                <p>I focused on the highest-friction moment in the journey: choosing a reward.</p>
+                <p>Rather than creating more rewards or changing the existing loyalty program, I proposed a lightweight recommendation layer that helps members identify one relevant, eligible reward at the right time.</p>
+                <h3>4. Hypothesis</h3>
+                <p>If members see one personalized, explainable reward recommendation instead of evaluating an entire catalog on their own, more members will redeem rewards and complete purchases.</p>
+
+                <h3>5. The solution</h3>
+                <img src="smart_rewards_solution.png" alt="Smart Rewards recommendation logic and member experience" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
+                <p>Smart Rewards filters the existing reward catalog to options a member can actually use, then recommends the most relevant one.</p>
+                <p>The recommendation considers:</p>
+                <ul>
+                    <li>Current point balance</li><li>Loyalty tier</li><li>Reward eligibility</li><li>Purchase and redemption history</li><li>Estimated customer value</li><li>Reward availability</li><li>Merchant-defined restrictions and campaign priorities</li>
+                </ul>
+                <p>The experience does not remove choice. Members can still browse the full reward catalog at any time.</p>
+
+                <h3>6. Member experience</h3>
+                <p>When a member opens the rewards dashboard, they see a “Recommended for you” card before the full catalog.</p>
+                <p>The card includes:</p>
+                <ul>
+                    <li>A single recommended reward</li><li>Estimated savings or value</li><li>A short explanation of why it was selected</li><li>A direct path to redeem</li><li>The option to continue browsing all rewards</li>
+                </ul>
+                <p>Example:</p>
+                <p>Recommended for you: $10 off your next purchase<br>You have enough points to redeem this reward today.<br>Estimated savings: $10.</p>
+                <p>This turns a complex decision into a clear next step while keeping the experience transparent and user-controlled.</p>
+
+                <h3>7. Designing for merchant control</h3>
+                <p>The recommendation system works within merchant-defined boundaries. Merchants remain in control of the loyalty program, including:</p>
+                <ul>
+                    <li>Which rewards exist</li><li>Who is eligible</li><li>Point requirements</li><li>Tier access</li><li>Inventory and redemption limits</li><li>Product restrictions</li><li>Campaign dates</li><li>Which rewards can be recommended</li>
+                </ul>
+                <p>Smart Rewards does not replace these systems. It filters eligible options first, then personalizes the recommendation.</p>
+
+                <h3>8. Marketer flow</h3>
+                <img src="smart_rewards_marketer_flow.png" alt="Smart Rewards marketer configuration, preview, and measurement flow" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
+                <p>The first shippable version gives marketers three simple actions:</p>
+                <ul>
+                    <li><strong>Configure</strong><br>Select the audience, eligible rewards, excluded rewards, and campaign timing.</li>
+                    <li><strong>Preview and publish</strong><br>Review the member-facing recommendation before launching.</li>
+                    <li><strong>Measure and optimize</strong><br>Monitor redemption, purchases, revenue, reward cost, and repeat purchase behavior.</li>
+                </ul>
+
+                <h3>9. MVP scope</h3>
+                <p>To keep the concept focused and feasible, the MVP includes:</p>
+                <ul>
+                    <li>Eligibility filtering for existing rewards</li>
+                    <li>Relevance ranking</li>
+                    <li>One explainable recommendation on the rewards screen</li>
+                    <li>Merchant controls for audience, rewards, exclusions, and dates</li>
+                    <li>A performance dashboard tied to redemption and purchase outcomes</li>
+                </ul>
+                <p>Future opportunities include goal-based recommendations, reward bundles, personalized reminders, and smarter timing.</p>
+
+                <h3>10. Measuring success</h3>
+                <img src="smart_rewards_successMetrics.png" alt="Smart Rewards primary and supporting success metrics" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
+                <p>Success is measured by completed customer behavior, not recommendation impressions alone.</p>
+                <h3>11. Primary metrics</h3>
+                <ul><li>Reward redemption rate</li><li>Recommendation-to-redemption conversion</li><li>Completed loyalty purchases</li></ul>
+                <h3>12. Supporting metrics</h3>
+                <img src="smart_rewards_businessOutcomesDashboard.png" alt="Smart Rewards business outcomes dashboard" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
+                <ul><li>Recommendation click-through rate</li><li>Average order value</li><li>Repeat purchase rate</li><li>Reward cost</li><li>Time to redemption</li><li>Member feedback on recommendation relevance</li></ul>
+
+                <h3>13. Validation approach</h3>
+                <p>I would validate Smart Rewards through a phased A/B test.</p>
+                <p>The control group would receive the existing rewards experience. The treatment group would receive the recommendation experience.</p>
+                <p>The goal would be to understand whether Smart Rewards drives a meaningful lift in redemption and purchase completion without creating unfavorable reward costs or reducing trust.</p>
+
+                <h3>14. Illustrative impact</h3>
+                <p>Using planning assumptions only:</p>
+                <ul><li>100,000 loyalty members</li><li>40% monthly active members</li><li>30% reaching reward eligibility</li><li>20% baseline redemption rate</li><li>25% target redemption rate after introducing Smart Rewards</li><li>$60 average order value</li></ul>
+                <img src="smart_rewards_impactFunnel.png" alt="Illustrative Smart Rewards impact funnel" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
+                <p>This would represent 600 additional redemptions and approximately $36,000 in reward-associated purchase revenue.</p>
+                <img src="smart_rewards_revenueCalculation.png" alt="Illustrative Smart Rewards revenue calculation" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
+                <p>These figures are illustrative, not observed results. A controlled pilot would be required to validate the impact.</p>
+
+                <h3>15. Key takeaway</h3>
+                <p>Smart Rewards reframes personalization as decision support.</p>
+                <p>Instead of asking members to sort through a complex reward catalog, it helps them confidently take the next best action. Merchants set the guardrails, members retain control, and the platform can measure whether better guidance leads to redemption and purchase.</p>
+
+                <div class="modal-nav">
+                    <a href="#selected-work" class="btn btn-secondary modal-nav-btn prev-modal-btn" data-action="close-scroll"><i class="fa-solid fa-arrow-left"></i> Selected Work</a>
+                    <button type="button" class="btn btn-primary modal-nav-btn next-modal-btn" data-next="modal-foundmoon-app">Next Project <i class="fa-solid fa-arrow-right"></i></button>
                 </div>
             </div>
         </div>
@@ -835,7 +900,7 @@ ishtyle (Root)
                 
                 <div class="modal-nav">
                     <button type="button" class="btn btn-secondary modal-nav-btn prev-modal-btn" data-prev="modal-ai-stylist"><i class="fa-solid fa-arrow-left"></i> Prev Project</button>
-                    <button type="button" class="btn btn-primary modal-nav-btn next-modal-btn" data-next="modal-foundmoon-app">Next Project <i class="fa-solid fa-arrow-right"></i></button>
+                    <button type="button" class="btn btn-primary modal-nav-btn next-modal-btn" data-next="modal-yonderlust">Next Project <i class="fa-solid fa-arrow-right"></i></button>
                 </div>
             </div>
         </div>
@@ -1002,8 +1067,8 @@ ishtyle (Root)
                 <p>Foundmoon is a study in designing for continuity rather than engagement metrics. The product reduces the effort required to remember what a reader is reading, gives them ownership over their data, and uses Android-native capabilities only when they support the reading habit.</p>
 
                 <div class="modal-nav">
-                    <button type="button" class="btn btn-secondary modal-nav-btn prev-modal-btn" data-prev="modal-ecocycle"><i class="fa-solid fa-arrow-left"></i> Prev Project</button>
-                    <button type="button" class="btn btn-primary modal-nav-btn next-modal-btn" data-next="modal-yonderlust">Next Project <i class="fa-solid fa-arrow-right"></i></button>
+                    <button type="button" class="btn btn-secondary modal-nav-btn prev-modal-btn" data-prev="modal-smart-rewards"><i class="fa-solid fa-arrow-left"></i> Prev Project</button>
+                    <button type="button" class="btn btn-primary modal-nav-btn next-modal-btn" data-next="modal-ai-stylist">Next Project <i class="fa-solid fa-arrow-right"></i></button>
                 </div>
             </div>
         </div>
@@ -1248,7 +1313,7 @@ ishtyle (Root)
                 <p>This project reinforced that designing for travel extends beyond booking experiences. Solo travelers need products that reduce uncertainty while preserving the excitement of exploration. If I continued developing YonderLust, I would expand the product with AI-powered itinerary recommendations, community features for connecting with fellow travelers, and location-based safety insights to create a more personalized and supportive travel experience.</p>
                 
                 <div class="modal-nav">
-                    <button type="button" class="btn btn-secondary modal-nav-btn prev-modal-btn" data-prev="modal-bookish"><i class="fa-solid fa-arrow-left"></i> Prev Project</button>
+                    <button type="button" class="btn btn-secondary modal-nav-btn prev-modal-btn" data-prev="modal-ecocycle"><i class="fa-solid fa-arrow-left"></i> Prev Project</button>
                     <button type="button" class="btn btn-primary modal-nav-btn next-modal-btn" data-next="modal-aura">Next Project <i class="fa-solid fa-arrow-right"></i></button>
                 </div>
             </div>
