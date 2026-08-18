@@ -74,7 +74,6 @@ document.addEventListener('DOMContentLoaded', () => {
         type();
     }
 
-
     // 3. Mobile Navigation Menu Toggle
     const menuToggle = document.getElementById('menu-toggle');
     const navMenu = document.querySelector('.nav-menu');

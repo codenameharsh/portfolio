@@ -71,81 +71,29 @@
                 </div>
             </div>
             <div class="hero-visual" style="display: flex; align-items: center; justify-content: center; width: 100%;">
-                <!-- Outer Wrapper to allow uncropped overflowing dot -->
-                <div class="slider-wrapper-outer">
-                    <!-- Circular Container -->
-                    <div class="slider-comparison-container" id="hero-slider-container" style="max-width: 100%; height: 100%; margin: 0;">
-                        
-                        <!-- Left Slide: Profile Card (Design View) -->
-                        <div class="slider-panel panel-left" id="panel-design">
-                            <div class="slider-panel-content">
-                                <div class="premium-product-card inline-card" style="text-align: center; border-image: linear-gradient(135deg, var(--secondary), var(--primary)) 1; border-radius: var(--border-radius-lg); position: relative; overflow: visible;">
-                                    
-                                    <!-- Rotating Gradient Portrait Frame (Zero-Reflow GPU Spun Ring) -->
-                                    <div class="profile-photo-container" style="position: relative; width: 75px; height: 75px; margin: 0 auto 0.75rem auto;">
-                                        <div class="rotating-glow-ring" style="position: absolute; top: -3px; left: -3px; right: -3px; bottom: -3px; background: linear-gradient(135deg, var(--primary), var(--secondary), #a855f7); border-radius: 50%; animation: rotateRing 8s linear infinite; z-index: 1; filter: drop-shadow(0 0 8px rgba(6, 182, 212, 0.45));"></div>
-                                        <div style="position: relative; width: 100%; height: 100%; border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; overflow: hidden; background: #0a0a0f; z-index: 2; border: 2.5px solid rgba(255,255,255,0.15);">
-                                            <img src="abou_photo.png" alt="Harshitha Rajendran" style="width: 100%; height: 100%; object-fit: cover; transform: scale(1.7); transform-origin: center 80%;">
-                                        </div>
-                                    </div>
-
-                                    <!-- Glowing Gradient Title -->
-                                    <h4 style="font-size: 1.2rem; font-weight: 900; background: linear-gradient(135deg, #ffffff 40%, var(--secondary) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin: 0 0 0.15rem 0; letter-spacing: 0.5px; display: inline-flex; align-items: center; gap: 0.4rem; justify-content: center; width: 100%;">
-                                        Harshitha                              <span style="width: 7px; height: 7px; background: #10b981; border-radius: 50%; box-shadow: 0 0 8px #10b981; display: inline-block; animation: pulseGlow 2s infinite;"></span>
-                                    </h4>
-                                    <p style="font-size: 0.65rem; color: var(--secondary); font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; margin: 0 0 0.5rem 0;">Product & Brand EXP Designer</p>
-                                    <p style="font-size: 0.72rem; color: var(--text-secondary); line-height: 1.35; margin: 0 0 0.75rem 0; font-weight: 400; padding: 0 0.1rem;">
-                                        <span style="font-size: 0.65rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; display: block; margin-bottom: 0.35rem; font-weight: 600;">If I was a brand my slogan would be…</span>
-                                        <span style="font-size: 0.88rem; font-weight: 600; color: var(--white); font-style: italic; letter-spacing: 0.5px; display: block; line-height: 1.4;">"Quiet creativity, bold impact."</span>
-                                    </p>
-                                    
-                                    <!-- Creative Social Pill Badges -->
-                                    <div style="display: flex; gap: 0.5rem; justify-content: center; align-items: center;">
-                                        <a href="https://www.linkedin.com/in/codenameharsh/" target="_blank" aria-label="LinkedIn" style="display: flex; align-items: center; gap: 0.3rem; font-size: 0.65rem; font-weight: 700; color: var(--text-primary); background: rgba(255, 255, 255, 0.03); border: 1px solid var(--card-border); padding: 0.35rem 0.65rem; border-radius: 20px; transition: all 0.3s ease; text-decoration: none;" onmouseover="this.style.background='var(--secondary)'; this.style.borderColor='var(--secondary)'; this.style.color='#0a0a0f';" onmouseout="this.style.background='rgba(255, 255, 255, 0.03)'; this.style.borderColor='var(--card-border)'; this.style.color='var(--text-primary)';">
-                                            <i class="fa-brands fa-linkedin-in"></i>
-                                        </a>
-                                        <a href="https://www.instagram.com/thehappinessofbeing" target="_blank" aria-label="Instagram" style="display: flex; align-items: center; gap: 0.3rem; font-size: 0.65rem; font-weight: 700; color: var(--text-primary); background: rgba(255, 255, 255, 0.03); border: 1px solid var(--card-border); padding: 0.35rem 0.65rem; border-radius: 20px; transition: all 0.3s ease; text-decoration: none;" onmouseover="this.style.background='var(--primary)'; this.style.borderColor='var(--primary)'; this.style.color='#ffffff';" onmouseout="this.style.background='rgba(255, 255, 255, 0.03)'; this.style.borderColor='var(--card-border)'; this.style.color='var(--text-primary)';">
-                                            <i class="fa-brands fa-instagram"></i> 
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Right Slide: Profile CSS (Code View) -->
-                        <div class="slider-panel panel-right" id="panel-code">
-                            <div class="slider-panel-content">
-                                <div class="product-code-card inline-card">
-                                    <div class="card-header" style="align-items: center; display: flex;">
-                                        <span class="dot red"></span>
-                                        <span class="dot yellow"></span>
-                                        <span class="dot green"></span>
-                                        <span class="file-name" style="font-family: monospace; font-size: 0.75rem; color: var(--text-muted); margin-left: auto;">profile.css</span>
-                                    </div>
-                                    <div class="card-body" style="font-family: monospace; font-size: 0.7rem; line-height: 1.4; padding-top: 0.5rem; text-align: left;">
-                                        <span class="code-selector">.profile-ring</span> {<br>
-                                        &nbsp;&nbsp;<span class="code-keyword">border-radius</span>: 60% 40% 30% 70%;<br>
-                                        &nbsp;&nbsp;<span class="code-keyword">animation</span>: rotateRing 8s linear infinite;<br>
-                                        &nbsp;&nbsp;<span class="code-keyword">filter</span>: drop-shadow(0 0 8px var(--cyan));<br>
-                                        }<br><br>
-                                        <span class="code-selector">@keyframes rotateRing</span> {<br>
-                                        &nbsp;&nbsp;0% { <span class="code-keyword">transform</span>: rotate(0deg); }<br>
-                                        &nbsp;&nbsp;100% { <span class="code-keyword">transform</span>: rotate(360deg); }<br>
-                                        }
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                <div class="hero-scrapbook" aria-label="A scrapbook collage of Harshitha's selected work">
+                    <span class="hero-scrapbook-kicker">A few things I’ve made</span>
+                    <a class="hero-scrapbook-card scrapbook-card-main" href="#selected-work">
+                        <img src="smart-rewards-case-study-cover.png" alt="Smart Rewards product design work">
+                        <span>Product systems</span>
+                    </a>
+                    <a class="hero-scrapbook-card scrapbook-card-eco" href="#selected-work">
+                        <img src="ecocycle-case-study-cover.png" alt="EcoCycle sustainability experience work">
+                        <span>Purposeful experiences</span>
+                    </a>
+                    <a class="hero-scrapbook-card scrapbook-card-brand" href="#selected-work">
+                        <img src="ishtyle-case-study-cover.png" alt="Ishtyle brand and commerce work">
+                        <span>Brand with feeling</span>
+                    </a>
+                    <a class="hero-scrapbook-card scrapbook-card-digital" href="#selected-work">
+                        <img src="foundmoon-case-study-cover.png" alt="Foundmoon digital product work">
+                        <span>Ideas made tangible</span>
+                    </a>
+                    <div class="hero-scrapbook-note" aria-hidden="true">
+                        <i class="fa-solid fa-sparkles"></i>
+                        <span>Strategy · UX/UI · Brand · Build</span>
                     </div>
-
-                    <!-- Rounded Rectangle Path Tracing Line -->
-                    <svg class="rect-trace-svg" viewBox="0 0 100 100" preserveAspectRatio="none">
-                        <rect x="0.5" y="0.5" width="99" height="99" rx="5" ry="5" class="rect-trace-path"></rect>
-                    </svg>
-
-                    <!-- Dynamic Floating Circle Badges (Fade in during pauses) -->
-                    <div class="circle-badge design-badge">Design</div>
-                    <div class="circle-badge dev-badge">Development</div>
+                    <div class="hero-scrapbook-stamp" aria-hidden="true">Made<br>with care</div>
                 </div>
             </div>
         </section>
