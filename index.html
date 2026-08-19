@@ -12,7 +12,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Stylesheet -->
@@ -72,20 +72,20 @@
             </div>
             <div class="hero-visual" style="display: flex; align-items: center; justify-content: center; width: 100%;">
                 <div class="hero-scrapbook" aria-label="A scrapbook collage of Harshitha's selected work">
-                    <span class="hero-scrapbook-kicker">A few things I’ve made</span>
-                    <a class="hero-scrapbook-card scrapbook-card-main" href="#selected-work">
+                    <span class="hero-scrapbook-kicker">Selected projects</span>
+                    <a class="hero-scrapbook-card scrapbook-card-main" href="#project-smart-rewards" aria-label="View Smart Rewards in selected projects">
                         <img src="smart-rewards-case-study-cover.png" alt="Smart Rewards product design work">
                         <span>Product systems</span>
                     </a>
-                    <a class="hero-scrapbook-card scrapbook-card-eco" href="#selected-work">
+                    <a class="hero-scrapbook-card scrapbook-card-eco" href="#project-ecocycle" aria-label="View EcoCycle in selected projects">
                         <img src="ecocycle-case-study-cover.png" alt="EcoCycle sustainability experience work">
                         <span>Purposeful experiences</span>
                     </a>
-                    <a class="hero-scrapbook-card scrapbook-card-brand" href="#selected-work">
+                    <a class="hero-scrapbook-card scrapbook-card-brand" href="#project-ishtyle" aria-label="View ishtyle in selected projects">
                         <img src="ishtyle-case-study-cover.png" alt="Ishtyle brand and commerce work">
                         <span>Brand with feeling</span>
                     </a>
-                    <a class="hero-scrapbook-card scrapbook-card-digital" href="#selected-work">
+                    <a class="hero-scrapbook-card scrapbook-card-digital" href="#project-foundmoon" aria-label="View Foundmoon in selected projects">
                         <img src="foundmoon-case-study-cover.png" alt="Foundmoon digital product work">
                         <span>Ideas made tangible</span>
                     </a>
@@ -108,14 +108,14 @@
 
                 <div class="projects-grid">
                     <!-- Project 1: Smart Rewards -->
-                    <article class="project-card" data-project="smart-rewards">
+                    <article id="project-smart-rewards" class="project-card" data-project="smart-rewards">
                         <div class="project-img-wrapper">
                             <img class="project-cover-image" src="smart-rewards-case-study-cover.png" alt="Smart Rewards loyalty recommendation case study collage">
                         </div>
                         <div class="project-info">
                             <span class="project-category">Product Design &amp; Loyalty</span>
                             <h3 class="project-card-title">Smart Rewards</h3>
-                            <p class="project-desc">A recommendation layer that helps loyalty members confidently choose and redeem the most relevant reward—without taking away the full catalog.</p>
+                            <p class="project-desc">A recommendation layer that helps loyalty members confidently choose and redeem the most relevant reward without taking away the full catalog.</p>
                             <div class="project-tags">
                                 <span>Product Strategy</span>
                                 <span>UX Design</span>
@@ -126,7 +126,7 @@
                     </article>
 
                     <!-- Project 1: AI Stylist -->
-                    <article class="project-card" data-project="ai-stylist">
+                    <article id="project-ishtyle" class="project-card" data-project="ai-stylist">
                         <div class="project-img-wrapper">
                             <img class="project-cover-image" src="ishtyle-case-study-cover.png" alt="ishtyle AI fashion product design case study collage">
                         </div>
@@ -144,7 +144,7 @@
                     </article>
 
                     <!-- Project 2: EcoCycle -->
-                    <article class="project-card" data-project="ecocycle">
+                    <article id="project-ecocycle" class="project-card" data-project="ecocycle">
                         <div class="project-img-wrapper">
                             <img class="project-cover-image" src="ecocycle-case-study-cover.png" alt="EcoCycle sustainability community case study collage">
                         </div>
@@ -162,7 +162,7 @@
                     </article>
 
                     <!-- Project 3: Foundmoon -->
-                    <article class="project-card" data-project="foundmoon-app">
+                    <article id="project-foundmoon" class="project-card" data-project="foundmoon-app">
                         <div class="project-img-wrapper">
                             <img class="project-cover-image" src="foundmoon-case-study-cover.png" alt="Foundmoon reading companion case study collage">
                         </div>
@@ -358,35 +358,33 @@
             <div class="container">
                 <div class="about-grid">
                     <div class="about-info">
-                        <div class="section-header" style="display: flex; align-items: center; gap: 1.5rem; margin-bottom: 3rem;">
-                            <div style="width: 80px; height: 80px; border-radius: 50%; border: 2.5px solid var(--secondary); overflow: hidden; box-shadow: 0 4px 20px rgba(6, 182, 212, 0.25); display: flex; align-items: center; justify-content: center;">
-                                <img src="abou_photo.png" alt="Harshitha Rajendran" style="width: 100%; height: 100%; object-fit: cover; transform: scale(1.7); transform-origin: center 80%;">
-                            </div>
-                            <div>
-                                <span class="section-tag">Biography</span>
-                                <h2 class="section-title" style="margin: 0;">About Me</h2>
-                            </div>
+                        <div class="section-header">
+                            <span class="section-tag">Biography</span>
+                            <h2 class="section-title">About Me</h2>
                         </div>
-                        <p class="about-text" style="margin-bottom: 1.25rem;">
-                            Hello, I’m <strong>Harshitha</strong> (Asha) <strong>Rajendran</strong>. I design digital experiences where <strong>brand narrative meets flawless execution</strong>. My path to product design wasn’t typical, and that’s my greatest asset. I started in <strong>Fashion Technology and Management</strong>, where I spent years decoding consumer desires, mastering visual merchandising, and obsessing over systemic quality control down to the millimeter. I learned early on that an exceptional experience is a meticulous blend of <strong>emotional storytelling</strong> and <strong>strict functional standards</strong>.
-                        </p>
-                        <p class="about-text" style="margin-bottom: 1.25rem;">
-                            Today, I <strong>bridge the gap between design and development</strong>. As a Product & Brand Experience Designer, I don’t just hand off flat UI layouts in Figma; I <strong>build, test, and iterate</strong> on actual mobile and web interfaces using <strong>SwiftUI, Kotlin, and React</strong>. Whether conducting dozens of deep-dive user interviews to build an AI stylist app (like ishtyle) or optimizing conversion funnels that generate thousands of leads and sales for e-commerce brands, I bring a <strong>grounded, data-driven approach</strong> to human-centered design.
-                        </p>
-                        <blockquote class="about-quote">
-                            <p class="about-text" style="margin: 0;">
-                                <strong><span class="text-highlight">The superpower I bring to your team:</span></strong> I am a <strong>practical systems thinker</strong>. I love the messy chaos of inventing new concepts, but my true zone of genius is <strong>bringing structure to that chaos</strong>, transforming big, abstract strategies into sustainable, highly polished, and <strong>meticulously executed digital realities</strong>.
-                            </p>
-                        </blockquote>
-                        <blockquote class="about-quote" style="margin-top: 1.25rem;">
-                            <p class="about-text" style="margin: 0;">
-                                <strong><span class="text-highlight">When I’m not designing:</span></strong> You’ll likely find me <strong>capturing stories through a camera lens</strong> (PSI award-winner!), nose-deep in a fantasy book, writing poetry, or advocating for inclusive, accessible, and ethical technology.
-                            </p>
-                        </blockquote>
+                        <div class="about-story">
+                            <article class="story-chapter">
+                                <span class="story-number">01 / foundation</span>
+                                <h3>I learned that the details people feel are rarely accidental.</h3>
+                                <p class="about-text">Hello, I’m <strong>Harshitha</strong> (Asha) <strong>Rajendran</strong>. My first design education was in <strong>Fashion Technology and Management</strong>, where I learned to notice how colour, material, and small decisions shape the way people feel. It taught me that a memorable experience needs both <strong>emotional storytelling</strong> and the care to make every detail work.</p>
+                            </article>
+                            <article class="story-chapter story-chapter-offset">
+                                <span class="story-number">02 / practice</span>
+                                <h3>Now I bring that same curiosity to digital products.</h3>
+                                <p class="about-text">Today I bridge design and development. I listen closely, turn what I learn into ideas, and test what will genuinely help. Then I build alongside the team with <strong>SwiftUI, Kotlin, and React</strong>, bringing brand intent to life in practical experiences, from an AI stylist to conversion-focused commerce.</p>
+                            </article>
+                            <aside class="about-quote story-pullquote">
+                                <span class="story-number">03 / point of view</span>
+                                <p><span class="text-highlight">What I bring to a team:</span> calm structure in the messy middle, so good ideas can become clear, useful, and beautifully finished products.</p>
+                            </aside>
+                            <p class="story-coda">Outside the studio, I’m usually behind a camera lens (and a PSI award-winner), deep in a fantasy novel, writing poetry, or thinking about how technology can be more inclusive and human.</p>
+                        </div>
                         
-                        <div class="skills-box">
-                            <h3 class="skills-heading">Skills & Expertise</h3>
-                            <div class="skills-list">
+                        <div class="about-toolkit">
+                            <div class="toolkit-panel skills-box">
+                                <span class="story-number">Toolkit / capabilities</span>
+                                <h3 class="skills-heading">Skills &amp; Expertise</h3>
+                                <div class="skills-list">
                                 <span class="skill-tag">Product Design</span>
                                 <span class="skill-tag">UX Research</span>
                                 <span class="skill-tag">Interaction Design</span>
@@ -398,67 +396,61 @@
                                 <span class="skill-tag">HTML5 / CSS3</span>
                                 <span class="skill-tag">JavaScript / React.js</span>
                                 <span class="skill-tag">SwiftUI / Kotlin</span>
+                                </div>
                             </div>
-                        </div>
 
-                        <!-- Certifications & Education Box -->
-                        <div class="education-certs-box" style="margin-top: 2.5rem;">
-                            <h3 class="skills-heading">Education & Certifications</h3>
-                            <ul class="education-certs-list" style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 1rem;">
-                                <li style="display: flex; align-items: flex-start; gap: 0.75rem;">
-                                    <i class="fa-solid fa-graduation-cap" style="color: var(--secondary); margin-top: 0.25rem; font-size: 1.1rem; width: 20px;"></i>
+                            <div class="toolkit-panel education-certs-box">
+                                <span class="story-number">Foundation / learning</span>
+                                <h3 class="skills-heading">Education &amp; Certifications</h3>
+                                <ul class="education-certs-list">
+                                <li>
+                                    <i class="fa-solid fa-graduation-cap"></i>
                                     <div>
-                                        <strong style="color: var(--text-primary);">Master's in Fashion Management</strong><br>
-                                        <span style="font-size: 0.9rem; color: var(--text-secondary);">Manipal Academy of Higher Education | 2020</span>
+                                        <strong>Master's in Fashion Management</strong>
+                                        <span>Manipal Academy of Higher Education · 2020</span>
                                     </div>
                                 </li>
-                                <li style="display: flex; align-items: flex-start; gap: 0.75rem;">
-                                    <i class="fa-solid fa-graduation-cap" style="color: var(--secondary); margin-top: 0.25rem; font-size: 1.1rem; width: 20px;"></i>
+                                <li>
+                                    <i class="fa-solid fa-graduation-cap"></i>
                                     <div>
-                                        <strong style="color: var(--text-primary);">Bachelor's in Fashion Technology</strong><br>
-                                        <span style="font-size: 0.9rem; color: var(--text-secondary);">National Institute of Fashion Technology (NIFT) | 2017</span>
+                                        <strong>Bachelor's in Fashion Technology</strong>
+                                        <span>National Institute of Fashion Technology (NIFT) · 2017</span>
                                     </div>
                                 </li>
-                                <li style="display: flex; align-items: flex-start; gap: 0.75rem;">
-                                    <i class="fa-solid fa-certificate" style="color: var(--primary); margin-top: 0.25rem; font-size: 1.1rem; width: 20px;"></i>
+                                <li>
+                                    <i class="fa-solid fa-certificate"></i>
                                     <div>
-                                        <strong style="color: var(--text-primary);">Google Professional UX Design Certificate</strong><br>
-                                        <span style="font-size: 0.9rem; color: var(--text-secondary);">Google Professional Certification</span>
+                                        <strong>Google Professional UX Design Certificate</strong>
+                                        <span>Google Professional Certification</span>
                                     </div>
                                 </li>
-                                <li style="display: flex; align-items: flex-start; gap: 0.75rem;">
-                                    <i class="fa-solid fa-certificate" style="color: var(--primary); margin-top: 0.25rem; font-size: 1.1rem; width: 20px;"></i>
+                                <li>
+                                    <i class="fa-solid fa-certificate"></i>
                                     <div>
-                                        <strong style="color: var(--text-primary);">Brand Identity & Brand Strategy Certificate</strong><br>
-                                        <span style="font-size: 0.9rem; color: var(--text-secondary);">IE Business School</span>
+                                        <strong>Brand Identity &amp; Brand Strategy Certificate</strong>
+                                        <span>IE Business School</span>
                                     </div>
                                 </li>
                             </ul>
+                            </div>
                         </div>
                     </div>
-                    <div class="about-graphic">
-                        <div class="graphic-container">
-                            <div class="avatar-backdrop"></div>
-                            <div class="avatar-placeholder">
-                                <i class="fa-solid fa-gem"></i>
-                            </div>
-                            <div class="floating-badge badge-1">
-                                <i class="fa-solid fa-mobile-screen" style="font-size: 1.25rem; color: var(--secondary); margin-bottom: 0.25rem;"></i>
-                                <span class="badge-lbl">Product Designer</span>
-                            </div>
-                            <div class="floating-badge badge-2">
-                                <i class="fa-solid fa-compass-drafting" style="font-size: 1.25rem; color: var(--primary); margin-bottom: 0.25rem;"></i>
-                                <span class="badge-lbl">Brand Designer</span>
-                            </div>
-                            <div class="floating-badge badge-3">
-                                <i class="fa-solid fa-palette" style="font-size: 1.25rem; color: #a855f7; margin-bottom: 0.25rem;"></i>
-                                <span class="badge-lbl">Illustrator</span>
-                            </div>
-                            <div class="floating-badge badge-4">
-                                <i class="fa-solid fa-code" style="font-size: 1.25rem; color: #06b6d4; margin-bottom: 0.25rem;"></i>
-                                <span class="badge-lbl">Front-end Dev</span>
-                            </div>
+                    <aside class="about-visual-rail" aria-label="A visual companion to Harshitha's story">
+                        <figure class="story-image story-image-main">
+                            <img src="about-portrait-electric-indigo.png" alt="Harshitha Rajendran">
+                        </figure>
+                        <div class="story-skill-stickers" aria-label="Harshitha's interests and capabilities">
+                            <span class="skill-sticker sticker-research"><i class="fa-solid fa-magnifying-glass"></i><small>Research</small></span>
+                            <span class="skill-sticker sticker-systems"><i class="fa-solid fa-table-cells-large"></i><small>Systems</small></span>
+                            <span class="skill-sticker sticker-build"><i class="fa-solid fa-code"></i><small>Build</small></span>
+                            <span class="skill-sticker sticker-photo"><i class="fa-solid fa-camera"></i><small>Photo</small></span>
+                            <span class="skill-sticker sticker-draw"><i class="fa-solid fa-pencil"></i><small>Illustrate</small></span>
+                            <span class="skill-sticker sticker-read"><i class="fa-solid fa-book-open"></i><small>Stories</small></span>
                         </div>
+                        <blockquote class="story-postit">
+                            <span>Favourite thought</span>
+                            <p>“I am seeking. I am striving. I am in it with all my heart.” <cite>Vincent van Gogh</cite></p>
+                        </blockquote>
                     </div>
                 </div>
             </div>
@@ -1001,7 +993,7 @@ ishtyle (Root)
 
                 <h3>1. Introduction</h3>
                 <img src="foundmoon_feature_graphic.png" alt="Foundmoon app feature graphic" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
-                <p>Foundmoon is a native Android app for readers who want a quieter, more personal way to manage a reading life. It brings current reads, a searchable collection, reflective notes, monthly goals, and gentle reminders into one private place—without a social feed or public performance layer.</p>
+                <p>Foundmoon is a native Android app for readers who want a quieter, more personal way to manage a reading life. It brings current reads, a searchable collection, reflective notes, monthly goals, and gentle reminders into one private place without a social feed or public performance layer.</p>
 
                 <h3>2. Overview</h3>
                 <p><strong>Role:</strong> Product Designer & Android Developer<br>
@@ -1015,7 +1007,7 @@ ishtyle (Root)
                 <h3>4. Project Goals</h3>
                 <ul>
                     <li><strong>Private by default:</strong> The library, notes, goals, and preferences remain on-device; readers can export a portable JSON copy when they choose.</li>
-                    <li><strong>Progress without pressure:</strong> Reading is tracked through flexible statuses—Want to Read, Currently Reading, Read, and DNF—plus adjustable monthly targets.</li>
+                    <li><strong>Progress without pressure:</strong> Reading is tracked through flexible statuses: Want to Read, Currently Reading, Read, and DNF, plus adjustable monthly targets.</li>
                     <li><strong>Quietly helpful:</strong> Reminders are configurable by frequency and content, including an end-of-month prompt to carry an unfinished title forward.</li>
                 </ul>
 
@@ -1032,7 +1024,7 @@ ishtyle (Root)
                 <h3>7. Persona</h3>
                 <img src="foundmoon_persona_clara.png" alt="Foundmoon app user persona" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
 
-                <p><strong>Clara, 28 · Intentional Reader:</strong> Clara reads to decompress after demanding workdays. She wants a private, visually calm place to remember the books she owns, see what she is reading now, and record a thought before moving on—without the pressure of public ratings or streaks.</p>
+                <p><strong>Clara, 28 · Intentional Reader:</strong> Clara reads to decompress after demanding workdays. She wants a private, visually calm place to remember the books she owns, see what she is reading now, and record a thought before moving on, without the pressure of public ratings or streaks.</p>
 
                 <h3>8. User Journey Map</h3>
                 <img src="foundmoon_user_journey_map.png" alt="Foundmoon app user journey map" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
@@ -1079,7 +1071,7 @@ ishtyle (Root)
 
                 <h3>13. UI Design System</h3>
                  <img src="foundmoon_design_system.png" alt="Foundmoon app user journey map" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
-                <p>The interface uses a night-sky reading palette—Deep Plum, Cream, Lavender, Coral, and Teal—supported by rounded cards, Material 3 controls, and a system/light/dark appearance setting. The implementation keeps those core values centralized for a consistent visual language.</p>
+                <p>The interface uses a night-sky reading palette: Deep Plum, Cream, Lavender, Coral, and Teal, supported by rounded cards, Material 3 controls, and a system/light/dark appearance setting. The implementation keeps those core values centralized for a consistent visual language.</p>
                 <pre style="background: rgba(255,255,255,0.05); padding: 1rem; border-radius: 8px; font-family: monospace; overflow-x: auto; color: var(--text-primary); margin: 1.5rem 0; border: 1px solid var(--card-border);"><span style="color: #f472b6;">private val</span> Plum = Color(<span style="color: #fb923c;">0xFF3E2A4D</span>)
 <span style="color: #f472b6;">private val</span> Cream = Color(<span style="color: #fb923c;">0xFFF7F1E8</span>)
 <span style="color: #f472b6;">private val</span> Lavender = Color(<span style="color: #fb923c;">0xFFB28ACA</span>)
@@ -1141,7 +1133,7 @@ ishtyle (Root)
 }</pre>
 
                 <h3>15. Final Prototype</h3>
-                <p>The shipped Android build packages the Compose experience as a debug APK and release AAB. Its interactive prototype includes the landing flow, book editor, status management, goals, dark mode, import/export, and notifications—so design decisions can be evaluated in the same environment where readers will use them.</p>
+                <p>The shipped Android build packages the Compose experience as a debug APK and release AAB. Its interactive prototype includes the landing flow, book editor, status management, goals, dark mode, import/export, and notifications, so design decisions can be evaluated in the same environment where readers will use them.</p>
 
                 <h3>16. Usability Testing & Iteration</h3>
                 <p>Implementation validation focused on key user paths: adding and editing books, moving between reading states, enforcing the active-reading limit, preserving data across launches, merging an imported library, and respecting notification permission on Android 13+. A formal participant study is the next step; this case study does not present unverified usability metrics.</p>

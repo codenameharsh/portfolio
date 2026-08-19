@@ -167,13 +167,61 @@ document.addEventListener('DOMContentLoaded', () => {
         galleryItems.forEach(item => item.classList.toggle('is-hidden', item.dataset.galleryCategory !== category));
     };
 
+    let revealObserver;
     galleryFilters.forEach(filter => {
         filter.addEventListener('click', () => {
             selectGalleryCategory(filter.dataset.galleryFilter);
+            requestAnimationFrame(() => {
+                document.querySelectorAll('.gallery-item:not(.is-revealed)').forEach(item => revealObserver?.observe(item));
+            });
         });
     });
 
     selectGalleryCategory('photography');
+
+    // 4. Scroll choreography: staged reveals with a small depth response in
+    // the hero collage. It stays off for visitors who prefer reduced motion.
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (!reducedMotion && 'IntersectionObserver' in window) {
+        document.documentElement.classList.add('js-motion');
+        const revealTargets = [
+            ...document.querySelectorAll('.section-header, .project-card, .timeline-item'),
+            ...document.querySelectorAll('.about-info, .about-visual-rail, .story-chapter, .story-pullquote, .resume-intro, .resume-actions, .contact-text, .contact-method-card'),
+            ...document.querySelectorAll('.gallery-filter, .gallery-item')
+        ];
+        revealTargets.forEach((target, index) => {
+            target.classList.add('scroll-reveal');
+            target.style.setProperty('--reveal-delay', `${Math.min((index % 6) * 70, 350)}ms`);
+        });
+
+        revealObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                entry.target.classList.add('is-revealed');
+                observer.unobserve(entry.target);
+            });
+        }, { threshold: 0.14, rootMargin: '0px 0px -8% 0px' });
+        revealTargets.forEach(target => revealObserver.observe(target));
+
+        const scrapbook = document.querySelector('.hero-scrapbook');
+        const hero = document.querySelector('.hero-section');
+        let scrollTicking = false;
+        const updateScrollDepth = () => {
+            if (scrapbook && hero) {
+                const progress = Math.min(Math.max(-hero.getBoundingClientRect().top / hero.offsetHeight, 0), 1);
+                scrapbook.style.setProperty('--hero-scroll-shift', `${progress * -28}px`);
+                scrapbook.style.setProperty('--hero-scroll-tilt', `${progress * 1.4}deg`);
+            }
+            scrollTicking = false;
+        };
+        window.addEventListener('scroll', () => {
+            if (!scrollTicking) {
+                requestAnimationFrame(updateScrollDepth);
+                scrollTicking = true;
+            }
+        }, { passive: true });
+        updateScrollDepth();
+    }
 
     galleryItems.forEach(item => {
         item.addEventListener('click', () => {
