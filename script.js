@@ -308,6 +308,160 @@ document.addEventListener('DOMContentLoaded', () => {
     const closeButtons = document.querySelectorAll('.modal-close');
     const overlays = document.querySelectorAll('.modal-overlay');
     let modalScrollPosition = 0;
+    let lastModalTrigger = null;
+
+    const caseStudyGlances = {
+        'modal-smart-rewards': [
+            'I led product design, from research synthesis through problem framing and MVP definition.',
+            'I shaped the member recommendation experience, merchant controls, and a measurement plan for a loyalty platform.',
+            'Members had points to spend but faced a hard-to-compare reward catalog at the moment of redemption.',
+            'The concept offers an explainable best-fit recommendation while preserving access to the full catalog and member choice.'
+        ],
+        'modal-ai-stylist': [
+            'I led the UX/UI design and Android engineering for the four-week product concept.',
+            'I designed the end-to-end flow, high-fidelity mobile screens, and functional Android foundations in Kotlin.',
+            'Users needed to digitize a real wardrobe and make a confident outfit decision without a lengthy setup.',
+            'The resulting four-step wardrobe flow connects clothing, weather, calendar events, and mood to practical outfit suggestions.'
+        ],
+        'modal-ecocycle': [
+            'I led user research, product design, and UI for a four-week sustainability community concept.',
+            'The work included interview synthesis, personas, journey mapping, information architecture, wireframes, and a high-fidelity prototype.',
+            'Eco-conscious people were using scattered sources and lacked a clear place to share progress, find support, and build community.',
+            'Research showed that visible achievements, practical resources, and community participation could make sustainable habits easier to maintain.'
+        ],
+        'modal-foundmoon-app': [
+            'I designed and built the native Android product, from the reading experience to the technical foundation.',
+            'I defined the product flow and implemented the app with Android-native patterns for a calm, personal library.',
+            'Readers needed a private, low-friction way to track books and reading progress without turning the habit into a feed.',
+            'The app uses private, versioned on-device storage with import and export, keeping each reading record portable and personal.'
+        ],
+        'modal-foundmoon': [
+            'I designed and built the native Android product, from the reading experience to the technical foundation.',
+            'I defined the product flow and implemented the app with Android-native patterns for a calm, personal library.',
+            'Readers needed a private, low-friction way to track books and reading progress without turning the habit into a feed.',
+            'The app uses private, versioned on-device storage with import and export, keeping each reading record portable and personal.'
+        ],
+        'modal-yonderlust': [
+            'I designed the end-to-end experience during a focused two-day product design sprint.',
+            'I moved from community-informed research to persona, journey map, flows, wireframes, design system, and prototype.',
+            'Solo travelers were managing plans across apps while carrying safety concerns and the uncertainty of unfamiliar places.',
+            'The key learning was to place reassurance inside the journey at the right moments, rather than make safety feel intrusive.'
+        ],
+        'modal-aura': [
+            'I led the brand identity and editorial experience for this two-week luxury fashion concept.',
+            'I created the strategy, visual system, lookbook direction, packaging concepts, and digital brand guidance.',
+            'The challenge was to make every touchpoint feel emotionally distinctive while remaining recognizably part of one brand.',
+            'The outcome is a scalable celestial visual system applied consistently across editorial, packaging, and digital moments.'
+        ]
+    };
+
+    const caseStudyIntroductions = {
+        'modal-smart-rewards': 'A loyalty recommendation layer that helps members choose and redeem rewards with confidence.',
+        'modal-ai-stylist': 'An AI styling app that turns a personal wardrobe into timely outfit recommendations.',
+        'modal-ecocycle': 'A community platform that makes sustainable living feel social, practical, and motivating.',
+        'modal-foundmoon-app': 'A calm native Android companion for building a personal reading life.',
+        'modal-foundmoon': 'A calm native Android companion for building a personal reading life.',
+        'modal-yonderlust': 'A solo-travel planning concept designed to make independent exploration feel safer and lighter.',
+        'modal-aura': 'A luxury fashion identity built through celestial storytelling across every brand touchpoint.'
+    };
+
+    modals.forEach(modal => {
+        const title = modal.querySelector('h2');
+        const container = modal.querySelector('.modal-container');
+        const glance = caseStudyGlances[modal.id];
+        if (!title || !container) return;
+
+        title.id = `${modal.id}-title`;
+        modal.setAttribute('role', 'dialog');
+        modal.setAttribute('aria-modal', 'true');
+        modal.setAttribute('aria-labelledby', title.id);
+        modal.setAttribute('aria-hidden', 'true');
+        container.setAttribute('tabindex', '-1');
+
+        if (!modal.querySelector('.modal-close')) {
+            const closeButton = document.createElement('button');
+            closeButton.type = 'button';
+            closeButton.className = 'modal-close';
+            closeButton.setAttribute('aria-label', `Close ${title.textContent.trim()} case study`);
+            closeButton.innerHTML = '<i class="fa-solid fa-xmark" aria-hidden="true"></i>';
+            container.prepend(closeButton);
+            closeButton.addEventListener('click', () => closeModal(modal));
+        }
+
+        if (glance && !modal.querySelector('.case-study-glance')) {
+            const heading = document.createElement('h3');
+            const glanceSection = document.createElement('section');
+            heading.className = 'case-study-glance-title';
+            heading.textContent = 'TL;DR';
+            const introduction = document.createElement('p');
+            introduction.className = 'case-study-tldr-intro';
+            introduction.textContent = caseStudyIntroductions[modal.id];
+            glanceSection.className = 'case-study-glance';
+            glanceSection.setAttribute('aria-label', 'Case study summary');
+            ['Ownership', 'Scope', 'Focus', 'Evidence'].forEach((label, index) => {
+                const item = document.createElement('div');
+                item.innerHTML = `<span>${label}</span><p>${glance[index]}</p>`;
+                glanceSection.append(item);
+            });
+            const divider = modal.querySelector('.modal-body hr');
+            divider?.after(heading, introduction, glanceSection);
+        }
+
+        const modalNavigation = modal.querySelector('.modal-nav');
+        if (modalNavigation && !modal.querySelector('.modal-top-nav')) {
+            const previous = modalNavigation.querySelector('[data-prev]');
+            const next = modalNavigation.querySelector('[data-next]');
+            if (previous || next) {
+                const topNavigation = document.createElement('nav');
+                topNavigation.className = 'modal-top-nav';
+                topNavigation.setAttribute('aria-label', 'Case study navigation');
+                if (previous) {
+                    const previousButton = document.createElement('button');
+                    previousButton.type = 'button';
+                    previousButton.className = 'modal-nav-btn modal-top-nav-btn';
+                    previousButton.setAttribute('data-prev', previous.getAttribute('data-prev'));
+                    previousButton.innerHTML = '<i class="fa-solid fa-arrow-left" aria-hidden="true"></i><span>Previous</span>';
+                    topNavigation.append(previousButton);
+                }
+                if (next) {
+                    const nextButton = document.createElement('button');
+                    nextButton.type = 'button';
+                    nextButton.className = 'modal-nav-btn modal-top-nav-btn';
+                    nextButton.setAttribute('data-next', next.getAttribute('data-next'));
+                    nextButton.innerHTML = '<span>Next</span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i>';
+                    topNavigation.append(nextButton);
+                }
+                title.after(topNavigation);
+            }
+        }
+    });
+
+    const visualDescriptions = {
+        'yonder_intro.png': 'YonderLust solo travel app concept overview',
+        'yonder_research_painpopints.png': 'YonderLust research pain points from solo travelers',
+        'yonder_user_persona.png': 'YonderLust persona for Maya, a solo traveler',
+        'yonder_journey_map.png': 'YonderLust journey map from discovery to reflection',
+        'yonder_IA.png': 'YonderLust information architecture for discover, plan, explore, and safety',
+        'yonder_user_flow.png': 'YonderLust core travel planning user flow',
+        'yonder_wireframes.png': 'YonderLust early wireframes for planning and safety',
+        'yonder_design_system.png': 'YonderLust calm visual design system',
+        'yonder_final_UIxxxhdpi.png': 'YonderLust final mobile interface',
+        'yonder_prototype.png': 'YonderLust prototype screens',
+        'aura_1.png': 'AURA brand identity overview',
+        'aura_moodboardxxxhdpi.png': 'AURA celestial creative direction moodboard',
+        'aura_logo_1.png': 'AURA primary logo and usage',
+        'aura_logo_2.png': 'AURA alternate logo treatment',
+        'aura_palette1.png': 'AURA primary color palette',
+        'aura_palette2.png': 'AURA supporting color palette',
+        'aura_typography.png': 'AURA typography system',
+        'aura_editorial.png': 'AURA editorial lookbook layout system',
+        'aura_packaging.png': 'AURA packaging application',
+        'aura_digital.png': 'AURA digital brand guidelines'
+    };
+    document.querySelectorAll('img[src]').forEach(image => {
+        const fileName = image.getAttribute('src').split('/').pop();
+        if (visualDescriptions[fileName]) image.alt = visualDescriptions[fileName];
+    });
 
     function lockBackgroundScroll() {
         if (document.body.classList.contains('modal-open')) return;
@@ -328,15 +482,22 @@ document.addEventListener('DOMContentLoaded', () => {
         if (container) container.scrollTop = 0;
     }
 
+    function openModal(modal, trigger) {
+        lastModalTrigger = trigger instanceof HTMLElement ? trigger : document.activeElement;
+        modal.classList.add('active');
+        modal.setAttribute('aria-hidden', 'false');
+        resetModalScroll(modal);
+        lockBackgroundScroll();
+        requestAnimationFrame(() => modal.querySelector('.modal-close, .modal-container')?.focus());
+    }
+
     modalTriggers.forEach(trigger => {
         trigger.addEventListener('click', (e) => {
             e.preventDefault();
             const modalId = trigger.getAttribute('data-modal');
             const targetModal = document.getElementById(modalId);
             if (targetModal) {
-                targetModal.classList.add('active');
-                resetModalScroll(targetModal);
-                lockBackgroundScroll();
+                openModal(targetModal, trigger);
             }
         });
     });
@@ -352,16 +513,19 @@ document.addEventListener('DOMContentLoaded', () => {
             const modalId = `modal-${projectType}`;
             const targetModal = document.getElementById(modalId);
             if (targetModal) {
-                targetModal.classList.add('active');
-                resetModalScroll(targetModal);
-                lockBackgroundScroll();
+                openModal(targetModal, card.querySelector('.project-link'));
             }
         });
     });
 
     function closeModal(modal) {
         modal.classList.remove('active');
+        modal.setAttribute('aria-hidden', 'true');
         unlockBackgroundScroll();
+        if (lastModalTrigger instanceof HTMLElement && document.contains(lastModalTrigger)) {
+            lastModalTrigger.focus();
+        }
+        lastModalTrigger = null;
     }
 
     closeButtons.forEach(btn => {
@@ -378,14 +542,25 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // ESC key close
+    // Keyboard close and focus containment
     document.addEventListener('keydown', (e) => {
+        const activeModal = document.querySelector('.modal.active');
         if (e.key === 'Escape') {
-            modals.forEach(modal => {
-                if (modal.classList.contains('active')) {
-                    closeModal(modal);
-                }
-            });
+            if (activeModal) closeModal(activeModal);
+        }
+        if (e.key === 'Tab' && activeModal) {
+            const focusable = [...activeModal.querySelectorAll('button:not([disabled]), a[href], [tabindex]:not([tabindex="-1"])')]
+                .filter(element => element.offsetParent !== null);
+            if (!focusable.length) return;
+            const first = focusable[0];
+            const last = focusable[focusable.length - 1];
+            if (e.shiftKey && document.activeElement === first) {
+                e.preventDefault();
+                last.focus();
+            } else if (!e.shiftKey && document.activeElement === last) {
+                e.preventDefault();
+                first.focus();
+            }
         }
     });
 
@@ -534,25 +709,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (currentModal) {
                 currentModal.classList.remove('active');
+                currentModal.setAttribute('aria-hidden', 'true');
+                const returnTrigger = lastModalTrigger;
                 
                 if (action === 'close-scroll') {
                     unlockBackgroundScroll();
+                    if (returnTrigger instanceof HTMLElement) returnTrigger.focus();
+                    lastModalTrigger = null;
                 } else if (nextModalId) {
                     const nextModal = document.getElementById(nextModalId);
                     if (nextModal) {
                         setTimeout(() => {
-                            nextModal.classList.add('active');
-                            resetModalScroll(nextModal);
-                            lockBackgroundScroll();
+                            openModal(nextModal, returnTrigger);
                         }, 250);
                     }
                 } else if (prevModalId) {
                     const prevModal = document.getElementById(prevModalId);
                     if (prevModal) {
                         setTimeout(() => {
-                            prevModal.classList.add('active');
-                            resetModalScroll(prevModal);
-                            lockBackgroundScroll();
+                            openModal(prevModal, returnTrigger);
                         }, 250);
                     }
                 }
