@@ -1342,6 +1342,32 @@ body.modal-open {
 .project-proof em { display: block; margin-bottom: 0.16rem; color: var(--note-accent); font-size: 0.56rem; font-style: normal; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; }
 @media (max-width: 540px) { .project-proof { grid-template-columns: 1fr; gap: 0.55rem; } .project-tldr-fact { padding: 0; } .project-tldr-fact + .project-tldr-fact { border-left: 0; } }
 
+/* Keep the post-it treatment readable and comfortably tappable on small screens. */
+@media (max-width: 768px) {
+    .projects-grid { gap: 1.6rem; }
+    .project-card,
+    .project-card[data-project] { width: 100%; transform: none; }
+    .js-motion .project-card.scroll-reveal,
+    .js-motion .project-card.scroll-reveal.is-revealed,
+    .js-motion .project-card.scroll-reveal.is-revealed:hover { transform: translate3d(0, 0, 0); }
+    .project-card::before { top: -0.55rem; width: 27%; height: 1rem; }
+    .project-card:hover { transform: none; }
+    .project-img-wrapper { height: clamp(11.5rem, 58vw, 15.5rem); margin: 0.55rem 0.55rem 0; }
+    .project-card .project-info { padding: 1.25rem 1.2rem 1.35rem; }
+    .project-card-title { margin-bottom: 0.6rem; font-size: 1.35rem; }
+    .project-proof { margin-top: 1rem; padding: 1rem 0.8rem 0.75rem; }
+    .project-proof strong { left: 0.45rem; }
+    .project-tags { gap: 0.4rem; }
+    .project-tags span { padding: 0.3rem 0.55rem; font-size: 0.7rem; }
+}
+
+@media (max-width: 420px) {
+    .projects-grid { gap: 1.35rem; }
+    .project-card { box-shadow: 3px 5px 0 rgba(5, 7, 21, 0.42), 0 12px 24px color-mix(in srgb, var(--note-accent) 20%, transparent); }
+    .project-img-wrapper { height: 11rem; }
+    .project-card .project-info { padding: 1.15rem 1rem 1.2rem; }
+}
+
 .visual-gallery-grid {
     column-count: 4;
     column-gap: 0.9rem;
