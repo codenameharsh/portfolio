@@ -31,6 +31,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Keep compact card tool icons legible without adding permanent visual noise.
+    document.querySelectorAll('.project-tags [aria-label]').forEach((tool) => {
+        tool.dataset.tooltip = tool.getAttribute('aria-label');
+    });
+
 
     // 2. Typing Effect (Hero Section)
     const typingText = document.getElementById('typing-text');
@@ -94,11 +99,8 @@ document.addEventListener('DOMContentLoaded', () => {
         { category: 'painting', title: 'Bridal Portrait', src: 'gallery/personal-work/painting-bridal-portrait.jpg', shape: 'gallery-item-tall' },
         { category: 'painting', title: 'Cornfield Sunset', src: 'gallery/personal-work/painting-cornfield-sunset.jpg', shape: 'gallery-item-tall' },
         { category: 'painting', title: 'Mountain Triptych', src: 'gallery/personal-work/painting-mountain-triptych.jpg', shape: 'gallery-item-wide' },
-        { category: 'illustration', title: 'Tamil Letterforms', src: 'gallery/personal-work/illustration-tamil-letterforms.png', shape: '' },
-        { category: 'illustration', title: 'Madras Auto', src: 'gallery/personal-work/illustration-madras-auto.png', shape: '' },
         { category: 'illustration', title: 'Bharatanatyam', src: 'gallery/personal-work/illustration-bharatanatyam.png', shape: 'gallery-item-tall' },
         { category: 'illustration', title: 'Chennai Central', src: 'gallery/personal-work/illustration-chennai-central.png', shape: '' },
-        { category: 'illustration', title: 'Filter Kaapi', src: 'gallery/personal-work/illustration-filter-kaapi.png', shape: 'gallery-item-tall' },
         { category: 'illustration', title: 'Idli, Vada, Sambar', src: 'gallery/personal-work/illustration-idli-vada-sambar.png', shape: '' },
         { category: 'illustration', title: 'Madras Presidency Map', src: 'gallery/personal-work/illustration-madras-map.png', shape: 'gallery-item-tall' },
         { category: 'illustration', title: 'Marina Natkal', src: 'gallery/personal-work/illustration-marina-natkal.png', shape: 'gallery-item-tall' },
@@ -167,61 +169,13 @@ document.addEventListener('DOMContentLoaded', () => {
         galleryItems.forEach(item => item.classList.toggle('is-hidden', item.dataset.galleryCategory !== category));
     };
 
-    let revealObserver;
     galleryFilters.forEach(filter => {
         filter.addEventListener('click', () => {
             selectGalleryCategory(filter.dataset.galleryFilter);
-            requestAnimationFrame(() => {
-                document.querySelectorAll('.gallery-item:not(.is-revealed)').forEach(item => revealObserver?.observe(item));
-            });
         });
     });
 
     selectGalleryCategory('photography');
-
-    // 4. Scroll choreography: staged reveals with a small depth response in
-    // the hero collage. It stays off for visitors who prefer reduced motion.
-    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (!reducedMotion && 'IntersectionObserver' in window) {
-        document.documentElement.classList.add('js-motion');
-        const revealTargets = [
-            ...document.querySelectorAll('.section-header, .project-card, .timeline-item'),
-            ...document.querySelectorAll('.about-info, .about-visual-rail, .story-chapter, .story-pullquote, .resume-intro, .resume-actions, .contact-text, .contact-method-card'),
-            ...document.querySelectorAll('.gallery-filter, .gallery-item')
-        ];
-        revealTargets.forEach((target, index) => {
-            target.classList.add('scroll-reveal');
-            target.style.setProperty('--reveal-delay', `${Math.min((index % 6) * 70, 350)}ms`);
-        });
-
-        revealObserver = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (!entry.isIntersecting) return;
-                entry.target.classList.add('is-revealed');
-                observer.unobserve(entry.target);
-            });
-        }, { threshold: 0.14, rootMargin: '0px 0px -8% 0px' });
-        revealTargets.forEach(target => revealObserver.observe(target));
-
-        const scrapbook = document.querySelector('.hero-scrapbook');
-        const hero = document.querySelector('.hero-section');
-        let scrollTicking = false;
-        const updateScrollDepth = () => {
-            if (scrapbook && hero) {
-                const progress = Math.min(Math.max(-hero.getBoundingClientRect().top / hero.offsetHeight, 0), 1);
-                scrapbook.style.setProperty('--hero-scroll-shift', `${progress * -28}px`);
-                scrapbook.style.setProperty('--hero-scroll-tilt', `${progress * 1.4}deg`);
-            }
-            scrollTicking = false;
-        };
-        window.addEventListener('scroll', () => {
-            if (!scrollTicking) {
-                requestAnimationFrame(updateScrollDepth);
-                scrollTicking = true;
-            }
-        }, { passive: true });
-        updateScrollDepth();
-    }
 
     galleryItems.forEach(item => {
         item.addEventListener('click', () => {
@@ -246,26 +200,40 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 4. Mobile Navigation Menu Toggle
     const menuToggle = document.getElementById('menu-toggle');
+    const menuClose = document.getElementById('menu-close');
     const navMenu = document.querySelector('.nav-menu');
     const navLinks = document.querySelectorAll('.nav-link');
 
     if (menuToggle && navMenu) {
+        const closeMobileMenu = () => {
+            navMenu.classList.remove('active');
+            menuToggle.querySelector('i').className = 'fa-solid fa-bars';
+            menuToggle.setAttribute('aria-expanded', 'false');
+        };
+
         menuToggle.addEventListener('click', () => {
             navMenu.classList.toggle('active');
             const icon = menuToggle.querySelector('i');
-            if (navMenu.classList.contains('active')) {
+            const isOpen = navMenu.classList.contains('active');
+            if (isOpen) {
                 icon.className = 'fa-solid fa-xmark';
             } else {
                 icon.className = 'fa-solid fa-bars';
             }
+            menuToggle.setAttribute('aria-expanded', String(isOpen));
         });
+
+        menuClose?.addEventListener('click', closeMobileMenu);
 
         // Close menu on click of nav links
         navLinks.forEach(link => {
             link.addEventListener('click', () => {
-                navMenu.classList.remove('active');
-                menuToggle.querySelector('i').className = 'fa-solid fa-bars';
+                closeMobileMenu();
             });
+        });
+
+        document.addEventListener('keydown', event => {
+            if (event.key === 'Escape' && navMenu.classList.contains('active')) closeMobileMenu();
         });
     }
 
@@ -365,6 +333,44 @@ document.addEventListener('DOMContentLoaded', () => {
         'modal-aura': 'A luxury fashion identity built through celestial storytelling across every brand touchpoint.'
     };
 
+    const caseStudyTechStack = {
+        'modal-smart-rewards': [
+            ['fa-brands fa-figma', 'Figma'],
+            ['fa-solid fa-compass', 'Product strategy'],
+            ['fa-solid fa-flask', 'Experimentation']
+        ],
+        'modal-ai-stylist': [
+            ['fa-brands fa-figma', 'Figma'],
+            ['fa-brands fa-android', 'Android Studio'],
+            ['fa-solid fa-code', 'Kotlin']
+        ],
+        'modal-ecocycle': [
+            ['fa-brands fa-figma', 'Figma'],
+            ['fa-solid fa-table-columns', 'FigJam'],
+            ['fa-solid fa-magnifying-glass', 'Miro and UX research']
+        ],
+        'modal-foundmoon-app': [
+            ['fa-brands fa-android', 'Android'],
+            ['fa-solid fa-code', 'Kotlin'],
+            ['fa-solid fa-layer-group', 'Jetpack Compose']
+        ],
+        'modal-foundmoon': [
+            ['fa-brands fa-android', 'Android'],
+            ['fa-solid fa-code', 'Kotlin'],
+            ['fa-solid fa-layer-group', 'Jetpack Compose']
+        ],
+        'modal-yonderlust': [
+            ['fa-brands fa-figma', 'Figma'],
+            ['fa-solid fa-table-columns', 'FigJam'],
+            ['fa-solid fa-pen-nib', 'Illustrator']
+        ],
+        'modal-aura': [
+            ['fa-solid fa-pen-nib', 'Adobe Illustrator'],
+            ['fa-solid fa-image', 'Photoshop'],
+            ['fa-solid fa-book-open', 'InDesign']
+        ]
+    };
+
     modals.forEach(modal => {
         const title = modal.querySelector('h2');
         const container = modal.querySelector('.modal-container');
@@ -405,6 +411,21 @@ document.addEventListener('DOMContentLoaded', () => {
             });
             const divider = modal.querySelector('.modal-body hr');
             divider?.after(heading, introduction, glanceSection);
+        }
+
+        const techStack = caseStudyTechStack[modal.id];
+        if (techStack && !modal.querySelector('.case-study-tech-stack')) {
+            const techStackSection = document.createElement('section');
+            techStackSection.className = 'case-study-tech-stack';
+            techStackSection.setAttribute('aria-label', 'Tech stack');
+            techStack.forEach(([iconClass, label]) => {
+                const pill = document.createElement('span');
+                pill.className = 'case-study-tech-pill';
+                pill.innerHTML = `<i class="${iconClass}" aria-hidden="true"></i><span>${label}</span>`;
+                techStackSection.append(pill);
+            });
+            const insertionPoint = modal.querySelector('.case-study-glance');
+            insertionPoint?.after(techStackSection);
         }
 
         const modalNavigation = modal.querySelector('.modal-nav');

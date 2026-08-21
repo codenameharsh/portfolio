@@ -42,6 +42,7 @@
         <div class="nav-container">
             <a href="#" class="logo" id="nav-logo">HR<span class="dot">.</span></a>
             <nav class="nav-menu">
+                <button class="menu-close" id="menu-close" type="button" aria-label="Close menu"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
                 <a href="#hero" class="nav-link active">Home</a>
                 <a href="#selected-work" class="nav-link">Work</a>
                 <a href="#experience" class="nav-link">Experience</a>
@@ -49,7 +50,7 @@
                 <a href="#resume" class="nav-link">Resume</a>
                 <a href="#contact" class="nav-link">Contact</a>
             </nav>
-            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu">
+            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu" aria-expanded="false">
                 <i class="fa-solid fa-bars"></i>
             </button>
         </div>
@@ -59,12 +60,12 @@
         <!-- Hero Section -->
         <section id="hero" class="hero-section">
             <div class="hero-content">
-                <p class="hero-tagline">Product & Brand Experience Designer</p>
+                <p class="hero-tagline">Product &amp; Brand Experience Designer</p>
                 <h1 class="hero-title">
                     <span class="hero-name-line">Hi, I'm <span class="highlight">Harshitha</span>.</span>
-                    <span class="hero-typing-line">I design <span id="typing-text"></span></span>
+                    <span class="hero-typing-line">Curiosity first. <span class="hero-emphasis">Clarity always.</span></span>
                 </h1>
-                <p class="hero-subtitle">A multidisciplinary designer specializing in the consumer space, delivering everything from polished design systems to production-ready code.</p>
+                <p class="hero-subtitle">I blend product thinking, visual systems, and front-end craft to make consumer experiences feel effortless.</p>
                 <div class="hero-actions">
                     <a href="#selected-work" class="btn btn-primary">See My Work <i class="fa-solid fa-arrow-down"></i></a>
                     <a href="#contact" class="btn btn-secondary">Get In Touch</a>
@@ -114,13 +115,13 @@
                         </div>
                         <div class="project-info">
                             <span class="project-category">Product Design &amp; Loyalty</span>
-                            <h3 class="project-card-title">Smart Rewards</h3>
-                            <p class="project-proof"><strong>At a glance</strong><span class="project-intro">A clearer way for loyalty members to discover and redeem the right reward.</span><span class="project-tldr-fact"><em>Role</em>Product designer</span><span class="project-tldr-fact"><em>Scope</em>Research to MVP</span><span class="project-tldr-fact"><em>Takeaway</em>Clear guidance helps members choose rewards with confidence.</span></p>
+                            <div class="project-title-row"><h3 class="project-card-title">Smart Rewards</h3>
                             <div class="project-tags">
-                                <span>Product Strategy</span>
-                                <span>UX Design</span>
-                                <span>Experimentation</span>
-                            </div>
+                                <span aria-label="Product Strategy"><i class="fa-solid fa-compass" aria-hidden="true"></i></span>
+                                <span aria-label="UX Design"><i class="fa-solid fa-object-group" aria-hidden="true"></i></span>
+                                <span aria-label="Experimentation"><i class="fa-solid fa-flask" aria-hidden="true"></i></span>
+                            </div></div>
+                            <p class="project-proof"><strong>At a glance</strong><span class="project-intro">A clearer way for loyalty members to discover and redeem the right reward.</span><span class="project-tldr-fact"><em>Role</em>Product designer</span><span class="project-tldr-fact"><em>Scope</em>Research to MVP</span><span class="project-tldr-fact"><em>Takeaway</em>Clear guidance helps members choose rewards with confidence.</span></p>
                             <a href="#" class="project-link" data-modal="modal-smart-rewards">Explore Details <i class="fa-solid fa-arrow-right"></i></a>
                         </div>
                     </article>
@@ -132,13 +133,13 @@
                         </div>
                         <div class="project-info">
                             <span class="project-category">Product Design & AI Fashion</span>
-                            <h3 class="project-card-title">ishtyle</h3>
-                            <p class="project-proof"><strong>At a glance</strong><span class="project-intro">An AI stylist that turns a wardrobe into contextual outfit recommendations.</span><span class="project-tldr-fact"><em>Role</em>UX/UI designer and Android builder</span><span class="project-tldr-fact"><em>Scope</em>Flow and prototype</span><span class="project-tldr-fact"><em>Takeaway</em>Four quick steps turn a wardrobe into useful outfit suggestions.</span></p>
+                            <div class="project-title-row"><h3 class="project-card-title">ishtyle</h3>
                             <div class="project-tags">
-                                <span>Figma</span>
-                                <span>Android Studio</span>
-                                <span>Kotlin</span>
-                            </div>
+                                <span aria-label="Figma"><i class="fa-brands fa-figma" aria-hidden="true"></i></span>
+                                <span aria-label="Android Studio"><i class="fa-brands fa-android" aria-hidden="true"></i></span>
+                                <span aria-label="Kotlin"><i class="fa-solid fa-code" aria-hidden="true"></i></span>
+                            </div></div>
+                            <p class="project-proof"><strong>At a glance</strong><span class="project-intro">An AI stylist that turns a wardrobe into contextual outfit recommendations.</span><span class="project-tldr-fact"><em>Role</em>UX/UI designer and Android builder</span><span class="project-tldr-fact"><em>Scope</em>Flow and prototype</span><span class="project-tldr-fact"><em>Takeaway</em>Four quick steps turn a wardrobe into useful outfit suggestions.</span></p>
                             <a href="#" class="project-link" data-modal="modal-ai-stylist">Explore Details <i class="fa-solid fa-arrow-right"></i></a>
                         </div>
                     </article>
@@ -150,13 +151,13 @@
                         </div>
                         <div class="project-info">
                             <span class="project-category">UX Design & Sustainability</span>
-                            <h3 class="project-card-title">EcoCycle</h3>
-                            <p class="project-proof"><strong>At a glance</strong><span class="project-intro">A community space that makes sustainable habits more visible and social.</span><span class="project-tldr-fact"><em>Role</em>Research, UX, and UI lead</span><span class="project-tldr-fact"><em>Scope</em>Community profile experience</span><span class="project-tldr-fact"><em>Takeaway</em>Progress feels more motivating when a community can see and share it.</span></p>
+                            <div class="project-title-row"><h3 class="project-card-title">EcoCycle</h3>
                             <div class="project-tags">
-                                <span>Figma</span>
-                                <span>Illustrator</span>
-                                <span>UX Research</span>
-                            </div>
+                                <span aria-label="Figma"><i class="fa-brands fa-figma" aria-hidden="true"></i></span>
+                                <span aria-label="Illustrator"><i class="fa-solid fa-pen-nib" aria-hidden="true"></i></span>
+                                <span aria-label="UX Research"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i></span>
+                            </div></div>
+                            <p class="project-proof"><strong>At a glance</strong><span class="project-intro">A community space that makes sustainable habits more visible and social.</span><span class="project-tldr-fact"><em>Role</em>Research, UX, and UI lead</span><span class="project-tldr-fact"><em>Scope</em>Community profile experience</span><span class="project-tldr-fact"><em>Takeaway</em>Progress feels more motivating when a community can see and share it.</span></p>
                             <a href="#" class="project-link" data-modal="modal-ecocycle">Explore Details <i class="fa-solid fa-arrow-right"></i></a>
                         </div>
                     </article>
@@ -168,13 +169,13 @@
                         </div>
                         <div class="project-info">
                             <span class="project-category">Android Product Design & Development</span>
-                            <h3 class="project-card-title">Foundmoon</h3>
-                            <p class="project-proof"><strong>At a glance</strong><span class="project-intro">A calm Android companion for building a personal reading life.</span><span class="project-tldr-fact"><em>Role</em>Product designer and Android builder</span><span class="project-tldr-fact"><em>Scope</em>Native reading companion</span><span class="project-tldr-fact"><em>Takeaway</em>Private, versioned storage keeps a reading record truly personal.</span></p>
+                            <div class="project-title-row"><h3 class="project-card-title">Foundmoon</h3>
                             <div class="project-tags">
-                                <span>Figma</span>
-                                <span>Android</span>
-                                <span>Jetpack Compose</span>
-                            </div>
+                                <span aria-label="Figma"><i class="fa-brands fa-figma" aria-hidden="true"></i></span>
+                                <span aria-label="Android"><i class="fa-brands fa-android" aria-hidden="true"></i></span>
+                                <span aria-label="Jetpack Compose"><i class="fa-solid fa-layer-group" aria-hidden="true"></i></span>
+                            </div></div>
+                            <p class="project-proof"><strong>At a glance</strong><span class="project-intro">A calm Android companion for building a personal reading life.</span><span class="project-tldr-fact"><em>Role</em>Product designer and Android builder</span><span class="project-tldr-fact"><em>Scope</em>Native reading companion</span><span class="project-tldr-fact"><em>Takeaway</em>Private, versioned storage keeps a reading record truly personal.</span></p>
                             <a href="#" class="project-link" data-modal="modal-foundmoon-app">Explore Details <i class="fa-solid fa-arrow-right"></i></a>
                         </div>
                     </article>
@@ -186,13 +187,13 @@
                         </div>
                         <div class="project-info">
                             <span class="project-category">UX Design & Travel</span>
-                            <h3 class="project-card-title">YonderLust</h3>
-                            <p class="project-proof"><strong>At a glance</strong><span class="project-intro">A solo-travel planner designed to make exploration feel safer and lighter.</span><span class="project-tldr-fact"><em>Role</em>Product designer</span><span class="project-tldr-fact"><em>Scope</em>Two-day design sprint</span><span class="project-tldr-fact"><em>Takeaway</em>Safety should support a trip without taking over the experience.</span></p>
+                            <div class="project-title-row"><h3 class="project-card-title">YonderLust</h3>
                             <div class="project-tags">
-                                <span>Figma</span>
-                                <span>UX Research</span>
-                                <span>Prototyping</span>
-                            </div>
+                                <span aria-label="Figma"><i class="fa-brands fa-figma" aria-hidden="true"></i></span>
+                                <span aria-label="UX Research"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i></span>
+                                <span aria-label="Prototyping"><i class="fa-solid fa-mobile-screen-button" aria-hidden="true"></i></span>
+                            </div></div>
+                            <p class="project-proof"><strong>At a glance</strong><span class="project-intro">A solo-travel planner designed to make exploration feel safer and lighter.</span><span class="project-tldr-fact"><em>Role</em>Product designer</span><span class="project-tldr-fact"><em>Scope</em>Two-day design sprint</span><span class="project-tldr-fact"><em>Takeaway</em>Safety should support a trip without taking over the experience.</span></p>
                             <a href="#" class="project-link" data-modal="modal-yonderlust">Explore Details <i class="fa-solid fa-arrow-right"></i></a>
                         </div>
                     </article>
@@ -204,13 +205,13 @@
                         </div>
                         <div class="project-info">
                             <span class="project-category">Brand Identity & Editorial</span>
-                            <h3 class="project-card-title">Aura</h3>
-                            <p class="project-proof"><strong>At a glance</strong><span class="project-intro">A celestial brand identity brought to life across editorial and digital touchpoints.</span><span class="project-tldr-fact"><em>Role</em>Brand and editorial designer</span><span class="project-tldr-fact"><em>Scope</em>Identity to touchpoints</span><span class="project-tldr-fact"><em>Takeaway</em>One visual system makes every brand moment feel connected.</span></p>
+                            <div class="project-title-row"><h3 class="project-card-title">Aura</h3>
                             <div class="project-tags">
-                                <span>Illustrator</span>
-                                <span>Photoshop</span>
-                                <span>InDesign</span>
-                            </div>
+                                <span aria-label="Illustrator"><i class="fa-solid fa-pen-nib" aria-hidden="true"></i></span>
+                                <span aria-label="Photoshop"><i class="fa-solid fa-image" aria-hidden="true"></i></span>
+                                <span aria-label="InDesign"><i class="fa-solid fa-book-open" aria-hidden="true"></i></span>
+                            </div></div>
+                            <p class="project-proof"><strong>At a glance</strong><span class="project-intro">A celestial brand identity brought to life across editorial and digital touchpoints.</span><span class="project-tldr-fact"><em>Role</em>Brand and editorial designer</span><span class="project-tldr-fact"><em>Scope</em>Identity to touchpoints</span><span class="project-tldr-fact"><em>Takeaway</em>One visual system makes every brand moment feel connected.</span></p>
                             <a href="#" class="project-link" data-modal="modal-aura">Explore Details <i class="fa-solid fa-arrow-right"></i></a>
                         </div>
                     </article>
