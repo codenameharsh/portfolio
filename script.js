@@ -36,50 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
         tool.dataset.tooltip = tool.getAttribute('aria-label');
     });
 
-
-    // 2. Typing Effect (Hero Section)
-    const typingText = document.getElementById('typing-text');
-    const words = [
-        "intuitive digital products.",
-        "compelling brand experiences.",
-        "engaging user interfaces.",
-        "holistic design systems."
-    ];
-    let wordIndex = 0;
-    let charIndex = 0;
-    let isDeleting = false;
-    let typingSpeed = 70;
-
-    function type() {
-        const currentWord = words[wordIndex];
-        
-        if (isDeleting) {
-            typingText.textContent = currentWord.substring(0, charIndex - 1);
-            charIndex--;
-            typingSpeed = 35; // Speed up when deleting
-        } else {
-            typingText.textContent = currentWord.substring(0, charIndex + 1);
-            charIndex++;
-            typingSpeed = 70; // Normal speed when typing
-        }
-
-        if (!isDeleting && charIndex === currentWord.length) {
-            typingSpeed = 1500; // Pause at full word
-            isDeleting = true;
-        } else if (isDeleting && charIndex === 0) {
-            isDeleting = false;
-            wordIndex = (wordIndex + 1) % words.length;
-            typingSpeed = 300; // Pause before typing next word
-        }
-
-        setTimeout(type, typingSpeed);
-    }
-
-    if (typingText) {
-        type();
-    }
-
-    // 3. Interactive visual gallery
+    // 2. Interactive visual gallery
     const galleryGrid = document.querySelector('.visual-gallery-grid');
     const visualGallerySection = document.getElementById('visual-gallery');
     const resumeSection = document.getElementById('resume');
@@ -586,76 +543,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
-    // 6. Contact Form Interactive Validation & Mock Submission
-    const contactForm = document.getElementById('contact-form');
-    const formStatus = document.getElementById('form-status');
-    const submitBtn = document.getElementById('form-submit');
-
-    if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-
-            // Set loading state
-            submitBtn.disabled = true;
-            submitBtn.innerHTML = `Sending... <i class="fa-solid fa-circle-notch fa-spin"></i>`;
-            formStatus.className = 'form-status';
-            formStatus.textContent = '';
-
-            // Simulate form submission API delay
-            setTimeout(() => {
-                const name = document.getElementById('form-name').value;
-                const email = document.getElementById('form-email').value;
-                
-                if (name && email) {
-                    formStatus.classList.add('success');
-                    formStatus.textContent = `Thank you, ${name}! Your message has been sent successfully.`;
-                    contactForm.reset();
-                } else {
-                    formStatus.classList.add('error');
-                    formStatus.textContent = 'Oops! Please make sure all required fields are filled correctly.';
-                }
-
-                // Restore button state
-                submitBtn.disabled = false;
-                submitBtn.innerHTML = `Send Message <i class="fa-solid fa-paper-plane"></i>`;
-            }, 1800);
-        });
-    }
-
-    // 7. Circular Before/After Auto-Transition Alignment (Design vs. Code)
-    // Removed to prevent performance-intensive layout reflow calculations on mobile window resizing.
-
-    // 9. AURA Case Study Gallery Slider
-    const auraGallery = document.querySelector('.aura-gallery-container');
-    if (auraGallery) {
-        const slides = auraGallery.querySelectorAll('.aura-gallery-slide');
-        const prevBtn = auraGallery.querySelector('.aura-gallery-arrow.prev');
-        const nextBtn = auraGallery.querySelector('.aura-gallery-arrow.next');
-        const dots = auraGallery.querySelectorAll('.aura-dot');
-        let currentSlide = 0;
-
-        function showSlide(index) {
-            slides[currentSlide].classList.remove('active');
-            dots[currentSlide].classList.remove('active');
-            
-            currentSlide = (index + slides.length) % slides.length;
-            
-            slides[currentSlide].classList.add('active');
-            dots[currentSlide].classList.add('active');
-        }
-
-        prevBtn.addEventListener('click', () => showSlide(currentSlide - 1));
-        nextBtn.addEventListener('click', () => showSlide(currentSlide + 1));
-
-        dots.forEach(dot => {
-            dot.addEventListener('click', () => {
-                const index = parseInt(dot.getAttribute('data-slide'));
-                showSlide(index);
-            });
-        });
-    }
-
-    // 10. Foundmoon Final UI Gallery Slider
+    // 6. Foundmoon Final UI Gallery Slider
     const foundmoonGallery = document.querySelector('.foundmoon-gallery');
     if (foundmoonGallery) {
         const slides = foundmoonGallery.querySelectorAll('.foundmoon-gallery-slide');
@@ -767,5 +655,31 @@ document.addEventListener('DOMContentLoaded', () => {
             unlockBackgroundScroll();
         });
     });
+
+    // Subtle scroll choreography that preserves the browser's natural scrolling.
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const scrollStages = document.querySelectorAll(
+        '.section-header, .project-card, .timeline-item, .about-visual, .about-story, .skills-card, .education-card, .resume-card, .contact-method'
+    );
+
+    if (!prefersReducedMotion && 'IntersectionObserver' in window) {
+        scrollStages.forEach((stage, index) => {
+            stage.classList.add('scroll-stage');
+            stage.style.setProperty('--scroll-stage-delay', `${Math.min(index % 4, 3) * 70}ms`);
+        });
+
+        const stageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach((entry) => {
+                if (!entry.isIntersecting) return;
+                entry.target.classList.add('is-in-view');
+                observer.unobserve(entry.target);
+            });
+        }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+
+        scrollStages.forEach((stage) => stageObserver.observe(stage));
+
+    } else {
+        scrollStages.forEach((stage) => stage.classList.add('is-in-view'));
+    }
 
 });
