@@ -881,12 +881,12 @@ body.modal-open {
 }
 
 /* Keep the visual project sequence aligned with the case-study journey. */
-.project-card[data-project="smart-rewards"] { order: 1; }
-.project-card[data-project="foundmoon-app"] { order: 2; }
-.project-card[data-project="ai-stylist"] { order: 3; }
+.project-card[data-project="aura"] { order: 1; }
+.project-card[data-project="ai-stylist"] { order: 2; }
+.project-card[data-project="smart-rewards"] { order: 3; }
 .project-card[data-project="ecocycle"] { order: 4; }
-.project-card[data-project="yonderlust"] { order: 5; }
-.project-card[data-project="aura"] { order: 6; }
+.project-card[data-project="foundmoon-app"] { order: 5; }
+.project-card[data-project="yonderlust"] { order: 6; }
 
 .project-card[data-project="smart-rewards"] { --note-paper: var(--bg-dark-alt); --note-ink: var(--text-primary); --note-accent: var(--primary); --card-tilt: -1.1deg; transform: rotate(var(--card-tilt)); }
 .project-card[data-project="foundmoon-app"] { --note-paper: var(--bg-dark-alt); --note-ink: var(--text-primary); --note-accent: var(--secondary); --card-tilt: 1deg; transform: rotate(var(--card-tilt)); }
