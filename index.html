@@ -121,7 +121,7 @@
                                 <span aria-label="UX Design"><i class="fa-solid fa-object-group" aria-hidden="true"></i></span>
                                 <span aria-label="Experimentation"><i class="fa-solid fa-flask" aria-hidden="true"></i></span>
                             </div></div>
-                            <p class="project-proof"><strong>At a glance</strong><span class="project-intro">A clearer way for loyalty members to discover and redeem the right reward.</span><span class="project-tldr-fact"><em>Role</em>Product designer</span><span class="project-tldr-fact"><em>Scope</em>Research to MVP</span><span class="project-tldr-fact"><em>Takeaway</em>Clear guidance helps members choose rewards with confidence.</span></p>
+                            <p class="project-proof"><strong>At a glance</strong><span class="project-intro">A recommendation layer that helps loyalty members choose a reward instead of just browse for one.</span><span class="project-tldr-fact"><em>Role</em>Product designer</span><span class="project-tldr-fact"><em>Scope</em>Recommendation experience, controls, MVP, and measurement</span><span class="project-tldr-fact"><em>Takeaway</em>Decision support can clarify the next best action without taking away choice.</span></p>
                             <a href="#" class="project-link" data-modal="modal-smart-rewards">Explore Details <i class="fa-solid fa-arrow-right"></i></a>
                         </div>
                     </article>
@@ -139,7 +139,7 @@
                                 <span aria-label="Android Studio"><i class="fa-brands fa-android" aria-hidden="true"></i></span>
                                 <span aria-label="Kotlin"><i class="fa-solid fa-code" aria-hidden="true"></i></span>
                             </div></div>
-                            <p class="project-proof"><strong>At a glance</strong><span class="project-intro">An AI stylist that turns a wardrobe into contextual outfit recommendations.</span><span class="project-tldr-fact"><em>Role</em>UX/UI designer and Android builder</span><span class="project-tldr-fact"><em>Scope</em>Flow and prototype</span><span class="project-tldr-fact"><em>Takeaway</em>Four quick steps turn a wardrobe into useful outfit suggestions.</span></p>
+                            <p class="project-proof"><strong>At a glance</strong><span class="project-intro">An AI stylist that earns useful context without making wardrobe setup feel like work.</span><span class="project-tldr-fact"><em>Role</em>Lead UX/UI designer and Android developer</span><span class="project-tldr-fact"><em>Scope</em>Personalization, product design, and Android build</span><span class="project-tldr-fact"><em>Takeaway</em>Progressive input makes personal AI feel useful before it feels demanding.</span></p>
                             <a href="#" class="project-link" data-modal="modal-ai-stylist">Explore Details <i class="fa-solid fa-arrow-right"></i></a>
                         </div>
                     </article>
@@ -211,7 +211,7 @@
                                 <span aria-label="Photoshop"><i class="fa-solid fa-image" aria-hidden="true"></i></span>
                                 <span aria-label="InDesign"><i class="fa-solid fa-book-open" aria-hidden="true"></i></span>
                             </div></div>
-                            <p class="project-proof"><strong>At a glance</strong><span class="project-intro">A celestial brand identity brought to life across editorial and digital touchpoints.</span><span class="project-tldr-fact"><em>Role</em>Brand and editorial designer</span><span class="project-tldr-fact"><em>Scope</em>Identity to touchpoints</span><span class="project-tldr-fact"><em>Takeaway</em>One visual system makes every brand moment feel connected.</span></p>
+                            <p class="project-proof"><strong>At a glance</strong><span class="project-intro">A luxury fashion world where celestial inspiration becomes a flexible, recognizable brand system.</span><span class="project-tldr-fact"><em>Role</em>Brand experience designer</span><span class="project-tldr-fact"><em>Scope</em>Strategy, identity, and touchpoints</span><span class="project-tldr-fact"><em>Takeaway</em>Shared rules keep a brand recognizable across changing compositions and media.</span></p>
                             <a href="#" class="project-link" data-modal="modal-aura">Explore Details <i class="fa-solid fa-arrow-right"></i></a>
                         </div>
                     </article>
@@ -559,9 +559,103 @@
         <div class="modal-container">
             <div class="modal-body">
                 <h2>ishtyle</h2>
-                <p class="modal-subtitle text-highlight">AI-powered fashion ecosystem seamlessly digitizing physical closets to deliver personalized outfit recommendations</p>
+                <p class="modal-subtitle text-highlight">Making AI styling personal without making setup exhausting</p>
                 <hr>
-                
+
+                <img src="ishtyle_case_study_hero.png" alt="ishtyle mobile experience for personalized outfit recommendations" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
+                <p><strong>Role:</strong> Lead UX/UI Designer &amp; Android Developer<br>
+                <strong>Duration:</strong> 4 weeks<br>
+                <strong>Tools:</strong> Figma · Android Studio · Kotlin · Jetpack Compose<br>
+                <strong>Focus:</strong> AI personalization · Wardrobe digitization · Product design · Android development</p>
+
+                <h3>Personalization only works when people can get started</h3>
+                <p>A useful AI stylist needs context. It needs to understand what someone owns, what they like, what suits them, where they are going, and even factors such as weather or mood.</p>
+                <p>But collecting all of that information creates a second problem:</p>
+                <p><strong>The more an AI stylist knows, the better it can personalize. The more it asks upfront, the harder it becomes to start using.</strong></p>
+                <p>I designed ishtyle around that tension. The goal was not simply to build a digital closet; it was to make getting dressed easier while keeping the effort required to create that closet low enough to feel worthwhile.</p>
+
+                <h3>The opportunity was connecting the closet to the moment</h3>
+                <img src="ishtyle_competitive_landscape.png" alt="Competitive landscape for wardrobe and AI styling products" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
+                <p>I looked at products including Whering, Acloset, Cladwell, Indyx, and Alta. Each solved part of the problem well: closet organization, capsule wardrobes, human styling, or AI recommendations. But the experience was fragmented.</p>
+                <p>That suggested an opportunity to connect three things in one system: <strong>what I own → what works for me → what should I wear today?</strong></p>
+                <p>From there, I focused the product around wardrobe digitization, contextual recommendations, personal style information, and optional human styling support.</p>
+
+                <h3>Wardrobe setup was the highest-risk moment</h3>
+                <img src="ishtyle_lofi_wireframes_mobile.png" alt="ishtyle wireframes for the step-by-step garment digitization flow" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
+                <p>Before ishtyle could recommend anything useful, users needed to digitize their clothes. That made wardrobe setup one of the highest-risk moments in the experience.</p>
+                <p>Instead of treating upload as a generic form, I designed a four-step flow: <strong>Capture → Remove background → Categorize → Confirm</strong>.</p>
+                <p>The goal was to reduce manual work and make each step feel immediately understandable. I later implemented the flow in Jetpack Compose, including the camera interaction, background-removal state, category handling, and visual feedback.</p>
+
+                <h3>Style DNA is built progressively, not demanded all at once</h3>
+                <img src="ishtyle_onboarding_user_flow.png" alt="ishtyle onboarding flow for progressive style personalization" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
+                <p>The onboarding flow combines style preferences, visual preference matching, color analysis, and wardrobe information. Rather than making personalization feel like a single long questionnaire, the experience breaks it into smaller interactions that progressively build the user's Style DNA.</p>
+                <p>Once inside the product, that context can support recommendations based on wardrobe, weather, calendar events, mood, and personal characteristics.</p>
+                <p>The principle was simple: <strong>Ask for information when its value to the user is clear.</strong></p>
+
+                <h3>A working prototype made the invisible system visible</h3>
+                <img src="ishtyle_hifi_mobile_ui.png" alt="High-fidelity ishtyle mobile UI for wardrobe and outfit recommendations" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
+                <p>Building ishtyle as a functional Android prototype exposed decisions that were easy to overlook in static mockups. I had to think about:</p>
+                <ul>
+                    <li>how garments are represented as structured data</li>
+                    <li>what happens after an item is captured</li>
+                    <li>how categories remain consistent across the wardrobe</li>
+                    <li>how UI states transition during digitization</li>
+                    <li>how visual components behave in code</li>
+                    <li>how wardrobe attributes could eventually inform recommendations</li>
+                </ul>
+                <img src="ishtyle_design_system.png" alt="ishtyle design system with color, typography, and reusable mobile UI components" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
+                <p>The design system paired editorial type with a calm, warm palette and lightweight components so the product could feel personal without adding visual noise to an already information-rich experience.</p>
+                <h4 class="case-study-code-title">A garment becomes useful when its attributes are usable</h4>
+                <p>Each captured item needed more than an image. I modeled the attributes that let the experience organize a wardrobe today and support context-aware recommendations later.</p>
+                <pre class="case-study-code"><code><span class="code-keyword">data class</span> <span class="code-type">WardrobeItem</span>(
+    <span class="code-keyword">val</span> id: String,
+    <span class="code-keyword">val</span> category: String,
+    <span class="code-keyword">val</span> itemType: String,
+    <span class="code-keyword">val</span> color: String = <span class="code-string">"Neutral"</span>,
+    <span class="code-keyword">val</span> season: String = <span class="code-string">"All"</span>,
+    <span class="code-keyword">val</span> occasion: String = <span class="code-string">"Casual"</span>,
+    <span class="code-keyword">val</span> isFavorite: Boolean = <span class="code-keyword">false</span>
+)</code></pre>
+                <h4 class="case-study-code-title">Processing states need to feel active, not opaque</h4>
+                <p>For background removal, I used a lightweight animated scan line to make an otherwise invisible processing state legible while keeping the user oriented in the flow.</p>
+                <pre class="case-study-code"><code><span class="code-annotation">@Composable</span>
+<span class="code-keyword">fun</span> <span class="code-type">BackgroundRemovalStep</span>() {
+    <span class="code-keyword">val</span> transition = rememberInfiniteTransition(label = <span class="code-string">"scan"</span>)
+    <span class="code-keyword">val</span> scanY <span class="code-keyword">by</span> transition.animateFloat(
+        initialValue = <span class="code-number">0.05f</span>, targetValue = <span class="code-number">0.95f</span>,
+        animationSpec = infiniteRepeatable(tween(<span class="code-number">2000</span>), RepeatMode.Reverse),
+        label = <span class="code-string">"scan-position"</span>
+    )
+
+    Canvas(Modifier.fillMaxSize()) {
+        drawLine(RichMauve, Offset(<span class="code-number">0f</span>, size.height * scanY),
+            Offset(size.width, size.height * scanY), strokeWidth = <span class="code-number">3.dp</span>.toPx())
+    }
+}</code></pre>
+                <p>That shifted my thinking from designing individual screens to designing a system of connected states and data.</p>
+
+                <h3>The setup flow had to prove it could stay lightweight</h3>
+                <img src="ishtyle_usability_testing_spacious.png" alt="ishtyle usability testing results for wardrobe digitization and onboarding" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
+                <p>I tested the prototype with five participants, focusing particularly on wardrobe setup. The digitization flow averaged <strong>38 seconds</strong>, beating my target of under 45 seconds. Style Quiz completion reached <strong>90%</strong>, while initial category auto-detection achieved <strong>92% accuracy</strong> during uploads.</p>
+                <p>These results are directional given the small sample, but they helped validate that the core setup experience could remain relatively lightweight despite the amount of information the system needs.</p>
+
+                <h3>The next measure is whether recommendations earn repeat use</h3>
+                <p>The next question is less about whether people can digitize their wardrobe and more about whether the resulting recommendations are actually useful. I would evaluate:</p>
+                <ul>
+                    <li>recommendation acceptance and saves</li>
+                    <li>regeneration or rejection rate</li>
+                    <li>onboarding completion</li>
+                    <li>wardrobe growth over time</li>
+                    <li>repeat styling sessions</li>
+                    <li>whether additional personalization meaningfully improves recommendation quality</li>
+                </ul>
+                <p>I would also test how much information can be deferred until after the first useful recommendation.</p>
+
+                <h3>AI products succeed by balancing intelligence with control</h3>
+                <p>ishtyle taught me that designing an AI product is not primarily about putting AI into an interface. It is about designing the relationship between <strong>input, intelligence, explanation, and user control</strong>.</p>
+                <p>The better the system understands someone, the more useful it can become. The product challenge is earning that information without making personalization itself feel like work.</p>
+
+                <!-- Superseded case-study content retained in source history.
                 <h3>Introduction</h3>
                 <img src="ishtyle_case_study_hero.png" alt="ishtyle AI Outfit Recommendation" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
                 <p><strong>Tagline:</strong> Your wardrobe. Your stylist. Your confidence.<br>
@@ -778,10 +872,11 @@ ishtyle (Root)
 
                 <h3>17. Reflection</h3>
                 <p>Combining design systems with functional code structures early avoids layout regression. High-fashion aesthetics (like editorial typography and a custom warm palette) elevate the utility from a simple closet inventory list to a desirable, daily lifestyle companion.</p>
-                
+                -->
+
                 <div class="modal-nav">
-                    <button type="button" class="btn btn-secondary modal-nav-btn prev-modal-btn" data-prev="modal-foundmoon-app"><i class="fa-solid fa-arrow-left"></i> Prev Project</button>
-                    <button type="button" class="btn btn-primary modal-nav-btn next-modal-btn" data-next="modal-ecocycle">Next Project <i class="fa-solid fa-arrow-right"></i></button>
+                    <button type="button" class="btn btn-secondary modal-nav-btn prev-modal-btn" data-prev="modal-aura"><i class="fa-solid fa-arrow-left"></i> Previous: AURA</button>
+                    <button type="button" class="btn btn-primary modal-nav-btn next-modal-btn" data-next="modal-smart-rewards">Next: Smart Rewards <i class="fa-solid fa-arrow-right"></i></button>
                 </div>
             </div>
         </div>
@@ -793,9 +888,84 @@ ishtyle (Root)
         <div class="modal-container">
             <div class="modal-body">
                 <h2>Smart Rewards</h2>
-                <p class="modal-subtitle text-highlight">Helping loyalty members redeem with confidence</p>
+                <p class="modal-subtitle text-highlight">Helping loyalty members choose instead of just browse</p>
                 <hr>
 
+                <img src="smart_rewards_hero.png" alt="Smart Rewards recommendation experience for loyalty members" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
+                <p><strong>Role:</strong> Product Designer<br>
+                <strong>Scope:</strong> Problem framing · Recommendation experience · Merchant controls · MVP strategy · Measurement</p>
+
+                <h3>The problem was not earning. It was choosing.</h3>
+                <img src="smart_rewards_problem.png" alt="A difficult-to-compare loyalty reward catalog" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
+                <p>Loyalty programs are designed to make rewards feel valuable, but reaching redemption can create another decision.</p>
+                <p>A member opens a catalog and has to determine:</p>
+                <p><strong>Which reward gives me the best value? Can I use it now? Should I spend my points or keep saving?</strong></p>
+                <p>That creates friction at exactly the moment the loyalty program is supposed to feel rewarding. I focused Smart Rewards on this decision point.</p>
+
+                <h3>A smaller intervention could have a clearer effect</h3>
+                <p>One direction would have been to redesign the entire rewards experience. I chose a smaller intervention.</p>
+                <p><strong>What if the platform could help a member identify one relevant reward without taking away their ability to choose?</strong></p>
+                <p>My hypothesis was that an eligible, personalized, explainable recommendation could reduce the effort of comparing an entire catalog and create a clearer path toward redemption.</p>
+
+                <h3>Decision support is useful only when the member stays in control</h3>
+                <img src="smart_rewards_solution.png" alt="Smart Rewards eligibility filtering, relevance ranking, and member recommendation experience" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
+                <p>The recommendation uses information the loyalty system may already have access to, including:</p>
+                <ul>
+                    <li>point balance and tier</li>
+                    <li>reward eligibility</li>
+                    <li>purchase and redemption history</li>
+                    <li>reward availability</li>
+                    <li>merchant restrictions and campaign priorities</li>
+                </ul>
+                <p>The system first removes rewards the member cannot use, then ranks the remaining options for relevance. The interface surfaces <strong>one recommended reward</strong>, its value, why it was selected, and a direct redemption path.</p>
+                <p>But I deliberately kept access to the full catalog. The system makes a recommendation. <strong>The member still makes the decision.</strong></p>
+
+                <h3>Explainability had to be part of the experience</h3>
+                <p>Personalization can create a trust problem if users cannot understand why something is being shown to them. Instead of displaying a mysterious “best reward,” the recommendation provides a simple explanation.</p>
+                <p><strong>Recommended for you: $10 off your next purchase</strong></p>
+                <p><em>You have enough points to redeem this reward today.</em></p>
+                <p>The explanation does not expose algorithmic complexity. It gives the member enough context to evaluate the recommendation themselves.</p>
+
+                <h3>Merchant guardrails define what personalization can do</h3>
+                <img src="smart_rewards_marketer_flow.png" alt="Smart Rewards marketer flow for configuration, preview, and measurement" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
+                <p>The member experience is only half of a loyalty product. Merchants need control over which rewards exist, who qualifies, campaign timing, restrictions, inventory, and which rewards are eligible for recommendation.</p>
+                <p>I designed the marketer side around three actions: <strong>Configure → Preview &amp; publish → Measure &amp; optimize</strong>.</p>
+                <p>This keeps recommendation logic inside merchant-defined guardrails rather than allowing personalization to override business rules.</p>
+
+                <h3>The MVP proves the behavior before expanding the intelligence</h3>
+                <p>There were many directions the concept could take, including bundles, goal-based recommendations, reminders, and increasingly sophisticated personalization. I deliberately excluded them from the first release.</p>
+                <p>The MVP focuses on:</p>
+                <ul>
+                    <li>eligibility filtering</li>
+                    <li>relevance ranking</li>
+                    <li>one explainable recommendation</li>
+                    <li>basic merchant configuration</li>
+                    <li>recommendation preview</li>
+                    <li>performance measurement</li>
+                </ul>
+                <p>The purpose of the first version is not to build the smartest possible recommendation engine. It is to answer a more fundamental question: <strong>Does better decision support actually change redemption behavior?</strong></p>
+
+                <h3>Success means healthier redemption, not just more clicks</h3>
+                <img src="smart_rewards_successMetrics.png" alt="Smart Rewards proposed primary and supporting success metrics" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
+                <p>Because this concept has not been launched, I separate proposed success measures from observed results. The primary metrics I would watch are:</p>
+                <ul>
+                    <li>reward redemption rate</li>
+                    <li>recommendation-to-redemption conversion</li>
+                    <li>completed loyalty purchases</li>
+                </ul>
+                <p>Supporting metrics would include repeat purchase rate, average order value, reward cost, time to redemption, and member feedback on recommendation relevance.</p>
+                <p>I would validate the concept with a controlled test comparing the existing catalog experience with the recommendation experience. The goal would be to determine whether increased redemption also produces healthy business outcomes rather than simply increasing reward cost.</p>
+
+                <h3>The business model is a hypothesis, not a claim</h3>
+                <img src="smart_rewards_impactFunnel.png" alt="Illustrative Smart Rewards impact funnel based on planning assumptions" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
+                <p>I also created an illustrative model to understand how a relatively small improvement in redemption could affect downstream purchase activity. Those numbers are <strong>planning assumptions, not observed results</strong>.</p>
+                <p>The purpose of the model was not to claim impact. It was to connect the design hypothesis to a measurable business outcome and establish what would need to be validated in a pilot.</p>
+
+                <h3>Personalization should clarify the next action, not take it over</h3>
+                <p>Smart Rewards changed the way I thought about personalization. The goal is not always to give users more options or build a more sophisticated interface.</p>
+                <p>Sometimes the most useful product intervention is simply: <strong>help me understand the next best action, tell me why, and let me stay in control.</strong></p>
+
+                <!-- Superseded case-study content retained in source history.
                 <h3>1. Overview</h3>
                 <img src="smart_rewards_hero.png" alt="Smart Rewards recommendation experience" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
                 <p>Smart Rewards is a recommendation layer for a loyalty platform that helps members choose and redeem rewards with less friction.</p>
@@ -891,10 +1061,11 @@ ishtyle (Root)
                 <h3>15. Key takeaway</h3>
                 <p>Smart Rewards reframes personalization as decision support.</p>
                 <p>Instead of asking members to sort through a complex reward catalog, it helps them confidently take the next best action. Merchants set the guardrails, members retain control, and the platform can measure whether better guidance leads to redemption and purchase.</p>
+                -->
 
                 <div class="modal-nav">
-                    <a href="#selected-work" class="btn btn-secondary modal-nav-btn prev-modal-btn" data-action="close-scroll"><i class="fa-solid fa-arrow-left"></i> Selected Work</a>
-                    <button type="button" class="btn btn-primary modal-nav-btn next-modal-btn" data-next="modal-foundmoon-app">Next Project <i class="fa-solid fa-arrow-right"></i></button>
+                    <button type="button" class="btn btn-secondary modal-nav-btn prev-modal-btn" data-prev="modal-ai-stylist"><i class="fa-solid fa-arrow-left"></i> Previous: ishtyle</button>
+                    <button type="button" class="btn btn-primary modal-nav-btn next-modal-btn" data-next="modal-ecocycle">Next: EcoCycle <i class="fa-solid fa-arrow-right"></i></button>
                 </div>
             </div>
         </div>
@@ -990,8 +1161,8 @@ ishtyle (Root)
                 <p>This project reinforced that sustainability platforms succeed through community as much as functionality. While users wanted tools to track progress, they were equally motivated by opportunities to connect, learn, and celebrate achievements together. If I continued developing EcoCycle, I would expand the community experience by introducing local events, group challenges, and personalized sustainability recommendations to encourage ongoing engagement.</p>
                 
                 <div class="modal-nav">
-                    <button type="button" class="btn btn-secondary modal-nav-btn prev-modal-btn" data-prev="modal-ai-stylist"><i class="fa-solid fa-arrow-left"></i> Prev Project</button>
-                    <button type="button" class="btn btn-primary modal-nav-btn next-modal-btn" data-next="modal-yonderlust">Next Project <i class="fa-solid fa-arrow-right"></i></button>
+                    <button type="button" class="btn btn-secondary modal-nav-btn prev-modal-btn" data-prev="modal-smart-rewards"><i class="fa-solid fa-arrow-left"></i> Previous: Smart Rewards</button>
+                    <button type="button" class="btn btn-primary modal-nav-btn next-modal-btn" data-next="modal-foundmoon-app">Next: Foundmoon <i class="fa-solid fa-arrow-right"></i></button>
                 </div>
             </div>
         </div>
@@ -1158,8 +1329,8 @@ ishtyle (Root)
                 <p>Foundmoon is a study in designing for continuity rather than engagement metrics. The product reduces the effort required to remember what a reader is reading, gives them ownership over their data, and uses Android-native capabilities only when they support the reading habit.</p>
 
                 <div class="modal-nav">
-                    <button type="button" class="btn btn-secondary modal-nav-btn prev-modal-btn" data-prev="modal-smart-rewards"><i class="fa-solid fa-arrow-left"></i> Prev Project</button>
-                    <button type="button" class="btn btn-primary modal-nav-btn next-modal-btn" data-next="modal-ai-stylist">Next Project <i class="fa-solid fa-arrow-right"></i></button>
+                    <button type="button" class="btn btn-secondary modal-nav-btn prev-modal-btn" data-prev="modal-ecocycle"><i class="fa-solid fa-arrow-left"></i> Previous: EcoCycle</button>
+                    <button type="button" class="btn btn-primary modal-nav-btn next-modal-btn" data-next="modal-yonderlust">Next: YonderLust <i class="fa-solid fa-arrow-right"></i></button>
                 </div>
             </div>
         </div>
@@ -1238,8 +1409,8 @@ ishtyle (Root)
                 <p>Foundmoon demonstrates how a focused Android product can make a small ritual feel more sustainable. By reducing the work of logging a book and removing performative social pressure, the app leaves more attention for reading itself.</p>
 
                 <div class="modal-nav">
-                    <button type="button" class="btn btn-secondary modal-nav-btn prev-modal-btn" data-prev="modal-ecocycle"><i class="fa-solid fa-arrow-left"></i> Prev Project</button>
-                    <button type="button" class="btn btn-primary modal-nav-btn next-modal-btn" data-next="modal-yonderlust">Next Project <i class="fa-solid fa-arrow-right"></i></button>
+                    <button type="button" class="btn btn-secondary modal-nav-btn prev-modal-btn" data-prev="modal-ecocycle"><i class="fa-solid fa-arrow-left"></i> Previous: EcoCycle</button>
+                    <button type="button" class="btn btn-primary modal-nav-btn next-modal-btn" data-next="modal-yonderlust">Next: YonderLust <i class="fa-solid fa-arrow-right"></i></button>
                 </div>
             </div>
         </div>
@@ -1404,8 +1575,8 @@ ishtyle (Root)
                 <p>This project reinforced that designing for travel extends beyond booking experiences. Solo travelers need products that reduce uncertainty while preserving the excitement of exploration. If I continued developing YonderLust, I would expand the product with AI-powered itinerary recommendations, community features for connecting with fellow travelers, and location-based safety insights to create a more personalized and supportive travel experience.</p>
                 
                 <div class="modal-nav">
-                    <button type="button" class="btn btn-secondary modal-nav-btn prev-modal-btn" data-prev="modal-ecocycle"><i class="fa-solid fa-arrow-left"></i> Prev Project</button>
-                    <button type="button" class="btn btn-primary modal-nav-btn next-modal-btn" data-next="modal-aura">Next Project <i class="fa-solid fa-arrow-right"></i></button>
+                    <button type="button" class="btn btn-secondary modal-nav-btn prev-modal-btn" data-prev="modal-foundmoon-app"><i class="fa-solid fa-arrow-left"></i> Previous: Foundmoon</button>
+                    <a href="#selected-work" class="btn btn-primary modal-nav-btn next-modal-btn" data-action="close-scroll">All Case Studies <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>
@@ -1418,110 +1589,75 @@ ishtyle (Root)
         <div class="modal-container">
             <div class="modal-body">
                 <h2>AURA</h2>
-                <p class="modal-subtitle text-highlight">Designing a luxury fashion brand through editorial storytelling</p>
+                <p class="modal-subtitle text-highlight">Building a luxury fashion world, not just a logo</p>
                 <hr>
 
-                <h3>1. Introduction</h3>
-                <img src="aura_1.png" alt="Bookish Color Palette" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
-                <p>Luxury fashion is built on more than products. Every touchpoint, from the logo to packaging and digital experiences, shapes how customers perceive the brand.</p>
-                <p>AURA is a conceptual luxury fashion brand inspired by celestial storytelling, combining editorial aesthetics with contemporary elegance to create a cohesive identity across print and digital experiences.</p>
-
-                <h3>2. Overview</h3>
+                <img src="aura_1.png" alt="AURA luxury fashion brand identity overview" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
                 <p><strong>Role:</strong> Brand Experience Designer<br>
-                <strong>Duration:</strong> 2 Weeks<br>
-                <strong>Tools:</strong> Adobe Illustrator • Photoshop • InDesign<br>
-                <strong>Deliverables:</strong> Brand Strategy • Visual Identity • Editorial Lookbook • Style Guide • Packaging Concepts • Digital Brand Guidelines</p>
+                <strong>Duration:</strong> 2 weeks<br>
+                <strong>Tools:</strong> Adobe Illustrator · Photoshop · InDesign<br>
+                <strong>Scope:</strong> Brand strategy · Visual identity · Editorial · Packaging · Digital guidelines</p>
 
-                <h3>3. The Challenge</h3>
-                <p>Create a premium fashion brand that feels emotionally engaging and visually distinctive while maintaining consistency across every customer touchpoint, from editorial layouts to packaging and digital experiences.</p>
+                <h3>Luxury is built through every detail, not the product alone</h3>
+                <p>Luxury fashion is experienced as much through perception as product.</p>
+                <p>Typography, photography, packaging, editorial composition, materials, and even empty space all contribute to whether a brand feels premium, distinctive, and coherent.</p>
+                <p>I created AURA around one question:</p>
+                <p><strong>How can a celestial concept become a recognizable luxury brand without becoming visually literal or decorative?</strong></p>
 
-                <h3>4. Project Goals</h3>
+                <h3>Celestial fantasy needed a point of view, not a motif</h3>
+                <img src="aura_moodboardxxxhdpi.png" alt="AURA moodboard pairing celestial atmosphere with contemporary fashion" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
+                <p>AURA is positioned at the intersection of <strong>contemporary elegance and celestial fantasy</strong>.</p>
+                <p>I translated that positioning into five principles: <strong>Artistry · Emotion · Elegance · Authenticity · Imagination</strong>.</p>
+                <p>These became a filter for the visual system. Rather than filling every touchpoint with stars or obvious celestial motifs, I used atmosphere, contrast, typography, imagery, and composition to communicate the idea more subtly.</p>
+
+                <h3>Recognition comes from the rules behind the visuals</h3>
+                <img src="aura_logo_2.png" alt="AURA wordmark and alternate logo treatment" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
+                <img src="aura_palette1.png" alt="AURA deep navy, warm gold, and neutral color palette" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
+                <img src="aura_typography.png" alt="AURA typography system balancing expressive editorial type with readability" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
+                <p>The identity combines a custom wordmark with deep navy, warm gold, and soft neutrals. Typography balances expressive editorial character with practical readability.</p>
+                <p>But the goal was not to create a collection of attractive individual assets. It was to establish rules that could make different touchpoints feel unmistakably part of the same brand.</p>
+                <p>I built the system around:</p>
                 <ul>
-                    <li>Develop a recognizable luxury brand identity.</li>
-                    <li>Create a scalable visual system for print and digital.</li>
-                    <li>Establish consistent typography, color, and imagery guidelines.</li>
-                    <li>Design an editorial lookbook that introduces the debut collection through visual storytelling.</li>
+                    <li>a consistent typographic hierarchy</li>
+                    <li>controlled color relationships</li>
+                    <li>generous whitespace</li>
+                    <li>full-bleed fashion imagery</li>
+                    <li>grid-based editorial composition</li>
+                    <li>integrated illustration and photography</li>
                 </ul>
+                <p>This created enough consistency for recognition without making every layout identical.</p>
 
-                <h3>5. Brand Strategy</h3>
-                <p>AURA is positioned as a luxury fashion house where contemporary elegance meets celestial fantasy. Every design decision reinforces the brand's core values of artistry, emotion, elegance, authenticity, and imagination, creating an immersive and memorable brand experience.</p>
+                <h3>Editorial direction needs structure with room to breathe</h3>
+                <img src="aura_editorial.png" alt="AURA editorial lookbook layouts showing controlled variation" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
+                <p>Luxury editorial design needs room for art direction. A rigid template would make every spread predictable; too little structure would make the identity inconsistent.</p>
+                <p>I designed the editorial system around <strong>controlled variation</strong>.</p>
+                <p>The grid, typography, spacing, and image behavior remain consistent while individual compositions can change according to the story being told. That principle allowed AURA to feel like a brand system rather than a single lookbook.</p>
 
-                <h3>6. Creative Direction</h3>
-                <img src="aura_moodboardxxxhdpi.png" alt="Bookish Color Palette" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
-                <p>The visual direction draws inspiration from celestial landscapes, soft lighting, and editorial fashion photography.</p>
-                <p><strong>Design Principles:</strong> Celestial-inspired storytelling, elegant editorial layouts, premium typography, rich atmospheric color palette, and minimal yet expressive compositions.</p>
+                <h3>The brand should hold together when the medium changes</h3>
+                <img src="aura_packaging.png" alt="AURA packaging concept with navy surfaces, gold details, tissue, and message cards" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
+                <p>For packaging, I used navy surfaces, gold detailing, patterned tissue, and message cards to make the unboxing experience part of the brand narrative.</p>
+                <img src="aura_digital.png" alt="AURA digital guidelines for editorial layouts and social content" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
+                <p>For digital applications, I established direction for editorial web layouts, social content, iconography, and interface elements. For retail, I explored how lighting, layered textiles, and constellation-inspired displays could translate the same atmosphere into physical space.</p>
+                <p>Each application changes medium. The underlying brand language stays recognizable.</p>
 
-
-                <h3>7. Visual Identity</h3>
-                <h4>Logo</h4>
-                <img src="aura_logo_1.png" alt="Bookish Color Palette" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
-                <img src="aura_logo_2.png" alt="Bookish Color Palette" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
-                <p>The custom wordmark reflects AURA's ethereal personality through refined typography and hand-crafted details, creating a timeless identity that feels both modern and luxurious.</p>
-                <!-- <div class="project-img-placeholder stylized-bg-1" style="height: 150px; border-radius: 8px; margin: 1.5rem 0; font-size: 1.5rem; flex-direction: column; gap: 0.5rem;">
-                    <i class="fa-solid fa-signature" style="font-size: 2.5rem;"></i>
-                    <span style="font-size: 0.95rem; font-family: var(--font-heading); font-weight: 600;">Logo Concept & Typography Exploration Sheet</span>
-                </div> -->
-
-                <h4>Color System</h4>
-                <img src="aura_palette1.png" alt="Bookish Color Palette" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
-                <img src="aura_palette2.png" alt="Bookish Color Palette" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
-                <p>The palette combines deep navy tones with warm gold accents and soft neutrals to evoke mystery, elegance, and celestial beauty while maintaining strong visual contrast across print and digital applications.</p>
-                <!-- <div class="project-img-placeholder stylized-bg-4" style="height: 150px; border-radius: 8px; margin: 1.5rem 0; font-size: 1.5rem; flex-direction: column; gap: 0.5rem;">
-                    <i class="fa-solid fa-palette" style="font-size: 2.5rem;"></i>
-                    <span style="font-size: 0.95rem; font-family: var(--font-heading); font-weight: 600;">Celestial Palette Swatches (Navy, Gold, Ivory, Grey)</span>
-                </div> -->
-
-                <h4>Typography</h4>
-                <img src="aura_typography.png" alt="Bookish Color Palette" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
-                <p>A combination of Major Mono Display, Arapey, and Ubuntu establishes a clear visual hierarchy while balancing editorial sophistication with readability across different media.</p>
-                <!-- <div class="project-img-placeholder stylized-bg-3" style="height: 150px; border-radius: 8px; margin: 1.5rem 0; font-size: 1.5rem; flex-direction: column; gap: 0.5rem;">
-                    <i class="fa-solid fa-font" style="font-size: 2.5rem;"></i>
-                    <span style="font-size: 0.95rem; font-family: var(--font-heading); font-weight: 600;">Typography Spec System (Heading, Subheading, Body hierarchy)</span>
-                </div> -->
-
-                <h3>8. Editorial System</h3>
-                <img src="aura_editorial.png" alt="Bookish Color Palette" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
-                <p>To create a cohesive storytelling experience, I developed a flexible editorial system that includes: grid-based layouts, consistent typography hierarchy, full-bleed imagery, generous whitespace, and fashion illustrations integrated with photography. This system ensures visual consistency while allowing each collection to communicate its own narrative.</p>
-                <!-- <div class="project-img-placeholder stylized-bg-2" style="height: 150px; border-radius: 8px; margin: 1.5rem 0; font-size: 1.5rem; flex-direction: column; gap: 0.5rem;">
-                    <i class="fa-solid fa-book-open" style="font-size: 2.5rem;"></i>
-                    <span style="font-size: 0.95rem; font-family: var(--font-heading); font-weight: 600;">Lookbook Spread Grid System & Spacing Spec Templates</span>
-                </div> -->
-
-                <h3>9. Brand Applications</h3>
-                <p>The identity extends beyond print into multiple customer touchpoints.</p>
-                
-                <h4>Packaging</h4>
-                <img src="aura_packaging.png" alt="Bookish Color Palette" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
-                <p>Designed premium packaging featuring navy boxes, gold foil branding, patterned tissue paper, and poetic message cards to reinforce the unboxing experience.</p>
-                
-                <h4>Digital Experience</h4>
-                <img src="aura_digital.png" alt="Bookish Color Palette" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
-                <p>Created guidelines for editorial web layouts, social media content, iconography, and interface elements to ensure the brand remains consistent across digital platforms.</p>
-                
-                <h4>Retail Experience</h4>
-                <p>Developed merchandising concepts inspired by celestial environments, incorporating ambient lighting, layered fabrics, and constellation-inspired displays to create an immersive in-store experience.</p>
-
-                <h3>10. Final Deliverables</h3>
-                
+                <h3>The next test is making the world work for commerce</h3>
+                <p>AURA establishes the identity and its application across editorial, packaging, digital guidelines, and retail concepts. The next step would be to test the system in a fully interactive environment.</p>
+                <p>I would extend it into:</p>
                 <ul>
-                    <li>Brand Identity</li>
-                    <li>Logo System</li>
-                    <li>Typography Guidelines</li>
-                    <li>Color Palette</li>
-                    <li>Editorial Lookbook</li>
-                    <li>Fashion Illustrations</li>
-                    <li>Packaging Concepts</li>
-                    <li>Digital Style Guide</li>
-                    <li>Social Media Direction</li>
+                    <li>a responsive ecommerce experience</li>
+                    <li>an interactive digital lookbook</li>
+                    <li>collection landing pages</li>
+                    <li>product-detail experiences</li>
+                    <li>a component-based digital design system</li>
                 </ul>
+                <p>That would test whether the visual identity can retain its expressive character while accommodating the functional demands of commerce.</p>
 
-                <h3>11. Reflection</h3>
-                <p>AURA strengthened my ability to design beyond individual assets and think holistically about brand experience. Building a complete identity system reinforced how consistency, storytelling, and thoughtful design decisions shape how people perceive a brand across physical and digital touchpoints.</p>
-                <p>If I expanded the project, I would design a responsive ecommerce experience, interactive digital lookbook, and comprehensive design system to extend the brand seamlessly into a modern online retail experience.</p>
+                <h3>Consistency is shared structure, not visual sameness</h3>
+                <p>AURA changed how I think about consistency. A strong brand system does not require every touchpoint to look identical. It creates enough shared structure that the brand remains recognizable <strong>even when the composition, medium, and context change.</strong></p>
                 
                 <div class="modal-nav">
-                    <button type="button" class="btn btn-secondary modal-nav-btn prev-modal-btn" data-prev="modal-yonderlust"><i class="fa-solid fa-arrow-left"></i> Prev Project</button>
-                    <a href="#selected-work" class="btn btn-primary modal-nav-btn next-modal-btn" data-action="close-scroll">Selected Work <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="#selected-work" class="btn btn-secondary modal-nav-btn prev-modal-btn" data-action="close-scroll"><i class="fa-solid fa-arrow-left"></i> All Case Studies</a>
+                    <button type="button" class="btn btn-primary modal-nav-btn next-modal-btn" data-next="modal-ai-stylist">Next: ishtyle <i class="fa-solid fa-arrow-right"></i></button>
                 </div>
             </div>
         </div>

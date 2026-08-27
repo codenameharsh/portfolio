@@ -237,16 +237,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const caseStudyGlances = {
         'modal-smart-rewards': [
-            'I led product design, from research synthesis through problem framing and MVP definition.',
-            'I shaped the member recommendation experience, merchant controls, and a measurement plan for a loyalty platform.',
-            'Members had points to spend but faced a hard-to-compare reward catalog at the moment of redemption.',
-            'The concept offers an explainable best-fit recommendation while preserving access to the full catalog and member choice.'
+            'I designed a focused recommendation layer for the point where loyalty members must choose a reward.',
+            'The work covered problem framing, the member experience, merchant controls, MVP strategy, and measurement.',
+            'Members had points to spend but faced a difficult-to-compare catalog at the moment redemption should feel rewarding.',
+            'The concept offers one explainable next-best reward while preserving the full catalog and the member’s control.'
         ],
         'modal-ai-stylist': [
-            'I led the UX/UI design and Android engineering for the four-week product concept.',
-            'I designed the end-to-end flow, high-fidelity mobile screens, and functional Android foundations in Kotlin.',
-            'Users needed to digitize a real wardrobe and make a confident outfit decision without a lengthy setup.',
-            'The resulting four-step wardrobe flow connects clothing, weather, calendar events, and mood to practical outfit suggestions.'
+            'I designed and built an AI stylist that turns a personal wardrobe into more useful daily recommendations.',
+            'Over four weeks, I connected wardrobe digitization, progressive Style DNA onboarding, and a functional Android prototype.',
+            'The key tension was earning the context an AI needs without front-loading personalization as work.',
+            'The result is a four-step setup flow that keeps the path from a physical closet to a useful recommendation lightweight.'
         ],
         'modal-ecocycle': [
             'I led user research, product design, and UI for a four-week sustainability community concept.',
@@ -273,21 +273,21 @@ document.addEventListener('DOMContentLoaded', () => {
             'The key learning was to place reassurance inside the journey at the right moments, rather than make safety feel intrusive.'
         ],
         'modal-aura': [
-            'I led the brand identity and editorial experience for this two-week luxury fashion concept.',
-            'I created the strategy, visual system, lookbook direction, packaging concepts, and digital brand guidance.',
-            'The challenge was to make every touchpoint feel emotionally distinctive while remaining recognizably part of one brand.',
-            'The outcome is a scalable celestial visual system applied consistently across editorial, packaging, and digital moments.'
+            'I built AURA as a luxury fashion world where celestial inspiration is expressed through atmosphere, not literal decoration.',
+            'Over two weeks, I shaped the strategy, visual identity, editorial system, packaging concepts, and digital guidelines.',
+            'The core decision was to create shared rules for type, color, imagery, spacing, and composition rather than one fixed look.',
+            'The result is a flexible system that stays recognizable as it moves across editorial, packaging, digital, and retail concepts.'
         ]
     };
 
     const caseStudyIntroductions = {
-        'modal-smart-rewards': 'A loyalty recommendation layer that helps members choose and redeem rewards with confidence.',
-        'modal-ai-stylist': 'An AI styling app that turns a personal wardrobe into timely outfit recommendations.',
+        'modal-smart-rewards': 'A loyalty recommendation layer that helps members choose a relevant reward instead of browsing without direction.',
+        'modal-ai-stylist': 'An AI stylist designed to earn useful wardrobe context without making personalized setup feel exhausting.',
         'modal-ecocycle': 'A community platform that makes sustainable living feel social, practical, and motivating.',
         'modal-foundmoon-app': 'A calm native Android companion for building a personal reading life.',
         'modal-foundmoon': 'A calm native Android companion for building a personal reading life.',
         'modal-yonderlust': 'A solo-travel planning concept designed to make independent exploration feel safer and lighter.',
-        'modal-aura': 'A luxury fashion identity built through celestial storytelling across every brand touchpoint.'
+        'modal-aura': 'A luxury fashion world built from shared visual rules—expressive enough for editorial, coherent enough for every brand touchpoint.'
     };
 
     const caseStudyTechStack = {
@@ -299,7 +299,8 @@ document.addEventListener('DOMContentLoaded', () => {
         'modal-ai-stylist': [
             ['fa-brands fa-figma', 'Figma'],
             ['fa-brands fa-android', 'Android Studio'],
-            ['fa-solid fa-code', 'Kotlin']
+            ['fa-solid fa-code', 'Kotlin'],
+            ['fa-solid fa-layer-group', 'Jetpack Compose']
         ],
         'modal-ecocycle': [
             ['fa-brands fa-figma', 'Figma'],
@@ -387,8 +388,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const modalNavigation = modal.querySelector('.modal-nav');
         if (modalNavigation && !modal.querySelector('.modal-top-nav')) {
-            const previous = modalNavigation.querySelector('[data-prev]');
-            const next = modalNavigation.querySelector('[data-next]');
+            const previous = modalNavigation.querySelector('[data-prev], .prev-modal-btn[data-action]');
+            const next = modalNavigation.querySelector('[data-next], .next-modal-btn[data-action]');
             if (previous || next) {
                 const topNavigation = document.createElement('nav');
                 topNavigation.className = 'modal-top-nav';
@@ -397,16 +398,24 @@ document.addEventListener('DOMContentLoaded', () => {
                     const previousButton = document.createElement('button');
                     previousButton.type = 'button';
                     previousButton.className = 'modal-nav-btn modal-top-nav-btn';
-                    previousButton.setAttribute('data-prev', previous.getAttribute('data-prev'));
-                    previousButton.innerHTML = '<i class="fa-solid fa-arrow-left" aria-hidden="true"></i><span>Previous</span>';
+                    if (previous.hasAttribute('data-action')) {
+                        previousButton.setAttribute('data-action', previous.getAttribute('data-action'));
+                    } else {
+                        previousButton.setAttribute('data-prev', previous.getAttribute('data-prev'));
+                    }
+                    previousButton.innerHTML = previous.innerHTML;
                     topNavigation.append(previousButton);
                 }
                 if (next) {
                     const nextButton = document.createElement('button');
                     nextButton.type = 'button';
                     nextButton.className = 'modal-nav-btn modal-top-nav-btn';
-                    nextButton.setAttribute('data-next', next.getAttribute('data-next'));
-                    nextButton.innerHTML = '<span>Next</span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i>';
+                    if (next.hasAttribute('data-action')) {
+                        nextButton.setAttribute('data-action', next.getAttribute('data-action'));
+                    } else {
+                        nextButton.setAttribute('data-next', next.getAttribute('data-next'));
+                    }
+                    nextButton.innerHTML = next.innerHTML;
                     topNavigation.append(nextButton);
                 }
                 title.after(topNavigation);
@@ -611,33 +620,40 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalNavButtons = document.querySelectorAll('.modal-nav-btn');
     modalNavButtons.forEach(btn => {
         btn.addEventListener('click', (e) => {
+            e.preventDefault();
             const currentModal = btn.closest('.modal');
             const action = btn.getAttribute('data-action');
             const nextModalId = btn.getAttribute('data-next');
             const prevModalId = btn.getAttribute('data-prev');
 
             if (currentModal) {
+                if (currentModal.dataset.navigating === 'true') return;
+                currentModal.dataset.navigating = 'true';
                 currentModal.classList.remove('active');
                 currentModal.setAttribute('aria-hidden', 'true');
                 const returnTrigger = lastModalTrigger;
                 
                 if (action === 'close-scroll') {
                     unlockBackgroundScroll();
-                    if (returnTrigger instanceof HTMLElement) returnTrigger.focus();
+                    const selectedWork = document.getElementById('selected-work');
+                    selectedWork?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    if (returnTrigger instanceof HTMLElement) setTimeout(() => returnTrigger.focus({ preventScroll: true }), 450);
                     lastModalTrigger = null;
                 } else if (nextModalId) {
                     const nextModal = document.getElementById(nextModalId);
                     if (nextModal) {
                         setTimeout(() => {
+                            delete currentModal.dataset.navigating;
                             openModal(nextModal, returnTrigger);
-                        }, 250);
+                        }, 220);
                     }
                 } else if (prevModalId) {
                     const prevModal = document.getElementById(prevModalId);
                     if (prevModal) {
                         setTimeout(() => {
+                            delete currentModal.dataset.navigating;
                             openModal(prevModal, returnTrigger);
-                        }, 250);
+                        }, 220);
                     }
                 }
             }
