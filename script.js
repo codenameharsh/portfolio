@@ -31,31 +31,54 @@ document.addEventListener('DOMContentLoaded', () => {
         yonderDivider.after(...refreshedNodes);
     }
 
-    // 1. Custom Cursor Tracking
-    const cursor = document.querySelector('.custom-cursor');
-    const cursorDot = document.querySelector('.custom-cursor-dot');
-    const interactiveElements = document.querySelectorAll('a, button, input, textarea, .project-card, .fe-card');
+    // 1. Translucent marker trail (the browser retains its native cursor).
+    const cursorTrail = document.createElement('canvas');
+    cursorTrail.className = 'cursor-marker-trail';
+    cursorTrail.setAttribute('aria-hidden', 'true');
+    document.body.append(cursorTrail);
+    const trailContext = cursorTrail.getContext('2d');
+    const trailPoints = [];
 
-    document.addEventListener('mousemove', (e) => {
-        // Dot movement (instant)
-        cursorDot.style.left = `${e.clientX}px`;
-        cursorDot.style.top = `${e.clientY}px`;
-        
-        // Ring movement (smooth transition via custom animate)
-        cursor.animate({
-            left: `${e.clientX}px`,
-            top: `${e.clientY}px`
-        }, { duration: 500, fill: 'forwards' });
+    const sizeTrail = () => {
+        const scale = window.devicePixelRatio || 1;
+        cursorTrail.width = Math.round(window.innerWidth * scale);
+        cursorTrail.height = Math.round(window.innerHeight * scale);
+        trailContext.setTransform(scale, 0, 0, scale, 0, 0);
+    };
+
+    sizeTrail();
+    window.addEventListener('resize', sizeTrail);
+
+    document.addEventListener('pointermove', event => {
+        if (event.pointerType && event.pointerType !== 'mouse') return;
+        trailPoints.push({ x: event.clientX, y: event.clientY, time: performance.now() });
+        if (trailPoints.length > 36) trailPoints.shift();
     });
 
-    interactiveElements.forEach(el => {
-        el.addEventListener('mouseenter', () => {
-            cursor.classList.add('hovered');
-        });
-        el.addEventListener('mouseleave', () => {
-            cursor.classList.remove('hovered');
-        });
-    });
+    const paintMarkerTrail = () => {
+        const now = performance.now();
+        const lifetime = 680;
+        while (trailPoints.length && now - trailPoints[0].time > lifetime) trailPoints.shift();
+        trailContext.clearRect(0, 0, window.innerWidth, window.innerHeight);
+
+        for (let index = 1; index < trailPoints.length; index += 1) {
+            const start = trailPoints[index - 1];
+            const end = trailPoints[index];
+            const age = now - end.time;
+            const opacity = Math.max(0, 1 - age / lifetime) * 0.18;
+            trailContext.beginPath();
+            trailContext.moveTo(start.x, start.y);
+            trailContext.lineTo(end.x, end.y);
+            trailContext.strokeStyle = `rgba(6, 182, 212, ${opacity})`;
+            trailContext.lineWidth = 8;
+            trailContext.lineCap = 'round';
+            trailContext.stroke();
+        }
+
+        requestAnimationFrame(paintMarkerTrail);
+    };
+
+    paintMarkerTrail();
 
     // Keep compact card tool icons legible without adding permanent visual noise.
     document.querySelectorAll('.project-tags [aria-label]').forEach((tool) => {
