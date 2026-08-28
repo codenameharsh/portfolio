@@ -5,6 +5,32 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+    // The refreshed YonderLust narrative is authored alongside its legacy source.
+    // Mount that focused sequence in the active modal before modal enhancements run.
+    const yonderSource = document.querySelector('#modal-foundmoon .modal-body');
+    const yonderTarget = document.querySelector('#modal-yonderlust .modal-body');
+    const yonderStart = yonderSource?.querySelector('img[src="yonder_intro.png"]');
+    const yonderDivider = yonderTarget?.querySelector('hr');
+    const yonderNavigation = yonderTarget?.querySelector('.modal-nav');
+    if (yonderStart && yonderDivider && yonderNavigation) {
+        const refreshedNodes = [];
+        let node = yonderStart;
+        while (node) {
+            const copy = node.cloneNode(true);
+            refreshedNodes.push(copy);
+            if (node.nodeType === Node.ELEMENT_NODE && node.tagName === 'P' && node.textContent.includes('Given two days, prioritizing the right problem mattered more')) break;
+            node = node.nextSibling;
+        }
+
+        let targetNode = yonderDivider.nextSibling;
+        while (targetNode && targetNode !== yonderNavigation) {
+            const nextNode = targetNode.nextSibling;
+            targetNode.remove();
+            targetNode = nextNode;
+        }
+        yonderDivider.after(...refreshedNodes);
+    }
+
     // 1. Custom Cursor Tracking
     const cursor = document.querySelector('.custom-cursor');
     const cursorDot = document.querySelector('.custom-cursor-dot');
@@ -249,10 +275,10 @@ document.addEventListener('DOMContentLoaded', () => {
             'The result is a four-step setup flow that keeps the path from a physical closet to a useful recommendation lightweight.'
         ],
         'modal-ecocycle': [
-            'I led user research, product design, and UI for a four-week sustainability community concept.',
-            'The work included interview synthesis, personas, journey mapping, information architecture, wireframes, and a high-fidelity prototype.',
-            'Eco-conscious people were using scattered sources and lacked a clear place to share progress, find support, and build community.',
-            'Research showed that visible achievements, practical resources, and community participation could make sustainable habits easier to maintain.'
+            'I led research, product design, and UI for a four-week sustainability community concept, grounded in 40 interviews.',
+            'The work moved from research synthesis through architecture, profile exploration, and a high-fidelity prototype.',
+            'People did not only want to track their sustainable actions; they were already looking for resources, participation, and ways to share progress.',
+            'The product shifted from a personal tracker to a profile-centered system connecting identity, discovery, participation, and recognition.'
         ],
         'modal-foundmoon-app': [
             'I designed and built the native Android product, from the reading experience to the technical foundation.',
@@ -267,10 +293,10 @@ document.addEventListener('DOMContentLoaded', () => {
             'The app uses private, versioned on-device storage with import and export, keeping each reading record portable and personal.'
         ],
         'modal-yonderlust': [
-            'I designed the end-to-end experience during a focused two-day product design sprint.',
-            'I moved from community-informed research to persona, journey map, flows, wireframes, design system, and prototype.',
-            'Solo travelers were managing plans across apps while carrying safety concerns and the uncertainty of unfamiliar places.',
-            'The key learning was to place reassurance inside the journey at the right moments, rather than make safety feel intrusive.'
+            'I designed YonderLust in a focused two-day sprint around the two needs that most shaped solo travel: clarity and confidence.',
+            'The work used secondary qualitative research to prioritize the core travel-planning flow and persistent safety support.',
+            'The central decision was to leave social matching, booking, and other marketplace features outside the sprint.',
+            'The resulting prototype connects discovery, planning, exploration, and help without letting safety take over the journey.'
         ],
         'modal-aura': [
             'I built AURA as a luxury fashion world where celestial inspiration is expressed through atmosphere, not literal decoration.',
@@ -283,10 +309,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const caseStudyIntroductions = {
         'modal-smart-rewards': 'A loyalty recommendation layer that helps members choose a relevant reward instead of browsing without direction.',
         'modal-ai-stylist': 'An AI stylist designed to earn useful wardrobe context without making personalized setup feel exhausting.',
-        'modal-ecocycle': 'A community platform that makes sustainable living feel social, practical, and motivating.',
+        'modal-ecocycle': 'A research-led sustainability community built around participation, shared resources, and visible personal progress.',
         'modal-foundmoon-app': 'A calm native Android companion for building a personal reading life.',
         'modal-foundmoon': 'A calm native Android companion for building a personal reading life.',
-        'modal-yonderlust': 'A solo-travel planning concept designed to make independent exploration feel safer and lighter.',
+        'modal-yonderlust': 'A focused solo-travel concept that brings planning and safety together without turning exploration into a warning system.',
         'modal-aura': 'A luxury fashion world built from shared visual rules—expressive enough for editorial, coherent enough for every brand touchpoint.'
     };
 

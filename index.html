@@ -563,36 +563,37 @@
                 <hr>
 
                 <img src="ishtyle_case_study_hero.png" alt="ishtyle mobile experience for personalized outfit recommendations" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
+                <p class="case-study-hero-statement">Making AI styling personal without making setup exhausting</p>
                 <p><strong>Role:</strong> Lead UX/UI Designer &amp; Android Developer<br>
                 <strong>Duration:</strong> 4 weeks<br>
                 <strong>Tools:</strong> Figma · Android Studio · Kotlin · Jetpack Compose<br>
                 <strong>Focus:</strong> AI personalization · Wardrobe digitization · Product design · Android development</p>
 
-                <h3>Personalization only works when people can get started</h3>
+                <h3>The challenge</h3>
                 <p>A useful AI stylist needs context. It needs to understand what someone owns, what they like, what suits them, where they are going, and even factors such as weather or mood.</p>
                 <p>But collecting all of that information creates a second problem:</p>
                 <p><strong>The more an AI stylist knows, the better it can personalize. The more it asks upfront, the harder it becomes to start using.</strong></p>
                 <p>I designed ishtyle around that tension. The goal was not simply to build a digital closet; it was to make getting dressed easier while keeping the effort required to create that closet low enough to feel worthwhile.</p>
 
-                <h3>The opportunity was connecting the closet to the moment</h3>
+                <h3>Finding the gap</h3>
                 <img src="ishtyle_competitive_landscape.png" alt="Competitive landscape for wardrobe and AI styling products" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
                 <p>I looked at products including Whering, Acloset, Cladwell, Indyx, and Alta. Each solved part of the problem well: closet organization, capsule wardrobes, human styling, or AI recommendations. But the experience was fragmented.</p>
                 <p>That suggested an opportunity to connect three things in one system: <strong>what I own → what works for me → what should I wear today?</strong></p>
                 <p>From there, I focused the product around wardrobe digitization, contextual recommendations, personal style information, and optional human styling support.</p>
 
-                <h3>Wardrobe setup was the highest-risk moment</h3>
+                <h3>The critical friction: building the digital wardrobe</h3>
                 <img src="ishtyle_lofi_wireframes_mobile.png" alt="ishtyle wireframes for the step-by-step garment digitization flow" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
                 <p>Before ishtyle could recommend anything useful, users needed to digitize their clothes. That made wardrobe setup one of the highest-risk moments in the experience.</p>
                 <p>Instead of treating upload as a generic form, I designed a four-step flow: <strong>Capture → Remove background → Categorize → Confirm</strong>.</p>
                 <p>The goal was to reduce manual work and make each step feel immediately understandable. I later implemented the flow in Jetpack Compose, including the camera interaction, background-removal state, category handling, and visual feedback.</p>
 
-                <h3>Style DNA is built progressively, not demanded all at once</h3>
+                <h3>Designing personalization progressively</h3>
                 <img src="ishtyle_onboarding_user_flow.png" alt="ishtyle onboarding flow for progressive style personalization" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
                 <p>The onboarding flow combines style preferences, visual preference matching, color analysis, and wardrobe information. Rather than making personalization feel like a single long questionnaire, the experience breaks it into smaller interactions that progressively build the user's Style DNA.</p>
                 <p>Once inside the product, that context can support recommendations based on wardrobe, weather, calendar events, mood, and personal characteristics.</p>
                 <p>The principle was simple: <strong>Ask for information when its value to the user is clear.</strong></p>
 
-                <h3>A working prototype made the invisible system visible</h3>
+                <h3>From screens to system behavior</h3>
                 <img src="ishtyle_hifi_mobile_ui.png" alt="High-fidelity ishtyle mobile UI for wardrobe and outfit recommendations" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
                 <p>Building ishtyle as a functional Android prototype exposed decisions that were easy to overlook in static mockups. I had to think about:</p>
                 <ul>
@@ -634,12 +635,12 @@
 }</code></pre>
                 <p>That shifted my thinking from designing individual screens to designing a system of connected states and data.</p>
 
-                <h3>The setup flow had to prove it could stay lightweight</h3>
+                <h3>Testing the highest-risk interaction</h3>
                 <img src="ishtyle_usability_testing_spacious.png" alt="ishtyle usability testing results for wardrobe digitization and onboarding" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
                 <p>I tested the prototype with five participants, focusing particularly on wardrobe setup. The digitization flow averaged <strong>38 seconds</strong>, beating my target of under 45 seconds. Style Quiz completion reached <strong>90%</strong>, while initial category auto-detection achieved <strong>92% accuracy</strong> during uploads.</p>
                 <p>These results are directional given the small sample, but they helped validate that the core setup experience could remain relatively lightweight despite the amount of information the system needs.</p>
 
-                <h3>The next measure is whether recommendations earn repeat use</h3>
+                <h3>What I would test next</h3>
                 <p>The next question is less about whether people can digitize their wardrobe and more about whether the resulting recommendations are actually useful. I would evaluate:</p>
                 <ul>
                     <li>recommendation acceptance and saves</li>
@@ -651,7 +652,7 @@
                 </ul>
                 <p>I would also test how much information can be deferred until after the first useful recommendation.</p>
 
-                <h3>AI products succeed by balancing intelligence with control</h3>
+                <h3>Takeaway</h3>
                 <p>ishtyle taught me that designing an AI product is not primarily about putting AI into an interface. It is about designing the relationship between <strong>input, intelligence, explanation, and user control</strong>.</p>
                 <p>The better the system understands someone, the more useful it can become. The product challenge is earning that information without making personalization itself feel like work.</p>
 
@@ -892,22 +893,23 @@ ishtyle (Root)
                 <hr>
 
                 <img src="smart_rewards_hero.png" alt="Smart Rewards recommendation experience for loyalty members" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
+                <p class="case-study-hero-statement">Helping loyalty members choose instead of just browse</p>
                 <p><strong>Role:</strong> Product Designer<br>
                 <strong>Scope:</strong> Problem framing · Recommendation experience · Merchant controls · MVP strategy · Measurement</p>
 
-                <h3>The problem was not earning. It was choosing.</h3>
+                <h3>The problem wasn't earning. It was choosing.</h3>
                 <img src="smart_rewards_problem.png" alt="A difficult-to-compare loyalty reward catalog" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
                 <p>Loyalty programs are designed to make rewards feel valuable, but reaching redemption can create another decision.</p>
                 <p>A member opens a catalog and has to determine:</p>
                 <p><strong>Which reward gives me the best value? Can I use it now? Should I spend my points or keep saving?</strong></p>
                 <p>That creates friction at exactly the moment the loyalty program is supposed to feel rewarding. I focused Smart Rewards on this decision point.</p>
 
-                <h3>A smaller intervention could have a clearer effect</h3>
+                <h3>Reframing the opportunity</h3>
                 <p>One direction would have been to redesign the entire rewards experience. I chose a smaller intervention.</p>
                 <p><strong>What if the platform could help a member identify one relevant reward without taking away their ability to choose?</strong></p>
                 <p>My hypothesis was that an eligible, personalized, explainable recommendation could reduce the effort of comparing an entire catalog and create a clearer path toward redemption.</p>
 
-                <h3>Decision support is useful only when the member stays in control</h3>
+                <h3>Designing decision support, not automated choice</h3>
                 <img src="smart_rewards_solution.png" alt="Smart Rewards eligibility filtering, relevance ranking, and member recommendation experience" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
                 <p>The recommendation uses information the loyalty system may already have access to, including:</p>
                 <ul>
@@ -920,19 +922,19 @@ ishtyle (Root)
                 <p>The system first removes rewards the member cannot use, then ranks the remaining options for relevance. The interface surfaces <strong>one recommended reward</strong>, its value, why it was selected, and a direct redemption path.</p>
                 <p>But I deliberately kept access to the full catalog. The system makes a recommendation. <strong>The member still makes the decision.</strong></p>
 
-                <h3>Explainability had to be part of the experience</h3>
+                <h3>Explainability became part of the UX</h3>
                 <p>Personalization can create a trust problem if users cannot understand why something is being shown to them. Instead of displaying a mysterious “best reward,” the recommendation provides a simple explanation.</p>
                 <p><strong>Recommended for you: $10 off your next purchase</strong></p>
                 <p><em>You have enough points to redeem this reward today.</em></p>
                 <p>The explanation does not expose algorithmic complexity. It gives the member enough context to evaluate the recommendation themselves.</p>
 
-                <h3>Merchant guardrails define what personalization can do</h3>
+                <h3>The other user: the marketer</h3>
                 <img src="smart_rewards_marketer_flow.png" alt="Smart Rewards marketer flow for configuration, preview, and measurement" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
                 <p>The member experience is only half of a loyalty product. Merchants need control over which rewards exist, who qualifies, campaign timing, restrictions, inventory, and which rewards are eligible for recommendation.</p>
                 <p>I designed the marketer side around three actions: <strong>Configure → Preview &amp; publish → Measure &amp; optimize</strong>.</p>
                 <p>This keeps recommendation logic inside merchant-defined guardrails rather than allowing personalization to override business rules.</p>
 
-                <h3>The MVP proves the behavior before expanding the intelligence</h3>
+                <h3>Scoping the MVP</h3>
                 <p>There were many directions the concept could take, including bundles, goal-based recommendations, reminders, and increasingly sophisticated personalization. I deliberately excluded them from the first release.</p>
                 <p>The MVP focuses on:</p>
                 <ul>
@@ -945,7 +947,7 @@ ishtyle (Root)
                 </ul>
                 <p>The purpose of the first version is not to build the smartest possible recommendation engine. It is to answer a more fundamental question: <strong>Does better decision support actually change redemption behavior?</strong></p>
 
-                <h3>Success means healthier redemption, not just more clicks</h3>
+                <h3>How I would validate it</h3>
                 <img src="smart_rewards_successMetrics.png" alt="Smart Rewards proposed primary and supporting success metrics" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
                 <p>Because this concept has not been launched, I separate proposed success measures from observed results. The primary metrics I would watch are:</p>
                 <ul>
@@ -956,12 +958,12 @@ ishtyle (Root)
                 <p>Supporting metrics would include repeat purchase rate, average order value, reward cost, time to redemption, and member feedback on recommendation relevance.</p>
                 <p>I would validate the concept with a controlled test comparing the existing catalog experience with the recommendation experience. The goal would be to determine whether increased redemption also produces healthy business outcomes rather than simply increasing reward cost.</p>
 
-                <h3>The business model is a hypothesis, not a claim</h3>
+                <h3>Modeling the business case</h3>
                 <img src="smart_rewards_impactFunnel.png" alt="Illustrative Smart Rewards impact funnel based on planning assumptions" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
                 <p>I also created an illustrative model to understand how a relatively small improvement in redemption could affect downstream purchase activity. Those numbers are <strong>planning assumptions, not observed results</strong>.</p>
                 <p>The purpose of the model was not to claim impact. It was to connect the design hypothesis to a measurable business outcome and establish what would need to be validated in a pilot.</p>
 
-                <h3>Personalization should clarify the next action, not take it over</h3>
+                <h3>Takeaway</h3>
                 <p>Smart Rewards changed the way I thought about personalization. The goal is not always to give users more options or build a more sophisticated interface.</p>
                 <p>Sometimes the most useful product intervention is simply: <strong>help me understand the next best action, tell me why, and let me stay in control.</strong></p>
 
@@ -1078,9 +1080,71 @@ ishtyle (Root)
         <div class="modal-container">
             <div class="modal-body">
                 <h2>EcoCycle</h2>
-                <p class="modal-subtitle text-highlight">Building a community that makes sustainable living feel social</p>
+                <p class="modal-subtitle text-highlight">Research showed me that another sustainability tracker wasn't enough</p>
                 <hr>
 
+                <figure class="case-study-visual eco-hero-visual">
+                    <img src="ecocycle-hero-ecosystem.png" alt="EcoCycle ecosystem connecting identity, community, and sustainable progress">
+                    <figcaption>A social sustainability space designed around identity, participation, and shared progress.</figcaption>
+                </figure>
+                <p class="case-study-hero-statement">Research showed me that another sustainability tracker wasn't enough</p>
+                <p><strong>Role:</strong> UX Research · Product Design · UI Design<br>
+                <strong>Duration:</strong> 4 weeks<br>
+                <strong>Tools:</strong> Figma · FigJam · Miro<br>
+                <strong>Research:</strong> 40 user interviews</p>
+
+                <h3>The starting point</h3>
+                <p>Sustainability products often focus on tracking individual behavior. Log an action. Measure progress. Repeat.</p>
+                <p>But before committing to that model, I wanted to understand what actually keeps people engaged with sustainable living. I interviewed 40 people about their motivations, habits, communities, and the resources they currently use.</p>
+                <p>The research changed the emphasis of the product.</p>
+
+                <h3>What people were actually looking for</h3>
+                <figure class="case-study-visual eco-affinity-visual"><img src="ecocycle-research-infographic.png" alt="EcoCycle research findings about climate motivation, community, and profile customization"><figcaption>Research revealed that motivation already existed; people needed practical ways to participate, find resources, and make progress visible.</figcaption></figure>
+                <p>Climate concern was the strongest reported motivation, with <strong>80% of participants</strong> identifying it as a primary driver. But motivation alone was not the problem.</p>
+                <p><strong>60% already connected with other environmentally conscious people through online communities and forums</strong>, and participants repeatedly described looking for practical resources, discussions, events, and ways to share progress.</p>
+                <p><strong>55% also considered profile customization important</strong>, with interest in showing goals and achievements. The pattern was becoming clear: people didn't only want to <strong>track sustainable behavior</strong>. They wanted to <strong>participate in it with other people</strong>.</p>
+
+                <h3>The product shifted from tracking to identity and community</h3>
+                <p>That insight changed the hierarchy of EcoCycle. Instead of making metrics the center of the experience, I focused the profile around three ideas:</p>
+                <p><strong>Identity</strong><br>What do I care about and what am I working toward?</p>
+                <p><strong>Progress</strong><br>What have I done and what have I achieved?</p>
+                <p><strong>Community</strong><br>Where can I learn, participate, and share?</p>
+                <p>The profile became more than an account page. It became the connective layer between personal goals, community activity, resources, and recognition.</p>
+
+                <h3>Designing recognition without turning sustainability into a competition</h3>
+                <figure class="case-study-visual"><img src="ecocycle-achievement-journey.png" alt="EcoCycle achievement journey showing sustainable milestones and recognition"><figcaption>Achievements make participation visible while keeping the emphasis on personal milestones and shared discovery.</figcaption></figure>
+                <p>Achievements and badges could make progress visible, but they introduced another design question: <strong>How do you recognize sustainable action without reducing it to points and competition?</strong></p>
+                <p>I treated achievements as markers of participation rather than a leaderboard. Users can showcase milestones, goals, and activities, while the broader experience emphasizes shared progress and discovery rather than ranking people against one another.</p>
+
+                <h3>Simplifying the ecosystem</h3>
+                <figure class="case-study-visual"><img src="ecocycle-architecture-clean.png" alt="EcoCycle information architecture for profile, discovery, participation, and progress"><figcaption>The information architecture gives users a clear route from sustainable intent to useful discovery, participation, and visible progress.</figcaption></figure>
+                <p>The research surfaced many possible features: discussions, events, resources, challenges, profiles, goals, achievements, content discovery, and social interactions. Putting everything at the same level would have created another fragmented platform.</p>
+                <p>I organized the experience around four connected areas: <strong>Profile → Discovery → Participation → Progress</strong>.</p>
+                <p>This gave users a clearer route from wanting to live more sustainably to finding something useful, taking action, and making that progress visible.</p>
+
+                <h3>Iterating the profile</h3>
+                <figure class="case-study-visual"><img src="ecocycle-wireframe-evolution-infographic.png" alt="EcoCycle profile wireframe evolution from early layouts to the final interface"><figcaption>Successive profile layouts tested how identity, activity, and achievements should share the page hierarchy.</figcaption></figure>
+                <p>I explored multiple low-fidelity layouts before moving into the final interface. The central hierarchy question was: <strong>Should the profile lead with personal information, activity, or achievement?</strong></p>
+                <p>The final direction balances personal identity with recent actions and earned badges, allowing the page to communicate both who the user is and what they are doing.</p>
+                <p>A reusable card and badge system, consistent spacing, accessible typography, and a nature-inspired visual language helped carry that structure through the product.</p>
+
+                <h3>What I validated</h3>
+                <figure class="case-study-visual"><img src="ecocycle-profile-journey.png" alt="EcoCycle profile prototype for setting goals and sharing achievements"><figcaption>The prototype was used to evaluate navigation clarity, goal setting, and the experience of sharing environmental achievements.</figcaption></figure>
+                <p>I evaluated navigation clarity, goal-setting flows, and the social-sharing experience for environmental achievements. Because the project did not produce production analytics, I would treat these tests as usability validation rather than evidence of long-term behavior change.</p>
+                <p>A live product would need to answer larger questions:</p>
+                <ul>
+                    <li>Do people return to the community?</li>
+                    <li>Do resources lead to participation?</li>
+                    <li>Does recognition increase continued engagement?</li>
+                    <li>Are users discovering relevant local actions?</li>
+                    <li>Does sharing progress motivate without creating performative behavior?</li>
+                </ul>
+
+                <h3>Takeaway</h3>
+                <p>EcoCycle reinforced one of the most useful lessons from this project: <strong>Research should be allowed to change the product.</strong></p>
+                <p>The opportunity was not simply to build a better sustainability tracker. It was to connect personal progress with the community, resources, and recognition people were already seeking.</p>
+
+                <!-- Superseded case-study content retained in source history.
                 <h3>1. Introduction</h3>
                 <figure class="case-study-visual eco-hero-visual">
                     <img src="ecocycle-hero-ecosystem.png" alt="EcoCycle product ecosystem across identity, community, and progress">
@@ -1159,7 +1223,8 @@ ishtyle (Root)
 
                 <h3>17. Reflection</h3>
                 <p>This project reinforced that sustainability platforms succeed through community as much as functionality. While users wanted tools to track progress, they were equally motivated by opportunities to connect, learn, and celebrate achievements together. If I continued developing EcoCycle, I would expand the community experience by introducing local events, group challenges, and personalized sustainability recommendations to encourage ongoing engagement.</p>
-                
+                -->
+
                 <div class="modal-nav">
                     <button type="button" class="btn btn-secondary modal-nav-btn prev-modal-btn" data-prev="modal-smart-rewards"><i class="fa-solid fa-arrow-left"></i> Previous: Smart Rewards</button>
                     <button type="button" class="btn btn-primary modal-nav-btn next-modal-btn" data-next="modal-foundmoon-app">Next: Foundmoon <i class="fa-solid fa-arrow-right"></i></button>
@@ -1174,9 +1239,124 @@ ishtyle (Root)
         <div class="modal-container">
             <div class="modal-body">
                 <h2>Foundmoon</h2>
-                <p class="modal-subtitle text-highlight">An intentional Android reading companion built for private progress</p>
+                <p class="modal-subtitle text-highlight">Designing a reading tracker that doesn't turn reading into another performance metric</p>
                 <hr>
 
+                <img src="foundmoon_feature_graphic.png" alt="Foundmoon Android reading companion overview" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
+                <p class="case-study-hero-statement">Designing a reading tracker that doesn't turn reading into another performance metric</p>
+                <p><strong>Role:</strong> Product Designer &amp; Android Developer<br>
+                <strong>Platform:</strong> Android 8.0+<br>
+                <strong>Build:</strong> Kotlin · Jetpack Compose · Material 3 · WorkManager<br>
+                <strong>Data:</strong> Private versioned storage with import/export</p>
+
+                <h3>The tension</h3>
+                <p>Reading is something many people do to slow down.</p>
+                <p>Reading apps can do the opposite.</p>
+                <p>Public ratings, social feeds, streaks, detailed statistics, recommendations, and constant activity can turn a personal habit into another thing to manage.</p>
+                <p>Foundmoon started with a different question:</p>
+                <p><strong>How can a reading tracker help someone return to a book without demanding more attention than reading itself?</strong></p>
+
+                <h3>Choosing what not to build</h3>
+                <p>I deliberately positioned Foundmoon away from social-first book platforms and data-heavy trackers.</p>
+                <p>There is no public activity feed at the center of the experience.</p>
+                <p>Instead, I focused on a smaller set of needs:</p>
+                <p><strong>What am I reading?</strong><br><strong>What do I want to read?</strong><br><strong>What did I think about it?</strong><br><strong>Am I making the progress I wanted to make?</strong></p>
+                <p>This made Foundmoon closer to a private reading journal than a social network.</p>
+
+                <h3>Reading isn't linear</h3>
+                <img src="foundmoon_user_flow.png" alt="Foundmoon flow for moving books between flexible reading states" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
+                <p>One of the most important product decisions was treating unfinished reading as normal behavior.</p>
+                <p>Books don't always move neatly from:</p>
+                <p><strong>Want to Read → Currently Reading → Read</strong></p>
+                <p>People pause books. Return months later. Read several at once. Decide not to finish something.</p>
+                <p>So Foundmoon supports:</p>
+                <p><strong>Want to Read · Currently Reading · Read · DNF</strong></p>
+                <p>DNF isn't treated as failure. It is simply another legitimate state in someone's reading history.</p>
+
+                <h3>Progress without pressure</h3>
+                <img class="case-study-phone-visual" src="foundmoon_goals.png" alt="Foundmoon adjustable monthly reading goals" style="width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
+                <p>I still wanted the product to help readers maintain momentum, but without relying on aggressive streak mechanics.</p>
+                <p>That led to two constraints.</p>
+                <p>First, monthly goals are adjustable rather than imposed.</p>
+                <p>Second, the active shelf is intentionally limited to <strong>three Currently Reading titles</strong>.</p>
+                <p>When someone attempts to add a fourth, the app asks them to choose what should leave the active shelf rather than silently allowing it to become another backlog.</p>
+                <p>This turns a technical constraint into a product behavior:</p>
+                <p><strong>help the reader focus without judging what they choose.</strong></p>
+
+                <h3>Designing reminders carefully</h3>
+                <p>Notifications created a similar tension.</p>
+                <p>A reminder can help someone return to a habit.</p>
+                <p>It can also make leisure feel like an obligation.</p>
+                <p>Foundmoon therefore makes reminders configurable in both frequency and content, including a month-end prompt that helps readers decide what to do with unfinished books.</p>
+                <p>The goal is continuity, not engagement for its own sake.</p>
+
+                <h3>Building changed the design</h3>
+                <img src="foundmoon_design_system.png" alt="Foundmoon design system for a calm, native Android reading experience" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
+                <p>I implemented Foundmoon as a native Android product rather than stopping at a prototype.</p>
+                <p>That meant resolving product behavior for:</p>
+                <ul>
+                    <li>adding and editing books</li>
+                    <li>moving between reading states</li>
+                    <li>enforcing the active-reading limit</li>
+                    <li>goals</li>
+                    <li>appearance settings</li>
+                    <li>notification permissions</li>
+                    <li>data persistence</li>
+                    <li>library import/export</li>
+                    <li>merging imported records without overwriting the existing shelf</li>
+                </ul>
+                <h4 class="case-study-code-title">Reading history needs room for every outcome</h4>
+                <p>The data model treats paused and unfinished books as valid parts of a reading life, rather than exceptional cases to hide or correct.</p>
+                <pre class="case-study-code"><code><span class="code-keyword">enum class</span> <span class="code-type">ReadingStatus</span> {
+    WANT_TO_READ,
+    CURRENTLY_READING,
+    READ,
+    DNF
+}
+
+<span class="code-keyword">data class</span> <span class="code-type">Book</span>(
+    <span class="code-keyword">val</span> id: String,
+    <span class="code-keyword">val</span> title: String,
+    <span class="code-keyword">val</span> status: ReadingStatus = ReadingStatus.WANT_TO_READ
+)</code></pre>
+                <h4 class="case-study-code-title">The active-shelf limit asks for an intentional choice</h4>
+                <p>Rather than silently adding a fourth active title, the app pauses the update and gives the reader a chance to choose which current book should leave the shelf.</p>
+                <pre class="case-study-code"><code><span class="code-keyword">fun</span> <span class="code-type">saveBook</span>(book: Book) {
+    <span class="code-keyword">val</span> activeBooks = books.count {
+        it.id != book.id &amp;&amp; it.status == ReadingStatus.CURRENTLY_READING
+    }
+
+    <span class="code-keyword">if</span> (book.status == ReadingStatus.CURRENTLY_READING &amp;&amp; activeBooks >= <span class="code-number">3</span>) {
+        pendingActiveBook = book
+        <span class="code-keyword">return</span>
+    }
+
+    upsertBook(book)
+}</code></pre>
+                <p>These details pushed the work beyond screen design.</p>
+                <p>For example, library ownership became a UX decision as much as a technical one. Readers can export their data and import it later instead of having their reading history trapped inside the product.</p>
+
+                <h3>Validation</h3>
+                <img class="case-study-phone-visual" src="foundmoon_journey.png" alt="Foundmoon Journey screen showing a personal reading record" style="width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
+                <p>Implementation testing focused on the core paths: adding and editing books, changing status, enforcing the three-book limit, preserving data across launches, importing a library, and handling Android notification permissions.</p>
+                <p>I have not presented formal participant usability metrics because that study has not yet been conducted.</p>
+                <p>That is the next step.</p>
+                <p>I would specifically test:</p>
+                <ul>
+                    <li>how quickly someone can add their first book</li>
+                    <li>whether the reading states feel intuitive</li>
+                    <li>whether the three-book constraint feels helpful or arbitrary</li>
+                    <li>whether reminders support rather than pressure</li>
+                    <li>whether users understand import/export</li>
+                    <li>whether the product remains useful over several months of reading</li>
+                </ul>
+
+                <h3>Takeaway</h3>
+                <p>Foundmoon became a study in <strong>continuity rather than maximum engagement</strong>.</p>
+                <p>Not every consumer product needs to demand more attention.</p>
+                <p>Sometimes good product design means helping someone do what they already care about, then getting out of the way.</p>
+
+                <!-- Superseded case-study content retained in source history.
                 <h3>1. Introduction</h3>
                 <img src="foundmoon_feature_graphic.png" alt="Foundmoon app feature graphic" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
                 <p>Foundmoon is a native Android app for readers who want a quieter, more personal way to manage a reading life. It brings current reads, a searchable collection, reflective notes, monthly goals, and gentle reminders into one private place without a social feed or public performance layer.</p>
@@ -1327,6 +1507,7 @@ ishtyle (Root)
                 <h3>17. Reflection</h3>
                 <p>The app stores a versioned data file in private app storage and migrates legacy preferences on first load. Readers can export their library as <code>foundmoon-books.json</code> and import it later; incoming records are merged by unique ID instead of overwriting the existing shelf.</p>
                 <p>Foundmoon is a study in designing for continuity rather than engagement metrics. The product reduces the effort required to remember what a reader is reading, gives them ownership over their data, and uses Android-native capabilities only when they support the reading habit.</p>
+                -->
 
                 <div class="modal-nav">
                     <button type="button" class="btn btn-secondary modal-nav-btn prev-modal-btn" data-prev="modal-ecocycle"><i class="fa-solid fa-arrow-left"></i> Previous: EcoCycle</button>
@@ -1336,14 +1517,89 @@ ishtyle (Root)
         </div>
     </div>
 
-    <!-- Foundmoon Modal -->
+    <!-- Legacy Foundmoon Modal (unused) -->
     <div class="modal" id="modal-foundmoon">
         <div class="modal-overlay"></div>
         <div class="modal-container">
             <div class="modal-body">
-                <h2>Foundmoon</h2>
-                <p class="modal-subtitle text-highlight">Foundmoon | An intentional Android book tracker</p>
+                <h2>YonderLust</h2>
+                <p class="modal-subtitle text-highlight">Two days to design for the two things solo travelers need most: clarity and confidence</p>
                 <hr>
+
+                <img src="yonder_intro.png" alt="YonderLust solo travel planning experience overview" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
+                <p class="case-study-hero-statement">Two days to design for the two things solo travelers need most: clarity and confidence</p>
+                <p><strong>Role:</strong> Product Designer<br>
+                <strong>Duration:</strong> 2-day design sprint<br>
+                <strong>Tools:</strong> Figma · FigJam · Illustrator<br>
+                <strong>Focus:</strong> Prioritization · Travel planning · Safety</p>
+
+                <h3>The constraint</h3>
+                <p>Travel is an enormous product space.</p>
+                <p>A single app could include booking, transportation, maps, recommendations, itineraries, reviews, social features, budgeting, safety tools, and dozens of other capabilities.</p>
+                <p>I had <strong>two days</strong>.</p>
+                <p>So the challenge wasn't:</p>
+                <p><strong>How much can I design?</strong></p>
+                <p>It was:</p>
+                <p><strong>What deserves to be designed first?</strong></p>
+
+                <h3>Finding the highest-value problems</h3>
+                <img src="yonder_research_painpopints.png" alt="YonderLust research themes from solo travel discussions" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
+                <p>Given the sprint timeline, I used secondary qualitative research rather than attempting a large primary study.</p>
+                <p>I reviewed solo-travel discussions, travel-blog comments, app reviews, and competing travel products.</p>
+                <p>Four themes appeared repeatedly:</p>
+                <ul>
+                    <li>planning across multiple tools creates cognitive load</li>
+                    <li>safety affects decisions throughout a solo trip</li>
+                    <li>travelers value independence but don't necessarily want isolation</li>
+                    <li>feature-heavy travel products can make planning feel harder</li>
+                </ul>
+                <p>I narrowed the sprint around the first two:</p>
+                <p><strong>Planning + Safety</strong></p>
+
+                <h3>What I deliberately didn't solve</h3>
+                <p>This was the most important prioritization decision.</p>
+                <p>YonderLust could have expanded into social matching, booking, budgeting, transportation management, AI trip generation, or a full travel marketplace.</p>
+                <p>I left those outside the core sprint.</p>
+                <p>Instead, I concentrated the prototype around:</p>
+                <p><strong>Discover → Plan → Explore → Get help if needed</strong></p>
+                <p>That gave the experience a coherent job instead of a long feature list.</p>
+
+                <h3>Making safety visible without making travel feel dangerous</h3>
+                <img src="yonder_final_UIxxxhdpi.png" alt="YonderLust final mobile interface with accessible travel safety tools" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
+                <p>Safety presented an unusual design problem.</p>
+                <p>Hide emergency tools too deeply and they become useless when someone needs them.</p>
+                <p>Make them too prominent and the product constantly reminds users that something might go wrong.</p>
+                <p>I designed quick access to emergency contacts, location sharing, and SOS functionality while keeping the primary experience focused on exploration and planning.</p>
+                <p>Safety supports the journey.</p>
+                <p><strong>It doesn't become the journey.</strong></p>
+
+                <h3>Bringing planning into one flow</h3>
+                <img src="yonder_IA.png" alt="YonderLust information architecture for discovery, planning, exploration, and safety" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
+                <p>The planning experience connects destination discovery with itinerary building and map-based exploration.</p>
+                <p>Instead of requiring users to mentally reconstruct a trip across multiple tools, the information architecture groups actions around user intent:</p>
+                <p><strong>discover, plan, explore, safety.</strong></p>
+                <img src="yonder_wireframes.png" alt="YonderLust early wireframes for dashboard, itinerary, map, and safety access" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
+                <p>Early wireframes helped me prioritize the home dashboard, visual itinerary, interactive map, and persistent safety access before investing time in visual polish.</p>
+
+                <h3>What I validated, and what I didn't</h3>
+                <p>Because this was a two-day sprint, I did <strong>not</strong> conduct formal participant usability testing.</p>
+                <p>I iterated through heuristic evaluation, research findings, and continuous design review.</p>
+                <p>That limitation matters.</p>
+                <p>The next version should test the assumptions I made under time pressure, particularly:</p>
+                <ul>
+                    <li>Can someone build an itinerary without guidance?</li>
+                    <li>How quickly can they find SOS?</li>
+                    <li>Do they understand what location sharing does?</li>
+                    <li>Does persistent safety access feel reassuring or intrusive?</li>
+                    <li>Can users move between discovery and planning without losing context?</li>
+                </ul>
+
+                <h3>Takeaway</h3>
+                <p>YonderLust taught me that speed in product design isn't about producing more screens.</p>
+                <p>It's about making <strong>fewer, more defensible decisions</strong>.</p>
+                <p>Given two days, prioritizing the right problem mattered more than designing the largest product.</p>
+
+                <!-- Superseded case-study content retained in source history.
 
                 <h3>1. Introduction</h3>
                 <img src="bookish_intro.png" alt="Foundmoon Android book tracker overview" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
@@ -1407,6 +1663,7 @@ ishtyle (Root)
 
                 <h3>11. Reflection</h3>
                 <p>Foundmoon demonstrates how a focused Android product can make a small ritual feel more sustainable. By reducing the work of logging a book and removing performative social pressure, the app leaves more attention for reading itself.</p>
+                -->
 
                 <div class="modal-nav">
                     <button type="button" class="btn btn-secondary modal-nav-btn prev-modal-btn" data-prev="modal-ecocycle"><i class="fa-solid fa-arrow-left"></i> Previous: EcoCycle</button>
@@ -1424,7 +1681,7 @@ ishtyle (Root)
         <div class="modal-container">
             <div class="modal-body">
                 <h2>YonderLust</h2>
-                <p class="modal-subtitle text-highlight">Designing a solo travel experience that feels safe, personal, and empowering</p>
+                <p class="modal-subtitle text-highlight">Two days to design for the two things solo travelers need most: clarity and confidence</p>
                 <hr>
 
                 <h3>1. Introduction</h3>
@@ -1593,29 +1850,30 @@ ishtyle (Root)
                 <hr>
 
                 <img src="aura_1.png" alt="AURA luxury fashion brand identity overview" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
+                <p class="case-study-hero-statement">Building a luxury fashion world, not just a logo</p>
                 <p><strong>Role:</strong> Brand Experience Designer<br>
                 <strong>Duration:</strong> 2 weeks<br>
                 <strong>Tools:</strong> Adobe Illustrator · Photoshop · InDesign<br>
                 <strong>Scope:</strong> Brand strategy · Visual identity · Editorial · Packaging · Digital guidelines</p>
 
-                <h3>Luxury is built through every detail, not the product alone</h3>
+                <h3>The challenge</h3>
                 <p>Luxury fashion is experienced as much through perception as product.</p>
-                <p>Typography, photography, packaging, editorial composition, materials, and even empty space all contribute to whether a brand feels premium, distinctive, and coherent.</p>
+                <p>Typography, photography, packaging, editorial composition, materials, and even empty space contribute to whether a brand feels premium, distinctive, and coherent.</p>
                 <p>I created AURA around one question:</p>
                 <p><strong>How can a celestial concept become a recognizable luxury brand without becoming visually literal or decorative?</strong></p>
 
-                <h3>Celestial fantasy needed a point of view, not a motif</h3>
+                <h3>Defining the world</h3>
                 <img src="aura_moodboardxxxhdpi.png" alt="AURA moodboard pairing celestial atmosphere with contemporary fashion" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
                 <p>AURA is positioned at the intersection of <strong>contemporary elegance and celestial fantasy</strong>.</p>
                 <p>I translated that positioning into five principles: <strong>Artistry · Emotion · Elegance · Authenticity · Imagination</strong>.</p>
                 <p>These became a filter for the visual system. Rather than filling every touchpoint with stars or obvious celestial motifs, I used atmosphere, contrast, typography, imagery, and composition to communicate the idea more subtly.</p>
 
-                <h3>Recognition comes from the rules behind the visuals</h3>
+                <h3>Building recognition through a system</h3>
                 <img src="aura_logo_2.png" alt="AURA wordmark and alternate logo treatment" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
                 <img src="aura_palette1.png" alt="AURA deep navy, warm gold, and neutral color palette" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
                 <img src="aura_typography.png" alt="AURA typography system balancing expressive editorial type with readability" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
                 <p>The identity combines a custom wordmark with deep navy, warm gold, and soft neutrals. Typography balances expressive editorial character with practical readability.</p>
-                <p>But the goal was not to create a collection of attractive individual assets. It was to establish rules that could make different touchpoints feel unmistakably part of the same brand.</p>
+                <p>But the goal wasn't to create a collection of attractive individual assets. It was to establish rules that could make different touchpoints feel unmistakably part of the same brand.</p>
                 <p>I built the system around:</p>
                 <ul>
                     <li>a consistent typographic hierarchy</li>
@@ -1627,21 +1885,21 @@ ishtyle (Root)
                 </ul>
                 <p>This created enough consistency for recognition without making every layout identical.</p>
 
-                <h3>Editorial direction needs structure with room to breathe</h3>
+                <h3>Controlled variation</h3>
                 <img src="aura_editorial.png" alt="AURA editorial lookbook layouts showing controlled variation" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
                 <p>Luxury editorial design needs room for art direction. A rigid template would make every spread predictable; too little structure would make the identity inconsistent.</p>
                 <p>I designed the editorial system around <strong>controlled variation</strong>.</p>
                 <p>The grid, typography, spacing, and image behavior remain consistent while individual compositions can change according to the story being told. That principle allowed AURA to feel like a brand system rather than a single lookbook.</p>
 
-                <h3>The brand should hold together when the medium changes</h3>
+                <h3>Extending the identity beyond editorial</h3>
                 <img src="aura_packaging.png" alt="AURA packaging concept with navy surfaces, gold details, tissue, and message cards" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
                 <p>For packaging, I used navy surfaces, gold detailing, patterned tissue, and message cards to make the unboxing experience part of the brand narrative.</p>
                 <img src="aura_digital.png" alt="AURA digital guidelines for editorial layouts and social content" style="width: 100%; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
                 <p>For digital applications, I established direction for editorial web layouts, social content, iconography, and interface elements. For retail, I explored how lighting, layered textiles, and constellation-inspired displays could translate the same atmosphere into physical space.</p>
                 <p>Each application changes medium. The underlying brand language stays recognizable.</p>
 
-                <h3>The next test is making the world work for commerce</h3>
-                <p>AURA establishes the identity and its application across editorial, packaging, digital guidelines, and retail concepts. The next step would be to test the system in a fully interactive environment.</p>
+                <h3>What I would develop next</h3>
+                <p>AURA currently establishes the identity and its application across editorial, packaging, digital guidelines, and retail concepts. The next step would be to test the system in a fully interactive environment.</p>
                 <p>I would extend it into:</p>
                 <ul>
                     <li>a responsive ecommerce experience</li>
@@ -1652,8 +1910,8 @@ ishtyle (Root)
                 </ul>
                 <p>That would test whether the visual identity can retain its expressive character while accommodating the functional demands of commerce.</p>
 
-                <h3>Consistency is shared structure, not visual sameness</h3>
-                <p>AURA changed how I think about consistency. A strong brand system does not require every touchpoint to look identical. It creates enough shared structure that the brand remains recognizable <strong>even when the composition, medium, and context change.</strong></p>
+                <h3>Takeaway</h3>
+                <p>AURA changed how I think about consistency. A strong brand system doesn't require every touchpoint to look identical. It creates enough shared structure that the brand remains recognizable <strong>even when the composition, medium, and context change.</strong></p>
                 
                 <div class="modal-nav">
                     <a href="#selected-work" class="btn btn-secondary modal-nav-btn prev-modal-btn" data-action="close-scroll"><i class="fa-solid fa-arrow-left"></i> All Case Studies</a>
