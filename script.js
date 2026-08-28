@@ -36,6 +36,12 @@ document.addEventListener('DOMContentLoaded', () => {
     cursorTrail.className = 'cursor-marker-trail';
     cursorTrail.setAttribute('aria-hidden', 'true');
     document.body.append(cursorTrail);
+    const cursorClickFlag = document.createElement('span');
+    cursorClickFlag.className = 'cursor-click-flag';
+    cursorClickFlag.setAttribute('aria-hidden', 'true');
+    cursorClickFlag.textContent = 'Click me';
+    document.body.append(cursorClickFlag);
+    const interactiveCursorSelector = 'a, button, input, textarea, .project-card, .fe-card, .gallery-item, [role="button"]';
     const trailContext = cursorTrail.getContext('2d');
     const trailPoints = [];
 
@@ -53,6 +59,10 @@ document.addEventListener('DOMContentLoaded', () => {
         if (event.pointerType && event.pointerType !== 'mouse') return;
         trailPoints.push({ x: event.clientX, y: event.clientY, time: performance.now() });
         if (trailPoints.length > 36) trailPoints.shift();
+
+        const interactiveTarget = event.target instanceof Element && event.target.closest(interactiveCursorSelector);
+        cursorClickFlag.classList.toggle('is-visible', Boolean(interactiveTarget));
+        cursorClickFlag.style.transform = `translate(${event.clientX + 14}px, ${event.clientY + 8}px)`;
     });
 
     const paintMarkerTrail = () => {
@@ -721,8 +731,49 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Subtle scroll choreography that preserves the browser's natural scrolling.
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    // Scroll-led depth for the hero and project collection. This is deliberately
+    // disabled on smaller screens and for reduced-motion preferences.
+    const canUseParallax = !prefersReducedMotion && window.matchMedia('(min-width: 769px)').matches;
+    if (canUseParallax) {
+        const hero = document.getElementById('hero');
+        const heroCollage = hero?.querySelector('.hero-scrapbook');
+        const projectCards = Array.from(document.querySelectorAll('#selected-work .project-card'));
+        let parallaxFrame = null;
+
+        const clamp = (value, min, max) => Math.min(Math.max(value, min), max);
+        const updateParallax = () => {
+            parallaxFrame = null;
+            const viewportCenter = window.innerHeight / 2;
+
+            if (hero && heroCollage) {
+                const heroRect = hero.getBoundingClientRect();
+                const offset = clamp(heroRect.top * 0.12, -26, 18);
+                heroCollage.style.setProperty('--hero-parallax-y', `${offset.toFixed(1)}px`);
+            }
+
+            projectCards.forEach((card, index) => {
+                const rect = card.getBoundingClientRect();
+                if (rect.bottom < -120 || rect.top > window.innerHeight + 120) return;
+                const distance = rect.top + rect.height / 2 - viewportCenter;
+                const intensity = index % 2 === 0 ? -0.045 : -0.03;
+                const offset = clamp(distance * intensity, -18, 18);
+                card.style.setProperty('--project-parallax-y', `${offset.toFixed(1)}px`);
+            });
+        };
+
+        const requestParallaxUpdate = () => {
+            if (parallaxFrame !== null) return;
+            parallaxFrame = window.requestAnimationFrame(updateParallax);
+        };
+
+        window.addEventListener('scroll', requestParallaxUpdate, { passive: true });
+        window.addEventListener('resize', requestParallaxUpdate);
+        requestParallaxUpdate();
+    }
+
+    // Subtle scroll choreography that preserves the browser's natural scrolling.
     const scrollStages = document.querySelectorAll(
         '.section-header, .project-card, .timeline-item, .about-visual, .about-story, .skills-card, .education-card, .resume-card, .contact-method'
     );
