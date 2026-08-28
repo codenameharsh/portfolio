@@ -309,6 +309,8 @@ textarea,
     width: 100%;
     z-index: 2100;
     background-color: rgba(10, 10, 15, 0.7);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180' viewBox='0 0 180 180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.72' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.14'/%3E%3C/svg%3E");
+    background-blend-mode: soft-light;
     backdrop-filter: var(--glass-blur);
     border-bottom: 1px solid var(--card-border);
     transition: var(--transition-smooth);
@@ -2543,6 +2545,80 @@ body.gallery-open { overflow: hidden; }
     #experience .timeline-bullets li { font-size: 0.82rem; }
 }
 
+/* One quiet work cue per chapter: product craft, brand systems, styling, and quality. */
+#experience .timeline-role { padding-right: 2.8rem; }
+#experience .timeline-doodle {
+    position: absolute;
+    top: 1rem;
+    right: 1.1rem;
+    display: grid;
+    width: 2.25rem;
+    height: 2.25rem;
+    place-items: center;
+    color: var(--timeline-accent);
+    border: 1px dashed color-mix(in srgb, var(--timeline-accent) 62%, transparent);
+    border-radius: 47% 53% 45% 55% / 52% 44% 56% 48%;
+    background: color-mix(in srgb, var(--timeline-accent) 8%, transparent);
+    font-size: 0.92rem;
+    opacity: 0.9;
+    transform: rotate(-7deg);
+    transition: transform 180ms ease, background 180ms ease;
+}
+
+#experience .timeline-item:nth-of-type(even) .timeline-doodle { transform: rotate(6deg); }
+#experience .timeline-item:hover .timeline-doodle { background: color-mix(in srgb, var(--timeline-accent) 18%, transparent); transform: rotate(0deg) scale(1.06); }
+
+@media (max-width: 520px) {
+    #experience .timeline-doodle { top: 0.9rem; right: 0.9rem; width: 2rem; height: 2rem; font-size: 0.82rem; }
+}
+
+/* Site-wide micro interactions: short, tactile feedback without constant motion. */
+@media (hover: hover) and (pointer: fine) {
+    .btn { position: relative; overflow: hidden; isolation: isolate; }
+    .btn::after { position: absolute; z-index: -1; top: -20%; left: -35%; width: 22%; height: 140%; content: ''; background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent); transform: skewX(-22deg); transition: left 430ms ease; }
+    .btn:hover::after { left: 115%; }
+    .btn:active { transform: translateY(0) scale(0.98); }
+
+    .nav-link { transition: color 180ms ease, translate 180ms ease; }
+    .nav-link:hover { translate: 0 -1px; }
+
+    .project-card:hover .project-img-wrapper { transform: translateY(-0.15rem); }
+    .project-img-wrapper { transition: transform 220ms ease; }
+    .project-card:hover .project-cover-image { transform: scale(1.018); }
+    .project-cover-image { transition: transform 280ms ease, opacity 220ms ease; }
+
+    .gallery-filter { transition: color 180ms ease, background 180ms ease, translate 180ms ease; }
+    .gallery-filter:hover { translate: 0 -2px; }
+    .gallery-item { transition: transform 240ms ease, box-shadow 240ms ease, filter 240ms ease; }
+    .gallery-item:hover { filter: brightness(1.06); }
+    .gallery-item:hover img { transform: scale(1.025); }
+    .gallery-item img { transition: transform 320ms ease; }
+
+    .skill-tag { transition: color 180ms ease, background 180ms ease, border-color 180ms ease, translate 180ms ease; }
+    .skill-tag:hover { translate: 0 -2px; }
+    .contact-method-card { transition: border-color 200ms ease, background 200ms ease, translate 200ms ease; }
+    .contact-method-card:hover { translate: 0 -3px; }
+    .contact-method-card:hover .method-icon { transform: rotate(-7deg) scale(1.08); }
+    .method-icon { transition: transform 200ms ease; }
+    .contact-social-links a { transition: color 180ms ease, background 180ms ease, transform 180ms ease; }
+    .contact-social-links a:hover { transform: translateY(-2px) rotate(-4deg); }
+
+    .modal-close { transition: color 180ms ease, background 180ms ease, transform 180ms ease; }
+    .modal-close:hover { transform: rotate(8deg) scale(1.06); }
+    .modal-top-nav-btn { transition: color 180ms ease, translate 180ms ease; }
+    .modal-top-nav-btn:hover { translate: 0 -1px; }
+}
+
+:where(a, button, .project-card, .gallery-item, .skill-tag):focus-visible {
+    outline: 2px solid color-mix(in srgb, var(--secondary) 78%, white);
+    outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .btn::after { display: none; }
+    .btn, .nav-link, .project-img-wrapper, .project-cover-image, .gallery-filter, .gallery-item, .gallery-item img, .skill-tag, .contact-method-card, .method-icon, .contact-social-links a, .modal-close, .modal-top-nav-btn { transition: none !important; }
+}
+
 /* Scroll parallax: light depth only, leaving hover and accessibility states intact. */
 @media (min-width: 769px) and (prefers-reduced-motion: no-preference) {
     #hero .hero-scrapbook {
@@ -2852,21 +2928,46 @@ pre code {
     z-index: 1000;
     display: grid;
     place-items: center;
-    min-width: 3.75rem;
-    min-height: 3.75rem;
-    padding: 0.6rem;
-    color: var(--text-primary);
+    min-width: 3.6rem;
+    min-height: 3.35rem;
+    padding: 0.55rem 0.7rem;
+    color: #c8f8ff;
     font-family: var(--font-heading);
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     font-weight: 700;
     letter-spacing: 0.03em;
-    background: rgba(10, 10, 15, 0.78);
-    border: 1px solid var(--card-border);
-    border-radius: 50%;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25), inset 0 0 0 1px rgba(6, 182, 212, 0.1);
+    background: rgba(13, 16, 36, 0.76);
+    border: 1px dashed rgba(103, 232, 249, 0.62);
+    border-radius: 44% 56% 48% 52% / 55% 45% 58% 42%;
+    box-shadow: 0 0.65rem 1.5rem rgba(0, 0, 0, 0.22);
     backdrop-filter: var(--glass-blur);
     pointer-events: none;
+    transform: rotate(-4deg);
 }
+
+.scroll-percentage::before {
+    position: absolute;
+    inset: -0.22rem -0.16rem -0.17rem -0.2rem;
+    content: '';
+    border: 1px solid rgba(129, 140, 248, 0.48);
+    border-radius: 52% 43% 54% 45% / 43% 56% 44% 58%;
+    pointer-events: none;
+    transform: rotate(7deg);
+}
+
+.scroll-percentage::after {
+    position: absolute;
+    right: -0.18rem;
+    bottom: 0.16rem;
+    width: 0.42rem;
+    height: 0.42rem;
+    content: '';
+    border-right: 1px solid rgba(103, 232, 249, 0.72);
+    border-bottom: 1px solid rgba(103, 232, 249, 0.72);
+    transform: rotate(22deg);
+}
+
+.scroll-percentage span { position: relative; z-index: 1; transform: rotate(4deg); }
 
 @media (max-width: 768px) {
     .scroll-percentage {
