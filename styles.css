@@ -1025,7 +1025,7 @@ textarea,
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 2.5rem;
+    gap: 3rem;
 }
 
 .project-card {
@@ -1577,7 +1577,7 @@ textarea,
 
 /* Keep the post-it treatment readable and comfortably tappable on small screens. */
 @media (max-width: 768px) {
-    .projects-grid { gap: 1.6rem; }
+    .projects-grid { gap: 1.85rem; }
     .project-card,
     .project-card[data-project] { width: 100%; transform: none; }
     .project-card::before { top: -0.55rem; width: 27%; height: 1rem; }
@@ -1593,7 +1593,7 @@ textarea,
 }
 
 @media (max-width: 420px) {
-    .projects-grid { gap: 1.35rem; }
+    .projects-grid { gap: 1.55rem; }
     .project-card { box-shadow: 3px 5px 0 rgba(5, 7, 21, 0.42), 0 12px 24px color-mix(in srgb, var(--note-accent) 20%, transparent); }
     .project-img-wrapper { height: 11rem; }
     .project-card .project-info { padding: 1.15rem 1rem 1.2rem; }
@@ -2176,6 +2176,15 @@ body.gallery-open { overflow: hidden; }
 .case-study-visual img { display: block; width: 100%; height: auto; }
 .case-study-visual figcaption { padding: 0.8rem 1rem; color: var(--text-secondary); border-top: 1px solid var(--card-border); font-size: 0.84rem; line-height: 1.5; }
 .case-study-visual figcaption strong { color: var(--text-primary); }
+.ishtyle-prototype-video {
+    display: block;
+    width: min(100%, 340px);
+    height: auto;
+    margin: 1.5rem auto;
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    background: #000;
+}
 .eco-research-grid, .eco-prototype-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.1rem; margin: 1.5rem 0; }
 .eco-research-grid .case-study-visual:first-child { grid-column: 1 / -1; }
 .eco-research-grid .case-study-visual, .eco-prototype-grid .case-study-visual { margin: 0; }
@@ -2371,7 +2380,7 @@ body.gallery-open { overflow: hidden; }
 
     .projects-grid {
         grid-template-columns: 1fr;
-        gap: 2rem;
+        gap: 2.65rem;
     }
 
     .frontend-grid {
@@ -2396,6 +2405,15 @@ body.gallery-open { overflow: hidden; }
         grid-template-columns: 1fr;
         gap: 3rem;
     }
+}
+
+/* The single-column project stack needs extra room around the tilted card edges. */
+@media (max-width: 768px) {
+    .projects-grid { gap: 2.15rem; }
+}
+
+@media (max-width: 420px) {
+    .projects-grid { gap: 1.85rem; }
 }
 
 /* Larger, semi-translucent washi: visible as a material detail, never a full-frame decoration. */
