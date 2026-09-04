@@ -1336,6 +1336,12 @@ ishtyle (Root)
                 <p>These details pushed the work beyond screen design.</p>
                 <p>For example, library ownership became a UX decision as much as a technical one. Readers can export their data and import it later instead of having their reading history trapped inside the product.</p>
 
+                <h3>The prototype in motion</h3>
+                <video class="ishtyle-prototype-video" controls playsinline preload="metadata" aria-label="Foundmoon functional Android prototype demonstration">
+                    <source src="foundmoon-prototype-demo.mp4" type="video/mp4">
+                    Your browser does not support embedded video. <a href="foundmoon-prototype-demo.mp4">Download the Foundmoon prototype demonstration</a>.
+                </video>
+
                 <h3>Validation</h3>
                 <img class="case-study-phone-visual" src="foundmoon_journey.png" alt="Foundmoon Journey screen showing a personal reading record" style="width: 100%; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--card-border); display: block;">
                 <p>Implementation testing focused on the core paths: adding and editing books, changing status, enforcing the three-book limit, preserving data across launches, importing a library, and handling Android notification permissions.</p>
@@ -1445,39 +1451,6 @@ ishtyle (Root)
 <span style="color: #f472b6;">private val</span> Teal = Color(<span style="color: #fb923c;">0xFF7AA6A6</span>)</pre>
 
                 <h3>14. Final UI Screen Showcase</h3>
-                <div class="foundmoon-gallery" aria-label="Foundmoon final UI gallery">
-                    <div class="foundmoon-gallery-slides">
-                        <figure class="foundmoon-gallery-slide active">
-                            <img src="foundmoon_journey.png" alt="Foundmoon Journey screen with monthly reading cards">
-                            <figcaption>Journey · browse your reading month and keep current titles in view.</figcaption>
-                        </figure>
-                        <figure class="foundmoon-gallery-slide">
-                            <img src="foundmoon_add_book.png" alt="Foundmoon Add New Book form">
-                            <figcaption>Add New Book · capture the essentials, reading status, and personal notes.</figcaption>
-                        </figure>
-                        <figure class="foundmoon-gallery-slide">
-                            <img src="foundmoon_goals.png" alt="Foundmoon monthly goals screen">
-                            <figcaption>Goals · set a monthly target and review reading progress over time.</figcaption>
-                        </figure>
-                        <figure class="foundmoon-gallery-slide">
-                            <img src="foundmoon_collection.png" alt="Foundmoon Collection screen">
-                            <figcaption>Collection · search, sort, and scan a complete personal library.</figcaption>
-                        </figure>
-                        <figure class="foundmoon-gallery-slide">
-                            <img src="foundmoon_collection_alt.png" alt="Foundmoon Collection screen alternate capture">
-                            <figcaption>Collection · status and genre treatments make each shelf easy to read.</figcaption>
-                        </figure>
-                    </div>
-                    <button type="button" class="foundmoon-gallery-arrow prev" aria-label="Previous Foundmoon screen"><i class="fa-solid fa-chevron-left"></i></button>
-                    <button type="button" class="foundmoon-gallery-arrow next" aria-label="Next Foundmoon screen"><i class="fa-solid fa-chevron-right"></i></button>
-                    <div class="foundmoon-gallery-dots" aria-label="Foundmoon screen selection">
-                        <button type="button" class="foundmoon-gallery-dot active" aria-label="Show Journey screen" data-slide="0"></button>
-                        <button type="button" class="foundmoon-gallery-dot" aria-label="Show Add New Book screen" data-slide="1"></button>
-                        <button type="button" class="foundmoon-gallery-dot" aria-label="Show Goals screen" data-slide="2"></button>
-                        <button type="button" class="foundmoon-gallery-dot" aria-label="Show Collection screen" data-slide="3"></button>
-                        <button type="button" class="foundmoon-gallery-dot" aria-label="Show alternate Collection screen" data-slide="4"></button>
-                    </div>
-                </div>
                 <p>The polished library surface puts a reader’s books first, using clear status treatment and searchable collection controls. The code uses Compose state to prevent an overloaded active shelf, then presents an explicit replacement choice when a fourth Currently Reading title is selected.</p>
                 <ul>
                     <li><strong>Journey:</strong> Browse a time-based reading view, search by title or author, and quickly add a new book.</li>
