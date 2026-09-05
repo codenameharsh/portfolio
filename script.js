@@ -95,6 +95,14 @@ document.addEventListener('DOMContentLoaded', () => {
         tool.dataset.tooltip = tool.getAttribute('aria-label');
     });
 
+    // Studio postcards reveal their short project notes on click or keyboard activation.
+    document.querySelectorAll('.studio-postcard').forEach((postcard) => {
+        postcard.addEventListener('click', () => {
+            const isFlipped = postcard.classList.toggle('is-flipped');
+            postcard.setAttribute('aria-pressed', String(isFlipped));
+        });
+    });
+
     // 2. Interactive visual gallery
     const galleryGrid = document.querySelector('.visual-gallery-grid');
     const visualGallerySection = document.getElementById('visual-gallery');
