@@ -103,6 +103,19 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Keep the showcase focused, with the remaining case studies available on demand.
+    const projectsGrid = document.getElementById('projects-grid');
+    const showMoreProjects = document.getElementById('show-more-projects');
+    if (projectsGrid && showMoreProjects) {
+        showMoreProjects.addEventListener('click', () => {
+            const isExpanded = projectsGrid.classList.toggle('is-expanded');
+            showMoreProjects.setAttribute('aria-expanded', String(isExpanded));
+            showMoreProjects.innerHTML = isExpanded
+                ? 'Show fewer projects <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>'
+                : 'View all work <span>2 more projects</span> <i class="fa-solid fa-arrow-down" aria-hidden="true"></i>';
+        });
+    }
+
     // 2. Interactive visual gallery
     const galleryGrid = document.querySelector('.visual-gallery-grid');
     const visualGallerySection = document.getElementById('visual-gallery');
