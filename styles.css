@@ -1028,7 +1028,6 @@ textarea,
 
 .projects-grid .is-more-work { display: none; }
 .projects-grid.is-expanded .is-more-work { display: flex; animation: project-reveal 360ms ease both; }
-#projects-grid > .project-card { order: 0; }
 
 @keyframes project-reveal {
     from { opacity: 0; transform: translateY(0.8rem) rotate(var(--card-tilt, 0deg)); }
@@ -1120,7 +1119,7 @@ textarea,
 }
 
 .studio-postcard {
-    --postcard-paper: #30323d;
+    --postcard-paper: var(--bg-dark-alt);
     --postcard-ink: #f7f3ea;
     --postcard-accent: var(--secondary);
     position: relative;
@@ -1151,30 +1150,23 @@ textarea,
     display: block;
     overflow: hidden;
     backface-visibility: hidden;
-    background: var(--postcard-paper);
-    border: 1px solid color-mix(in srgb, var(--postcard-edge, var(--primary)) 78%, #fff 22%);
-    box-shadow: 9px 10px 0 rgba(5, 7, 21, 0.5), 0 22px 42px color-mix(in srgb, var(--postcard-edge, var(--primary)) 20%, rgba(0, 0, 0, 0.28));
+    background:
+        repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.012) 0 1px, transparent 1px 7px),
+        linear-gradient(145deg, color-mix(in srgb, var(--postcard-paper) 88%, var(--postcard-edge) 6%), color-mix(in srgb, var(--postcard-paper) 96%, var(--postcard-edge) 2%));
+    border: 1px solid color-mix(in srgb, var(--postcard-edge, var(--primary)) 30%, transparent);
+    box-shadow: 9px 13px 0 rgba(5, 7, 21, 0.42), 0 24px 42px color-mix(in srgb, var(--postcard-edge, var(--primary)) 20%, transparent);
     clip-path: polygon(
-        0.15% 0.15%, 25% 0, 50% 0.18%, 75% 0, 99.85% 0.15%,
-        100% 25%, 99.85% 50%, 100% 75%, 99.85% 99.85%,
-        75% 100%, 50% 99.82%, 25% 100%, 0.15% 99.85%,
-        0 75%, 0.15% 50%, 0 25%
+        0.8% 0.4%, 8% 0.15%, 15% 0.55%, 22% 0.25%, 30% 0.58%, 37% 0.2%, 45% 0.55%, 53% 0.25%, 61% 0.6%, 69% 0.2%, 77% 0.55%, 85% 0.25%, 92% 0.6%, 99.2% 0.4%,
+        99.6% 8%, 99.25% 16%, 99.65% 24%, 99.3% 32%, 99.65% 40%, 99.25% 48%, 99.65% 56%, 99.3% 64%, 99.65% 72%, 99.25% 80%, 99.6% 88%, 99.2% 99.6%,
+        92% 99.3%, 85% 99.7%, 78% 99.35%, 70% 99.75%, 62% 99.35%, 54% 99.7%, 46% 99.3%, 38% 99.7%, 30% 99.35%, 22% 99.75%, 14% 99.35%, 7% 99.7%, 0.8% 99.6%,
+        0.4% 91%, 0.75% 83%, 0.35% 75%, 0.7% 67%, 0.35% 59%, 0.75% 51%, 0.35% 43%, 0.7% 35%, 0.35% 27%, 0.75% 19%, 0.4% 11%
     );
 }
 
 .postcard-front {
     transform: rotate(var(--postcard-tilt, -1deg));
-    clip-path: polygon(
-        0.8% 0.9%, 8% 0.25%, 17% 0.7%, 27% 0.15%, 37% 0.75%, 48% 0.2%, 59% 0.65%, 70% 0.1%, 81% 0.75%, 91% 0.2%, 99.2% 0.85%,
-        99.85% 9%, 99.2% 18%, 99.8% 28%, 99.15% 38%, 99.75% 49%, 99.1% 60%, 99.8% 70%, 99.2% 81%, 99.75% 91%, 99.15% 99.2%,
-        91% 99.8%, 81% 99.15%, 70% 99.75%, 59% 99.1%, 48% 99.8%, 37% 99.2%, 27% 99.75%, 17% 99.1%, 8% 99.8%, 0.75% 99.15%,
-        0.15% 91%, 0.8% 81%, 0.2% 70%, 0.85% 60%, 0.15% 49%, 0.8% 38%, 0.2% 28%, 0.85% 18%, 0.15% 9%
-    );
 }
-.postcard-front { background: #3b405d; }
-.postcard-front::before { position: absolute; z-index: 0; inset: 0; content: ''; background: radial-gradient(circle at 17% 12%, rgba(14, 17, 36, 0.28) 0 0.65px, transparent 0.9px) 0 0 / 8px 9px, radial-gradient(circle at 74% 61%, rgba(219, 229, 255, 0.3) 0 0.75px, transparent 1px) 0 0 / 11px 12px, repeating-linear-gradient(7deg, rgba(12, 14, 33, 0.14) 0 1px, transparent 1px 5px), linear-gradient(135deg, #59618b, #343950 52%, #485071); box-shadow: inset 0 0 1.15rem rgba(9, 11, 27, 0.38); }
-.postcard-front img { position: absolute; z-index: 1; inset: 0.68rem; display: block; width: calc(100% - 1.36rem); height: calc(100% - 1.36rem); object-fit: cover; filter: saturate(0.9) contrast(0.98); box-shadow: 0 0 0 1px rgba(93, 67, 36, 0.22); clip-path: polygon(0.5% 0.8%, 12% 0.15%, 25% 0.7%, 38% 0.1%, 52% 0.55%, 66% 0.1%, 80% 0.6%, 99.4% 0.2%, 99.8% 14%, 99.35% 28%, 99.8% 42%, 99.4% 57%, 99.8% 72%, 99.35% 86%, 99.7% 99.35%, 84% 99.75%, 70% 99.3%, 56% 99.8%, 42% 99.35%, 28% 99.75%, 14% 99.3%, 0.3% 99.7%, 0.7% 84%, 0.2% 70%, 0.65% 56%, 0.2% 42%, 0.65% 28%, 0.2% 14%); transition: transform 500ms ease, filter 500ms ease; }
-.postcard-front::after { position: absolute; z-index: 2; inset: 0.68rem; content: ''; pointer-events: none; background: repeating-linear-gradient(90deg, rgba(255, 252, 240, 0.14) 0 1px, transparent 1px 5px), repeating-linear-gradient(0deg, rgba(51, 37, 23, 0.08) 0 1px, transparent 1px 7px); clip-path: polygon(0.5% 0.8%, 12% 0.15%, 25% 0.7%, 38% 0.1%, 52% 0.55%, 66% 0.1%, 80% 0.6%, 99.4% 0.2%, 99.8% 14%, 99.35% 28%, 99.8% 42%, 99.4% 57%, 99.8% 72%, 99.35% 86%, 99.7% 99.35%, 84% 99.75%, 70% 99.3%, 56% 99.8%, 42% 99.35%, 28% 99.75%, 14% 99.3%, 0.3% 99.7%, 0.7% 84%, 0.2% 70%, 0.65% 56%, 0.2% 42%, 0.65% 28%, 0.2% 14%); mix-blend-mode: soft-light; }
+.postcard-front img { position: absolute; z-index: 1; inset: 0; display: block; width: 100%; height: 100%; object-fit: cover; filter: saturate(0.96) contrast(0.99); transition: transform 500ms ease, filter 500ms ease; }
 .studio-postcard:hover .postcard-front img { transform: scale(1.018); filter: saturate(1.02) contrast(1); }
 .postcard-stamp { position: absolute; z-index: 3; }
 .postcard-stamp { top: 1rem; left: 1rem; display: grid; width: 3.4rem; height: 3.4rem; place-items: center; color: #2a2b35; font-family: Caveat, cursive; font-size: 0.96rem; font-weight: 700; line-height: 0.88; text-align: center; background: #eee3d1; border: 2px dashed color-mix(in srgb, var(--postcard-accent) 78%, #fff 22%); border-radius: 50%; box-shadow: 0 5px 18px rgba(0, 0, 0, 0.28); transform: rotate(-10deg); }
@@ -1184,8 +1176,8 @@ textarea,
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    padding: 1.65rem;
-    background: #444b6a;
+    padding: 1.8rem;
+    background: transparent;
     transform: rotateY(180deg);
 }
 .postcard-back-kicker { margin-bottom: 0.8rem; color: var(--postcard-accent); font-size: 0.65rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; }
@@ -3999,7 +3991,7 @@ pre code {
 
 /* Visual Collection: every work gets a true white Polaroid border and caption. */
 .gallery-item {
-    padding: 0.42rem 0.42rem 0.88rem;
+    padding: 0.42rem;
     color: var(--text-primary);
     background:
         repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.012) 0 1px, transparent 1px 7px),
@@ -4014,14 +4006,27 @@ pre code {
 .gallery-image-frame { background: #11131d; }
 .gallery-item img { box-shadow: none; }
 .gallery-item-caption {
-    padding: 0.7rem 0.36rem 0.02rem;
-    color: var(--text-primary);
-    font-family: var(--font-heading);
-    font-size: 0.64rem;
-    letter-spacing: 0.015em;
+    position: absolute;
+    z-index: 3;
+    right: 0.78rem;
+    bottom: 0.78rem;
+    display: block;
+    max-width: calc(100% - 1.56rem);
+    padding: 0.3rem 0.42rem;
+    color: #f8f5ee;
+    font-family: var(--font-body);
+    font-size: 0.6rem;
+    font-weight: 800;
+    letter-spacing: 0.07em;
+    line-height: 1.2;
+    text-transform: uppercase;
+    background: rgba(19, 21, 29, 0.78);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
 }
 .gallery-item-caption i { color: var(--sticker-accent); }
 .gallery-item-caption i { display: none; }
+.gallery-item:hover .gallery-item-caption,
+.gallery-item:focus-visible .gallery-item-caption { color: #f8f5ee; }
 .gallery-item:hover,
 .gallery-item:focus-visible {
     box-shadow: 0 1.3rem 2.2rem rgba(0, 0, 0, 0.42);
@@ -4128,8 +4133,8 @@ pre code {
 @media (max-width: 760px) {
     .hero-scrapbook-card { padding: 0.3rem 0.3rem 0.52rem; }
     .hero-scrapbook-card span { padding-top: 0.36rem; }
-    .gallery-item { padding: 0.3rem 0.3rem 0.62rem; }
-    .gallery-item-caption { padding: 0.5rem 0.22rem 0; }
+    .gallery-item { padding: 0.3rem; }
+    .gallery-item-caption { right: 0.58rem; bottom: 0.58rem; padding: 0.28rem 0.38rem; font-size: 0.56rem; }
 
     #experience .timeline { padding: 2rem 0 0 2.45rem; }
     #experience .timeline-label { justify-self: start; margin: 0 0 2rem -2.45rem; }
