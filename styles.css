@@ -400,8 +400,6 @@ textarea,
 
 .section-alt {
     background-color: var(--bg-dark-alt);
-    border-top: 1px solid var(--card-border);
-    border-bottom: 1px solid var(--card-border);
 }
 
 .section-header {
@@ -1086,10 +1084,9 @@ textarea,
 
 /* --- Studio Postcards --- */
 .studio-postcards-section {
+    margin-top: 4.5rem;
+    padding-top: 4.5rem;
     overflow: hidden;
-    background:
-        radial-gradient(circle at 14% 24%, rgba(99, 102, 241, 0.14), transparent 21rem),
-        radial-gradient(circle at 87% 73%, rgba(6, 182, 212, 0.12), transparent 25rem);
 }
 
 .studio-postcards-header {
