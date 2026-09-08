@@ -319,43 +319,43 @@ document.addEventListener('DOMContentLoaded', () => {
         'modal-smart-rewards': [
             'I designed a focused recommendation layer for the point where loyalty members must choose a reward.',
             'The work covered problem framing, the member experience, merchant controls, MVP strategy, and measurement.',
-            'Members had points to spend but faced a difficult-to-compare catalog at the moment redemption should feel rewarding.',
+            'Help members choose confidently without taking away the control of the full rewards catalog.',
             'The concept offers one explainable next-best reward while preserving the full catalog and the member’s control.'
         ],
         'modal-ai-stylist': [
             'I designed and built an AI stylist that turns a personal wardrobe into more useful daily recommendations.',
             'Over four weeks, I connected wardrobe digitization, progressive Style DNA onboarding, and a functional Android prototype.',
-            'The key tension was earning the context an AI needs without front-loading personalization as work.',
+            'Earn the context an AI needs without making personalization feel like upfront work.',
             'The result is a four-step setup flow that keeps the path from a physical closet to a useful recommendation lightweight.'
         ],
         'modal-ecocycle': [
             'I led research, product design, and UI for a four-week sustainability community concept, grounded in 40 interviews.',
             'The work moved from research synthesis through architecture, profile exploration, and a high-fidelity prototype.',
-            'People did not only want to track their sustainable actions; they were already looking for resources, participation, and ways to share progress.',
+            'Make personal progress social and motivating without turning sustainable action into a performance.',
             'The product shifted from a personal tracker to a profile-centered system connecting identity, discovery, participation, and recognition.'
         ],
         'modal-foundmoon-app': [
             'I designed and built the native Android product, from the reading experience to the technical foundation.',
             'I defined the product flow and implemented the app with Android-native patterns for a calm, personal library.',
-            'Readers needed a private, low-friction way to track books and reading progress without turning the habit into a feed.',
+            'Support a reading habit without turning books, goals, or unfinished reads into a performance.',
             'The app uses private, versioned on-device storage with import and export, keeping each reading record portable and personal.'
         ],
         'modal-foundmoon': [
             'I designed and built the native Android product, from the reading experience to the technical foundation.',
             'I defined the product flow and implemented the app with Android-native patterns for a calm, personal library.',
-            'Readers needed a private, low-friction way to track books and reading progress without turning the habit into a feed.',
+            'Support a reading habit without turning books, goals, or unfinished reads into a performance.',
             'The app uses private, versioned on-device storage with import and export, keeping each reading record portable and personal.'
         ],
         'modal-yonderlust': [
             'I designed YonderLust in a focused two-day sprint around the two needs that most shaped solo travel: clarity and confidence.',
             'The work used secondary qualitative research to prioritize the core travel-planning flow and persistent safety support.',
-            'The central decision was to leave social matching, booking, and other marketplace features outside the sprint.',
+            'Create clarity and visible safety in two days without turning exploration into a warning system.',
             'The resulting prototype connects discovery, planning, exploration, and help without letting safety take over the journey.'
         ],
         'modal-aura': [
             'I built AURA as a luxury fashion world where celestial inspiration is expressed through atmosphere, not literal decoration.',
             'Over two weeks, I shaped the strategy, visual identity, editorial system, packaging concepts, and digital guidelines.',
-            'The core decision was to create shared rules for type, color, imagery, spacing, and composition rather than one fixed look.',
+            'Make an expressive fashion identity feel coherent across every touchpoint, not just one logo.',
             'The result is a flexible system that stays recognizable as it moves across editorial, packaging, digital, and retail concepts.'
         ]
     };
@@ -442,7 +442,7 @@ document.addEventListener('DOMContentLoaded', () => {
             introduction.textContent = caseStudyIntroductions[modal.id];
             glanceSection.className = 'case-study-glance';
             glanceSection.setAttribute('aria-label', 'Case study summary');
-            ['Ownership', 'Scope', 'Focus', 'Evidence'].forEach((label, index) => {
+            ['Ownership', 'Scope', 'The hard part', 'What changed'].forEach((label, index) => {
                 const item = document.createElement('div');
                 item.innerHTML = `<span>${label}</span><p>${glance[index]}</p>`;
                 glanceSection.append(item);
