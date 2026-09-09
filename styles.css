@@ -3935,6 +3935,19 @@ pre code {
     .modal-container { width: calc(100% - 2.5rem); padding-right: clamp(1.5rem, 6vw, 2.25rem); padding-left: clamp(1.5rem, 6vw, 2.25rem); }
 }
 
+/* Give the hero copy and project collage room to breathe on stacked layouts. */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .hero-section { gap: 5.75rem; }
+    .hero-visual { max-width: 350px; }
+    .hero-scrapbook { max-width: 350px; }
+}
+
+@media (max-width: 768px) {
+    .hero-section { gap: 4.75rem; padding-bottom: 7rem; }
+    .hero-visual { max-width: 300px; }
+    .hero-scrapbook { max-width: 300px; }
+}
+
 /* Compact case-study pages: one centered, readable editorial composition. */
 @media (max-width: 768px) {
     .modal {
