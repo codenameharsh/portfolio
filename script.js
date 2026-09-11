@@ -319,6 +319,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const overlays = document.querySelectorAll('.modal-overlay');
     let modalScrollPosition = 0;
     let lastModalTrigger = null;
+    const projectHashByModal = {
+        'modal-smart-rewards': '#project-smart-rewards',
+        'modal-ai-stylist': '#project-ishtyle',
+        'modal-ecocycle': '#project-ecocycle',
+        'modal-foundmoon-app': '#project-foundmoon',
+        'modal-yonderlust': '#project-yonderlust',
+        'modal-aura': '#project-aura'
+    };
+    const modalByProjectHash = Object.fromEntries(
+        Object.entries(projectHashByModal).map(([modalId, hash]) => [hash, modalId])
+    );
 
     const caseStudyGlances = {
         'modal-smart-rewards': [
@@ -563,12 +574,37 @@ document.addEventListener('DOMContentLoaded', () => {
         requestAnimationFrame(() => modal.querySelector('.modal-close, .modal-container')?.focus());
     }
 
+    function updateProjectUrl(modalId) {
+        const projectHash = projectHashByModal[modalId];
+        if (projectHash && window.location.hash !== projectHash) {
+            history.pushState(null, '', projectHash);
+        }
+    }
+
+    function syncModalWithUrl() {
+        const modalId = modalByProjectHash[window.location.hash];
+        const activeModal = document.querySelector('.modal.active');
+
+        if (!modalId) {
+            if (activeModal) closeModal(activeModal, false);
+            return;
+        }
+
+        const targetModal = document.getElementById(modalId);
+        if (targetModal && targetModal !== activeModal) {
+            if (activeModal) closeModal(activeModal, false);
+            const trigger = document.querySelector(`[data-modal="${modalId}"]`);
+            openModal(targetModal, trigger);
+        }
+    }
+
     modalTriggers.forEach(trigger => {
         trigger.addEventListener('click', (e) => {
             e.preventDefault();
             const modalId = trigger.getAttribute('data-modal');
             const targetModal = document.getElementById(modalId);
             if (targetModal) {
+                updateProjectUrl(modalId);
                 openModal(targetModal, trigger);
             }
         });
@@ -585,20 +621,28 @@ document.addEventListener('DOMContentLoaded', () => {
             const modalId = `modal-${projectType}`;
             const targetModal = document.getElementById(modalId);
             if (targetModal) {
+                updateProjectUrl(modalId);
                 openModal(targetModal, card.querySelector('.project-link'));
             }
         });
     });
 
-    function closeModal(modal) {
+    function closeModal(modal, clearProjectUrl = true) {
         modal.classList.remove('active');
         modal.setAttribute('aria-hidden', 'true');
         unlockBackgroundScroll();
+        if (clearProjectUrl && projectHashByModal[modal.id] === window.location.hash) {
+            history.replaceState(null, '', `${window.location.pathname}${window.location.search}`);
+        }
         if (lastModalTrigger instanceof HTMLElement && document.contains(lastModalTrigger)) {
             lastModalTrigger.focus();
         }
         lastModalTrigger = null;
     }
+
+    window.addEventListener('hashchange', syncModalWithUrl);
+    window.addEventListener('popstate', syncModalWithUrl);
+    syncModalWithUrl();
 
     closeButtons.forEach(btn => {
         btn.addEventListener('click', () => {
@@ -659,22 +703,6 @@ document.addEventListener('DOMContentLoaded', () => {
         dots.forEach(dot => dot.addEventListener('click', () => showFoundmoonSlide(Number(dot.dataset.slide))));
     }
 
-    // 11. Fixed Scroll Percentage
-    function updateScrollPercentage() {
-        const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
-        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        const percentage = height > 0 ? Math.round((winScroll / height) * 100) : 0;
-        const indicator = document.getElementById('scroll-percentage-indicator');
-        const label = document.getElementById('scroll-percentage');
-        if (indicator && label) {
-            indicator.setAttribute('aria-valuenow', percentage);
-            label.textContent = `${percentage}%`;
-        }
-    }
-
-    window.addEventListener('scroll', updateScrollPercentage, { passive: true });
-    updateScrollPercentage();
-
     // 11. Image Lightbox for Mobile/Tablet Screens
     const caseImages = document.querySelectorAll('.modal-body img');
     const lightbox = document.getElementById('lightbox');
@@ -729,6 +757,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     if (nextModal) {
                         setTimeout(() => {
                             delete currentModal.dataset.navigating;
+                            updateProjectUrl(nextModalId);
                             openModal(nextModal, returnTrigger);
                         }, 220);
                     }
@@ -737,6 +766,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     if (prevModal) {
                         setTimeout(() => {
                             delete currentModal.dataset.navigating;
+                            updateProjectUrl(prevModalId);
                             openModal(prevModal, returnTrigger);
                         }, 220);
                     }
