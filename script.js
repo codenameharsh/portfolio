@@ -119,7 +119,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // 2. Interactive visual gallery
     const galleryGrid = document.querySelector('.visual-gallery-grid');
     const visualGallerySection = document.getElementById('visual-gallery');
-    const resumeSection = document.getElementById('resume');
+    const aboutSection = document.getElementById('about');
+    const experienceSection = document.getElementById('experience');
     const personalGalleryWorks = [
         { category: 'painting', title: 'Moonlit Grove', src: 'gallery/personal-work/painting-moonlit-trees.jpg', shape: 'gallery-item-wide' },
         { category: 'painting', title: 'Golden Temple', src: 'gallery/personal-work/painting-golden-temple.jpg', shape: 'gallery-item-tall' },
@@ -179,8 +180,12 @@ document.addEventListener('DOMContentLoaded', () => {
         `).join('');
     }
 
-    if (visualGallerySection && resumeSection) {
-        resumeSection.insertAdjacentElement('afterend', visualGallerySection);
+    if (aboutSection && experienceSection) {
+        experienceSection.insertAdjacentElement('beforebegin', aboutSection);
+    }
+
+    if (visualGallerySection && experienceSection) {
+        experienceSection.insertAdjacentElement('afterend', visualGallerySection);
     }
 
     const galleryFilters = document.querySelectorAll('.gallery-filter');
