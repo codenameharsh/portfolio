@@ -208,7 +208,25 @@ document.addEventListener('DOMContentLoaded', () => {
             item.classList.toggle('active', isSelected);
             item.setAttribute('aria-pressed', isSelected ? 'true' : 'false');
         });
-        galleryItems.forEach(item => item.classList.toggle('is-hidden', item.dataset.galleryCategory !== category));
+        galleryItems.forEach(item => {
+            const isSelected = item.dataset.galleryCategory === category;
+            item.classList.toggle('is-hidden', !isSelected);
+            item.setAttribute('aria-hidden', String(!isSelected));
+
+            // Mobile browsers may not fetch an image that was lazy-loaded while
+            // its card was hidden. Promote the newly selected collection so its
+            // thumbnails are requested as soon as the tab is opened.
+            if (isSelected) {
+                const image = item.querySelector('img');
+                if (image) image.loading = 'eager';
+            }
+        });
+
+        // Force the masonry columns to recalculate after cards are shown or hidden.
+        // This avoids an empty column layout on some mobile and tablet browsers.
+        if (galleryGrid) {
+            void galleryGrid.offsetHeight;
+        }
     };
 
     galleryFilters.forEach(filter => {
