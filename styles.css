@@ -17,8 +17,8 @@
     --primary-glow: rgba(99, 102, 241, 0.15);
     --secondary: #06b6d4;       /* Glowing Cyan */
     --text-primary: #f8fafc;
-    --text-secondary: #94a3b8;
-    --text-muted: #64748b;
+    --text-secondary: #b8c4d4;
+    --text-muted: #94a3b8;
     --white: #ffffff;
     
     /* Gradients */
@@ -346,8 +346,8 @@ textarea,
 .nav-link {
     color: var(--text-secondary);
     text-decoration: none;
-    font-size: 0.95rem;
-    font-weight: 500;
+    font-size: 0.98rem;
+    font-weight: 600;
     transition: var(--transition-fast);
     position: relative;
     padding: 0.25rem 0;
@@ -401,7 +401,7 @@ textarea,
     padding: 0.46rem 0.72rem;
     border-radius: 999px;
     color: var(--text-secondary);
-    font: 700 0.68rem/1 var(--font-body);
+    font: 700 0.75rem/1.15 var(--font-body);
     letter-spacing: 0.045em;
     text-decoration: none;
     text-transform: uppercase;
@@ -425,14 +425,21 @@ textarea,
 @media (max-width: 480px) {
     .portfolio-switcher-full { display: none; }
     .portfolio-switcher-short { display: inline; }
-    .portfolio-switcher-link { padding-right: 0.56rem; padding-left: 0.56rem; font-size: 0.63rem; }
+    .portfolio-switcher-link { padding-right: 0.56rem; padding-left: 0.56rem; font-size: 0.68rem; }
 }
 
 /* Fashion is the foundation of the product practice, not a separate aside. */
 .fashion-bridge {
+    position: relative;
+    overflow: hidden;
     padding: clamp(5rem, 9vw, 8rem) 0;
-    color: #f5f0e8;
-    background: #263a35;
+    color: var(--text-primary);
+    background:
+        radial-gradient(circle at 12% 95%, rgba(99, 102, 241, 0.18), transparent 34%),
+        radial-gradient(circle at 92% 10%, rgba(6, 182, 212, 0.12), transparent 30%),
+        var(--bg-dark-alt);
+    border-top: 1px solid var(--card-border);
+    border-bottom: 1px solid var(--card-border);
 }
 
 .fashion-bridge-layout {
@@ -444,8 +451,8 @@ textarea,
 
 .fashion-bridge-kicker,
 .fashion-bridge-principles span {
-    color: #d9b56d;
-    font: 700 0.72rem/1 var(--font-body);
+    color: var(--secondary);
+    font: 700 0.78rem/1.2 var(--font-body);
     letter-spacing: 0.13em;
     text-transform: uppercase;
 }
@@ -453,7 +460,9 @@ textarea,
 .fashion-bridge h2 {
     max-width: 690px;
     margin: 1rem 0 1.5rem;
-    color: #fffaf1;
+    background: var(--gradient-text);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     font: 700 clamp(2.35rem, 4.8vw, 4.7rem)/0.96 var(--font-heading);
     letter-spacing: -0.055em;
 }
@@ -461,30 +470,22 @@ textarea,
 .fashion-bridge-intro > p {
     max-width: 610px;
     margin: 0;
-    color: rgba(255, 250, 241, 0.78);
+    color: var(--text-secondary);
     font-size: 1.08rem;
     line-height: 1.65;
 }
 
 .fashion-bridge-link {
-    display: inline-flex;
-    gap: 0.6rem;
-    align-items: center;
     margin-top: 2rem;
-    padding-bottom: 0.45rem;
-    border-bottom: 1px solid #d9b56d;
-    color: #fffaf1;
-    font-weight: 700;
-    text-decoration: none;
 }
 
 .fashion-bridge-link:hover,
-.fashion-bridge-link:focus-visible { color: #d9b56d; outline: none; }
+.fashion-bridge-link:focus-visible { color: var(--text-primary); outline: none; }
 
-.fashion-bridge-principles { border-top: 1px solid rgba(255, 250, 241, 0.32); }
-.fashion-bridge-principles article { padding: 1.25rem 0 1.5rem; border-bottom: 1px solid rgba(255, 250, 241, 0.32); }
-.fashion-bridge-principles h3 { margin: 0.48rem 0; color: #fffaf1; font: 700 1.35rem var(--font-heading); }
-.fashion-bridge-principles p { max-width: 410px; margin: 0; color: rgba(255, 250, 241, 0.72); font-size: 0.94rem; line-height: 1.55; }
+.fashion-bridge-principles { border-top: 1px solid var(--card-border); }
+.fashion-bridge-principles article { padding: 1.25rem 0 1.5rem; border-bottom: 1px solid var(--card-border); }
+.fashion-bridge-principles h3 { margin: 0.48rem 0; color: var(--text-primary); font: 700 1.35rem var(--font-heading); }
+.fashion-bridge-principles p { max-width: 410px; margin: 0; color: var(--text-secondary); font-size: 0.98rem; line-height: 1.6; }
 
 @media (max-width: 768px) {
     .fashion-bridge-layout { grid-template-columns: 1fr; gap: 3rem; }
@@ -789,7 +790,7 @@ textarea,
 }
 
 .hero-scrapbook-card img { display: block; width: 100%; height: auto; min-height: 0; flex: 1 1 auto; object-fit: cover; box-shadow: 0 2px 0 rgba(5, 7, 21, 0.14); }
-.hero-scrapbook-card span { display: block; padding: 0.42rem 0.15rem 0 0.1rem; font-family: var(--font-heading); font-size: 0.65rem; font-weight: 700; }
+.hero-scrapbook-card span { display: block; padding: 0.42rem 0.15rem 0 0.1rem; font-family: var(--font-heading); font-size: 0.72rem; font-weight: 700; line-height: 1.25; }
 .hero-scrapbook-card:hover { z-index: 5; box-shadow: 12px 16px 26px rgba(0, 0, 0, 0.4); transform: rotate(0deg) translateY(-0.35rem); }
 
 .scrapbook-card-main { --postit-paper: var(--bg-dark-alt); --postit-ink: var(--text-primary); --postit-accent: var(--primary); z-index: 3; top: 18%; left: 11%; width: 43%; height: 49%; transform: rotate(-7deg); }
@@ -818,7 +819,7 @@ textarea,
     gap: 0.35rem;
     padding: 0.42rem 0.55rem;
     color: #081923;
-    font-size: 0.56rem;
+    font-size: 0.66rem;
     font-weight: 800;
     line-height: 1.2;
     background: repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.18) 0 1px, transparent 1px 6px), #a5f3fc;
@@ -839,7 +840,7 @@ textarea,
     place-items: center;
     color: #a5f3fc;
     font-family: var(--font-heading);
-    font-size: 0.59rem;
+    font-size: 0.68rem;
     font-weight: 800;
     line-height: 1.05;
     text-align: center;
@@ -874,10 +875,10 @@ textarea,
 @media (max-width: 768px) {
     .hero-scrapbook { max-width: 340px; }
     .hero-scrapbook-card { padding: 0.3rem 0.3rem 0.4rem; }
-    .hero-scrapbook-card span { padding-top: 0.25rem; font-size: 0.48rem; }
+    .hero-scrapbook-card span { padding-top: 0.25rem; font-size: 0.6rem; }
     .hero-scrapbook-kicker { padding: 0.3rem 0.45rem; font-size: 0.5rem; }
-    .hero-scrapbook-note { padding: 0.3rem 0.4rem; font-size: 0.42rem; }
-    .hero-scrapbook-stamp { width: 3rem; height: 3rem; font-size: 0.45rem; }
+    .hero-scrapbook-note { padding: 0.3rem 0.4rem; font-size: 0.55rem; }
+    .hero-scrapbook-stamp { width: 3rem; height: 3rem; font-size: 0.55rem; }
 }
 
 .hero-skill-explorer {
@@ -1005,7 +1006,7 @@ textarea,
 .hero-skill-detail p { margin: 0; font-family: var(--font-heading); font-size: 0.9rem; line-height: 1.15; letter-spacing: 0.01em; }
 .hero-skill-detail p span { color: var(--text-secondary); font-weight: 500; }
 .hero-skill-detail strong { color: var(--secondary); font-weight: 700; }
-.hero-skill-detail small { display: block; margin-top: 0.22rem; color: var(--text-muted); font-size: 0.61rem; letter-spacing: 0.035em; }
+.hero-skill-detail small { display: block; margin-top: 0.22rem; color: var(--text-secondary); font-size: 0.7rem; font-weight: 600; letter-spacing: 0.035em; }
 
 @keyframes hero-interaction-pulse {
     0%, 65%, 100% { box-shadow: 0 0 0 0 rgba(6, 182, 212, 0); }
@@ -1030,7 +1031,7 @@ textarea,
     .hero-skill-node[data-hero-skill="build"] { right: 0; bottom: 7%; }
     .hero-skill-detail { min-height: 3rem; padding: 0.5rem 0.65rem; }
     .hero-skill-detail p { font-size: 0.78rem; }
-    .hero-skill-detail small { margin-top: 0.2rem; font-size: 0.55rem; }
+    .hero-skill-detail small { margin-top: 0.2rem; font-size: 0.64rem; }
 }
 }
 
@@ -1985,7 +1986,7 @@ textarea,
     max-width: 100%;
     padding: 0.68rem 0.2rem 0 0.14rem;
     color: var(--text-primary);
-    font-size: 0.62rem;
+    font-size: 0.75rem;
     font-weight: 700;
     letter-spacing: 0.02em;
     text-shadow: none;
@@ -2029,7 +2030,7 @@ body.gallery-open { overflow: hidden; }
     .visual-gallery-grid { column-count: 2; column-gap: 0.65rem; }
     .gallery-item { margin-bottom: 1rem; transform: none; }
     .gallery-item::before { top: 0.2rem; height: 0.5rem; }
-    .gallery-item-caption { font-size: 0.6rem; }
+    .gallery-item-caption { font-size: 0.7rem; }
     .gallery-lightbox { padding: 1rem; }
 }
 
@@ -2472,7 +2473,7 @@ body.gallery-open { overflow: hidden; }
 
 .modal-top-nav { display: flex; align-items: center; justify-content: space-between; gap: 0.55rem; margin: 0.65rem 0 1.35rem; padding-bottom: 0.75rem; border-bottom: 1px solid var(--card-border); }
 .modal-top-nav:has(.modal-top-nav-btn:only-child) { justify-content: flex-end; }
-.modal-top-nav-btn { display: inline-flex; align-items: center; gap: 0.38rem; padding: 0.25rem 0; color: var(--text-muted); border: 0; background: transparent; font: 700 0.68rem var(--font-body); letter-spacing: 0.06em; text-transform: uppercase; cursor: pointer; }
+.modal-top-nav-btn { display: inline-flex; align-items: center; gap: 0.38rem; padding: 0.25rem 0; color: var(--text-secondary); border: 0; background: transparent; font: 700 0.75rem var(--font-body); letter-spacing: 0.06em; text-transform: uppercase; cursor: pointer; }
 .modal-top-nav-btn:hover, .modal-top-nav-btn:focus-visible { color: var(--secondary); outline: none; }
 .modal-top-nav-btn i { font-size: 0.62rem; }
 
@@ -4107,7 +4108,7 @@ pre code {
     .modal-top-nav-btn {
         min-width: 0;
         padding: 0.15rem 0;
-        font-size: 0.61rem;
+        font-size: 0.68rem;
         letter-spacing: 0.05em;
         line-height: 1.3;
         text-align: left;
@@ -4344,7 +4345,8 @@ pre code {
 .hero-scrapbook-card span {
     padding: 0.58rem 0.25rem 0.02rem;
     color: var(--text-primary);
-    font-size: 0.61rem;
+    font-size: 0.72rem;
+    line-height: 1.25;
     letter-spacing: 0.02em;
 }
 .hero-scrapbook-card:hover {
@@ -4503,7 +4505,7 @@ pre code {
     .hero-scrapbook-card { padding: 0.3rem 0.3rem 0.52rem; }
     .hero-scrapbook-card span { padding-top: 0.36rem; }
     .gallery-item { padding: 0.3rem; }
-    .gallery-item-caption { right: 0.58rem; bottom: 0.58rem; padding: 0.28rem 0.38rem; font-size: 0.56rem; }
+    .gallery-item-caption { right: 0.58rem; bottom: 0.58rem; padding: 0.28rem 0.38rem; font-size: 0.7rem; }
 
     #experience .timeline { padding: 2rem 0 0 2.45rem; }
     #experience .timeline-label { justify-self: start; margin: 0 0 2rem -2.45rem; }
