@@ -386,6 +386,48 @@ textarea,
 
 .menu-close { display: none; }
 
+/* Shared identity bridge between the product and fashion portfolios. */
+.portfolio-switcher {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.22rem;
+    border: 1px solid var(--card-border);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.035);
+    white-space: nowrap;
+}
+
+.portfolio-switcher-link {
+    padding: 0.46rem 0.72rem;
+    border-radius: 999px;
+    color: var(--text-secondary);
+    font: 700 0.68rem/1 var(--font-body);
+    letter-spacing: 0.045em;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: var(--transition-fast);
+}
+
+.portfolio-switcher-link:hover,
+.portfolio-switcher-link:focus-visible {
+    color: var(--text-primary);
+    outline: none;
+}
+
+.portfolio-switcher-link.is-current {
+    color: var(--white);
+    background: var(--gradient-primary);
+    box-shadow: 0 2px 10px rgba(99, 102, 241, 0.32);
+}
+
+.portfolio-switcher-short { display: none; }
+
+@media (max-width: 480px) {
+    .portfolio-switcher-full { display: none; }
+    .portfolio-switcher-short { display: inline; }
+    .portfolio-switcher-link { padding-right: 0.56rem; padding-left: 0.56rem; font-size: 0.63rem; }
+}
+
 /* --- Utility Typography & Layout --- */
 .container {
     max-width: 1200px;
