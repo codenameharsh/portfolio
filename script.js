@@ -267,7 +267,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (menuToggle && navMenu) {
         const closeMobileMenu = () => {
             navMenu.classList.remove('active');
-            menuToggle.querySelector('i').className = 'fa-solid fa-bars';
+            const icon = menuToggle.querySelector('i');
+            if (icon) icon.className = 'fa-solid fa-bars';
             menuToggle.setAttribute('aria-expanded', 'false');
         };
 
@@ -275,9 +276,9 @@ document.addEventListener('DOMContentLoaded', () => {
             navMenu.classList.toggle('active');
             const icon = menuToggle.querySelector('i');
             const isOpen = navMenu.classList.contains('active');
-            if (isOpen) {
+            if (icon && isOpen) {
                 icon.className = 'fa-solid fa-xmark';
-            } else {
+            } else if (icon) {
                 icon.className = 'fa-solid fa-bars';
             }
             menuToggle.setAttribute('aria-expanded', String(isOpen));
