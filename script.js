@@ -302,8 +302,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // 4. Scroll Spy Navigation (Highlight Active Section)
     const sections = document.querySelectorAll('section');
     function setActiveNav(activeId) {
+        const navId = activeId === 'experience' ? 'about' : activeId;
         navLinks.forEach(link => {
-            link.classList.toggle('active', link.getAttribute('href') === `#${activeId}`);
+            link.classList.toggle('active', link.getAttribute('href') === `#${navId}`);
         });
     }
 
